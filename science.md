@@ -1,0 +1,246 @@
+---
+
+copyright:
+  years: 2015, 2017
+lastupdated: "2017-08-08"
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+
+# The science behind the service
+{: #science}
+
+A well-accepted theory of psychology, marketing, and other fields is that human language reflects personality, thinking style, social connections, and emotional states. The frequency with which we use certain categories of words can provide clues to these characteristics. Several researchers found that variations in word usage in writings such as blogs, essays, and tweets can predict aspects of personality ([Fast &amp; Funder, 2008](/docs/services/personality-insights/references.html#fast2008); [Gill et al., 2009](/docs/services/personality-insights/references.html#gill2009); [Golbeck et al., 2011](/docs/services/personality-insights/references.html#golbeck2011); [Hirsh &amp; Peterson, 2009](/docs/services/personality-insights/references.html#hirsh2009); and [Yarkoni, 2010](/docs/services/personality-insights/references.html#yarkoni2010)).
+{: shortdesc}
+
+{{site.data.keyword.IBM_notm}} conducted a set of studies to understand whether personality characteristics inferred from social media data can predict people's behavior and preferences. {{site.data.keyword.IBM_notm}} found that people with specific personality characteristics responded and re-tweeted in higher numbers in information-collection and -spreading tasks. For example, people who score high on excitement-seeking are more likely to respond, while those who score high on cautiousness are less likely to do so ([Mahmud et al., 2013](/docs/services/personality-insights/references.html#mahmud2013)). Similarly, people who score high on modesty, openness, and friendliness are more likely to spread information ([Lee et al., 2014](/docs/services/personality-insights/references.html#lee2014)).
+
+{{site.data.keyword.IBM_notm}} also found that people with high openness and low emotional range (neuroticism) as inferred from social media language responded more favorably (for example, by clicking an advertisement link or following an account), results that have been corroborated with survey-based, ground-truth checking. For example, targeting the top 10 percent of users in terms of high openness and low emotional range resulted in increases in click rate from 6.8 percent to 11.3 percent and in follow rate from 4.7 percent to 8.8 percent.
+
+Multiple recent studies disclosed similar results for characteristics that were computed from social media data. One recent study with retail store data found that people who score high in orderliness, self-discipline, and cautiousness and low in immoderation are 40 percent more likely to respond to coupons than the random population. A second study found that people with specific values showed specific reading interests ([Hsieh et al. 2014](/docs/services/personality-insights/references.html#hsieh2014)). For example, people with a higher self-transcendence value demonstrated an interest in reading articles about the environment, and people with a higher self-enhancement value showed an interest in reading articles about work. A third study of more than 600 Twitter users found that a person's personality characteristics can predict their brand preference with 65 percent accuracy.
+
+The following sections expand upon these high-level findings to describe the research and development behind the {{site.data.keyword.personalityinsightsshort}} service. For more information about studies that apply the service to tangible scenarios, see [The service in action](/docs/services/personality-insights/applied.html).
+
+## Understanding the personality models
+{: #researchModels}
+
+For the {{site.data.keyword.personalityinsightsshort}} service, {{site.data.keyword.IBM_notm}} developed models to infer scores for Big Five dimensions and facets, Needs, and Values from textual information. The models reported by the service are based on research in the fields of psychology, psycholinguistics, and marketing:
+
+-   [Big Five](/docs/services/personality-insights/models.html#outputBigFive) is one of the best studied of the personality models developed by psychologists ([Costa &amp; McCrae, 1992](/docs/services/personality-insights/references.html#costa1992), and [Norman, 1963](/docs/services/personality-insights/references.html#norman1963)). It is the most widely used personality model to describe how a person generally engages with the world. The service computes the five dimensions and thirty facets of the model. The dimensions are often referred to by the mnemonic *OCEAN*, where *O* stands for Openness, *C* for Conscientiousness, *E* for Extraversion, *A* for Agreeableness, and *N* for Neuroticism. (Because the term Neuroticism can have a specific clinical meaning, the service presents such insights under the more generally applicable heading Emotional range.)
+-   [Needs](/docs/services/personality-insights/models.html#outputNeeds) are an important aspect of human behavior. Research literature suggests that several types of human needs are universal and directly influence consumer behavior ([Kotler &amp; Armstrong, 2013](/docs/services/personality-insights/references.html#kotler2013), and [Ford, 2005](/docs/services/personality-insights/references.html#ford2005)). The twelve categories of needs that are reported by the service are described in marketing literature as desires that a person hopes to fulfill when considering a product or service.
+-   [Values](/docs/services/personality-insights/models.html#outputValues) convey what is most important to an individual. They are "desirable, trans-situational goals, varying in importance, that serve as guiding principles in people's lives" ([Schwartz, 2006](/docs/services/personality-insights/references.html#schwartz2006)). Schwartz summarizes five features that are common to all values: (1) values are beliefs; (2) values are a motivational construct; (3) values transcend specific actions and situations; (4) values guide the selection or evaluation of actions, policies, people, and events; and (5) values vary by relative importance and can be ranked accordingly. The service computes the five basic human values proposed by Schwartz and validated in more than twenty countries ([Schwartz, 1992](/docs/services/personality-insights/references.html#schwartz1992)).
+
+## How personality characteristics are inferred
+{: #researchInfer}
+
+The {{site.data.keyword.personalityinsightsshort}} service infers personality characteristics from textual information based on an open-vocabulary approach. This method reflects the latest trend in the research about personality inference ([Schwartz et al., 2013](/docs/services/personality-insights/references.html#schwartz2013), and [Plank &amp; Hovy, 2015](/docs/services/personality-insights/references.html#plank2015)).
+
+The service first tokenizes the input text to develop a representation in an *n*-dimensional space. The service uses an open-source word-embedding technique called [GloVe ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://nlp.stanford.edu/projects/glove/){: new_window} to obtain a vector representation for the words in the input text ([Pennington et al., 2014](/docs/services/personality-insights/references.html#pennington2014)). It then feeds this representation to a machine-learning algorithm that infers a personality profile with Big Five, Needs, and Values characteristics. To train the algorithm, the service uses scores obtained from surveys conducted among thousands of users along with data from their Twitter feeds.
+
+{{site.data.keyword.IBM_notm}} developed the models for all supported languages in an identical way. The models were developed independent of user demographics such as age, gender, or culture. In the future, {{site.data.keyword.IBM_notm}} might develop models that are specific to different demographic categories.
+
+Earlier versions of the service used the Linguistic Inquiry and Word Count (LIWC) psycholinguistic dictionary with its machine-learning model. However, the open-vocabulary approach just described outperforms the LIWC-based model. For more information about the service's precision for each language in terms of average Mean Absolute Error (MAE) and correlation, see [How precise is the service](#researchPrecise). For guidance about providing input text to achieve the most accurate results, see [Guidelines for providing sufficient input](/docs/services/personality-insights/user-overview.html#overviewGuidelines).
+
+## How precise is the service
+{: #researchPrecise}
+
+{{site.data.keyword.IBM_notm}} conducted a validation study to understand the accuracy of the service's approach to inferring a personality profile. {{site.data.keyword.IBM_notm}} collected survey responses and Twitter feeds from between 1500 and 2000 participants for all characteristics and languages. To establish *ground truth*, participants took four sets of standard psychometric tests:
+
+-   50-item Big Five derived from the International Personality Item Pool (IPIP)
+-   120-item Facet derived from the IPIP Neuroticism, Extraversion &amp; Openness (IPIP-NEO)
+-   52-item fundamental Needs developed by {{site.data.keyword.IBM_notm}}
+-   26-item basic Values developed by Schwartz
+
+{{site.data.keyword.IBM_notm}} then compared the scores that were derived by its models with the survey-based scores for the Twitter users. Based on these results, {{site.data.keyword.IBM_notm}} determined the following statistical values between inferred and actual scores for the different categories of personality characteristics:
+
+-   *Mean Absolute Error (MAE)* is a metric that is used to measure the difference between actual and predicted values. For the {{site.data.keyword.personalityinsightsshort}} service, the actual value, or ground truth, is the personality score that was obtained by administering a personality survey. The predicted value is the score that the service's models predict.
+
+    {{site.data.keyword.IBM_notm}} computed the MAE by taking the average of the absolute value of the difference between the actual and predicted scores. {{site.data.keyword.IBM_notm}} used the absolute value because predicting more of less of the actual value is irrelevant; as long as there is a difference, the model is penalized by the magnitude of the error. The lower the MAE, the better the performance of the model. {{site.data.keyword.IBM_notm}} uses a scale of 0 to 1 for MAE, where 0 means no error (the predicted value is the exact same as the actual value), and 1 means maximum error.
+-   *Average correlation* is a statistical term that measures the interdependence of two variables. With this metric, {{site.data.keyword.IBM_notm}} measured the correlation between inferred and actual scores for the different categories of personality characteristics. If the predicted score closely tracks the actual results, the correlation score is high; otherwise, the score is low.
+
+    {{site.data.keyword.IBM_notm}} measures correlation on scale of -1 to 1: 1 indicates a perfect direct (increasing) linear relationship, and -1 indicates a perfect inverse (decreasing) linear relationship. In all other cases, the value lies between these extremes. If the variables are independent (they have no relationship at all), the correlation is 0.
+
+    {{site.data.keyword.IBM_notm}} looks for numbers closer to 1 for best predictions. But personalities are difficult to predict based solely on text, and it is rare to see correlations exceed 0.4 for these types of psychological models. In research literature for this domain, correlations above 0.2 are considered acceptable.
+
+The following table shows per-language average MAE and correlation results for the {{site.data.keyword.personalityinsightsshort}} service. The results place the service at the cutting edge of personality inference from textual data as indicated by [Schwartz et al. (2013)](/docs/services/personality-insights/references.html#schwartz2013) and [Plank and Hovy (2015)](/docs/services/personality-insights/references.html#plank2015).
+
+<table>
+  <caption>Table 1. Average MAE and correlation by language</caption>
+  <tr>
+    <th> </th>
+    <th style="text-align:center">
+      English
+    </th>
+    <th style="text-align:center">
+      Spanish
+    </th>
+    <th style="text-align:center">
+      Japanese
+    </th>
+    <th style="text-align:center">
+      Arabic
+    </th>
+  </tr>
+  <tr>
+    <th style="text-align:left; vertical-align:bottom">
+      Personality characteristics
+    </th>
+    <th style="text-align:center">
+      Average MAE /<br/>
+      Average correlation
+    </th>
+    <th style="text-align:center">
+      Average MAE /<br/>
+      Average correlation
+    </th>
+    <th style="text-align:center">
+      Average MAE /<br/>
+      Average correlation
+    </th>
+    <th style="text-align:center">
+      Average MAE /<br/>
+      Average correlation
+    </th>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      Big Five dimensions
+    </td>
+    <td style="text-align:center">
+      0.12 / 0.33
+    </td>
+    <td style="text-align:center">
+      0.10 / 0.35
+    </td>
+    <td style="text-align:center">
+      0.11 / 0.27
+    </td>
+    <td style="text-align:center">
+      0.09 / 0.17
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      Big Five facets
+    </td>
+    <td style="text-align:center">
+      0.12 / 0.28
+    </td>
+    <td style="text-align:center">
+      0.12 / 0.21
+    </td>
+    <td style="text-align:center">
+      0.12 / 0.22
+    </td>
+    <td style="text-align:center">
+      0.12 / 0.14
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      Needs
+    </td>
+    <td style="text-align:center">
+      0.11 / 0.22
+    </td>
+    <td style="text-align:center">
+      0.12 / 0.24
+    </td>
+    <td style="text-align:center">
+      0.11 / 0.25
+    </td>
+    <td style="text-align:center">
+      0.11 / 0.13
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      Values
+    </td>
+    <td style="text-align:center">
+      0.11 / 0.24
+    </td>
+    <td style="text-align:center">
+      0.11 / 0.19
+    </td>
+    <td style="text-align:center">
+      0.11 / 0.19
+    </td>
+    <td style="text-align:center">
+      0.10 / 0.14
+    </td>
+  </tr>
+</table>
+
+To compute the percentile scores, {{site.data.keyword.IBM_notm}} collected a very large data set of Twitter users (one million users for English, 100,000 users for each of Arabic and Japanese, and 80,000 users for Spanish) and computed their personality portraits. {{site.data.keyword.IBM_notm}} then compared the raw scores of each computed profile to the distribution of profiles from those data sets to determine the percentiles.
+
+> **Note:** For Arabic input, the service is unable to produce meaningful percentiles and raw scores for a number of personality characteristics. For more information, see [Limitations for Arabic input](/docs/services/personality-insights/output.html#arabic).
+
+## Understanding consumption preferences
+{: #researchPrefs}
+
+The relationship between personality and purchasing behavior has been studied across a variety of products and services:
+
+-   [Chen (2007)](/docs/services/personality-insights/references.html#chen2007), while testing preferences concerning organic foods, indicated that an individual's personality characteristics play an important role in establishing personal food-choice criteria.
+-   [Schlegelmilch at al. (1996)](/docs/services/personality-insights/references.html#schlegelmilch1996) explored the relationship between personality variables and pro-environmental purchasing behavior. The authors showed that consumers' overall environmental consciousness has a positive impact on green purchasing decisions.
+-   [Hymbaugh and Garrett (2007)](/docs/services/personality-insights/references.html#hymbaugh1974) investigated the relationship between personality and skydiving and found that people who score high in adventurousness and excitement-seeking generally indulge in skydiving. (For more information, see [Risk profiling](/docs/services/personality-insights/applied.html#otherRisk).)
+
+Applying these known relations between consumption behaviors and personality is challenging: Most of these works used personality data derived from surveys, and their models are not publicly available. {{site.data.keyword.IBM_notm}} therefore decided to learn these consumption preference models directly. When training the models, {{site.data.keyword.IBM_notm}} used personality scores returned from the {{site.data.keyword.personalityinsightsshort}} service as features. As a result, when you apply these models to calculate a user's personality characteristics with the service, the predictions are likely to be more accurate.
+
+## How consumption preferences are inferred
+{: #researchInferPrefs}
+
+The {{site.data.keyword.personalityinsightsshort}} service infers consumption preferences based on the results of its personality profile for the author of the input text. From existing literature, {{site.data.keyword.IBM_notm}} identified 104 consumption preferences that have proved to be correlated with personality. These include preferences related to shopping, movies, music, and other categories. {{site.data.keyword.IBM_notm}} then created a psychometric survey to assess an individual's inclination for each consumption behavior.
+
+{{site.data.keyword.IBM_notm}} obtained responses to its survey from about 600 individuals for whom it also had Twitter data (more than 200 self-authored tweets for each user). {{site.data.keyword.IBM_notm}} submitted the tweets to the service to gather a personality profile for each individual. It then built a classifier for each consumption preference, where the input feature set was the personality information.
+
+For inclusion with the service, {{site.data.keyword.IBM_notm}} selected only those consumption preferences for which personality-based classification performed at least 9 percent better than random classification. Of the original 104 preferences, 42 satisfied this criterion and are exposed as consumption preferences by the service.
+
+<!--
+COMMENTED FOR REMOVAL OF LIWC AND SAMPLING ERROR 08/10/2016
+
+## How media influence inferred characteristics
+
+{{site.data.keyword.IBM_notm}} conducted a validation study to understand the effect of media on inferred characteristics. To determine the accuracy of the service's approach to estimating characteristics, {{site.data.keyword.IBM_notm}} compared scores that were derived by its models with survey-based scores for Twitter users (for instance, approximately 500 users for English and more than 600 for Spanish).
+
+To establish ground truth, participants took three sets of standard psychometric tests: 50-item Big Five (derived from the International Personality Item Pool, or IPIP), 52-item fundamental Needs (developed by {{site.data.keyword.IBM_notm}}), and 26-item basic Values (developed by Schwartz). {{site.data.keyword.IBM_notm}} conducted the study in two phases:
+
+-   For the first study, conducted in 2013, {{site.data.keyword.IBM_notm}} recruited 256 Twitter users ([Gou et al., 2014](/docs/services/personality-insights/references.html#gou2014)). Although the models were learned from different sources, {{site.data.keyword.IBM_notm}} found that for more than 80 percent of the Twitter users, scores for characteristics that were inferred for all three models correlated significantly with survey-based scores (p-value &lt; 0.05 and correlation coefficient between 0.05 and 0.80). Specifically, scores that were derived by the service correlated with survey-based scores as follows:
+    -   For 80.8 percent of participants' Big Five scores (p-value &lt; 0.05 and correlation coefficients between 0.05 and 0.75)
+    -   For 86.6 percent of participants' Needs scores (p-value &lt; 0.05 and correlation coefficient between 0.05 and 0.80)
+    -   For 98.21 percent of participants' Values scores (p-value &lt; 0.05 and correlation coefficients between 0.05 and 0.55)
+-   For the second study, conducted in 2015, {{site.data.keyword.IBM_notm}} recruited another set of 237 Twitter users. The study found that for Big Five and Values, scores for inferred characteristics correlated significantly with survey-based scores (p-value &lt; 0.05 and correlation coefficient between 0.07 and 0.21) for every Twitter user. For needs, such significant correlation was observed for 90 percent of the users (p value &lt; 0.05 and correlation coefficient between 0.01 and 0.20).
+
+In both studies, participants also rated on a five-point scale how well each derived characteristic matched their perceptions of themselves. Their ratings suggest that the inferred characteristics largely matched their self-perceptions. Specifically, means of all ratings were above 3 ("somewhat") out of 5 ("perfect").
+
+-   For the 256 Twitter users of the first study, means were 3.4 (with a standard deviation of 1.14) for Big Five, 3.39 (with a standard deviation of 1.34) for Needs, and 3.13 (with a standard deviation of 1.17) for Values.
+-   For the 237 Twitter users of the second study, means were 3.31 (with a standard deviation of 1.18) for Big Five, 3.37 (with a standard deviation of 1.22) for Needs, and 3.36 (with a standard deviation of 1.18) for Values.
+
+COMMENTED FOR REMOVAL OF LIWC AND SAMPLING ERROR 08/10/2016
+-->
+
+## Notes about personality surveys
+{: #researchSurveys}
+
+When developing the {{site.data.keyword.personalityinsightsshort}} service, {{site.data.keyword.IBM_notm}} relied on personality surveys to establish ground-truth data for personality inference. Ground truth refers to the factual data obtained through direct observation rather than through inference. A typical measure of accuracy for any machine-learning model is to compare the scores inferred by the model with ground-truth data; the previous sections describe how {{site.data.keyword.IBM_notm}} used surveys to validate the accuracy of the service.
+
+The following notes clarify the use of personality surveys and survey-based personality estimation:
+
+-   Personality surveys are long and time-consuming to complete. The results are therefore constrained by the number of Twitter users who were willing and available to participate in {{site.data.keyword.IBM_notm}}'s study. {{site.data.keyword.IBM_notm}} plans to conduct validation studies with more users, as well as with users of other online media such as email, blogs, and forums.
+-   Survey-based personality estimation is based on self-reporting, which might not always be a true reflection of one's personality: Some users might give noisy answers to such surveys. To reduce the noise, {{site.data.keyword.IBM_notm}} filtered survey responses by including attention-checking questions and by discarding surveys that were completed too quickly.
+-   While the correlation between inferred and survey-based scores is both positive and significant, the results imply that inferred scores might not always correlate with survey-based results. Researchers from outside of {{site.data.keyword.IBM_notm}} have also done experiments to compare how well inferred scores match those obtained from surveys, and none reported a fully consistent match:
+    -   [Golbeck et al. (2011)](/docs/services/personality-insights/references.html#golbeck2011) reported an error rate of 10 to 18 percent when matching inferred scores with survey-based scores.
+    -   [Sumner et al. (2012)](/docs/services/personality-insights/references.html#sumner2012) reported approximately 65-percent accuracy for personality prediction.
+    -   [Mairesse and Walker (2006)](/docs/services/personality-insights/references.html#mairesse2006) reported 60- to 70-percent accuracy for Big Five personality prediction.
+
+In general, it is widely accepted in research literature that self-reported scores from personality surveys do not always fully match scores that are inferred from text. What is more important, however, is that {{site.data.keyword.IBM_notm}} found that characteristics inferred from text can reliably predict a variety of real-world behavior.
