@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-08-13"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2017-08-11"
 Users are applying the {{site.data.keyword.personalityinsightsshort}} service to an increasing number of use cases. They have applied the service to offer personalized product recommendations to customers via in-store kiosks. They have explored and analyzed differences in the personalities of US presidents as inferred from their State of the Union Addresses. And they have integrated the service with another product in the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} portfolio, {{site.data.keyword.watson}} Explorer, to demonstrate how an investment advisor can offer suitable options based on investors' personality portraits. (For more information, see [Use cases](/docs/services/personality-insights/usecases.html).)
 {: shortdesc}
 
-Throughout the development of these and other prospective use cases, {{site.data.keyword.IBM_notm}} has had conversations with banks, healthcare providers, customer experience management companies, and federal agencies. These conversations often generate questions about applicable usage scenarios. Some of these questions and links to their answers are available as [FAQs](/docs/services/personality-insights/faq.html). {{site.data.keyword.IBM_notm}}'s perspective on a number of additional questions follows:
+Throughout the development of these and other prospective use cases, {{site.data.keyword.IBM_notm}} has had conversations with banks, healthcare providers, customer experience management companies, and federal agencies. These conversations often generate questions about applicable usage scenarios. Some of these questions and links to their answers are available as FAQs. {{site.data.keyword.IBM_notm}}'s perspective on a number of additional questions follows:
 
 -   What type of text is best for inferring an individual's personality? Does the text have to be reflective in nature? If so, how reflective and how does one measure reflection? See [What type of text is optimal for inferring personality?](#optimal)
 -   How does one interpret text that is written by one person about another person? Can an author's personality be inferred from the author's fictional works? Can text that is written by multiple individuals be combined to obtain a personality portrait? See [Interpreting results from different types of text](#interpreting).
