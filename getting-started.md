@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-08-16"
 
 ---
 
@@ -36,7 +36,7 @@ If you already know the credentials for your {{site.data.keyword.personalityinsi
     1.  Click **View credentials** under **Actions**.
     1.  Copy the `username` and `password` values.
 
-## Step 2. Send plain text and receive basic JSON output
+## Step 2: Send plain text and receive basic JSON output
 {: #example1}
 
 The first example passes the plain text file `profile.txt` to the `profile` method and implicitly requests the default JSON response.
@@ -190,7 +190,7 @@ The service also reports basic metadata such as the number of words in the input
 ```
 {: codeblock}
 
-## Step 3. Send JSON input and receive detailed JSON output
+## Step 3: Send JSON input and receive detailed JSON output
 {: #example2}
 
 The second example passes the JSON file `profile.json` to the `profile` method, again accepting the default JSON response. The `consumption_preferences` and `raw_scores` query parameters are set to `true` to request a more detailed analysis of the input.
@@ -443,7 +443,7 @@ The service also reports a `score` for the collection of consumption preferences
 ```
 {: codeblock}
 
-## Step 4. Send JSON input and receive detailed CSV output
+## Step 4: Send JSON input and receive detailed CSV output
 {: #example3}
 
 The third example is similar to the second: it passes the same JSON content and requests the same results. But this example specifies `text/csv` for the `Accept` header to request the response in comma-separated values (CSV) format, using the `--output` option of the cURL command to direct the results to a file named `profile.csv`. The example sets the `csv_headers` query parameter to `true` to request that column headers be returned with the output.
