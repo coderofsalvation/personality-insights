@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-13"
+lastupdated: "2017-09-10"
 
 ---
 
@@ -30,11 +30,11 @@ lastupdated: "2017-08-13"
 
 1.  <span style="color:#003F69">When would I use the raw score instead of the percentile score?</span>
 
-    -   [Raw scores for personality characteristics](/docs/services/personality-insights/output.html#rawscores) provides insight into this choice. Briefly, you can use a raw score when you want to develop a custom normalization for a specific scenario or when comparison with a sample population is not required. If you need knowledge of how an author's results compare with a sample population, use the percentile scores.
+    -   [Raw scores for personality characteristics](/docs/services/personality-insights/output.html#rawScores) provides insight into this choice. Briefly, you can use a raw score when you want to develop a custom normalization for a specific scenario or when comparison with a sample population is not required. If you need knowledge of how an author's results compare with a sample population, use the percentile scores.
 
 1.  <span style="color:#003F69">How do I normalize a raw score to a percentile score?</span>
 
-    -   [Raw scores for personality characteristics](/docs/services/personality-insights/output.html#rawscores) provides high-level guidance for normalizing a raw score and discusses {{site.data.keyword.IBM_notm}}'s approach to normalization.
+    -   [Raw scores for personality characteristics](/docs/services/personality-insights/output.html#rawScores) provides high-level guidance for normalizing a raw score and discusses {{site.data.keyword.IBM_notm}}'s approach to normalization.
 
 1.  <span style="color:#003F69">How do I interpret the {{site.data.keyword.personalityinsightsshort}} visualization?</span>
 

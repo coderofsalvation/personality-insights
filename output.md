@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-09-10"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2017-08-11"
 When you use the `profile` method to analyze content, you can select the format of the profile that the service sends in response: JSON or Comma-Separated Values (CSV). Both formats return the same requested data based on the parameters of the call.
 {: shortdesc}
 
-The following sections describe the content of a response in both formats. For more information about calling the `profile` method, see [Requesting a profile](/docs/services/personality-insights/input.html). For complete details about the method, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}.
+The following sections describe the content of a response in both formats. All example output is produced by the sample JSON file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> that is used in the [Getting started tutorial](/docs/services/personality-insights/getting-started.html). For more information about calling the `profile` method, see [Requesting a profile](/docs/services/personality-insights/input.html). For complete details about the method, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}.
 
 ## JSON response content
 {: #outputJSON}
@@ -39,7 +39,10 @@ The service returns the results of its analysis as a JSON `Profile` object by de
 -   `consumption_preferences` is an array of `ConsumptionPreferencesCategory` objects that provides results for each category of consumption preferences. The elements of the array provide information for the individual preferences of that category. The service returns the field only if the `consumption_preferences` query parameter of the request is set to `true`.
 -   `warnings` is an array of `Warning` objects that provides messages associated with the input text. The array is empty if the input generated no warnings.
 
-The following example output shows the high-level structure of a `Profile` object. The input content is timestamped JSON, so the response includes the `behavior` field. The request also asks for consumption preferences, so the response includes the `consumption_preferences` field.
+### Example response
+{: #JSONExample}
+
+The following example output shows the high-level structure of a `Profile` object. The output always includes the `personality`, `needs`, and `values` fields. If the input is timestamped JSON, the response includes the `behavior` field. And if the request also asks for consumption preferences, the response includes the `consumption_preferences` field. In this example, the input generates no warnings.
 
 ```javascript
 {
@@ -65,7 +68,7 @@ The following example output shows the high-level structure of a `Profile` objec
 ```
 {: codeblock}
 
-### Personality characteristics output
+## Personality characteristics output
 {: #traitJSON}
 
 The `Profile` object always includes `personality`, `needs`, and `values` fields for all types of input. Each of these fields contains an array of `Trait` objects that describes the personality characteristics for the attributes of that type of characteristic. For Needs and Values characteristics, the array has a single level that describes the characteristics. For Big Five characteristics, a top-level array describes the dimensions, and second-level arrays describe the facets of each dimension.
@@ -73,16 +76,19 @@ The `Profile` object always includes `personality`, `needs`, and `values` fields
 -   `trait_id` (string) is the unique ID of the characteristic to which the results pertain:
     -   `big5_characteristic` for Big Five personality dimensions
     -   `facet_characteristic` for Big Five personality facets
-    -   `need_characateristic` for Needs
-    -   `value_characateristic` for Values
+    -   `need_characteristic` for Needs
+    -   `value_characteristic` for Values
 -   `name` (string) is the user-visible name of the characteristic.
 -   `category` (string) is the category of the characteristic:
     -   `personality` for Big Five personality characteristics
     -   `needs` for Needs
     -   `values` for Values
 -   `percentile` (double) is the normalized percentile score for the characteristic. For more information, see [Percentiles for personality characteristics](#percentiles).
--   `raw_score` (double) is the raw score for the characteristic. The field is returned only if you request raw scores by setting the `raw_scores` query parameter to `true`. For more information, see [Raw scores for personality characteristics](#rawscores).
+-   `raw_score` (double) is the raw score for the characteristic. The field is returned only if you request raw scores by setting the `raw_scores` query parameter to `true`. For more information, see [Raw scores for personality characteristics](#rawScores).
 -   `children` is an array of `Trait` objects that provides more detailed results for the facets of each Big Five dimension as inferred from the input text. The array is returned only for Big Five dimensions.
+
+### Example response
+{: #traitExample}
 
 The following example output shows snippets of the output for the Big Five, Needs, and Values characteristics. As described, only the Big Five characteristics have an array of `children` for their respective facets.
 
@@ -200,8 +206,8 @@ The following example output shows snippets of the output for the Big Five, Need
 ```
 {: codeblock}
 
-### Behavioral output
-{: #hevaviorJSON}
+## Behavioral output
+{: #behaviorJSON}
 
 If the input to the service is JSON that has timestamps for the individual content items, the `Profile` object includes a `behavior` field. The field includes a `Behavior` object for each day of the week and hour of the day.
 
@@ -211,6 +217,9 @@ If the input to the service is JSON that has timestamps for the individual conte
 -   `name` (string) is the user-visible name of the characteristic.
 -   `category` (string) is the category of the characteristic, which is always `behavior`.
 -   `percentage` (double) is the percentage of content items that occurred during that day of the week or hour of the day. For more information, see [Percentages for behavioral characteristics](#percentages).
+
+### Example response
+{: #behaviorExample}
 
 The following output shows snippets of the behavioral output for temporal characteristics.
 
@@ -262,7 +271,7 @@ The following output shows snippets of the behavioral output for temporal charac
 ```
 {: codeblock}
 
-### Consumption preferences output
+## Consumption preferences output
 {: #preferenceJSON}
 
 If the `consumption_preferences` query parameter is set to `true`, the `Profile` object includes a `consumption_preferences` field. The field includes a `ConsumptionPreferencesCategory` object for each category of preferences.
@@ -276,6 +285,9 @@ Each individual preference for a category is described via a `ConsumptionPrefere
 -   `consumption_preference_id` (string) is the unique ID of the consumption preference to which the results pertain in the form `consumption_preferences_preference`.
 -   `name` (string) is the user-visible name of the consumption preference.
 -   `score` (double) is a score that indicates the author's likelihood of preferring the item. For more information, see [Scores for consumption preferences](#scores).
+
+### Example response
+{: #preferenceExample}
 
 The following output shows snippets of the output for consumption preferences.
 
@@ -702,7 +714,7 @@ The following columns are present only if you request consumption preferences by
   </tr>
   <tr>
     <td>
-      Volunteering preferences<br/>category scores<br/>(1 columns)
+      Volunteering preferences<br/>category scores<br/>(1 column)
     </td>
     <td>
       consumption_preferences_volunteer
@@ -743,7 +755,7 @@ For example, a percentile of `0.64980796071382` for the personality characterist
 > **Note:** No mathematical relationship exists between the percentiles reported for Big Five dimensions and facets. The service calculates the normalized percentile for each dimension and facet independently based on correlations between survey participants' scores for that dimension or facet and the words they use. Therefore, even though facets provide finer-grained descriptions of dimensions, adding the scores for the six facets of a dimension does not necessarily yield the percentile for that dimension. The same is true of raw scores.
 
 ### Raw scores for personality characteristics
-{: #rawscores}
+{: #rawScores}
 
 If you specify `true` for the `raw_scores` query parameter of the request, the service reports a `raw_score` for each personality characteristic. Raw scores represent the score for the specific characteristic based solely on the author's text and the model for that characteristic, without comparing the results to a sample population. Raw scores can be interpreted as the scores the author would receive from taking a personality test.
 
