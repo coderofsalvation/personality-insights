@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-09-10"
 
 ---
 
@@ -118,22 +118,6 @@ You can use the `Content-Type` and `Accept` header parameters to indicate the fo
   </tr>
 </table>
 
-### Specifying JSON input
-{: #json}
-
-To pass JSON input content, you use the `Content` object. The object includes an array of `ContentItem` objects, each of which contains an element of the content. The only required field of the object is `content`, which provides the text to be analyzed. Other optional fields let you specify the following:
-
--   `id` (string) is a unique ID for the content item.
--   `created` (integer) is a UNIX timestamp that indicates when the content item was created.
--   `updated` (integer) is a UNIX timestamp that indicates when the content item was last updated.
--   `contenttype` (string) indicates the type of the content item, `text/plain` or `text/html`.
--   `language` (string) indicates the language of the content item: `ar` (Arabic), `en` (English), `es` (Spanish), or `ja` (Japanese). See [Specifying request and response languages](#languages).
--   `parentid` (string) is the `id` of the content item's parent item.
--   `reply` (boolean) indicates whether the content item is a reply to another item.
--   `forward` (boolean) indicates whether the content item is a forward or copy of another item.
-
-JSON input is well suited for content from Twitter or other social networks that consist of multiple conversations or posts. Instead of concatenating all of the author's text into a single string, you can use JSON to submit the data as it exists. This has the further advantage of letting the service know which pieces of text are related.
-
 ### Specifying the character set
 {: #charset}
 
@@ -147,27 +131,71 @@ When submitting plain text or HTML content, include the `charset` parameter with
 ```
 Content-Type: text/plain;charset=utf-8
 ```
-{: screen}
+{: codeblock}
 
 By using the `charset` parameter, you can avoid potential problems associated with non-ASCII or non-printable characters. If you pass UTF-8 data without specifying the character set, special characters can result in incorrect results or in HTTP 4*nn* or 5*nn* errors.
 
 ### Using cURL
 {: #charsetCurl}
 
-When using cURL, similar issues can occur if you pass the wrong type of data to the service. To preserve any UTF-8 encoding for the content, always pass the content via the `--data-binary` option of the `curl` command. If you use the `--data` option to pass the content as ASCII, the command can process the input, which can cause problems for data encoded in UTF-8.
+To prevent errors when using cURL, always pass the content via the `--data-binary` option of the `curl` command to preserve any UTF-8 encoding for the content. If you use the `--data` option to pass the content as ASCII, the command can process the input, which can cause problems for data encoded in UTF-8.
 
-For example, the following `curl` command correctly uses the `--data-binary` option to post the content of the specified *filename* as it exists, with no additional processing. The command uses the `charset` parameter with the `Content-Type` header. The command explicitly requests the default JSON response format.
+For example, the following `curl` command correctly uses the `--data-binary` option to post the content of the specified *filename* as it exists, with no additional processing. The command also uses the `charset` parameter with the `Content-Type` header, and it explicitly requests the default JSON response format.
 
 ```bash
 curl -X POST --user {username}:{password}
 --header "Content-Type: text/plain;charset=utf-8"
 --header "Accept: application/json"
---data-binary @<filename>
+--data-binary @{filename}
 "https://gateway.watsonplatform.net/personality-insights/api/v3/profile"
 ```
 {: pre}
 
-For additional examples of calling the service with different request and response formats, see [Getting started](/docs/services/personality-insights/getting-started.html).
+For additional examples of calling the service with different request and response formats, see the [Getting started tutorial](/docs/services/personality-insights/getting-started.html).
+
+## Specifying JSON input
+{: #json}
+
+To pass JSON input, you use the `Content` object. The object includes an array of `ContentItem` objects, each of which contains an element of the content. The only required field of the object is `content`, which provides the text to be analyzed. Other optional fields let you specify the following:
+
+-   `id` (string) is a unique ID for the content item.
+-   `created` (integer) is a UNIX timestamp that indicates when the content item was created.
+-   `updated` (integer) is a UNIX timestamp that indicates when the content item was last updated.
+-   `contenttype` (string) indicates the type of the content item, `text/plain` or `text/html`.
+-   `language` (string) indicates the language of the content item: `ar` (Arabic), `en` (English), `es` (Spanish), or `ja` (Japanese). See [Specifying request and response languages](#languages).
+-   `parentid` (string) is the `id` of the content item's parent item.
+-   `reply` (boolean) indicates whether the content item is a reply to another item.
+-   `forward` (boolean) indicates whether the content item is a forward or copy of another item.
+
+JSON input is well suited for content from Twitter or other social networks that consist of multiple conversations or posts. Instead of concatenating all of the author's text into a single string, you can use JSON to submit the data as it exists. This has the further advantage of letting the service know which pieces of text are related.
+
+### Example JSON input
+{: jsonExample}
+
+Examples in the [Getting started tutorial](/docs/services/personality-insights/getting-started.html) use the sample JSON file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>. The file includes a series of Twitter messages. The following example shows the first few tweets from the file.
+
+```javascript
+{
+  "contentItems": [
+    {
+      "content": "Wow, I liked @TheRock before, now I really SEE how special he is. The daughter story was IT for me. So great! #MasterClass",
+      "contenttype": "text/plain",
+      "created": 1447639154000,
+      "id": "666073008692314113",
+      "language": "en"
+    },
+    {
+      "content": ".@TheRock how did you Know to listen to your gut and Not go back to football? #Masterclass",
+      "contenttype": "text/plain",
+      "created": 1447638226000,
+      "id": "666069114889179136",
+      "language": "en"
+    },
+    . . .
+  ]
+}
+```
+{: codeblock}
 
 ## Specifying request and response languages
 {: #languages}
@@ -185,11 +213,11 @@ You can use the `Content-Language` and `Accept-Language` header parameters to in
     </th>
     <th style="width:30%; text-align:center; vertical-align:bottom">
       Supported by<br/>
-      <code>Content-Langauge</code>
+      <code>Content-Language</code>
     </th>
     <th style="width:30%; text-align:center; vertical-align:bottom">
       Supported by<br/>
-      <code>Accept-Langauge</code>
+      <code>Accept-Language</code>
     </th>
   </tr>
   <tr>
@@ -370,7 +398,7 @@ For information about using translated text, see [Inferring personality from tra
 ## Requesting raw scores
 {: #rawScores}
 
-The service always returns normalized scores for each personality characteristic (Big Five dimension and facet, Need, and Value) as part of its response. The service can also report a `raw_score` for each characteristic if you set the `raw_scores` query parameter to `true`. Raw scores represent the scores for the characteristics based solely on the author's text and the model for that characteristic, without comparing the results to a sample population. For more information about using raw scores, see [Raw scores for personality characteristics](/docs/services/personality-insights/output.html#rawscores).
+The service always returns normalized scores for each personality characteristic (Big Five dimension and facet, Need, and Value) as part of its response. The service can also report a `raw_score` for each characteristic if you set the `raw_scores` query parameter to `true`. Raw scores represent the scores for the characteristics based solely on the author's text and the model for that characteristic, without comparing the results to a sample population. For more information about using raw scores, see [Raw scores for personality characteristics](/docs/services/personality-insights/output.html#rawScores).
 
 ## Requesting consumption preferences
 {: #preferences}
