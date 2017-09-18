@@ -25,8 +25,7 @@ Personality Insights
     {: .navgroup id="howto"}
     input.md
     output.md
-
-    {: .topicgroup}
+    numeric.md
     models.md
     preferences.md
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-09-13"
 
 ---
 
@@ -27,7 +27,7 @@ Grouped into eight high-level categories, the more than 40 consumption preferenc
 
 Businesses have already been using the service's personality models to better understand their customers and to design and develop more personalized and targeted campaigns, products, and services. Consumption preferences make it even easier to take action based on the service's results. Users can now easily obtain a list of preferences that are associated with an individual's dominant characteristics and respond accordingly. For more information about possible applications of the consumption preferences, see [Use cases](/docs/services/personality-insights/usecases.html) and [The service in action](/docs/services/personality-insights/applied.html).
 
-The following sections list and describe the consumption preferences that the service can return. For more information about interpreting the numeric preferences, see [Scores for consumption preferences](/docs/services/personality-insights/output.html#scores). For information about how {{site.data.keyword.IBM_notm}} developed the preferences, see [The science behind the service](/docs/services/personality-insights/science.html).
+The following sections list and describe the consumption preferences that the service can return. For more information about interpreting the numeric preferences, see [Scores for consumption preferences](/docs/services/personality-insights/numeric.html#scores). For information about how {{site.data.keyword.IBM_notm}} developed the preferences, see [The science behind the service](/docs/services/personality-insights/science.html).
 
 ## Shopping preferences
 {: #shopping}

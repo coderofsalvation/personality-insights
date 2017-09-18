@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-09-13"
 
 ---
 
@@ -24,6 +24,15 @@ The following sections document the new features and changes that were included 
 {: shortdesc}
 
 > **Note:** The release notes document the *service version* and *interface version* for all recent updates. You specify the *interface version* with the `version` query parameter to use new features and functionality made available with that update. The service returns both versions with the `X-Service-Api-Version` response header.
+
+## 18 September 2017
+{: #September2017}
+
+**Service version:** `3.3.0`<br/> **Interface version:** `2016-10-20`
+
+The service now supports input content in Korean (`ko`). For information about the average Mean Absolute Error (MAE) and average correlation for Korean input, see [Per-language average MAE and correlation](/docs/services/personality-insights/science.html#precisePerLanguage).
+
+The service's models are unable to produce meaningful percentiles and raw scores for a few personality characteristics of Korean input. For more information about the results for these characteristics, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations).
 
 ## 10 April 2017
 {: #April2017}
@@ -48,31 +57,32 @@ The following sections document the new features and changes that were included 
 
 The {{site.data.keyword.personalityinsightsshort}} service was updated with small enhancements to logging.
 
-## 20 February 2017
+## Older releases
+{: #older}
+
+-   [20 February 2017](#February2017b)
+-   [13 February 2017](#February2017)
+-   [13 January 2017](#January2017)
+-   [15 December 2016](#December2016)
+-   [15 November 2016](#November2016)
+-   [20 October 2016](#October2016b)
+-   [12 October 2016](#October2016a)
+-   [31 August 2016](#August2016)
+-   [14 July 2016](#July2016b)
+-   [1 July 2016](#July2016a)
+-   [7 June 2016](#June2016b)
+-   [1 June 2016](#June2016a)
+-   [17 May 2016](#May2016)
+-   [18 March 2016](#March2016)
+-   [9 July 2015](#July2015)
+-   [23 February 2015](#February2015)
+
+### 20 February 2017
 {: #February2017b}
 
 **Service version:** `3.1.5.1`<br/> **Interface version:** `2016-10-20`
 
 The Personality insights service was updated with small security and defect fixes, and to improve metering of API calls.
-
-## Older releases
-{: #older}
-
-- [13 February 2017](#February2017)
-- [13 January 2017](#January2017)
-- [15 December 2016](#December2016)
-- [15 November 2016](#November2016)
-- [20 October 2016](#October2016b)
-- [12 October 2016](#October2016a)
-- [31 August 2016](#August2016)
-- [14 July 2016](#July2016b)
-- [1 July 2016](#July2016a)
-- [7 June 2016](#June2016b)
-- [1 June 2016](#June2016a)
-- [17 May 2016](#May2016)
-- [18 March 2016](#March2016)
-- [9 July 2015](#July2015)
-- [23 February 2015](#February2015)
 
 ### 13 February 2017
 {: #February2017}
@@ -142,7 +152,7 @@ The Personality insights service was updated with small security and defect fixe
       </tr>
     </table>
 
--   *For Arabic input*, information about the average Mean Absolute Error (MAE) and average correlation is now available in [How precise is the service](/docs/services/personality-insights/science.html#researchPrecise). In addition, the service's models are unable to produce meaningful percentiles and raw scores for a collection of personality characteristics. For more information about the results for these characteristics, see [Limitations for Arabic input](/docs/services/personality-insights/output.html#arabic).
+-   *For Arabic input*, information about the average Mean Absolute Error (MAE) and average correlation is now available in [Per-language average MAE and correlation[(/docs/services/personality-insights/science.html#precisePerLanguage). In addition, the service's models are unable to produce meaningful percentiles and raw scores for a collection of personality characteristics. For more information about the results for these characteristics, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations).
 
 ### 13 January 2017
 {: #January2017}
@@ -366,7 +376,7 @@ You can use any combination of languages for the input and response. In both cas
 {: #July2015}
 
 -   *Language support.* The service now lets you analyze both English and Spanish content. You indicate the language of the input text with the `Content-Language` header of the `profile` method. For information about specifying a language, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages).
--   *Raw scores.* The service now lets you request raw scores and raw sampling errors computed from the input text and the service's models. The values are not normalized or compared with a sample population. Raw scores are useful for customers who want to apply a custom normalization for a specific scenario or who do not require a comparison with a sample population. You request raw scores by setting the `include_raw` query parameter of the `profile` method to `true`. For more information, see [Interpreting the numeric results](/docs/services/personality-insights/output.html#numeric).
+-   *Raw scores.* The service now lets you request raw scores and raw sampling errors computed from the input text and the service's models. The values are not normalized or compared with a sample population. Raw scores are useful for customers who want to apply a custom normalization for a specific scenario or who do not require a comparison with a sample population. You request raw scores by setting the `include_raw` query parameter of the `profile` method to `true`. For more information, see [Interpreting the numeric results](/docs/services/personality-insights/numeric.html).
 -   *Model enhancements.* Based on its latest studies, {{site.data.keyword.IBM_notm}} has further improved some of its approaches to inferring personality characteristics. The changes are transparent to the service's users and do not invalidate any previous results obtained from the service. For more information about the studies and the service's approach to inference, see [How personality characteristics are inferred](/docs/services/personality-insights/science.html#researchInfer) and [How media influence inferred characteristics](/docs/services/personality-insights/science.html#researchMedia).
 
 ### 23 February 2015

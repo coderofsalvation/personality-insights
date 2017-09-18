@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-09-13"
 
 ---
 
@@ -55,7 +55,7 @@ For more information about the consumption preferences, their meaning, and their
 
 You can submit input as plain text, HTML, or JSON content, and the service can return its analysis in JSON or CSV format. For each personality characteristic, the service reports a *percentile*, which is a normalized score that describes the extent to which the author's writing exhibits a characteristic within a sample population. If requested, the service also returns a *raw score*, which is an absolute value that is not normalized for a sample population.
 
-If the input is timestamped, the service provides a summary of the author's writing habits with respect to day of week and time of day. If requested, the service also returns a likelihood score for each of its available consumption preferences. For more information about submitting a request and about the meaning of the different results, see [Requesting a profile](/docs/services/personality-insights/input.html) and [Interpreting the numeric results](/docs/services/personality-insights/output.html#numeric).
+If the input is timestamped, the service provides a summary of the author's writing habits with respect to day of week and time of day. If requested, the service also returns a likelihood score for each of its available consumption preferences. For more information about submitting a request and about the meaning of the different results, see [Requesting a profile](/docs/services/personality-insights/input.html) and [Understanding a profile](/docs/services/personality-insights/output.html).
 
 ## Guidelines for providing sufficient input
 {: #overviewGuidelines}
@@ -128,18 +128,19 @@ The {{site.data.keyword.personalityinsightsshort}} service can infer characteris
       Arabic<br/>
       English<br/>
       Japanese<br/>
+      Korean<br/>
       Spanish
     </td>
     <td style="text-align:center; vertical-align:top">
       Arabic<br/>
       English<br/>
       Japanese<br/>
+      Korean<br/>
       Spanish<br/>
       Brazilian Portuguese<br/>
       French<br/>
       German<br/>
       Italian<br/>
-      Korean<br/>
       Simplified Chinese<br/>
       Traditional Chinese
     </td>
