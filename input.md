@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-10"
+lastupdated: "2017-09-13"
 
 ---
 
@@ -340,7 +340,7 @@ You can use the `Content-Language` and `Accept-Language` header parameters to in
       <code>ko</code>
     </td>
     <td style="text-align:center">
-      No
+      Yes
     </td>
     <td style="text-align:center">
       Yes
@@ -398,14 +398,14 @@ For information about using translated text, see [Inferring personality from tra
 ## Requesting raw scores
 {: #rawScores}
 
-The service always returns normalized scores for each personality characteristic (Big Five dimension and facet, Need, and Value) as part of its response. The service can also report a `raw_score` for each characteristic if you set the `raw_scores` query parameter to `true`. Raw scores represent the scores for the characteristics based solely on the author's text and the model for that characteristic, without comparing the results to a sample population. For more information about using raw scores, see [Raw scores for personality characteristics](/docs/services/personality-insights/output.html#rawScores).
+The service always returns normalized scores for each personality characteristic (Big Five dimension and facet, Need, and Value) as part of its response. The service can also report a `raw_score` for each characteristic if you set the `raw_scores` query parameter to `true`. Raw scores represent the scores for the characteristics based solely on the author's text and the model for that characteristic, without comparing the results to a sample population. For more information about using raw scores, see [Raw scores for personality characteristics](/docs/services/personality-insights/numeric.html#rawScores).
 
 ## Requesting consumption preferences
 {: #preferences}
 
 The service always returns results for the personality models. When you set the `consumption_preferences` query parameter to `true`, the service also returns `scores` for a variety of consumption preferences based on the personality characteristics it infers from the input text. These results indicate the author's tendency to prefer different products, services, and activities. Businesses can use the results to better understand the author's inclinations and to personalize communications and offers for the author.
 
-For more information about the different consumption preferences, see [Consumption preferences](/docs/services/personality-insights/preferences.html). For information about interpreting the numeric results for a preference, see [Scores for consumption preferences](/docs/services/personality-insights/output.html#scores).
+For more information about the different consumption preferences, see [Consumption preferences](/docs/services/personality-insights/preferences.html). For information about interpreting the numeric results for a preference, see [Scores for consumption preferences](/docs/services/personality-insights/numeric.html#scores).
 
 ## Specifying the interface version
 {: #version}

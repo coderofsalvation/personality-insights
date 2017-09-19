@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-09-13"
 
 ---
 
@@ -16,6 +16,7 @@ lastupdated: "2017-08-11"
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+
 
 # The science behind the service
 {: #science}
@@ -43,7 +44,7 @@ For the {{site.data.keyword.personalityinsightsshort}} service, {{site.data.keyw
 ## How personality characteristics are inferred
 {: #researchInfer}
 
-The {{site.data.keyword.personalityinsightsshort}} service infers personality characteristics from textual information based on an open-vocabulary approach. This method reflects the latest trend in the research about personality inference ([Schwartz et al., 2013](/docs/services/personality-insights/references.html#schwartz2013), and [Plank &amp; Hovy, 2015](/docs/services/personality-insights/references.html#plank2015)).
+The {{site.data.keyword.personalityinsightsshort}} service infers personality characteristics from textual information based on an open-vocabulary approach. This method reflects the latest trend in the research about personality inference ([Arnoux et al., 2017](/docs/services/personality-insights/references.html#arnoux2017), [Schwartz et al., 2013](/docs/services/personality-insights/references.html#schwartz2013), and [Plank &amp; Hovy, 2015](/docs/services/personality-insights/references.html#plank2015)).
 
 The service first tokenizes the input text to develop a representation in an *n*-dimensional space. The service uses an open-source word-embedding technique called [GloVe ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://nlp.stanford.edu/projects/glove/){: new_window} to obtain a vector representation for the words in the input text ([Pennington et al., 2014](/docs/services/personality-insights/references.html#pennington2014)). It then feeds this representation to a machine-learning algorithm that infers a personality profile with Big Five, Needs, and Values characteristics. To train the algorithm, the service uses scores obtained from surveys conducted among thousands of users along with data from their Twitter feeds.
 
@@ -61,130 +62,248 @@ Earlier versions of the service used the Linguistic Inquiry and Word Count (LIWC
 -   52-item fundamental Needs developed by {{site.data.keyword.IBM_notm}}
 -   26-item basic Values developed by Schwartz
 
-{{site.data.keyword.IBM_notm}} then compared the scores that were derived by its models with the survey-based scores for the Twitter users. Based on these results, {{site.data.keyword.IBM_notm}} determined the following statistical values between inferred and actual scores for the different categories of personality characteristics:
+{{site.data.keyword.IBM_notm}} then compared the scores that were derived by its models with the survey-based scores for the Twitter users. Based on these results, {{site.data.keyword.IBM_notm}} determined the [average Mean Absolute Error](#preciseMAE) and [average correlation](#preciseCorrelation) between the inferred and actual scores for the different categories of personality characteristics. [Per-language average MAE and correlation](#precisePerLanguage) provides the statistical values for each supported language.
 
--   *Mean Absolute Error (MAE)* is a metric that is used to measure the difference between actual and predicted values. For the {{site.data.keyword.personalityinsightsshort}} service, the actual value, or ground truth, is the personality score that was obtained by administering a personality survey. The predicted value is the score that the service's models predict.
+### Average Mean Absolute Error
+{: #preciseMAE}
 
-    {{site.data.keyword.IBM_notm}} computed the MAE by taking the average of the absolute value of the difference between the actual and predicted scores. {{site.data.keyword.IBM_notm}} used the absolute value because predicting more of less of the actual value is irrelevant; as long as there is a difference, the model is penalized by the magnitude of the error. The lower the MAE, the better the performance of the model. {{site.data.keyword.IBM_notm}} uses a scale of 0 to 1 for MAE, where 0 means no error (the predicted value is the exact same as the actual value), and 1 means maximum error.
--   *Average correlation* is a statistical term that measures the interdependence of two variables. With this metric, {{site.data.keyword.IBM_notm}} measured the correlation between inferred and actual scores for the different categories of personality characteristics. If the predicted score closely tracks the actual results, the correlation score is high; otherwise, the score is low.
+*Mean Absolute Error (MAE)* is a metric that is used to measure the difference between actual and predicted values. For the {{site.data.keyword.personalityinsightsshort}} service, the actual value, or ground truth, is the personality score that was obtained by administering a personality survey. The predicted value is the score that the service's models produce.
 
-    {{site.data.keyword.IBM_notm}} measures correlation on scale of -1 to 1: 1 indicates a perfect direct (increasing) linear relationship, and -1 indicates a perfect inverse (decreasing) linear relationship. In all other cases, the value lies between these extremes. If the variables are independent (they have no relationship at all), the correlation is 0.
+{{site.data.keyword.IBM_notm}} computed the MAE by taking the average of the absolute value of the difference between the actual and predicted scores. {{site.data.keyword.IBM_notm}} used the absolute value because predicting more or less of the actual value is irrelevant; as long as there is a difference, the model is penalized by the magnitude of the error. The lower the MAE, the better the performance of the model. {{site.data.keyword.IBM_notm}} uses a scale of 0 to 1 for MAE, where 0 means no error (the predicted value is the exact same as the actual value), and 1 means maximum error.
 
-    {{site.data.keyword.IBM_notm}} looks for numbers closer to 1 for best predictions. But personalities are difficult to predict based solely on text, and it is rare to see correlations exceed 0.4 for these types of psychological models. In research literature for this domain, correlations above 0.2 are considered acceptable.
+### Average correlation
+{: #preciseCorrelation}
+
+*Average correlation* is a statistical term that measures the interdependence of two variables. With this metric, {{site.data.keyword.IBM_notm}} measured the correlation between inferred and actual scores for the different categories of personality characteristics. If the predicted score closely tracks the actual results, the correlation score is high; otherwise, the score is low.
+
+{{site.data.keyword.IBM_notm}} measures correlation on scale of -1 to 1: 1 indicates a perfect direct (increasing) linear relationship, and -1 indicates a perfect inverse (decreasing) linear relationship. In all other cases, the value lies between these extremes. If the variables are independent (they have no relationship at all), the correlation is 0.
+
+{{site.data.keyword.IBM_notm}} looks for numbers closer to 1 for best predictions. But personalities are difficult to predict based solely on text, and it is rare to see correlations exceed 0.4 for these types of psychological models. In research literature for this domain, correlations above 0.2 are considered acceptable.
+
+### Per-language average MAE and correlation
+{: #precisePerLanguage}
 
 The following table shows per-language average MAE and correlation results for the {{site.data.keyword.personalityinsightsshort}} service. The results place the service at the cutting edge of personality inference from textual data as indicated by [Schwartz et al. (2013)](/docs/services/personality-insights/references.html#schwartz2013) and [Plank and Hovy (2015)](/docs/services/personality-insights/references.html#plank2015).
 
 <table>
   <caption>Table 1. Average MAE and correlation by language</caption>
   <tr>
-    <th> </th>
-    <th style="text-align:center">
-      English
-    </th>
-    <th style="text-align:center">
-      Spanish
-    </th>
-    <th style="text-align:center">
-      Japanese
-    </th>
-    <th style="text-align:center">
-      Arabic
-    </th>
-  </tr>
-  <tr>
     <th style="text-align:left; vertical-align:bottom">
-      Personality characteristics
+      Language
     </th>
-    <th style="text-align:center">
-      Average MAE /<br/>
-      Average correlation
-    </th>
-    <th style="text-align:center">
-      Average MAE /<br/>
-      Average correlation
-    </th>
-    <th style="text-align:center">
-      Average MAE /<br/>
-      Average correlation
-    </th>
-    <th style="text-align:center">
-      Average MAE /<br/>
-      Average correlation
-    </th>
-  </tr>
-  <tr>
-    <td style="text-align:left">
+    <th style="text-align:center; vertical-align:bottom">
       Big Five dimensions
-    </td>
-    <td style="text-align:center">
-      0.12 / 0.33
-    </td>
-    <td style="text-align:center">
-      0.10 / 0.35
-    </td>
-    <td style="text-align:center">
-      0.11 / 0.27
-    </td>
-    <td style="text-align:center">
-      0.09 / 0.17
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:left">
+    </th>
+    <th style="text-align:center; vertical-align:bottom">
       Big Five facets
-    </td>
-    <td style="text-align:center">
-      0.12 / 0.28
-    </td>
-    <td style="text-align:center">
-      0.12 / 0.21
-    </td>
-    <td style="text-align:center">
-      0.12 / 0.22
-    </td>
-    <td style="text-align:center">
-      0.12 / 0.14
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:left">
+    </th>
+    <th style="text-align:center; vertical-align:bottom">
       Needs
-    </td>
-    <td style="text-align:center">
-      0.11 / 0.22
-    </td>
-    <td style="text-align:center">
-      0.12 / 0.24
-    </td>
-    <td style="text-align:center">
-      0.11 / 0.25
-    </td>
-    <td style="text-align:center">
-      0.11 / 0.13
+    </th>
+    <th style="text-align:center; vertical-align:bottom">
+      Values
+    </th>
+  </tr>
+  <tr>
+    <td colspan="5" style="text-align:left">
+      **English**
     </td>
   </tr>
   <tr>
     <td style="text-align:left">
-      Values
+      Average MAE
     </td>
     <td style="text-align:center">
-      0.11 / 0.24
+      0.12
     </td>
     <td style="text-align:center">
-      0.11 / 0.19
+      0.12
     </td>
     <td style="text-align:center">
-      0.11 / 0.19
+      0.11
     </td>
     <td style="text-align:center">
-      0.10 / 0.14
+      0.11
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      Average correlation
+    </td>
+    <td style="text-align:center">
+      0.33
+    </td>
+    <td style="text-align:center">
+      0.28
+    </td>
+    <td style="text-align:center">
+      0.22
+    </td>
+    <td style="text-align:center">
+      0.24
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5" style="text-align:left">
+      **Spanish**
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      Average MAE
+    </td>
+    <td style="text-align:center">
+      0.10
+    </td>
+    <td style="text-align:center">
+      0.12
+    </td>
+    <td style="text-align:center">
+      0.12
+    </td>
+    <td style="text-align:center">
+      0.11
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      Average correlation
+    </td>
+    <td style="text-align:center">
+      0.35
+    </td>
+    <td style="text-align:center">
+      0.21
+    </td>
+    <td style="text-align:center">
+      0.24
+    </td>
+    <td style="text-align:center">
+      0.19
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5" style="text-align:left">
+      **Japanese**
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      Average MAE
+    </td>
+    <td style="text-align:center">
+      0.11
+    </td>
+    <td style="text-align:center">
+      0.12
+    </td>
+    <td style="text-align:center">
+      0.11
+    </td>
+    <td style="text-align:center">
+      0.11
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      Average correlation
+    </td>
+    <td style="text-align:center">
+      0.27
+    </td>
+    <td style="text-align:center">
+      0.22
+    </td>
+    <td style="text-align:center">
+      0.25
+    </td>
+    <td style="text-align:center">
+      0.19
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5" style="text-align:left">
+      **Arabic**
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      Average MAE
+    </td>
+    <td style="text-align:center">
+      0.09
+    </td>
+    <td style="text-align:center">
+      0.12
+    </td>
+    <td style="text-align:center">
+      0.11
+    </td>
+    <td style="text-align:center">
+      0.10
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      Average correlation
+    </td>
+    <td style="text-align:center">
+      0.17
+    </td>
+    <td style="text-align:center">
+      0.14
+    </td>
+    <td style="text-align:center">
+      0.13
+    </td>
+    <td style="text-align:center">
+      0.14
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5" style="text-align:left">
+      **Korean**
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      Average MAE
+    </td>
+    <td style="text-align:center">
+      0.11
+    </td>
+    <td style="text-align:center">
+      0.12
+    </td>
+    <td style="text-align:center">
+      0.11
+    </td>
+    <td style="text-align:center">
+      0.11
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      Average correlation
+    </td>
+    <td style="text-align:center">
+      0.21
+    </td>
+    <td style="text-align:center">
+      0.21
+    </td>
+    <td style="text-align:center">
+      0.13
+    </td>
+    <td style="text-align:center">
+      0.12
     </td>
   </tr>
 </table>
 
-To compute the percentile scores, {{site.data.keyword.IBM_notm}} collected a very large data set of Twitter users (one million users for English, 100,000 users for each of Arabic and Japanese, and 80,000 users for Spanish) and computed their personality portraits. {{site.data.keyword.IBM_notm}} then compared the raw scores of each computed profile to the distribution of profiles from those data sets to determine the percentiles.
+To compute the percentile scores, {{site.data.keyword.IBM_notm}} collected a very large data set of Twitter users (one million users for English, 200,000 users for Korean, 100,000 users for each of Arabic and Japanese, and 80,000 users for Spanish) and computed their personality portraits. {{site.data.keyword.IBM_notm}} then compared the raw scores of each computed profile to the distribution of profiles from those data sets to determine the percentiles.
 
-> **Note:** For Arabic input, the service is unable to produce meaningful percentiles and raw scores for a number of personality characteristics. For more information, see [Limitations for Arabic input](/docs/services/personality-insights/output.html#arabic).
+> **Note:** For Arabic and Korean input, the service is unable to produce meaningful percentiles and raw scores for some personality characteristics. For more information, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations).
 
 ## Understanding consumption preferences
 {: #researchPrefs}
