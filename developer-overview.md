@@ -26,11 +26,11 @@ You can access the capabilities of the {{site.data.keyword.personalityinsightssh
 ## Programming with the service
 {: #programming}
 
-To produce a personality portrait, you send text written by the individual of interest to the service's HTTP `POST profile` method. The service returns output that provides insight into the personality characteristics of the author in terms of personality models and optional consumption preferences. You can request that the service return JSON or CSV output.
+To produce a personality portrait, you send text written by the individual of interest to the service's HTTP `POST /v3/profile` method. The service returns output that provides insight into the personality characteristics of the author in terms of personality models and optional consumption preferences. You can request that the service return JSON or CSV output.
 
 The service reports a percentile and an optional raw score for each characteristic that it analyzes. If the input text contains timestamps, the output includes temporal information about the percentage of the input that was created on each day of the week and hour of the day. Optionally, the service can also report a score for each consumption preference that indicates the author's preferences for different products, services, and activities.
 
-For more information about using the service's `profile` method, see [Requesting a profile](/docs/services/personality-insights/input.html) and [Understanding a profile](/docs/services/personality-insights/output.html). For detailed information about the meaning of a profile, see [Personality models](/docs/services/personality-insights/models.html) and [Consumption preferences](/docs/services/personality-insights/preferences.html).
+For more information about using the service's `/v3/profile` method, see [Requesting a profile](/docs/services/personality-insights/input.html) and [Understanding a profile](/docs/services/personality-insights/output.html). For detailed information about the meaning of a profile, see [Personality models](/docs/services/personality-insights/models.html) and [Consumption preferences](/docs/services/personality-insights/preferences.html).
 
 ### Visualizing a profile
 {: #visualize}

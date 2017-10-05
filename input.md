@@ -20,12 +20,12 @@ lastupdated: "2017-09-13"
 # Requesting a profile
 {: #input}
 
-To analyze content, you use the HTTP `POST` request method to call the `profile` method of the {{site.data.keyword.personalityinsightsshort}} service. You can pass the service a maximum of 20 MB of content to be analyzed via the body of the request, but the service requires far less input to produce an accurate personality profile; for more information, see [Guidelines for providing sufficient input](/docs/services/personality-insights/user-overview.html#overviewGuidelines).
+To analyze content, you use the HTTP `POST` request method to call the `/v3/profile` method of the {{site.data.keyword.personalityinsightsshort}} service. You can pass the service a maximum of 20 MB of content to be analyzed via the body of the request, but the service requires far less input to produce an accurate personality profile; for more information, see [Guidelines for providing sufficient input](/docs/services/personality-insights/user-overview.html#overviewGuidelines).
 {: shortdesc}
 
-The `profile` method includes parameters that let you specify the type of content to be passed to and returned by the service, as well as the language of each type of content. The service always returns a profile that provides insight into the personality characteristics of the author of the input text. You can also request that the service return raw scores not compared with a sample population and consumption preferences that indicate the types of products, services, and activities the author is likely to prefer.
+The `/v3/profile` method includes parameters that let you specify the type of content to be passed to and returned by the service, as well as the language of each type of content. The service always returns a profile that provides insight into the personality characteristics of the author of the input text. You can also request that the service return raw scores not compared with a sample population and consumption preferences that indicate the types of products, services, and activities the author is likely to prefer.
 
-The following sections describe the parameters of the `profile` method. For information about the results of a request, see [Understanding a profile](/docs/services/personality-insights/output.html). For detailed information about the `profile` method, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}.
+The following sections describe the parameters of the `/v3/profile` method. For information about the results of a request, see [Understanding a profile](/docs/services/personality-insights/output.html). For detailed information about the `/v3/profile` method, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}.
 
 ## Specifying request and response formats
 {: #formats}
@@ -410,6 +410,6 @@ For more information about the different consumption preferences, see [Consumpti
 ## Specifying the interface version
 {: #version}
 
-All calls to the `profile` method must include the `version` query parameter to indicate the version of the service's API and response format that you want to use. You specify the version as a date of the form `YYYY-MM-DD`; for example, specify `2016-10-20` for October 20, 2016. The parameter allows the service to update its API and response format for new versions without breaking existing clients.
+All calls to the `/v3/profile` method must include the `version` query parameter to indicate the version of the service's API and response format that you want to use. You specify the version as a date of the form `YYYY-MM-DD`; for example, specify `2016-10-20` for October 20, 2016. The parameter allows the service to update its API and response format for new versions without breaking existing clients.
 
 The date that you specify does not need to match a version of the service exactly; the service uses the version that is no later than the date you provide. If you specify a date that is earlier than the initial release of version 3, the service uses version 3 of the API. If you specify a date that is in the future or otherwise later than the most recent version, the service uses the latest version.
