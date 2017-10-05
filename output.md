@@ -20,10 +20,10 @@ lastupdated: "2017-09-13"
 # Understanding a profile
 {: #output}
 
-When you use the `profile` method to analyze content, you can select the format of the profile that the service sends in response: JSON or Comma-Separated Values (CSV). Both formats return the same requested data based on the parameters of the call.
+When you use the `POST /v3/profile` method to analyze content, you can select the format of the profile that the service sends in response: JSON or Comma-Separated Values (CSV). Both formats return the same requested data based on the parameters of the call.
 {: shortdesc}
 
-The following sections describe the content of a response in both formats. All example output is produced by the sample JSON file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> that is used in the [Getting started tutorial](/docs/services/personality-insights/getting-started.html). For more information about calling the `profile` method, see [Requesting a profile](/docs/services/personality-insights/input.html). For complete details about the method, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}.
+The following sections describe the content of a response in both formats. All example output is produced by the sample JSON file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> that is used in the [Getting started tutorial](/docs/services/personality-insights/getting-started.html). For more information about calling the `/v3/profile` method, see [Requesting a profile](/docs/services/personality-insights/input.html). For complete details about the method, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}.
 
 ## JSON response content
 {: #outputJSON}

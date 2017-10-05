@@ -152,7 +152,7 @@ The Personality insights service was updated with small security and defect fixe
       </tr>
     </table>
 
--   *For Arabic input*, information about the average Mean Absolute Error (MAE) and average correlation is now available in [Per-language average MAE and correlation[(/docs/services/personality-insights/science.html#precisePerLanguage). In addition, the service's models are unable to produce meaningful percentiles and raw scores for a collection of personality characteristics. For more information about the results for these characteristics, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations).
+-   *For Arabic input*, information about the average Mean Absolute Error (MAE) and average correlation is now available in [Per-language average MAE and correlation](/docs/services/personality-insights/science.html#precisePerLanguage). In addition, the service's models are unable to produce meaningful percentiles and raw scores for a collection of personality characteristics. For more information about the results for these characteristics, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations).
 
 ### 13 January 2017
 {: #January2017}
@@ -192,13 +192,13 @@ Version 3 is not backward-compatible with version 2. You are encouraged to migra
 
 This documentation now describes version 3 of the {{site.data.keyword.personalityinsightsshort}} API. The following sections summarize the changes for the new version of the interface:
 
--   For information about calling the `profile` method, see [Requesting a profile](/docs/services/personality-insights/input.html).
--   For information about the `profile` method's response, see [Understanding a profile](/docs/services/personality-insights/output.html).
+-   For information about calling the `/v3/profile` method, see [Requesting a profile](/docs/services/personality-insights/input.html).
+-   For information about the `/v3/profile` method's response, see [Understanding a profile](/docs/services/personality-insights/output.html).
 -   For complete details about the version 3 interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}.
 
-#### Changes to parameters of the <code>profile</code> method
+#### Changes to parameters of the <code>/v3/profile</code> method
 
-Parameters of the `profile` method have changed as follows:
+Parameters of the `/v3/profile` method have changed as follows:
 
 -   The API now offers an optional query parameter named `consumption_preferences`. The parameter accepts a boolean value that indicates whether information inferred about consumption preferences is to be returned with the results. By default, the information is not included in the response. For more information, see [New consumption preferences feature](#cp).
 -   The API now includes a required query parameter named `version`. The parameter accepts a string that identifies the requested version of the API and the response format as a date in the form `YYYY-MM-DD`; for example, specify `2016-10-20` for October 20, 2016. This parameter allows the service to update its API or response format for new versions without breaking existing clients. The initial string for version 3 of the API is `2016-10-20`.
@@ -210,7 +210,7 @@ Parameters of the `profile` method have changed as follows:
 #### New consumption preferences feature
 {: #cp}
 
-The consumption preferences feature provides an indication of the author's tendency to exhibit different consumer tendencies. When you pass the `consumption_preferences` query parameter with a value of `true` to the `profile` method, the service returns the following additional results with the `Profile` object:
+The consumption preferences feature provides an indication of the author's tendency to exhibit different consumer tendencies. When you pass the `consumption_preferences` query parameter with a value of `true` to the `/v3/profile` method, the service returns the following additional results with the `Profile` object:
 
 -   A `consumption_preferences` field that provides an array of `ConsumptionPreferencesCategory` objects.
 -   Each `ConsumptionPreferencesCategory` object includes the following fields:
@@ -230,13 +230,13 @@ For more information about the consumption preferences, see [Consumption prefere
 
 JSON input and output objects and their fields have been simplified and clarified as follows:
 
--   The following fields have been removed from JSON `ContentItem` objects that you can pass to the `profile` method with a request:
+-   The following fields have been removed from JSON `ContentItem` objects that you can pass to the `/v3/profile` method with a request:
     -   `userid`
     -   `sourceid`
     -   `charset` (previously deprecated)
 
     You pass these objects in the body of a JSON request as elements of the `contentItems` array of the `Content` object.
--   The following fields of the JSON `Profile` object that is returned by the `profile` method have changed:
+-   The following fields of the JSON `Profile` object that is returned by the `/v3/profile` method have changed:
     -   The following fields have been removed:
         -   `id`
         -   `source`
@@ -248,10 +248,10 @@ JSON input and output objects and their fields have been simplified and clarifie
 
     This change effectively moves the results one level higher in the JSON `Profile` object, eliminating a level of recursion.
     -   The name of the `processed_lang` field is now `processed_language`.
--   The following fields of JSON `Trait` objects that are returned by the `profile` method have been renamed:
+-   The following fields of JSON `Trait` objects that are returned by the `/v3/profile` method have been renamed:
     -   The name of the `id` field of the JSON `Trait` object is now `trait_id`.
     -   The name of the `percentage` field of the JSON `Trait` object is now `percentile`.
--   The following fields of JSON `Trait` objects that are returned by the `profile` method have been removed:
+-   The following fields of JSON `Trait` objects that are returned by the `/v3/profile` method have been removed:
     -   `sampling_error`
     -   `raw_sampling_error`
 
@@ -263,7 +263,7 @@ JSON input and output objects and their fields have been simplified and clarifie
     -   `percentage`
 
     In addition, behavioral information is no longer returned as a tree of values. The output consists of a single array that lists all temporal characteristics (day of week and time of day).
--   The name of the `id` field of the JSON `Warnings` object that can be returned by the `profile` method is now `warnings_id`.
+-   The name of the `id` field of the JSON `Warnings` object that can be returned by the `/v3/profile` method is now `warnings_id`.
 
 #### Changes to JSON IDs
 {: #ids}
@@ -296,7 +296,7 @@ The optional column headers that the service can return for CSV output have chan
 
 #### Removal of the <code>visualize</code> method
 
-Version 2 of the service's API included a deprecated `visualize` method that was used in an earlier release to visualize the results of a call to the `profile` method. The `visualize` method has been removed from the service's API. The service continues to provide a collection of JavaScript files that enable graphic visualization of a profile; for more information, see [Visualizing a profile](/docs/services/personality-insights/developer-overview.html#visualize).
+Version 2 of the service's API included a deprecated `visualize` method that was used in an earlier release to visualize the results of a call to the `/v3/profile` method. The `visualize` method has been removed from the service's API. The service continues to provide a collection of JavaScript files that enable graphic visualization of a profile; for more information, see [Visualizing a profile](/docs/services/personality-insights/developer-overview.html#visualize).
 
 ### 12 October 2016
 {: #October2016a}
@@ -336,7 +336,7 @@ For the new model used for English input, the service reports the average Mean A
     -   `zh-tw` (Traditional Chinese)
 
     For more information, see [Language support](/docs/services/personality-insights/user-overview.html#overviewLanguage).
--   The `profile` method can now return the following HTTP status codes:
+-   The `/v2/profile` method can now return the following HTTP status codes:
     -   429 *Too Many Requests*: The service is currently processing too many requests for the content language. Wait a short time and try the request again. If you are submitting many requests for the language, consider throttling the rate at which you submit requests.
     -   504 *Gateway Timeout*: The request timed out or took too long to process. Wait a short time and try the request again. If the input contained a large number of words (for example, more than 20,000), consider reducing the number of words while maintaining the guidelines for meaningful input.
 
@@ -375,8 +375,8 @@ You can use any combination of languages for the input and response. In both cas
 ### 9 July 2015
 {: #July2015}
 
--   *Language support.* The service now lets you analyze both English and Spanish content. You indicate the language of the input text with the `Content-Language` header of the `profile` method. For information about specifying a language, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages).
--   *Raw scores.* The service now lets you request raw scores and raw sampling errors computed from the input text and the service's models. The values are not normalized or compared with a sample population. Raw scores are useful for customers who want to apply a custom normalization for a specific scenario or who do not require a comparison with a sample population. You request raw scores by setting the `include_raw` query parameter of the `profile` method to `true`. For more information, see [Interpreting the numeric results](/docs/services/personality-insights/numeric.html).
+-   *Language support.* The service now lets you analyze both English and Spanish content. You indicate the language of the input text with the `Content-Language` header of the `/v2/profile` method. For information about specifying a language, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages).
+-   *Raw scores.* The service now lets you request raw scores and raw sampling errors computed from the input text and the service's models. The values are not normalized or compared with a sample population. Raw scores are useful for customers who want to apply a custom normalization for a specific scenario or who do not require a comparison with a sample population. You request raw scores by setting the `include_raw` query parameter of the `/v2/profile` method to `true`. For more information, see [Interpreting the numeric results](/docs/services/personality-insights/numeric.html).
 -   *Model enhancements.* Based on its latest studies, {{site.data.keyword.IBM_notm}} has further improved some of its approaches to inferring personality characteristics. The changes are transparent to the service's users and do not invalidate any previous results obtained from the service. For more information about the studies and the service's approach to inference, see [How personality characteristics are inferred](/docs/services/personality-insights/science.html#researchInfer) and [How media influence inferred characteristics](/docs/services/personality-insights/science.html#researchMedia).
 
 ### 23 February 2015
@@ -386,8 +386,8 @@ As of February 23, 2015, the {{site.data.keyword.personalityinsightsshort}} serv
 
 -   The {{site.data.keyword.personalityinsightsshort}} service is backward-compatible with the User Modeling service. The differences that are described in this section provide more flexibility and improved results without affecting current applications.
 -   The parameters with which you create the service in {{site.data.keyword.Bluemix_short}} have changed. You now use a service name of `personality_insights` instead of `user_modeling` and a service plan of `"IBM Watson Personality Insights Monthly Plan"` instead of `user_modeling_free_plan`.
--   The `profile` method accepts two new input formats. The `Content-Type` header now accepts the input formats plain text (`text/plain`), which is the default, and HTML (`text/html`), in addition to JSON (`application/json`).
--   The `profile` method now returns a new output format. The `Accept` header now accepts the output format CSV (`text/csv`) in addition to JSON (`application/json`), which is the default.
--   The `profile` method now includes a new output element, `sampling_error`, for each characteristic for which it reports a percentage value. The sampling error is returned as a double value that indicates the service's level of confidence in the author's percentile based on the input text.
+-   The `/v2/profile` method accepts two new input formats. The `Content-Type` header now accepts the input formats plain text (`text/plain`), which is the default, and HTML (`text/html`), in addition to JSON (`application/json`).
+-   The `/v2/profile` method now returns a new output format. The `Accept` header now accepts the output format CSV (`text/csv`) in addition to JSON (`application/json`), which is the default.
+-   The `/v2/profile` method now includes a new output element, `sampling_error`, for each characteristic for which it reports a percentage value. The sampling error is returned as a double value that indicates the service's level of confidence in the author's percentile based on the input text.
 -   The Needs model employs improved tokenization and processing to better normalize the distribution of values for its characteristics. You are advised to recompute any results that were generated by the User Modeling API.
 -   The `visualize` method is now deprecated and will be removed entirely in a future release. You can use the `personality.js` JavaScript file that is provided with the sample application to achieve similar results from the client. The `textsummary.js` JavaScript file provides additional formatting for the results of the service.

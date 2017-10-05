@@ -19,7 +19,7 @@ lastupdated: "2017-09-10"
 
 # Getting started tutorial
 
-The {{site.data.keyword.personalityinsightsfull}} service derives insights about personality characteristics from social media, enterprise data, or other digital communications. This tutorial can help you get started quickly with the {{site.data.keyword.personalityinsightsshort}} service. The examples show you how to call the service's `POST profile` method with different types of input and how to request different types of output and output formats.
+The {{site.data.keyword.personalityinsightsfull}} service derives insights about personality characteristics from social media, enterprise data, or other digital communications. This tutorial can help you get started quickly with the {{site.data.keyword.personalityinsightsshort}} service. The examples show you how to call the service's `POST /v3/profile` method with different types of input and how to request different types of output and output formats.
 {: shortdesc}
 
 > **Note:** The examples use cURL to call methods of the HTTP interface. You can install the version of cURL for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. You must install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
@@ -39,10 +39,10 @@ If you already know the credentials for your {{site.data.keyword.personalityinsi
 ## Step 2: Send plain text and receive basic JSON output
 {: #example1}
 
-The first example passes the plain text file `profile.txt` to the `profile` method and implicitly requests the default JSON response.
+The first example passes the plain text file `profile.txt` to the `POST /v3/profile` method and implicitly requests the default JSON response.
 
 1.  Download the sample file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.txt" download="profile.txt">profile.txt <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>.
-1.  Issue the following command to send the file to the `profile` method and request the default JSON response. The `charset` parameter included with the `Content-Type` header specifies the character encoding of the input text.
+1.  Issue the following command to send the file to the `/v3/profile` method and request the default JSON response. The `charset` parameter included with the `Content-Type` header specifies the character encoding of the input text.
     -   Replace `{username}` and `{password}` with your service credentials from the previous step.
     -   Modify `{path_to_file}` to specify the location of the `profile.txt` file.
 
@@ -61,10 +61,10 @@ The profile includes information about the Big Five personality, Needs, and Valu
 ## Step 3: Send JSON input and receive detailed JSON output
 {: #example2}
 
-The second example passes the JSON file `profile.json` to the `profile` method, again accepting the default JSON response. The `consumption_preferences` and `raw_scores` query parameters are set to `true` to request a more detailed analysis of the input.
+The second example passes the JSON file `profile.json` to the `/v3/profile` method, again accepting the default JSON response. The `consumption_preferences` and `raw_scores` query parameters are set to `true` to request a more detailed analysis of the input.
 
 1.  Download the sample file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>, which contains a collection of Twitter messages.
-1.  Issue the following command to send the file to the `profile` method. The example specifies `application/json` for the `Content-Type` header; the `charset` parameter is not needed for JSON input. The example sets the `consumption_preferences` and `raw_scores` query parameters to `true`.
+1.  Issue the following command to send the file to the `/v3/profile` method. The example specifies `application/json` for the `Content-Type` header; the `charset` parameter is not needed for JSON input. The example sets the `consumption_preferences` and `raw_scores` query parameters to `true`.
 
     ```bash
     curl -X POST --user {username}:{password} \
@@ -85,7 +85,7 @@ The service also reports scores for the collection of consumption preferences. T
 
 The third example is similar to the second: it passes the same JSON content and requests the same results. But this example specifies `text/csv` for the `Accept` header to request the response in comma-separated values (CSV) format, using the `--output` option of the cURL command to direct the results to a file named `profile.csv`. The example sets the `csv_headers` query parameter to `true` to request that column headers be returned with the output.
 
-1.  Issue the following command to send the JSON file to the `profile` method.
+1.  Issue the following command to send the JSON file to the `/v3/profile` method.
 
     ```bash
     curl -X POST --user {username}:{password} \
