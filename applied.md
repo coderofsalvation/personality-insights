@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-10-12"
 
 ---
 
@@ -21,12 +21,120 @@ lastupdated: "2017-08-11"
 {: #applied}
 
 {{site.data.keyword.IBM_notm}} and other researchers have validated many hypotheses that are related to real-world applications of personality characteristics. These studies have helped to drive development of the {{site.data.keyword.personalityinsightsshort}} service. Their findings provide insight into some of the many ways that you can apply the service to your business and communications goals. For more information about the research that underlies the {{site.data.keyword.personalityinsightsshort}} service, see [The science behind the service](/docs/services/personality-insights/science.html).
+{: shortdesc}
 
 ## Studies by IBM researchers
 {: #appliedIBM}
-{: shortdesc}
 
-The following studies conducted by {{site.data.keyword.IBM_notm}} researchers indicate that applying the results of the {{site.data.keyword.personalityinsightsshort}} service can yield tangible results in a number of domains.
+The following studies conducted by {{site.data.keyword.IBM_notm}} researchers indicate that applying the results of the service can yield tangible results in multiple domains. The studies contributed directly to the development of the service. The table includes links to sections with more information about each study.
+
+<table>
+  <caption>Table 3. Studies by IBM</caption>
+  <tr>
+    <th style="text-align:left; width:25%">Study</th>
+    <th style="text-align:center; width:25%">Subjects</th>
+    <th style="text-align:left; width:50%">Effect of personality
+    characteristics</th>
+  </tr>
+  <tr>
+    <td>
+      <a href="#IBMrespond"><strong>Responding to tweets</strong></a>
+      <br/>(information collection)
+    </td>
+    <td style="text-align:center">2000 Twitter users</td>
+    <td>
+      <strong>More likely to respond:</strong> Score high on Big Five dimensions
+      and facets excitement-seeking, friendliness, activity level,
+      gregariousness, trust, morality, extraversion, and
+      agreeableness<br/><br/>
+      <strong>Less likely to respond:</strong> Score high on Big Five facets
+      cautiousness and anxiety
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="#IBMretweet"><strong>Re-tweeting</strong></a>
+      <br/>(information spreading)
+    </td>
+    <td style="text-align:center">3500 Twitter users</td>
+    <td>
+      <strong>More likely to re-tweet:</strong> Score high on Big Five
+      dimensions and facets modesty, openness, and friendliness
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="#IBMtarget"><strong>Targeted advertising</strong></a>
+      <br/>(unsolicited advertising)
+    </td>
+    <td style="text-align:center">More than 6000 Twitter users
+    </td>
+    <td>
+      <strong>Respond more favorably:</strong> Score high on Big Five dimension
+      openness, and score low on Big Five dimension emotional range
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="#IBMcampaign"><strong>Marketing campaigns</strong></a>
+      <br/>(coupon redemption)
+    </td>
+    <td style="text-align:center">Thousands of retail customers</td>
+    <td>
+      <strong>More likely to respond:</strong> Score high on Big Five facets
+      orderliness, self-discipline, and cautiousness, and score low
+      on Big Five facet immoderation
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="#IBMbrand"><strong>Brand preference</strong></a>
+      <br/>(brand affinity)
+    </td>
+    <td style="text-align:center">600 Twitter users</td>
+    <td>
+      <strong>Predictors of brand preference:</strong> Big Five dimensions
+      and facets conscientiousness, conservation, self-enhancement,
+      and agreeableness; Needs love and ideal; and Value hedonism
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="#IBMmember"><strong>Member satisfaction</strong></a>
+      <br/>(community fulfillment)
+    </td>
+    <td style="text-align:center">More than 3000 community members</td>
+    <td>
+      <strong>Predictors of member satisfaction:</strong> Characteristics such
+      as anger, anxiety, work, leisure, inhibition, assent, and use of the
+      first-person pronoun
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="#IBMreading"><strong>Reading preference</strong></a>
+      <br/>(content interest)
+    </td>
+    <td style="text-align:center">More than 200 participants</td>
+    <td>
+      <strong>Interest in environmental articles:</strong> Score high on Value
+      self-transcendence<br/><br/>
+      <strong>Interest in work-related articles:</strong> Score high on Value
+      self-enhancement
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="#IBMpreferences"><strong>Predicting consumption
+      preferences</strong></a><br/>(consumer purchasing)
+    </td>
+    <td style="text-align:center">Hundreds of thousands of data records</td>
+    <td>
+      <strong>Predicting consumer preferences:</strong> Demographic data and
+      personality characteristics
+    </td>
+  </tr>
+</table>
 
 ### Responding to tweets
 {: #IBMrespond}

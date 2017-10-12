@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-10"
+lastupdated: "2017-10-12"
 
 ---
 
@@ -36,7 +36,7 @@ If you already know the credentials for your {{site.data.keyword.personalityinsi
     1.  Click **View credentials** under **Actions**.
     1.  Copy the `username` and `password` values.
 
-## Step 2: Send plain text and receive basic JSON output
+## Step 2: Send plain text input and receive basic JSON output
 {: #example1}
 
 The first example passes the plain text file `profile.txt` to the `POST /v3/profile` method and implicitly requests the default JSON response.
@@ -50,18 +50,18 @@ The first example passes the plain text file `profile.txt` to the `POST /v3/prof
     curl -X POST --user {username}:{password} \
     --header "Content-Type: text/plain;charset=utf-8" \
     --data-binary "@{path_to_file}profile.txt" \
-    "https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2016-10-20"
+    "https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13"
     ```
     {: pre}
 
-The service returns a JSON profile object that includes basic metadata such as the number of words in the input, the language model with which the input was processed, and any warnings associated with the input. For more information, see [JSON response content](/docs/services/personality-insights/output.html#outputJSON).
+The service returns a JSON `Profile` object that includes basic metadata such as the number of words in the input, the language model with which the input was processed, and any warnings associated with the input. For more information, see [The Profile object](/docs/services/personality-insights/output.html#outputJSON).
 
 The profile includes information about the Big Five personality, Needs, and Values characteristics for the author as inferred from the input text. The service reports a `percentile`, or normalized score, for each characteristic. The service computes the percentile by comparing the author's results with the results from a sample population. For more information, see [Personality characteristics output](/docs/services/personality-insights/output.html#traitJSON).
 
 ## Step 3: Send JSON input and receive detailed JSON output
 {: #example2}
 
-The second example passes the JSON file `profile.json` to the `/v3/profile` method, again accepting the default JSON response. The `consumption_preferences` and `raw_scores` query parameters are set to `true` to request a more detailed analysis of the input.
+The second example passes the JSON file `profile.json` to the `/v3/profile` method, again accepting the default JSON response. The example requests consumption preferences and raw scores for a more detailed analysis of the input.
 
 1.  Download the sample file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>, which contains a collection of Twitter messages.
 1.  Issue the following command to send the file to the `/v3/profile` method. The example specifies `application/json` for the `Content-Type` header; the `charset` parameter is not needed for JSON input. The example sets the `consumption_preferences` and `raw_scores` query parameters to `true`.
@@ -70,7 +70,7 @@ The second example passes the JSON file `profile.json` to the `/v3/profile` meth
     curl -X POST --user {username}:{password} \
     --header "Content-Type: application/json" \
     --data-binary "@{path_to_file}profile.json" \
-    "https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2016-10-20&consumption_preferences=true&raw_scores=true"
+    "https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13&consumption_preferences=true&raw_scores=true"
     ```
     {: pre}
 
@@ -78,12 +78,12 @@ The service returns a JSON profile that includes the metadata and characteristic
 
 Because the input content includes timestamps, the service also reports behavioral characteristics. These are temporal characteristics that indicate the `percentage` of the content items that were created on each day of the week and hour of the day. For more information, see [Behavioral output](/docs/services/personality-insights/output.html#behaviorJSON).
 
-The service also reports scores for the collection of consumption preferences. The scores indicate the author's likelihood to prefer different products, services, and activities based on the inferred characteristics. For more information, see [Consumption preferences output](/docs/services/personality-insights/output.html#preferenceJSON).
+The service also reports scores for its collection of consumption preferences. The scores indicate the author's likelihood to prefer different products, services, and activities based on the inferred characteristics. For more information, see [Consumption preferences output](/docs/services/personality-insights/output.html#preferenceJSON).
 
 ## Step 4: Send JSON input and receive detailed CSV output
 {: #example3}
 
-The third example is similar to the second: it passes the same JSON content and requests the same results. But this example specifies `text/csv` for the `Accept` header to request the response in comma-separated values (CSV) format, using the `--output` option of the cURL command to direct the results to a file named `profile.csv`. The example sets the `csv_headers` query parameter to `true` to request that column headers be returned with the output.
+The third example is similar to the second: it passes the same JSON content and requests the same results. But this example specifies `text/csv` for the `Accept` header to request the response in comma-separated values (CSV) format. It uses the `--output` option of the cURL command to direct the results to a file named `profile.csv`. The example sets the `csv_headers` query parameter to `true` to request that column headers be returned with the output.
 
 1.  Issue the following command to send the JSON file to the `/v3/profile` method.
 
@@ -93,15 +93,15 @@ The third example is similar to the second: it passes the same JSON content and 
     --header "Accept: text/csv" \
     --data-binary "@{path_to_file}profile.json" \
     --output profile.csv \
-    "https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2016-10-20&consumption_preferences=true&raw_scores=true&csv_headers=true"
+    "https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13&consumption_preferences=true&raw_scores=true&csv_headers=true"
     ```
     {: pre}
 
-For a detailed description of the CSV response and headers, see [CSV response content](/docs/services/personality-insights/output.html#outputCSV).
+For a detailed description of the CSV response and headers, see [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html).
 
 ## Next steps
 
--   Learn more about [Requesting a profile](/docs/services/personality-insights/input.html) and about [Understanding a profile](/docs/services/personality-insights/output.html).
+-   Learn more about [Requesting a profile](/docs/services/personality-insights/input.html) and about [Understanding a JSON profile](/docs/services/personality-insights/output.html) and [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html).
 -   Learn about the Big Five, Needs, and Values [Personality models](/docs/services/personality-insights/models.html).
 -   Learn more about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}
 -   Interact with the API in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/personality-insights-v3){: new_window}.

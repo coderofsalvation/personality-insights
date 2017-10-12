@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-13"
+lastupdated: "2017-10-12"
 
 ---
 
@@ -30,7 +30,7 @@ The {{site.data.keyword.personalityinsightsshort}} service returns numeric resul
 
 For each request, the service always reports a normalized score as a `percentile` for each Big Five, Values, and Needs personality characteristic. Normalized scores represent a percentile ranking for each characteristic based on qualities inferred from the input text. The service computes normalized scores by comparing the raw score for the author's text with results from a sample population. The service reports each percentile as a double in the range of 0 to 1.
 
-For example, a percentile of `0.64980796071382` for the personality characteristic `big5_extraversion` indicates that the author of the text scored in the 65th percentile for that characteristic. The author's writing exhibits the tendency to an extent that is greater than 64 percent and less than 34 percent of the sample population. The precision of the percentile depends on the number of words that were submitted as input with the request; for more information, see [Guidelines for providing sufficient input](/docs/services/personality-insights/user-overview.html#overviewGuidelines).
+For example, a percentile of `0.64980796071382` for the personality characteristic `big5_extraversion` indicates that the author of the text scored in the 65th percentile for that characteristic. The author's writing exhibits the tendency to an extent that is greater than 64 percent and less than 34 percent of the sample population. The precision of the percentile depends on the number of words that were submitted as input with the request; for more information, see [Providing sufficient input](/docs/services/personality-insights/input.html#sufficient).
 
 > **Note:** No mathematical relationship exists between the percentiles reported for Big Five dimensions and facets. The service calculates the normalized percentile for each dimension and facet independently based on correlations between survey participants' scores for that dimension or facet and the words they use. Therefore, even though facets provide finer-grained descriptions of dimensions, adding the scores for the six facets of a dimension does not necessarily yield the percentile for that dimension. The same is true of raw scores.
 
@@ -68,10 +68,10 @@ For a complete list of all preferences by category and the range of their result
 ## Limitations for Arabic and Korean input
 {: #limitations}
 
-For Arabic and Korean input, the service's models are unable to produce meaningful results for a subset of personality characteristics. For the following characteristics, normalized percentile scores are always `0.5` and raw scores are always the mean of the original distribution. Do *not* rely on the results for these characteristics as part of the personality profile of the author.
+For Arabic and Korean input, the service's models are unable to produce meaningful results for a subset of personality characteristics. For the following characteristics, normalized percentile scores are always `0.5` and raw scores are always the mean of the original distribution. The `significant` field for each of these characteristics is always `false`. Do *not* rely on the results for these characteristics as part of the personality profile of the author.
 
 <table>
-  <caption>Table 1. Characteristics whose results are not meaningful</caption>
+  <caption>Table 1. Characteristics whose results are not significant</caption>
   <tr>
     <th style="text-align:left; vertical-align:bottom">
       Characteristics

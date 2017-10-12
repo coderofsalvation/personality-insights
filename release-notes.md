@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-13"
+lastupdated: "2017-10-12"
 
 ---
 
@@ -24,6 +24,20 @@ The following sections document the new features and changes that were included 
 {: shortdesc}
 
 > **Note:** The release notes document the *service version* and *interface version* for all recent updates. You specify the *interface version* with the `version` query parameter to use new features and functionality made available with that update. The service returns both versions with the `X-Service-Api-Version` response header.
+
+## 13 October 2017
+{: #October2017}
+
+**Service version:** `3.4.0`<br/> **Interface version:** `2017-10-13`
+
+-   The `Trait` object of a personality profile now includes an additional `significant` field. A separate `Trait` object reports the results for each Big Five dimension, Big Five facet, Need, and Value. The `significant` field of each instance of the object identifies whether the results for that characteristic are meaningful for the input language (`Content-Language`) of the request:
+
+    -   For English, Spanish, and Japanese, the field is always `true` for all personality characteristics.
+    -   For Arabic and Korean, the field is `true` for most personality characteristics but is `false` for those for which the service's models are unable to produce meaningful results. The field is `false` for a constant set of characteristics; for a complete list, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations). Do not rely on the results for any characteristic for which the field is `false`.
+
+    For information about the service's JSON response content, see [Understanding a JSON profile](/docs/services/personality-insights/output.html).
+-   CSV output also now includes additional columns whose headings are named `*_significant`. Each column provides a boolean value to indicate whether a characteristic is meaningful. For information about the service's CSV response content, see [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html).
+-   The interface version specified with the `version` parameter is `2017-10-13` to use this latest version of the interface.
 
 ## 18 September 2017
 {: #September2017}
@@ -47,19 +61,13 @@ The service's models are unable to produce meaningful percentiles and raw scores
 
     `For maximum accuracy while also optimizing processing time, only the first 250KB of input text (excluding markup) was analyzed. Accuracy levels off at approximately 3K words so this did not affect the accuracy of the profile.`
 
-    For more information, see [Guidelines for providing sufficient input](/docs/services/personality-insights/user-overview.html#overviewGuidelines).
+    For more information, see [Providing sufficient input](/docs/services/personality-insights/input.html#sufficient).
 -   The service was updated with small security fixes.
-
-## 1 March 2017
-{: #March2017}
-
-**Service version:** `3.1.6`<br/> **Interface version:** `2016-10-20`
-
-The {{site.data.keyword.personalityinsightsshort}} service was updated with small enhancements to logging.
 
 ## Older releases
 {: #older}
 
+-   [1 March 2017](#March2017)
 -   [20 February 2017](#February2017b)
 -   [13 February 2017](#February2017)
 -   [13 January 2017](#January2017)
@@ -76,6 +84,13 @@ The {{site.data.keyword.personalityinsightsshort}} service was updated with smal
 -   [18 March 2016](#March2016)
 -   [9 July 2015](#July2015)
 -   [23 February 2015](#February2015)
+
+### 1 March 2017
+{: #March2017}
+
+**Service version:** `3.1.6`<br/> **Interface version:** `2016-10-20`
+
+The {{site.data.keyword.personalityinsightsshort}} service was updated with small enhancements to logging.
 
 ### 20 February 2017
 {: #February2017b}
@@ -186,14 +201,14 @@ The {{site.data.keyword.personalityinsightsshort}} service and its API were upda
 
 Version 3 is not backward-compatible with version 2. You are encouraged to migrate to version 3 to take advantage of the new features and changes. Migration to version 3 consists only of updating and redeploying your applications to use the changes described in these release notes for the new version. You do not need to create a new instance of the service in {{site.data.keyword.Bluemix_notm}}; you need only call the `v3` API.
 
-> **Note:** Version 2 of the {{site.data.keyword.personalityinsightsshort}} API will be removed from service in the near future. You are strongly encouraged to migrate to version 3 as soon as possible. For now, you can access reference documentation for version 2 at [API reference for v2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v2/){: new_window} {: new_window}; you can also access the interactive tool for testing calls to version 2 and viewing live responses from the service at [API explorer for v2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/personality-insights-v2){: new_window}.
+> **Note:** Version 2 of the {{site.data.keyword.personalityinsightsshort}} API will be removed from service in the near future. You are strongly encouraged to migrate to version 3 as soon as possible. For now, you can access reference documentation for version 2 at [API reference for v2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v2/){: new_window}; you can also access the interactive tool for testing calls to version 2 and viewing live responses from the service at [API explorer for v2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/personality-insights-v2){: new_window}.
 
 #### More information about version 3
 
 This documentation now describes version 3 of the {{site.data.keyword.personalityinsightsshort}} API. The following sections summarize the changes for the new version of the interface:
 
 -   For information about calling the `/v3/profile` method, see [Requesting a profile](/docs/services/personality-insights/input.html).
--   For information about the `/v3/profile` method's response, see [Understanding a profile](/docs/services/personality-insights/output.html).
+-   For information about the `/v3/profile` method's response, see [Understanding a JSON profile](/docs/services/personality-insights/output.html) and [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html).
 -   For complete details about the version 3 interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}.
 
 #### Changes to parameters of the <code>/v3/profile</code> method
@@ -255,7 +270,7 @@ JSON input and output objects and their fields have been simplified and clarifie
     -   `sampling_error`
     -   `raw_sampling_error`
 
-    The service now reports an average Mean Absolute Error (MAE) that qualifies the precision of its results. For more information about the MAE for different amounts of input text, see [Guidelines for providing sufficient input](/docs/services/personality-insights/user-overview.html#overviewGuidelines).
+    The service now reports an average Mean Absolute Error (MAE) that qualifies the precision of its results. For more information about the MAE for different amounts of input text, see [Providing sufficient input](/docs/services/personality-insights/input.html#sufficient).
 -   JSON `Trait` objects are still returned for the `personality`, `needs`, and `values` fields of the `Profile` object. But the `behavior` field returns an array of JSON objects named `Behavior` that have the following fields:
     -   `trait_id`
     -   `name`
@@ -308,7 +323,7 @@ For Spanish input text, the {{site.data.keyword.personalityinsightsshort}} servi
 
 The {{site.data.keyword.personalityinsightsshort}} service now uses an open-source word-embedding technique called *GloVe* to develop a personality profile; for more information, see [How personality characteristics are inferred](/docs/services/personality-insights/science.html#researchInfer). At this time, the service uses the new approach only for English input text. For other languages, the service continues to use the Linguistic Inquiry and Word Count (LIWC) psycholinguistic dictionary. Future versions of the service will use the open-vocabulary approach for all languages.
 
-For the new model used for English input, the service reports the average Mean Absolute Error (MAE) of the results for its trained model. For information about how the MAE changes with different amounts of input text, see [Guidelines for providing sufficient input](/docs/services/personality-insights/user-overview.html#overviewGuidelines). Future versions of the service will report the MAE for non-English models and will recommend that you use it, as opposed to sampling errors, to determine how the precision of the service changes based on the amount of input text that you provide.
+For the new model used for English input, the service reports the average Mean Absolute Error (MAE) of the results for its trained model. For information about how the MAE changes with different amounts of input text, see [Providing sufficient input](/docs/services/personality-insights/input.html#sufficient). Future versions of the service will report the MAE for non-English models and will recommend that you use it, as opposed to sampling errors, to determine how the precision of the service changes based on the amount of input text that you provide.
 
 ### 14 July 2016
 {: #July2016b}
@@ -335,7 +350,7 @@ For the new model used for English input, the service reports the average Mean A
     -   `zh-cn` (Simplified Chinese)
     -   `zh-tw` (Traditional Chinese)
 
-    For more information, see [Language support](/docs/services/personality-insights/user-overview.html#overviewLanguage).
+    For more information, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages).
 -   The `/v2/profile` method can now return the following HTTP status codes:
     -   429 *Too Many Requests*: The service is currently processing too many requests for the content language. Wait a short time and try the request again. If you are submitting many requests for the language, consider throttling the rate at which you submit requests.
     -   504 *Gateway Timeout*: The request timed out or took too long to process. Wait a short time and try the request again. If the input contained a large number of words (for example, more than 20,000), consider reducing the number of words while maintaining the guidelines for meaningful input.
@@ -346,7 +361,7 @@ For the new model used for English input, the service reports the average Mean A
 ### 7 June 2016
 {: #June2016b}
 
--   The service now supports Cross-Origin Resource Sharing (CORS) to allow browser-based clients to call the service directly. For more information, see [Visualizing a profile](/docs/services/personality-insights/developer-overview.html#visualize).
+-   The service now supports Cross-Origin Resource Sharing (CORS) to allow browser-based clients to call the service directly. For more information, see [CORS support](/docs/services/personality-insights/developer-overview.html#CORS).
 -   The service's performance when processing Japanese text has improved significantly.
 -   The update includes additional defect fixes and internal improvements.
 
@@ -368,7 +383,7 @@ The service now supports the following languages:
 -   Four languages for its input text: Arabic (`ar`), English (`en`), Spanish (`es`), and Japanese (`ja`). To specify the language, use the HTTP `Content-Language` header for plain text and HTML input or the `language` property of the `ContentItem` object for JSON input.
 -   The same four languages for its response. To specify the language of the response, use the `Accept-Language` header.
 
-You can use any combination of languages for the input and response. In both cases, if you do not indicate a language, the service defaults to English. For more information, see [Language support](/docs/services/personality-insights/user-overview.html#overviewLanguage). Also refer to the blog post [Arabic and Japanese support is now available for {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.personalityinsightsshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/watson/2016/04/arabic-japanese-support-now-available-ibm-watson-personality-insights/){: new_window} for additional information.
+You can use any combination of languages for the input and response. In both cases, if you do not indicate a language, the service defaults to English. For more information, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages). Also refer to the blog post [Arabic and Japanese support is now available for {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.personalityinsightsshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/watson/2016/04/arabic-japanese-support-now-available-ibm-watson-personality-insights/){: new_window} for additional information.
 
 > **Note:** Because it requires significantly more computing cycles to analyze than other languages, Arabic content takes markedly longer to process. Although the service supports the same 20 MB restriction on the amount of input text for all languages, the practical limit for Arabic content may be lower to avoid timeouts. Japanese content also takes longer to process, but the delays are of less meaningful significance than they are for Arabic.
 
@@ -377,7 +392,7 @@ You can use any combination of languages for the input and response. In both cas
 
 -   *Language support.* The service now lets you analyze both English and Spanish content. You indicate the language of the input text with the `Content-Language` header of the `/v2/profile` method. For information about specifying a language, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages).
 -   *Raw scores.* The service now lets you request raw scores and raw sampling errors computed from the input text and the service's models. The values are not normalized or compared with a sample population. Raw scores are useful for customers who want to apply a custom normalization for a specific scenario or who do not require a comparison with a sample population. You request raw scores by setting the `include_raw` query parameter of the `/v2/profile` method to `true`. For more information, see [Interpreting the numeric results](/docs/services/personality-insights/numeric.html).
--   *Model enhancements.* Based on its latest studies, {{site.data.keyword.IBM_notm}} has further improved some of its approaches to inferring personality characteristics. The changes are transparent to the service's users and do not invalidate any previous results obtained from the service. For more information about the studies and the service's approach to inference, see [How personality characteristics are inferred](/docs/services/personality-insights/science.html#researchInfer) and [How media influence inferred characteristics](/docs/services/personality-insights/science.html#researchMedia).
+-   *Model enhancements.* Based on its latest studies, {{site.data.keyword.IBM_notm}} has further improved some of its approaches to inferring personality characteristics. The changes are transparent to the service's users and do not invalidate any previous results obtained from the service. For more information about the studies and the service's approach to inference, see [How personality characteristics are inferred](/docs/services/personality-insights/science.html#researchInfer).
 
 ### 23 February 2015
 {: #February2015}
