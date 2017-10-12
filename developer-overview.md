@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-09"
+lastupdated: "2017-10-12"
 
 ---
 
@@ -20,22 +20,29 @@ lastupdated: "2017-09-09"
 # Overview for developers
 {: #overviewDevelopers}
 
-You can access the capabilities of the {{site.data.keyword.personalityinsightsshort}} service via an HTTP Representational State Transfer (REST) API. Several Software Development Kits (SDKs) are also available to simplify application development in various languages and environments. The following sections provide an overview of application development with the service.
+You can use the {{site.data.keyword.personalityinsightsshort}} service via an HTTP Representational State Transfer (REST) API. Several Software Development Kits (SDKs) are also available to simplify application development in various languages and environments.
 {: shortdesc}
 
 ## Programming with the service
 {: #programming}
 
-To produce a personality portrait, you send text written by the individual of interest to the service's HTTP `POST /v3/profile` method. The service returns output that provides insight into the personality characteristics of the author in terms of personality models and optional consumption preferences. You can request that the service return JSON or CSV output.
+To produce a personality profile, you send text to the service's HTTP `POST /v3/profile` method. You can submit plain text, HTML, or JSON content. The service can return its analysis in JSON or CSV format
 
-The service reports a percentile and an optional raw score for each characteristic that it analyzes. If the input text contains timestamps, the output includes temporal information about the percentage of the input that was created on each day of the week and hour of the day. Optionally, the service can also report a score for each consumption preference that indicates the author's preferences for different products, services, and activities.
+For each personality characteristic, the service reports a *percentile*, which is a normalized score that describes the extent to which the author's writing exhibits a characteristic within a sample population. If requested, the service also returns a *raw score*, which is an absolute value that is not normalized for a sample population. If the input is timestamped, the service provides a summary of the author's writing habits with respect to day of week and time of day. And if requested, the service also returns a likelihood score for each of its available consumption preferences.
 
-For more information about using the service's `/v3/profile` method, see [Requesting a profile](/docs/services/personality-insights/input.html) and [Understanding a profile](/docs/services/personality-insights/output.html). For detailed information about the meaning of a profile, see [Personality models](/docs/services/personality-insights/models.html) and [Consumption preferences](/docs/services/personality-insights/preferences.html).
+For more information about using the service, see
+
+-   [Requesting a profile](/docs/services/personality-insights/input.html)
+-   [Understanding a JSON profile](/docs/services/personality-insights/output.html)
+-   [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html)
 
 ### Visualizing a profile
 {: #visualize}
 
 The service provides a collection of JavaScript files that enable graphic visualization of a profile. The scripts facilitate use of the service with caching and content distribution networks. They rely on JavaScript, jQuery, HTML, and SVG with the Data-Driven Documents (`D3.js`) library to depict the results. For information about these client-side files, see the sample applications cited in [Using Software Development Kits](#sdks); for more information about `D3.js`, see [d3js.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://d3js.org/){: new_window}.
+
+### CORS support
+{: #CORS}
 
 The service supports Cross-Origin Resource Sharing (CORS) to allow browser-based clients to make asynchronous requests directly to the service from front-end scripts. CORS lets clients request resources from a domain that is outside the domain from which the request originated; it lets web applications work around the same-origin security policy, which otherwise prevents such requests. For more information, see [enable-cors.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://enable-cors.org/){: new_window}.
 
@@ -49,7 +56,7 @@ The service also makes available the following sample applications to help you g
 -   You can access an application that uses the Node.js SDK at the [personality-insights-nodejs repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/personality-insights-nodejs){: new_window}.
 -   You can access an application that uses the Java SDK at the [personality-insights-java repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/personality-insights-java){: new_window}.
 
-All SDKs support authenticating by using either your {{site.data.keyword.Bluemix_short}} service credentials or an authentication token.
+All SDKs support authenticating by using either your service credentials or an authentication token.
 
 ## Learning more about application development
 {: #learn}

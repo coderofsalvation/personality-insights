@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-13"
+lastupdated: "2017-10-12"
 
 ---
 
@@ -20,12 +20,12 @@ lastupdated: "2017-09-13"
 # Requesting a profile
 {: #input}
 
-To analyze content, you use the HTTP `POST` request method to call the `/v3/profile` method of the {{site.data.keyword.personalityinsightsshort}} service. You can pass the service a maximum of 20 MB of content to be analyzed via the body of the request, but the service requires far less input to produce an accurate personality profile; for more information, see [Guidelines for providing sufficient input](/docs/services/personality-insights/user-overview.html#overviewGuidelines).
+To analyze content, you use the HTTP `POST` request method to call the `/v3/profile` method of the {{site.data.keyword.personalityinsightsshort}} service. You can pass the service a maximum of 20 MB of content to be analyzed via the body of the request, but the service requires far less input to produce an accurate personality profile; for more information, see [Providing sufficient input](#sufficient).
 {: shortdesc}
 
-The `/v3/profile` method includes parameters that let you specify the type of content to be passed to and returned by the service, as well as the language of each type of content. The service always returns a profile that provides insight into the personality characteristics of the author of the input text. You can also request that the service return raw scores not compared with a sample population and consumption preferences that indicate the types of products, services, and activities the author is likely to prefer.
+The `/v3/profile` method includes parameters that let you specify the type of content to be passed to and returned by the service, as well as the language of each type of content. The service always returns a profile that provides insight into the personality characteristics of the author of the input text. You can also request that the service return raw scores and consumption preferences.
 
-The following sections describe the parameters of the `/v3/profile` method. For information about the results of a request, see [Understanding a profile](/docs/services/personality-insights/output.html). For detailed information about the `/v3/profile` method, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}.
+The following sections describe the parameters of the `/v3/profile` method. For information about the results of a request, see [Understanding a JSON profile](/docs/services/personality-insights/output.html) and [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html). For detailed information about the `/v3/profile` method, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}.
 
 ## Specifying request and response formats
 {: #formats}
@@ -140,14 +140,14 @@ By using the `charset` parameter, you can avoid potential problems associated wi
 
 To prevent errors when using cURL, always pass the content via the `--data-binary` option of the `curl` command to preserve any UTF-8 encoding for the content. If you use the `--data` option to pass the content as ASCII, the command can process the input, which can cause problems for data encoded in UTF-8.
 
-For example, the following `curl` command correctly uses the `--data-binary` option to post the content of the specified *filename* as it exists, with no additional processing. The command also uses the `charset` parameter with the `Content-Type` header, and it explicitly requests the default JSON response format.
+For example, the following `curl` command correctly uses the `--data-binary` option to post the contents of the specified *filename* with no additional processing. The command also uses the `charset` parameter with the `Content-Type` header, and it explicitly requests the default JSON response format.
 
 ```bash
 curl -X POST --user {username}:{password}
 --header "Content-Type: text/plain;charset=utf-8"
 --header "Accept: application/json"
 --data-binary @{filename}
-"https://gateway.watsonplatform.net/personality-insights/api/v3/profile"
+"https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13"
 ```
 {: pre}
 
@@ -162,7 +162,7 @@ To pass JSON input, you use the `Content` object. The object includes an array o
 -   `created` (integer) is a UNIX timestamp that indicates when the content item was created.
 -   `updated` (integer) is a UNIX timestamp that indicates when the content item was last updated.
 -   `contenttype` (string) indicates the type of the content item, `text/plain` or `text/html`.
--   `language` (string) indicates the language of the content item: `ar` (Arabic), `en` (English), `es` (Spanish), or `ja` (Japanese). See [Specifying request and response languages](#languages).
+-   `language` (string) indicates the language of the content item: `ar` (Arabic), `en` (English), `es` (Spanish), `ja` (Japanese), or `ko` (Korean). See [Specifying request and response languages](#languages).
 -   `parentid` (string) is the `id` of the content item's parent item.
 -   `reply` (boolean) indicates whether the content item is a reply to another item.
 -   `forward` (boolean) indicates whether the content item is a forward or copy of another item.
@@ -264,6 +264,20 @@ You can use the `Content-Language` and `Accept-Language` header parameters to in
   </tr>
   <tr>
     <td style="text-align:left">
+      Korean
+    </td>
+    <td style="text-align:center">
+      <code>ko</code>
+    </td>
+    <td style="text-align:center">
+      Yes
+    </td>
+    <td style="text-align:center">
+      Yes
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
       Spanish
     </td>
     <td style="text-align:center">
@@ -334,20 +348,6 @@ You can use the `Content-Language` and `Accept-Language` header parameters to in
   </tr>
   <tr>
     <td style="text-align:left">
-      Korean
-    </td>
-    <td style="text-align:center">
-      <code>ko</code>
-    </td>
-    <td style="text-align:center">
-      Yes
-    </td>
-    <td style="text-align:center">
-      Yes
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:left">
       Simplified Chinese
     </td>
     <td style="text-align:center">
@@ -388,12 +388,78 @@ Omit the `Content-Type` header to base the language solely on the specification 
 ### Language considerations
 {: #languageNotes}
 
-Consider the following when submitting input in English or Arabic:
+Consider the following when submitting input text:
 
 -   *For English,* results are based on US cultural norms. If you analyze English text from a different culture, you might need to adjust the results accordingly.
--   *For Arabic,* the service can trim the amount of input text for performance reasons. At a certain threshold, the accuracy of the results for Arabic does not improve with more words. If the service trims Arabic input, it returns a warning message to inform you that it reduced the amount of input text that it used for the profile.
+-   *For Arabic,* the service can trim the amount of input text for performance reasons. At a certain threshold, the accuracy of Arabic results does not improve with more words. If the service trims Arabic input, it returns a warning message to inform you that it reduced the amount of input text that it used for the profile.
+-   *For Arabic and Korean,* the service is unable to return meaningful results for a subset of characteristics. For more information, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations).
 
-For information about using translated text, see [Inferring personality from translated text](/docs/services/personality-insights/guidance.html#translation).
+For general information about using translated text, see [Inferring personality from translated text](/docs/services/personality-insights/guidance.html#translation).
+
+## Providing sufficient input
+{: #sufficient}
+
+A meaningful personality profile can be created only where sufficient data of suitable quantity and quality is provided. Because language use varies naturally from document to document and from time to time, a small sample of text might not be representative of an individual's overall language patterns. Moreover, different characteristics and different media converge at somewhat different rates.
+
+Up to a point, more words are likely to produce better results, improving the service's precision by reducing the deviation between the predicted results and the author's actual score. You can send the service up to 20 MB of input content, but accuracy levels off at around 3000 words of input; additional content does not contribute further to the accuracy of the profile. Therefore, the service extracts and uses only the first 250 KB of content, not counting any HTML or JSON markup, from large requests.
+
+This figure does not map to an exact number of words, which varies based on the language and nature of the text. In English, for example, average word length is between four and five characters, so this figure provides around 50,000 words, which is at least 15 times more words than the service needs to produce an accurate profile. By truncating long input, the service improves response time without sacrificing precision. The `word_count` field of the response JSON indicates the number of words that the service actually uses for a request, which can be less than the number of words submitted.
+
+### Guidelines and recommendations
+{: #sufficientGuidelines}
+
+The following table reports two values for different quantities of input text:
+
+-   The *Average Mean Absolute Error (MAE)* across all characteristics based on the number of words provided as input. The smaller the MAE, the closer the service's results are to the scores the author would receive by taking an actual personality test.
+-   The *Average correlation* between inferred and actual scores across all characteristics. The closer the correlation is to 1, the better the predictions, although correlations above 0.2 are considered acceptable and those above 0.4 are rare.
+
+The information is based on English-language data, but the general guidelines apply to all languages. For more information about average MAE and correlation, including language-specific statistics, see [How precise is the service](/docs/services/personality-insights/science.html#researchPrecise).
+
+<table style="width:80%">
+  <caption>Table 3. Average MAE and correlation</caption>
+  <tr>
+    <th style="text-align:center; vertical-align:bottom; width:24%">Number of words</th>
+    <th style="text-align:center; width:38%">Average MAE<br/>across all
+      characteristics</th>
+    <th style="text-align:center; width:38%">Average correlation<br/>across
+      all characteristics</th>
+  </tr>
+  <tr>
+    <td style="text-align:center">3000</td>
+    <td style="text-align:center">12.1%</td>
+    <td style="text-align:center">0.257</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">1200</td>
+    <td style="text-align:center">12.2%</td>
+    <td style="text-align:center">0.237</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">600</td>
+    <td style="text-align:center">12.3%</td>
+    <td style="text-align:center">0.212</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">300</td>
+    <td style="text-align:center">12.5%</td>
+    <td style="text-align:center">0.175</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">100</td>
+    <td style="text-align:center">12.7%</td>
+    <td style="text-align:center">0.095</td>
+  </tr>
+</table>
+
+As the following guidelines indicate, {{site.data.keyword.IBM_notm}} recommends that you provide at least 1200 words, but providing at least 600 words produces acceptable results:
+
+-   3000 words are sufficient to achieve the service's maximum precision.
+-   At least 1200 words result in an MAE that is within two percent of the best MAE that the service can return.
+-   Between 600 and 1200 words result in an MAE that is within three percent of the best MAE that the service can return.
+-   Fewer than 600 words generate a warning, but the service still analyzes the input.
+-   Fewer than 100 words generate an error.
+
+These guidelines can help you accommodate the reliability of the results to your application. For example, for a casual application that recommends movies, you might be comfortable with less precision; for an application that makes more critical recommendations, you likely require more precise results. For more information about how the service infers personality characteristics, see [How personality characteristics are inferred](/docs/services/personality-insights/science.html#researchInfer).
 
 ## Requesting raw scores
 {: #rawScores}
@@ -410,6 +476,6 @@ For more information about the different consumption preferences, see [Consumpti
 ## Specifying the interface version
 {: #version}
 
-All calls to the `/v3/profile` method must include the `version` query parameter to indicate the version of the service's API and response format that you want to use. You specify the version as a date of the form `YYYY-MM-DD`; for example, specify `2016-10-20` for October 20, 2016. The parameter allows the service to update its API and response format for new versions without breaking existing clients.
+All calls to the `/v3/profile` method must include the `version` query parameter to indicate the version of the service's API and response format that you want to use. You specify the version as a date in the format `YYYY-MM-DD`; for example, specify `2017-10-13` for October 13, 2017. The parameter allows the service to update its API and response format for new versions without breaking existing clients.
 
 The date that you specify does not need to match a version of the service exactly; the service uses the version that is no later than the date you provide. If you specify a date that is earlier than the initial release of version 3, the service uses version 3 of the API. If you specify a date that is in the future or otherwise later than the most recent version, the service uses the latest version.

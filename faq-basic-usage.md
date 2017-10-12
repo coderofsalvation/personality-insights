@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-13"
+lastupdated: "2017-10-12"
 
 ---
 
@@ -39,5 +39,5 @@ lastupdated: "2017-08-13"
 
 1.  <span style="color:#003F69">What is the accuracy of the service's estimation of personality characteristics?</span>
 
-    -   [Guidelines for providing sufficient input](/docs/services/personality-insights/user-overview.html#overviewGuidelines) describes the average Mean Absolute Error (MAE) and average correlation for different amounts of input text.
+    -   [Providing sufficient input](/docs/services/personality-insights/input.html#sufficient) describes the average Mean Absolute Error (MAE) and average correlation for different amounts of input text.
     -   [How precise is the service](/docs/services/personality-insights/science.html#researchPrecise) describes measurements of the accuracy of the service's results and the surveys behind those results.

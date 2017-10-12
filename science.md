@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-13"
+lastupdated: "2017-10-12"
 
 ---
 
@@ -16,7 +16,6 @@ lastupdated: "2017-09-13"
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
-
 
 # The science behind the service
 {: #science}
@@ -37,9 +36,9 @@ The following sections expand upon these high-level findings to describe the res
 
 For the {{site.data.keyword.personalityinsightsshort}} service, {{site.data.keyword.IBM_notm}} developed models to infer scores for Big Five dimensions and facets, Needs, and Values from textual information. The models reported by the service are based on research in the fields of psychology, psycholinguistics, and marketing:
 
--   [Big Five](/docs/services/personality-insights/models.html#outputBigFive) is one of the best studied of the personality models developed by psychologists ([Costa &amp; McCrae, 1992](/docs/services/personality-insights/references.html#costa1992), and [Norman, 1963](/docs/services/personality-insights/references.html#norman1963)). It is the most widely used personality model to describe how a person generally engages with the world. The service computes the five dimensions and thirty facets of the model. The dimensions are often referred to by the mnemonic *OCEAN*, where *O* stands for Openness, *C* for Conscientiousness, *E* for Extraversion, *A* for Agreeableness, and *N* for Neuroticism. (Because the term Neuroticism can have a specific clinical meaning, the service presents such insights under the more generally applicable heading Emotional range.)
--   [Needs](/docs/services/personality-insights/models.html#outputNeeds) are an important aspect of human behavior. Research literature suggests that several types of human needs are universal and directly influence consumer behavior ([Kotler &amp; Armstrong, 2013](/docs/services/personality-insights/references.html#kotler2013), and [Ford, 2005](/docs/services/personality-insights/references.html#ford2005)). The twelve categories of needs that are reported by the service are described in marketing literature as desires that a person hopes to fulfill when considering a product or service.
--   [Values](/docs/services/personality-insights/models.html#outputValues) convey what is most important to an individual. They are "desirable, trans-situational goals, varying in importance, that serve as guiding principles in people's lives" ([Schwartz, 2006](/docs/services/personality-insights/references.html#schwartz2006)). Schwartz summarizes five features that are common to all values: (1) values are beliefs; (2) values are a motivational construct; (3) values transcend specific actions and situations; (4) values guide the selection or evaluation of actions, policies, people, and events; and (5) values vary by relative importance and can be ranked accordingly. The service computes the five basic human values proposed by Schwartz and validated in more than twenty countries ([Schwartz, 1992](/docs/services/personality-insights/references.html#schwartz1992)).
+-   [Big Five](/docs/services/personality-insights/models.html) is one of the best studied of the personality models developed by psychologists ([Costa &amp; McCrae, 1992](/docs/services/personality-insights/references.html#costa1992), and [Norman, 1963](/docs/services/personality-insights/references.html#norman1963)). It is the most widely used personality model to describe how a person generally engages with the world. The service computes the five dimensions and thirty facets of the model. The dimensions are often referred to by the mnemonic *OCEAN*, where *O* stands for Openness, *C* for Conscientiousness, *E* for Extraversion, *A* for Agreeableness, and *N* for Neuroticism. (Because the term Neuroticism can have a specific clinical meaning, the service presents such insights under the more generally applicable heading Emotional range.)
+-   [Needs](/docs/services/personality-insights/needs.html) are an important aspect of human behavior. Research literature suggests that several types of human needs are universal and directly influence consumer behavior ([Kotler &amp; Armstrong, 2013](/docs/services/personality-insights/references.html#kotler2013), and [Ford, 2005](/docs/services/personality-insights/references.html#ford2005)). The twelve categories of needs that are reported by the service are described in marketing literature as desires that a person hopes to fulfill when considering a product or service.
+-   [Values](/docs/services/personality-insights/values.html) convey what is most important to an individual. They are "desirable, trans-situational goals, varying in importance, that serve as guiding principles in people's lives" ([Schwartz, 2006](/docs/services/personality-insights/references.html#schwartz2006)). Schwartz summarizes five features that are common to all values: (1) values are beliefs; (2) values are a motivational construct; (3) values transcend specific actions and situations; (4) values guide the selection or evaluation of actions, policies, people, and events; and (5) values vary by relative importance and can be ranked accordingly. The service computes the five basic human values proposed by Schwartz and validated in more than twenty countries ([Schwartz, 1992](/docs/services/personality-insights/references.html#schwartz1992)).
 
 ## How personality characteristics are inferred
 {: #researchInfer}
@@ -50,7 +49,7 @@ The service first tokenizes the input text to develop a representation in an *n*
 
 {{site.data.keyword.IBM_notm}} developed the models for all supported languages in an identical way. The models were developed independent of user demographics such as age, gender, or culture. In the future, {{site.data.keyword.IBM_notm}} might develop models that are specific to different demographic categories.
 
-Earlier versions of the service used the Linguistic Inquiry and Word Count (LIWC) psycholinguistic dictionary with its machine-learning model. However, the open-vocabulary approach just described outperforms the LIWC-based model. For more information about the service's precision for each language in terms of average Mean Absolute Error (MAE) and correlation, see [How precise is the service](#researchPrecise). For guidance about providing input text to achieve the most accurate results, see [Guidelines for providing sufficient input](/docs/services/personality-insights/user-overview.html#overviewGuidelines).
+Earlier versions of the service used the Linguistic Inquiry and Word Count (LIWC) psycholinguistic dictionary with its machine-learning model. However, the open-vocabulary approach just described outperforms the LIWC-based model. For more information about the service's precision for each language in terms of average Mean Absolute Error (MAE) and correlation, see [How precise is the service](#researchPrecise). For guidance about providing input text to achieve the most accurate results, see [Providing sufficient input](/docs/services/personality-insights/input.html#sufficient).
 
 ## How precise is the service
 {: #researchPrecise}

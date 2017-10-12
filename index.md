@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-17"
+lastupdated: "2017-10-12"
 
 ---
 
@@ -20,12 +20,30 @@ lastupdated: "2017-09-17"
 # About
 {: #about}
 
-> **Service update:** *The {{site.data.keyword.personalityinsightsshort}} service was updated on September 18, 2017, to provide support for Korean input content. For more information about this all updates to the service, see the [Release notes](/docs/services/personality-insights/release-notes.html).*
+> **Service update:** *The {{site.data.keyword.personalityinsightsshort}} service was updated on October 13, 2017. Each `Trait` object of a personality profile now includes a `significant` field to indicate whether a personality characteristic is meaningful for the input language. The field identifies those characteristics for which the service's models are unable to generate meaningful results for Arabic and Korean input. The interface version for the release is `2017-10-13`. For more information about this and all updates to the service, see the [Release notes](/docs/services/personality-insights/release-notes.html).*
 
-The {{site.data.keyword.personalityinsightsfull}} service provides an Application Programming Interface (API) that enables applications to derive insights from social media, enterprise data, or other digital communications. The service uses linguistic analytics to infer individuals' intrinsic personality characteristics, including Big Five, Needs, and Values, from digital communications such as email, text messages, tweets, and forum posts.
+The {{site.data.keyword.personalityinsightsfull}} service provides an Application Programming Interface (API) for deriving insights from social media, enterprise data, or other digital communications. The service uses linguistic analytics to infer individuals' intrinsic personality characteristics from digital communications such as email, text messages, tweets, and forum posts.
 {: shortdesc}
 
-The service can automatically infer, from potentially noisy social media, portraits of individuals that reflect their personality characteristics. It can also determine individuals' consumption preferences, which indicate their likelihood to prefer various products, services, and activities.
+The service infers, from potentially noisy social media, portraits of individuals that reflect their personality characteristics. It can also determine individuals' consumption preferences, which indicate their likelihood to prefer various products, services, and activities.
+
+## Personality characteristics
+{: #models}
+
+The {{site.data.keyword.personalityinsightsshort}} service infers personality characteristics based on three primary models:
+
+-   **Big Five** personality characteristics represent the most widely used model for generally describing how a person engages with the world. The model includes five primary dimensions: *Agreeableness*, *Conscientiousness*, *Extraversion*, *Emotional range*, and *Openness*. Each dimension has six facets that further characterize an individual according to the dimension.
+-   **Needs** describe which aspects of a product will resonate with a person. The model includes twelve characteristic needs: *Excitement*, *Harmony*, *Curiosity*, *Ideal*, *Closeness*, *Self-expression*, *Liberty*, *Love*, *Practicality*, *Stability*, *Challenge*, and *Structure*.
+-   **Values** describe motivating factors that influence a person's decision making. The model includes five values: *Self-transcendence / Helping others*, *Conservation / Tradition*, *Hedonism / Taking pleasure in life*, *Self-enhancement / Achieving success*, and *Open to change / Excitement*.
+
+For more information, see [Personality models](/docs/services/personality-insights/models.html).
+
+## Consumption preferences
+{: #preferences}
+
+Based on the personality characteristics inferred from the input text, the service can also return an indication of the author's consumption preferences. Consumption preferences indicate the author's likelihood to pursue different products, services, and activities. The service groups the individual preferences into eight categories: *Shopping*, *Music*, *Movies*, *Reading and learning*, *Health and activity*, *Volunteering*, *Environmental concern*, and *Entrepreneurship*. Each category contains from one to as many as a dozen individual preferences.
+
+For more information, see [Consumption preferences](/docs/services/personality-insights/preferences.html).
 
 ## Benefits of the service
 {: #benefits}
@@ -38,6 +56,45 @@ As a core service of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.wats
 
 For more information about how you can benefit from the service, see [Use cases](/docs/services/personality-insights/usecases.html).
 
+## Language support
+{: #languages}
+
+The service supports the following languages. You can use any combination of supported languages for the request and response, but all input text must be in the same language. For more information, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages).
+
+<table style="width:75%">
+  <caption>Table 1. Supported languages</caption>
+  <tr>
+    <th style="width:50%; text-align:center">
+      Request languages
+    </th>
+    <th style="width:50%; text-align:center">
+      Response languages
+    </th>
+  </tr>
+  <tr>
+    <td style="text-align:center; vertical-align:top">
+      Arabic<br/>
+      English<br/>
+      Japanese<br/>
+      Korean<br/>
+      Spanish
+    </td>
+    <td style="text-align:center; vertical-align:top">
+      Arabic<br/>
+      English<br/>
+      Japanese<br/>
+      Korean<br/>
+      Spanish<br/>
+      Brazilian Portuguese<br/>
+      French<br/>
+      German<br/>
+      Italian<br/>
+      Simplified Chinese<br/>
+      Traditional Chinese
+    </td>
+  </tr>
+</table>
+
 ## Learn more about the service
 {: #learn}
 
@@ -45,13 +102,3 @@ For more information about how you can benefit from the service, see [Use cases]
 -   Applications in {{site.data.keyword.watson}} Developer Cloud [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/watson/developercloud/starter-kits.html){: new_window} demonstrate the service.
 -   [The service in action](/docs/services/personality-insights/applied.html) and [The science behind the service](/docs/services/personality-insights/science.html) provide information about the research that underlies the service.
 -   The [{{site.data.keyword.personalityinsightsshort}} service in the {{site.data.keyword.Bluemix_short}} Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/catalog/services/personality-insights/){: new_window} describes the pricing plans that are available for the service.
-
-## Language support
-{: #languages}
-
-The service supports the following languages:
-
--   *Request content:* Arabic, English, Japanese, Korean, and Spanish
--   *Response results:* All of the input languages, plus Brazilian Portuguese, French, German, Italian, Simplified Chinese, and Traditional Chinese
-
-For more information, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages).

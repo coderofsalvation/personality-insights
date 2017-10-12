@@ -7,7 +7,6 @@ Personality Insights
     {: .navgroup id="learn"}
     getting-started.md
     index.md
-    user-overview.md
     developer-overview.md
 
     {: .topicgroup}
@@ -25,8 +24,20 @@ Personality Insights
     {: .navgroup id="howto"}
     input.md
     output.md
+    output-csv.md
     numeric.md
-    models.md
+
+    {: topicgroup}
+    Personality models
+        models.md
+        agreeableness.md
+        conscientiousness.md
+        extraversion.md
+        emotional-range.md
+        openness.md
+        needs.md
+        values.md
+
     preferences.md
 
     {: topicgroup}

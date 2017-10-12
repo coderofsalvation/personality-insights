@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-12"
+lastupdated: "2017-10-12"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2017-09-12"
 # Research references
 {: #references}
 
-For more information about the research behind the {{site.data.keyword.personalityinsightsshort}} service, see the following papers and books. Many of these references are cited in earlier sections of the {{site.data.keyword.personalityinsightsshort}} documentation, where they are presented in context.
+For more information about the research behind the {{site.data.keyword.personalityinsightsshort}} service, see the following documents. Many of these references are cited in earlier sections of the {{site.data.keyword.personalityinsightsshort}} documentation, where they are presented in context.
 {: shortdesc}
 
 1.  <a id="adorno1950" style="border-bottom:none; color:black">Adorno, Theodor W., Else Frenkel-Brunswik, Daniel J. Levinson, and Nevitt N. Sanford.</a> *The Authoritarian Personality.* Harper &amp; Row (1950).
