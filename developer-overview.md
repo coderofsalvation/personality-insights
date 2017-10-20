@@ -56,7 +56,7 @@ The service also makes available the following sample applications to help you g
 -   You can access an application that uses the Node.js SDK at the [personality-insights-nodejs repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/personality-insights-nodejs){: new_window}.
 -   You can access an application that uses the Java SDK at the [personality-insights-java repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/personality-insights-java){: new_window}.
 
-All SDKs support authenticating by using either your service credentials or an authentication token.
+For mobile development, see the [{{site.data.keyword.watson}} Developer Cloud Swift SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/swift-sdk){: new_window}. All SDKs support authenticating by using either your service credentials or an authentication token.
 
 ## Learning more about application development
 {: #learn}
