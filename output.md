@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-12"
+lastupdated: "2017-10-28"
 
 ---
 
@@ -314,7 +314,7 @@ The following output shows snippets of the output for consumption preferences.
       "consumption_preferences": [
         {
           "consumption_preference_id": "consumption_preferences_automobile_ownership_cost",
-          "name": "Prefers automobile ownership cost",
+          "name": "Likely to be sensitive to ownership cost when buying automobiles",
           "score": 0
         },
         . . .
@@ -326,7 +326,7 @@ The following output shows snippets of the output for consumption preferences.
       "consumption_preferences": [
         {
           "consumption_preference_id": "consumption_preferences_eat_out",
-          "name": "Prefers to eat out",
+          "name": "Likely to eat out frequently",
           "score": 1
         },
         . . .
@@ -339,7 +339,7 @@ The following output shows snippets of the output for consumption preferences.
       "consumption_preferences": [
         {
           "consumption_preference_id": "consumption_preferences_volunteer",
-          "name": "Have volunteering experience",
+          "name": "Likely to volunteer for social causes",
           "score": 0
         }
       ]
