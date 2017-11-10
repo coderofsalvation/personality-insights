@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-12"
+lastupdated: "2017-10-18"
 
 ---
 
@@ -16,27 +16,39 @@ lastupdated: "2017-10-12"
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:download: .download}
 
 # Getting started tutorial
 
 The {{site.data.keyword.personalityinsightsfull}} service derives insights about personality characteristics from social media, enterprise data, or other digital communications. This tutorial can help you get started quickly with the {{site.data.keyword.personalityinsightsshort}} service. The examples show you how to call the service's `POST /v3/profile` method with different types of input and how to request different types of output and output formats.
 {: shortdesc}
 
-> **Note:** The examples use cURL to call methods of the HTTP interface. You can install the version of cURL for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. You must install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
+## Before you begin
+{: #before-you-begin}
 
-## Step 1: Log in, create the service, and get your credentials
+- Create an instance of the service:
+    - {: download} If you're seeing this, you created your service instance. Now get your credentials.
+    - Create a project from a service:
+        1.  Go to the {{site.data.keyword.watson}} Developer Console [Services ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/developer/watson/services){: new_window} page.
+        1.  Select {{site.data.keyword.personalityinsightsshort}}, click **Add Services**, and either sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
+        1.  Type `personality-tutorial` as the project name and click **Create Project**.
+- Copy the credentials to authenticate to your service instance:
+    - {: download} From the service dashboard (what you're looking at):
+        1.  Click the **Service credentials** tab.
+        1.  Click **View credentials** under **Actions**.
+        1.  Copy the `username`, `password`, and `url` values.
+        {: download}
+    - From your **personality-tutorial** project in the Developer Console, copy the `username`,  `password`, and `url` values for `"personality_insights"` from the  **Credentials** section.
+- Make sure you have cURL:
+    - The examples use cURL to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
 
-If you already know the credentials for your {{site.data.keyword.personalityinsightsshort}} service instance, skip this step.
-{: tip}
+<!-- Remove this text after dedicated instances have the Developer Console: begin -->
 
-1.  Go to the [{{site.data.keyword.personalityinsightsshort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/personality-insights/){: new_window} and either sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
-1.  After you log in, enter `personality-tutorial` in the **Service name field** of the {{site.data.keyword.personalityinsightsshort}} page. Click **Create**.
-1.  Copy your credentials:
-    1.  Click **Service credentials**.
-    1.  Click **View credentials** under **Actions**.
-    1.  Copy the `username` and `password` values.
+If you use {{site.data.keyword.Bluemix_dedicated_notm}}, you create a service instance from the [{{site.data.keyword.personalityinsightsshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/personality-insights/){: new_window} page in the Catalog. For details about how to find your service credentials, see [Service credentials for Watson services ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/watson/getting-started-credentials.html#getting-credentials-manually){: new_window}.
 
-## Step 2: Send plain text input and receive basic JSON output
+<!-- Remove this text after dedicated instances have the Developer Console: end -->
+
+## Step 1: Send plain text input and receive basic JSON output
 {: #example1}
 
 The first example passes the plain text file `profile.txt` to the `POST /v3/profile` method and implicitly requests the default JSON response.
@@ -58,7 +70,7 @@ The service returns a JSON `Profile` object that includes basic metadata such as
 
 The profile includes information about the Big Five personality, Needs, and Values characteristics for the author as inferred from the input text. The service reports a `percentile`, or normalized score, for each characteristic. The service computes the percentile by comparing the author's results with the results from a sample population. For more information, see [Personality characteristics output](/docs/services/personality-insights/output.html#traitJSON).
 
-## Step 3: Send JSON input and receive detailed JSON output
+## Step 2: Send JSON input and receive detailed JSON output
 {: #example2}
 
 The second example passes the JSON file `profile.json` to the `/v3/profile` method, again accepting the default JSON response. The example requests consumption preferences and raw scores for a more detailed analysis of the input.
@@ -80,7 +92,7 @@ Because the input content includes timestamps, the service also reports behavior
 
 The service also reports scores for its collection of consumption preferences. The scores indicate the author's likelihood to prefer different products, services, and activities based on the inferred characteristics. For more information, see [Consumption preferences output](/docs/services/personality-insights/output.html#preferenceJSON).
 
-## Step 4: Send JSON input and receive detailed CSV output
+## Step 3: Send JSON input and receive detailed CSV output
 {: #example3}
 
 The third example is similar to the second: it passes the same JSON content and requests the same results. But this example specifies `text/csv` for the `Accept` header to request the response in comma-separated values (CSV) format. It uses the `--output` option of the cURL command to direct the results to a file named `profile.csv`. The example sets the `csv_headers` query parameter to `true` to request that column headers be returned with the output.
