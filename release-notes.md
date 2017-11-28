@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-12"
+lastupdated: "2017-11-28"
 
 ---
 
@@ -42,7 +42,7 @@ The following sections document the new features and changes that were included 
 ## 18 September 2017
 {: #September2017}
 
-**Service version:** `3.3.0`<br/> **Interface version:** `2016-10-20`
+**Service version:** `3.3.0`<br/> **Interface version:** `2016-10-19`
 
 The service now supports input content in Korean (`ko`). For information about the average Mean Absolute Error (MAE) and average correlation for Korean input, see [Per-language average MAE and correlation](/docs/services/personality-insights/science.html#precisePerLanguage).
 
@@ -51,7 +51,7 @@ The service's models are unable to produce meaningful percentiles and raw scores
 ## 10 April 2017
 {: #April2017}
 
-**Service version:** `3.1.7`<br/> **Interface version:** `2016-10-20`
+**Service version:** `3.1.7`<br/> **Interface version:** `2016-10-19`
 
 -   The service changed how it handles requests with large amounts of input content. The service accepts a maximum of 20 MB of content. However, with the models based on *GloVe*, accuracy levels off at around 3000 words of input. This is different from the older models, where more text produced greater accuracy. In general, the service no longer needs as much content to produce an accurate profile. But additional content requires additional processing time, which can cause a request to time out before it completes.
 
@@ -88,21 +88,21 @@ The service's models are unable to produce meaningful percentiles and raw scores
 ### 1 March 2017
 {: #March2017}
 
-**Service version:** `3.1.6`<br/> **Interface version:** `2016-10-20`
+**Service version:** `3.1.6`<br/> **Interface version:** `2016-10-19`
 
 The {{site.data.keyword.personalityinsightsshort}} service was updated with small enhancements to logging.
 
 ### 20 February 2017
 {: #February2017b}
 
-**Service version:** `3.1.5.1`<br/> **Interface version:** `2016-10-20`
+**Service version:** `3.1.5.1`<br/> **Interface version:** `2016-10-19`
 
 The Personality insights service was updated with small security and defect fixes, and to improve metering of API calls.
 
 ### 13 February 2017
 {: #February2017}
 
-**Service version:** `3.1.4`<br/> **Interface version:** `2016-10-20`
+**Service version:** `3.1.4`<br/> **Interface version:** `2016-10-19`
 
 -   The list of consumption preferences has been refined to include only those most important to understanding an individual's dominant lifestyle habits and consumer characteristics. The list of consumption preferences was shortened from 51 to 42; the remaining preferences express the author's likelihood to prefer different products, services, and activities more concisely, making it even easier to take action based on the results. The service no longer returns the following nine consumption preferences. For more information about the remaining preferences, see [Consumption preferences](/docs/services/personality-insights/preferences.html).
 
@@ -172,21 +172,21 @@ The Personality insights service was updated with small security and defect fixe
 ### 13 January 2017
 {: #January2017}
 
-**Service version:** `3.1.2.1`<br/> **Interface version:** `2016-10-20`
+**Service version:** `3.1.2.1`<br/> **Interface version:** `2016-10-19`
 
 The Personality insights service was updated with a few small defect fixes.
 
 ### 15 December 2016
 {: #December2016}
 
-**Service version:** `3.1.1`<br/> **Interface version:** `2016-10-20`
+**Service version:** `3.1.1`<br/> **Interface version:** `2016-10-19`
 
 For Arabic input text, the {{site.data.keyword.personalityinsightsshort}} service now uses the open-source word-embedding technique called *GloVe* to develop a personality profile. The service no longer uses the Linguistic Inquiry and Word Count (LIWC) psycholinguistic dictionary for any language. For more information about how the service develops a personality portrait, see [How personality characteristics are inferred](/docs/services/personality-insights/science.html#researchInfer).
 
 ### 15 November 2016
 {: #November2016}
 
-**Service version:** `3.1.0`<br/> **Interface version:** `2016-10-20`
+**Service version:** `3.1.0`<br/> **Interface version:** `2016-10-19`
 
 -   For Japanese input text, the {{site.data.keyword.personalityinsightsshort}} service now uses the open-source word-embedding technique called *GloVe* to develop a personality profile; the service no longer uses the Linguistic Inquiry and Word Count (LIWC) psycholinguistic dictionary for Japanese input. For more information, see [How personality characteristics are inferred](/docs/services/personality-insights/science.html#researchInfer).
 -   The `name` fields of the `ConsumptionPreferencesCategory` and `ConsumptionPreferences` objects are now returned with localized strings in the language specified with the `Accept-Language` request header.
@@ -195,7 +195,7 @@ For Arabic input text, the {{site.data.keyword.personalityinsightsshort}} servic
 ### 20 October 2016
 {: #October2016b}
 
-**Service version:** `3.0.0`<br/> **Interface version:** `2016-10-20`
+**Service version:** `3.0.0`<br/> **Interface version:** `2016-10-19`
 
 The {{site.data.keyword.personalityinsightsshort}} service and its API were updated significantly. The API was incremented from version 2 to version 3 and offers new features. The remaining sections of this release note describe the changes in detail.
 
@@ -216,7 +216,7 @@ This documentation now describes version 3 of the {{site.data.keyword.personalit
 Parameters of the `/v3/profile` method have changed as follows:
 
 -   The API now offers an optional query parameter named `consumption_preferences`. The parameter accepts a boolean value that indicates whether information inferred about consumption preferences is to be returned with the results. By default, the information is not included in the response. For more information, see [New consumption preferences feature](#cp).
--   The API now includes a required query parameter named `version`. The parameter accepts a string that identifies the requested version of the API and the response format as a date in the form `YYYY-MM-DD`; for example, specify `2016-10-20` for October 20, 2016. This parameter allows the service to update its API or response format for new versions without breaking existing clients. The initial string for version 3 of the API is `2016-10-20`.
+-   The API now includes a required query parameter named `version`. The parameter accepts a string that identifies the requested version of the API and the response format as a date in the form `YYYY-MM-DD`; for example, specify `2016-10-19` for October 19, 2016. This parameter allows the service to update its API or response format for new versions without breaking existing clients. The initial string for version 3 of the API is `2016-10-19`.
 
     The date that you specify does not need to match a version of the service exactly; the service uses the version that is no later than the date you provide. If you specify a date that is earlier than the release date of version 3, the service uses version 3 of the API. If you specify a date that is in the future or otherwise later than the most recent version, the service uses the latest version.
 -   The name of the `include_raw` query parameter is now `raw_scores`.
