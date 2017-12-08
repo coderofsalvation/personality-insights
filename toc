@@ -11,7 +11,7 @@ Personality Insights
 
     {: .topicgroup}
     Demos
-        [Quick demo](https://personality-insights-livedemo.mybluemix.net/)
+        [Quick demo](https://personality-insights-demo.ng.bluemix.net/)
         [Designer Match](http://roztayger.com/match/designer)
 
     {: .topicgroup}
