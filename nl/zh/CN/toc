@@ -1,0 +1,88 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="personality-insights" audience="service" href="/docs/services/personality-insights/getting-started.html"}
+Personality Insights
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    developer-overview.md
+
+    {: .topicgroup}
+    演示
+        [快速演示](https://personality-insights-demo.ng.bluemix.net/)
+        [设计人员匹配](http://roztayger.com/match/designer)
+
+    {: .topicgroup}
+    其他资源
+        [博客](https://developer.ibm.com/watson/blog/)
+        [网络研讨会](https://www.ibm.com/watson/webinars/)
+        [Watson 视频](https://www.youtube.com/user/IBMWatsonSolutions)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    input.md
+    output.md
+    output-csv.md
+    numeric.md
+
+    {: topicgroup}
+    个性模型
+        models.md
+        agreeableness.md
+        conscientiousness.md
+        extraversion.md
+        emotional-range.md
+        openness.md
+        needs.md
+        values.md
+
+    preferences.md
+
+    {: topicgroup}
+    服务背景
+        usecases.md
+        guidance.md
+        applied.md
+        science.md
+        references.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API 参考](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/)
+
+    {: .topicgroup}
+    样本应用程序
+        [Watson Personality Insights](https://github.com/watson-developer-cloud/personality-insights-nodejs)
+        [David Bowie Personas](https://github.com/IBM-Bluemix/ziggy)
+        [Social Customer Care](https://www.ibm.com/watson/developercloud/starter-kits.html#social-customer-care)
+
+    {: .topicgroup}
+    Watson SDK
+        [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
+        [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
+        [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
+        [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
+        [Swift SDK](https://github.com/watson-developer-cloud/ios-sdk)
+        [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
+
+    [Watson GitHub 存储库](https://github.com/watson-developer-cloud/)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    {: .topicgroup}
+    常见问题
+        faq-basic-usage.md
+        faq-requesting.md
+        faq-understanding.md
+        faq-preferences.md
+
+    release-notes.md
+
+    {: .topicgroup}
+    开发者社区
+        [StackOverflow](http://stackoverflow.com/questions/tagged/personality-insights)
+        [developerWorks Answers](https://developer.ibm.com/answers/topics/personality-insights/)
+        [WDC Slack 频道](http://wdc-slack-inviter.mybluemix.net/)
+    {: .navgroup-end}

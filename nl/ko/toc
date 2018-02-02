@@ -1,0 +1,88 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="personality-insights" audience="service" href="/docs/services/personality-insights/getting-started.html"}
+Personality Insights
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    developer-overview.md
+
+    {: .topicgroup}
+    데모
+        [빠른 데모](https://personality-insights-demo.ng.bluemix.net/)
+        [디자이너 일치](http://roztayger.com/match/designer)
+
+    {: .topicgroup}
+    추가 자원
+        [블로그](https://developer.ibm.com/watson/blog/)
+        [온라인 회의](https://www.ibm.com/watson/webinars/)
+        [Watson 동영상](https://www.youtube.com/user/IBMWatsonSolutions)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    input.md
+    output.md
+    output-csv.md
+    numeric.md
+
+    {: topicgroup}
+    성격 모델
+        models.md
+        agreeableness.md
+        conscientiousness.md
+        extraversion.md
+        emotional-range.md
+        openness.md
+        needs.md
+        values.md
+
+    preferences.md
+
+    {: topicgroup}
+    서비스 배경
+        usecases.md
+        guidance.md
+        applied.md
+        science.md
+        references.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API 참조](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/)
+
+    {: .topicgroup}
+    샘플 앱
+        [Watson Personality Insights](https://github.com/watson-developer-cloud/personality-insights-nodejs)
+        [David Bowie Personas](https://github.com/IBM-Bluemix/ziggy)
+        [Social Customer Care](https://www.ibm.com/watson/developercloud/starter-kits.html#social-customer-care)
+
+    {: .topicgroup}
+    Watson SDK
+        [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
+        [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
+        [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
+        [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
+        [Swift SDK](https://github.com/watson-developer-cloud/ios-sdk)
+        [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
+
+    [Watson GitHub 저장소](https://github.com/watson-developer-cloud/)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    {: .topicgroup}
+    FAQ
+        faq-basic-usage.md
+        faq-requesting.md
+        faq-understanding.md
+        faq-preferences.md
+
+    release-notes.md
+
+    {: .topicgroup}
+    개발자 커뮤니티
+        [StackOverflow](http://stackoverflow.com/questions/tagged/personality-insights)
+        [developerWorks Answers](https://developer.ibm.com/answers/topics/personality-insights/)
+        [WDC Slack 채널](http://wdc-slack-inviter.mybluemix.net/)
+    {: .navgroup-end}
