@@ -1,0 +1,52 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="personality-insights" audience="service" href="/docs/services/personality-insights/getting-started.html"}
+Personality Insights
+
+    {: .navgroup id="learn"}
+    De started.md index.md desenvolvedor overview.md
+
+    {: .topicgroup}
+    Demos [Quick demo](https://personality-insights-demo.ng.bluemix.net/) [Match Designer](http://roztayger.com/match/designer)
+
+    {: .topicgroup}
+    Recursos adicionais
+        [Blog](https://developer.ibm.com/watson/blog/)
+        [Webinars](https://www.ibm.com/watson/webinars/)
+        [Vídeos do Watson](https://www.youtube.com/user/IBMWatsonSolutions)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    Input.md output.md saída csv.md numeric.md
+
+    {: topicgroup}
+    Modelos de Personalidade models.md agreeableness.md conscientiousness.md extraversion.md emocional-range.md openness.md needs.md values.md
+
+    Preferences.md
+
+    {: topicgroup}
+    Serviço de usecases.md guidance.md applied.md science.md references.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [Referência de API](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/)
+
+    {: .topicgroup}
+    Amostra de aplicativos [Watson Personality Insights](https://github.com/watson-developer-cloud/personality-insights-nodejs) [David Bowie Pessoas](https://github.com/IBM-Bluemix/ziggy) [Social Customer Care](https://www.ibm.com/watson/developercloud/starter-kits.html#social-customer-care)
+
+    {: .topicgroup}
+    Watson SDKs [Android SDK](https://github.com/watson-developer-cloud/android-sdk) [Java SDK](https://github.com/watson-developer-cloud/java-sdk) [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk) [SDK Python](https://github.com/watson-developer-cloud/python-sdk) [Swift SDK](https://github.com/watson-developer-cloud/ios-sdk) [ Unidade SDK](https://github.com/watson-developer-cloud/unity-sdk)
+
+    [Repositórios do Watson GitHub](https://github.com/watson-developer-cloud/)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    {: .topicgroup}
+    Perguntas mais freqüentes-basic-usage.md faq-requesting.md faq-understanding.md faq-preferences.md
+
+    Release-notes.md
+
+    {: .topicgroup}
+    Desenvolvedor de comunidade [StackOverflow](http://stackoverflow.com/questions/tagged/personality-insights) [developerWorks Answers](https://developer.ibm.com/answers/topics/personality-insights/) [Canal WDC Slack](http://wdc-slack-inviter.mybluemix.net/)
+    {: .navgroup-end}
