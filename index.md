@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2018
+lastupdated: "2018-04-04"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-10-12"
 # About
 {: #about}
 
-> **Service update:** *The {{site.data.keyword.personalityinsightsshort}} service was updated on October 13, 2017. Each `Trait` object of a personality profile now includes a `significant` field to indicate whether a personality characteristic is meaningful for the input language. The field identifies those characteristics for which the service's models are unable to generate meaningful results for Arabic and Korean input. The interface version for the release is `2017-10-13`. For more information about this and all updates to the service, see the [Release notes](/docs/services/personality-insights/release-notes.html).*
+> **Service update:** *The {{site.data.keyword.personalityinsightsshort}} service was updated with small fixes on March 23, 2018. The interface version remains `2017-10-13`. For more information about this and all updates to the service, see the [Release notes](/docs/services/personality-insights/release-notes.html).*
 
 The {{site.data.keyword.personalityinsightsfull}} service provides an Application Programming Interface (API) for deriving insights from social media, enterprise data, or other digital communications. The service uses linguistic analytics to infer individuals' intrinsic personality characteristics from digital communications such as email, text messages, tweets, and forum posts.
 {: shortdesc}
