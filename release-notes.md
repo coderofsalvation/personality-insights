@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-28"
+  years: 2015, 2018
+lastupdated: "2018-04-04"
 
 ---
 
@@ -24,6 +24,13 @@ The following sections document the new features and changes that were included 
 {: shortdesc}
 
 > **Note:** The release notes document the *service version* and *interface version* for all recent updates. You specify the *interface version* with the `version` query parameter to use new features and functionality made available with that update. The service returns both versions with the `X-Service-Api-Version` response header.
+
+## 23 March 2018
+{: #March2018}
+
+**Service version:** `3.4.4`<br/> **Interface version:** `2017-10-13`
+
+The {{site.data.keyword.personalityinsightsshort}} service was updated with small defect fixes. The changes were specific to the Arabic, Japanese, and Korean languages.
 
 ## 13 October 2017
 {: #October2017}
@@ -48,25 +55,10 @@ The service now supports input content in Korean (`ko`). For information about t
 
 The service's models are unable to produce meaningful percentiles and raw scores for a few personality characteristics of Korean input. For more information about the results for these characteristics, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations).
 
-## 10 April 2017
-{: #April2017}
-
-**Service version:** `3.1.7`<br/> **Interface version:** `2016-10-19`
-
--   The service changed how it handles requests with large amounts of input content. The service accepts a maximum of 20 MB of content. However, with the models based on *GloVe*, accuracy levels off at around 3000 words of input. This is different from the older models, where more text produced greater accuracy. In general, the service no longer needs as much content to produce an accurate profile. But additional content requires additional processing time, which can cause a request to time out before it completes.
-
-    Therefore, the service now extracts and uses only the first 250 KB of content, not counting any HTML or JSON markup, from large requests. This figure does not map to an exact number of words, which varies based on the language and nature of the text. In English, for example, average word length is between four and five characters, so this figure provides around 50,000 words, which is at least 15 times more words than the service needs. The `word_count` field of the response JSON indicates the number of words that the service actually uses for a request, which can be less than the number of words in the input.
-
-    Because it still bases a profile on many more words than it strictly needs for maximum accuracy, the service produces a profile that is just as accurate as in the past. However, the service responds much faster than before. For requests for which it uses only a portion of the input content, the service returns the following `CONTENT_TRUNCATED` warning message to make the user aware of the fact:
-
-    `For maximum accuracy while also optimizing processing time, only the first 250KB of input text (excluding markup) was analyzed. Accuracy levels off at approximately 3K words so this did not affect the accuracy of the profile.`
-
-    For more information, see [Providing sufficient input](/docs/services/personality-insights/input.html#sufficient).
--   The service was updated with small security fixes.
-
 ## Older releases
 {: #older}
 
+-   [10 April 2017](#April2017)
 -   [1 March 2017](#March2017)
 -   [20 February 2017](#February2017b)
 -   [13 February 2017](#February2017)
@@ -84,6 +76,22 @@ The service's models are unable to produce meaningful percentiles and raw scores
 -   [18 March 2016](#March2016)
 -   [9 July 2015](#July2015)
 -   [23 February 2015](#February2015)
+
+### 10 April 2017
+{: #April2017}
+
+**Service version:** `3.1.7`<br/> **Interface version:** `2016-10-19`
+
+-   The service changed how it handles requests with large amounts of input content. The service accepts a maximum of 20 MB of content. However, with the models based on *GloVe*, accuracy levels off at around 3000 words of input. This is different from the older models, where more text produced greater accuracy. In general, the service no longer needs as much content to produce an accurate profile. But additional content requires additional processing time, which can cause a request to time out before it completes.
+
+    Therefore, the service now extracts and uses only the first 250 KB of content, not counting any HTML or JSON markup, from large requests. This figure does not map to an exact number of words, which varies based on the language and nature of the text. In English, for example, average word length is between four and five characters, so this figure provides around 50,000 words, which is at least 15 times more words than the service needs. The `word_count` field of the response JSON indicates the number of words that the service actually uses for a request, which can be less than the number of words in the input.
+
+    Because it still bases a profile on many more words than it strictly needs for maximum accuracy, the service produces a profile that is just as accurate as in the past. However, the service responds much faster than before. For requests for which it uses only a portion of the input content, the service returns the following `CONTENT_TRUNCATED` warning message to make the user aware of the fact:
+
+    `For maximum accuracy while also optimizing processing time, only the first 250KB of input text (excluding markup) was analyzed. Accuracy levels off at approximately 3K words so this did not affect the accuracy of the profile.`
+
+    For more information, see [Providing sufficient input](/docs/services/personality-insights/input.html#sufficient).
+-   The service was updated with small security fixes.
 
 ### 1 March 2017
 {: #March2017}
