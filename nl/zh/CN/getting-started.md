@@ -19,6 +19,7 @@ lastupdated: "2017-10-18"
 {:download: .download}
 
 # 入门教程
+{: #gettingStarted}
 
 {{site.data.keyword.personalityinsightsfull}} 服务用于从社交媒体、企业数据或其他数字通信提炼有关个性特征的洞见。本教程可帮助您快速开始使用 {{site.data.keyword.personalityinsightsshort}} 服务。示例显示如何针对不同类型的输入来调用服务的 `POST /v3/profile` 方法，以及如何请求不同类型的输出和输出格式。
 {: shortdesc}

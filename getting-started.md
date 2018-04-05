@@ -19,6 +19,7 @@ lastupdated: "2017-10-18"
 {:download: .download}
 
 # Getting started tutorial
+{: #gettingStarted}
 
 The {{site.data.keyword.personalityinsightsfull}} service derives insights about personality characteristics from social media, enterprise data, or other digital communications. This tutorial can help you get started quickly with the {{site.data.keyword.personalityinsightsshort}} service. The examples show you how to call the service's `POST /v3/profile` method with different types of input and how to request different types of output and output formats.
 {: shortdesc}
