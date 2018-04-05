@@ -19,6 +19,7 @@ lastupdated: "2017-10-18"
 {:download: .download}
 
 # Lernprogramm zur Einführung
+{: #gettingStarted}
 
 Der {{site.data.keyword.personalityinsightsfull}}-Service leitet Erkenntnisse zu Persönlichkeitsmerkmalen aus Social Media, Unternehmensdaten oder anderer digitaler Kommunikation ab. Dieses Lernprogramm kann Sie beim schnellen Einstieg in die Arbeit mit dem {{site.data.keyword.personalityinsightsshort}} unterstützen. Die Beispiele zeigen, wie die Methode `POST /v3/profile` des Service mit verschiedenen Typen von Eingaben aufgerufen wird und wie verschiedene Typen von Ausgaben und Ausgabeformaten angefordert werden.
 {: shortdesc}

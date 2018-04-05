@@ -19,6 +19,7 @@ lastupdated: "2017-10-18"
 {:download: .download}
 
 # Tutorial Introdução
+{: #gettingStarted}
 
 O serviço do {{site.data.keyword.personalityinsightsfull}} deriva insights sobre características da personalidade de mídia social, dados corporativos ou outras comunicações digitais. Este tutorial ajuda a começar a usar rapidamente o serviço do {{site.data.keyword.personalityinsightsshort}}. Os exemplos mostram como chamar o método `POST /v3/profile` do serviço com diferentes tipos de entrada e como solicitar diferentes tipos de saída e formatos de saída.
 {: shortdesc}
@@ -29,7 +30,7 @@ O serviço do {{site.data.keyword.personalityinsightsfull}} deriva insights sobr
 - Crie uma instância do serviço:
     - {: download} Se você estiver vendo isso, você criou sua instância de serviço. Agora, obtenha suas credenciais.
     - Crie um projeto com base em um serviço:
-        1.  Acesse a página {{site.data.keyword.watson}} Developer Console [ Serviços ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/developer/watson/services){: new_window}. 
+        1.  Acesse a página {{site.data.keyword.watson}} Developer Console [ Serviços ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/developer/watson/services){: new_window}.
         1.  Selecione {{site.data.keyword.personalityinsightsshort}}, clique em **Incluir serviços** e inscreva-se para uma conta do {{site.data.keyword.Bluemix_notm}} grátis ou efetue login.
         1.  Digite `personality-tutorial` como o nome do projeto e clique em **Criar projeto**.
 - Copie as credenciais para autenticação em sua instância de serviço:

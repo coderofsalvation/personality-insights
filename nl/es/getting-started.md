@@ -19,6 +19,7 @@ lastupdated: "2017-10-18"
 {:download: .download}
 
 # Guía de aprendizaje de iniciación
+{: #gettingStarted}
 
 El servicio de {{site.data.keyword.personalityinsightsfull}} obtiene información sobre las características de personalidad de las redes sociales, los datos empresariales, u otras comunicaciones digitales. Esta guía de aprendizaje puede ayudarle a comenzar rápidamente con el servicio de {{site.data.keyword.personalityinsightsshort}}. Los ejemplos muestran cómo llamar al método `POST /v3/profile` del servicio con distintos tipos de entrada y cómo solicitar distintos tipos de salida y de formatos de salida.
 {: shortdesc}

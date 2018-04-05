@@ -19,6 +19,7 @@ lastupdated: "2017-10-18"
 {:download: .download}
 
 # 入門指導教學
+{: #gettingStarted}
 
 {{site.data.keyword.personalityinsightsfull}} 服務從社交媒體、企業資料或其他數位通訊中，衍生出性格特質的相關洞察分析。本指導教學可協助您快速開始使用 {{site.data.keyword.personalityinsightsshort}} 服務。範例會顯示如何以不同類型的輸入來呼叫服務的 `POST /v3/profile` 方法，以及如何要求不同類型的輸出和輸出格式。
 {: shortdesc}

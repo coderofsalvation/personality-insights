@@ -19,6 +19,7 @@ lastupdated: "2017-10-18"
 {:download: .download}
 
 # 概要チュートリアル
+{: #gettingStarted}
 
 {{site.data.keyword.personalityinsightsfull}} サービスは、ソーシャル・メディア、エンタープライズ・データ、またはその他のデジタル・コミュニケーションからパーソナリティー特性の洞察を導きます。このチュートリアルを利用すると、{{site.data.keyword.personalityinsightsshort}} サービスを簡単に始めることができます。さまざまなタイプの入力を使用してサービスの `POST /v3/profile` メソッドを呼び出す方法と、さまざまなタイプの出力および出力形式を要求する方法が、例で示されています。
 {: shortdesc}

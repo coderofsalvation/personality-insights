@@ -19,6 +19,7 @@ lastupdated: "2017-10-18"
 {:download: .download}
 
 # Esercitazione introduttiva
+{: #gettingStarted}
 
 Il servizio {{site.data.keyword.personalityinsightsfull}} ricava informazioni approfondite sulle caratteristiche della personalità da social media, dati aziendali o altre comunicazioni digitali. Questa esercitazione può aiutarti a iniziare a utilizzare subito il servizio {{site.data.keyword.personalityinsightsshort}}. Gli esempi ti mostrano come richiamare il metodo `POST /v3/profile` del servizio con diversi tipi di input e come richiedere diversi tipi e formati di output.
 {: shortdesc}
