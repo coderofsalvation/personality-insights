@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-04-10"
 
 ---
 
@@ -209,7 +209,7 @@ The {{site.data.keyword.personalityinsightsshort}} service and its API were upda
 
 Version 3 is not backward-compatible with version 2. You are encouraged to migrate to version 3 to take advantage of the new features and changes. Migration to version 3 consists only of updating and redeploying your applications to use the changes described in these release notes for the new version. You do not need to create a new instance of the service in {{site.data.keyword.Bluemix_notm}}; you need only call the `v3` API.
 
-> **Note:** Version 2 of the {{site.data.keyword.personalityinsightsshort}} API will be removed from service in the near future. You are strongly encouraged to migrate to version 3 as soon as possible. For now, you can access reference documentation for version 2 at [API reference for v2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v2/){: new_window}; you can also access the interactive tool for testing calls to version 2 and viewing live responses from the service at [API explorer for v2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/personality-insights-v2){: new_window}.
+> **Note:** Version 2 of the {{site.data.keyword.personalityinsightsshort}} API will be removed from service in the near future. You are strongly encouraged to migrate to version 3 as soon as possible.
 
 #### More information about version 3
 
