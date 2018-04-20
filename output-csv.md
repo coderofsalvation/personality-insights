@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2018
+lastupdated: "2018-04-16"
 
 ---
 
@@ -43,85 +43,85 @@ The following columns are always present in the CSV output for all requests.
     <th style="text-align:left; vertical-align:bottom">Description</th>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Big Five Agreeableness<br/>percentiles<br/>(7 columns)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_agreeableness<br/>facet_altruism<br/>
       facet_cooperation<br/>facet_modesty<br/>
       facet_morality<br/>facet_sympathy<br/>
       facet_trust
     </td>
-    <td>
+    <td style="vertical-align:top">
       Normalized percentile score for the author of the text with respect
       to the named dimension or facet.
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Big Five Conscientiousness<br/>percentiles<br/>(7 columns)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_conscientiousness<br/>facet_achievement_striving
       <br/>facet_cautiousness<br/>facet_dutifulness<br/>
       facet_orderliness<br/>facet_self_discipline<br/>
       facet_self_efficacy
     </td>
-    <td>
+    <td style="vertical-align:top">
       Normalized percentile score for the author of the text with respect
       to the named dimension or facet.
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Big Five Extraversion<br/>percentiles<br/>(7 columns)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_extraversion<br/>facet_activity_level
       <br/>facet_assertiveness<br/>facet_cheerfulness<br/>
       facet_excitement_seeking<br/>facet_friendliness<br/>
       facet_gregariousness
     </td>
-    <td>
+    <td style="vertical-align:top">
       Normalized percentile score for the author of the text with respect
       to the named dimension or facet.
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Big Five Emotional range<br/>percentiles<br/>(7 columns)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_neuroticism<br/>facet_anger<br/>
       facet_anxiety<br/>facet_depression<br/>
       facet_immoderation<br/>facet_self_consciousness<br/>
       facet_vulnerability
     </td>
-    <td>
+    <td style="vertical-align:top">
       Normalized percentile score for the author of the text with respect
       to the named dimension or facet.
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Big Five Openness<br/>percentiles<br/>(7 columns)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_openness<br/>facet_adventurousness<br/>
       facet_artistic_interests<br/>facet_emotionality<br/>
       facet_imagination<br/>facet_intellect<br/>
       facet_liberalism
     </td>
-    <td>
+    <td style="vertical-align:top">
       Normalized percentile score for the author of the text with respect
       to the named dimension or facet.
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Needs percentiles<br/>(12 columns)
     </td>
-    <td>
+    <td style="vertical-align:top">
       need_liberty<br/>need_ideal<br/>
       need_love<br/>need_practicality<br/>
       need_self_expression<br/>need_stability<br/>
@@ -129,62 +129,62 @@ The following columns are always present in the CSV output for all requests.
       need_closeness<br/>need_curiosity<br/>
       need_excitement<br/>need_harmony
     </td>
-    <td>
+    <td style="vertical-align:top">
       Normalized percentile score for the author of the text with respect
       to the named need.
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Values percentiles<br/>(5 columns)
     </td>
-    <td>
+    <td style="vertical-align:top">
       value_conservation<br/>value_hedonism<br/>
       value_openness_to_change<br/>value_self_enhancement<br/>
       value_self_transcendence
     </td>
-    <td>
+    <td style="vertical-align:top">
       Normalized percentile score for the author of the text with respect
       to the named value.
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Days of the week<br/>percentages<br/>(7 columns)
     </td>
-    <td>
+    <td style="vertical-align:top">
       behavior_sunday<br/>behavior_monday<br/>
       behavior_tuesday<br/>behavior_wednesday<br/>
       behavior_thursday<br/>behavior_friday<br/>
       behavior_saturday
     </td>
-    <td>
-      If the input text is timestamped, the percentage of the input
-      associated with each day of the week; if the input is not
+    <td style="vertical-align:top">
+      <em>If the input text is timestamped,</em> the percentage of the
+      input associated with each day of the week; if the input is not
       timestamped, the percentages are all <code>0.0</code>.
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Hours of the day<br/>percentages<br/>(24 columns)
     </td>
-    <td>
+    <td style="vertical-align:top">
       behavior_0000<br/><em>through</em><br/>behavior_2300
     </td>
-    <td>
-      If the input text is timestamped, the percentage of the input
-      associated with each hour of the day; if the input is not
+    <td style="vertical-align:top">
+      <em>If the input text is timestamped,</em> the percentage of the
+      input associated with each hour of the day; if the input is not
       timestamped, the percentages are all <code>0.0</code>.
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Word count and<br/>language<br/>(2 columns)
     </td>
-    <td>
+    <td style="vertical-align:top">
       word_count<br/>processed_language
     </td>
-    <td>
+    <td style="vertical-align:top">
       An integer that indicates the number of words present in the input
       text, and a two-letter identifier for the language model that the
       service used to analyze the text.
@@ -204,7 +204,7 @@ The following columns are present only if you request raw scores by setting the 
     <th style="width:60%; text-align:left; vertical-align:bottom">Optional labels</th>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Big Five Agreeableness<br/>raw scores<br/>(7 columns)
     </td>
     <td>
@@ -215,7 +215,7 @@ The following columns are present only if you request raw scores by setting the 
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Big Five Conscientiousness<br/>raw scores<br/>(7 columns)
     </td>
     <td>
@@ -226,7 +226,7 @@ The following columns are present only if you request raw scores by setting the 
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Big Five Extraversion<br/>raw scores<br/>(7 columns)
     </td>
     <td>
@@ -237,7 +237,7 @@ The following columns are present only if you request raw scores by setting the 
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Big Five Emotional range<br/>raw scores<br/>(7 columns)
     </td>
     <td>
@@ -248,7 +248,7 @@ The following columns are present only if you request raw scores by setting the 
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Big Five Openness<br/>raw scores<br/>(7 columns)
     </td>
     <td>
@@ -259,7 +259,7 @@ The following columns are present only if you request raw scores by setting the 
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Needs raw scores<br/>(12 columns)
     </td>
     <td>
@@ -272,7 +272,7 @@ The following columns are present only if you request raw scores by setting the 
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Values raw scores<br/>(5 columns)
     </td>
     <td>
@@ -295,7 +295,7 @@ The following columns are always present in the CSV output for all requests. In 
     <th style="width:60%; text-align:left; vertical-align:bottom">Optional labels</th>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Big Five Agreeableness<br/>significance<br/>(7 columns)
     </td>
     <td>
@@ -306,7 +306,7 @@ The following columns are always present in the CSV output for all requests. In 
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Big Five Conscientiousness<br/>significance<br/>(7 columns)
     </td>
     <td>
@@ -318,7 +318,7 @@ The following columns are always present in the CSV output for all requests. In 
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Big Five Extraversion<br/>significance<br/>(7 columns)
     </td>
     <td>
@@ -329,7 +329,7 @@ The following columns are always present in the CSV output for all requests. In 
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Big Five Emotional range<br/>significance<br/>(7 columns)
     </td>
     <td>
@@ -340,7 +340,7 @@ The following columns are always present in the CSV output for all requests. In 
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Big Five Openness<br/>significance<br/>(7 columns)
     </td>
     <td>
@@ -351,7 +351,7 @@ The following columns are always present in the CSV output for all requests. In 
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Needs raw significance<br/>(12 columns)
     </td>
     <td>
@@ -364,7 +364,7 @@ The following columns are always present in the CSV output for all requests. In 
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Values significance<br/>(5 columns)
     </td>
     <td>
@@ -388,10 +388,10 @@ The following columns are present only if you request consumption preferences by
     <th style="width:60%; text-align:left; vertical-align:bottom">Optional labels</th>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Purchasing preferences<br/>category scores<br/>(12 columns)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_spur_of_moment<br/>
       consumption_preferences_credit_card_payment<br/>
       consumption_preferences_influence_brand_name<br/>
@@ -407,10 +407,10 @@ The following columns are present only if you request consumption preferences by
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Music preferences<br/>category scores<br/>(9 columns)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_music_rap<br/>
       consumption_preferences_music_country<br/>
       consumption_preferences_music_r_b<br/>
@@ -423,20 +423,20 @@ The following columns are present only if you request consumption preferences by
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Health and activity preferences<br/>category scores<br/>(3 columns)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_gym_membership<br/>
       consumption_preferences_outdoor<br/>
       consumption_preferences_eat_out
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Movie preferences<br/>category scores<br/>(10 columns)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_movie_romance<br/>
       consumption_preferences_movie_adventure<br/>
       consumption_preferences_movie_horror<br/>
@@ -450,10 +450,10 @@ The following columns are present only if you request consumption preferences by
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Reading preferences<br/>category scores<br/>(5 columns)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_read_frequency<br/>
       consumption_preferences_books_entertainment_magazines<br/>
       consumption_preferences_books_non_fiction<br/>
@@ -462,26 +462,26 @@ The following columns are present only if you request consumption preferences by
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Volunteering preferences<br/>category scores<br/>(1 column)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_volunteer
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Environmental concern preferences<br/>category scores<br/>(1 column)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_concerned_environment
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       Entrepreneurship preferences<br/>category scores<br/>(1 column)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_start_business
     </td>
   </tr>

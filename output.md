@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-28"
+  years: 2015, 2018
+lastupdated: "2018-04-16"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-10-28"
 # Understanding a JSON profile
 {: #output}
 
-When you use the `POST /v3/profile` method to analyze content, the service returns the results of its analysis as a JSON `Profile` object by default or when you specify `application/json` with the `Accept` header of a request. The scope of the JSON output depends on the parameters you specified with the request and on whether the input text represents timestamped data, such as the text associated with a Twitter feed.
+When you use the `POST /v3/profile` method to analyze content, the service returns the results of its analysis as a JSON `Profile` object when you specify `application/json` with the `Accept` header of a request. The scope of the JSON output depends on the parameters you specify with the request and on whether the input text represents timestamped data, such as the text associated with a Twitter feed.
 {: shortdesc}
 
 The following sections describe the contents of a response in JSON format. All example output is produced by the sample JSON file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> that is used in the [Getting started tutorial](/docs/services/personality-insights/getting-started.html). For information about CSV output, see [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html).
@@ -74,10 +74,10 @@ The following example output shows the high-level structure of a `Profile` objec
 The `Profile` object always includes `personality`, `needs`, and `values` fields for all types of input. Each of these fields contains an array of `Trait` objects that describes the personality characteristics for the attributes of that type of characteristic. For Needs and Values characteristics, the array has a single level that describes the characteristics. For Big Five characteristics, a top-level array describes the dimensions, and second-level arrays describe the facets of each dimension.
 
 -   `trait_id` (string) is the unique ID of the characteristic to which the results pertain:
-    -   `big5_characteristic` for Big Five personality dimensions
-    -   `facet_characteristic` for Big Five personality facets
-    -   `need_characteristic` for Needs
-    -   `value_characteristic` for Values
+    -   `big5_{characteristic}` for Big Five personality dimensions
+    -   `facet_{characteristic}` for Big Five personality facets
+    -   `need_{characteristic}` for Needs
+    -   `value_{characteristic}` for Values
 -   `name` (string) is the user-visible name of the characteristic.
 -   `category` (string) is the category of the characteristic:
     -   `personality` for Big Five personality characteristics
@@ -225,8 +225,8 @@ The following example output shows snippets of the output for the Big Five, Need
 If the input to the service is JSON that has timestamps for the individual content items, the `Profile` object includes a `behavior` field. The field includes a `Behavior` object for each day of the week and hour of the day.
 
 -   `trait_id` (string) is the unique ID of the characteristic to which the results pertain:
-    -   `behavior_day` for days of the week (for example, `behavior_sunday`).
-    -   `behavior_hour` for hours of the day (for example, `behavior_0000`).
+    -   `behavior_{day}` for days of the week (for example, `behavior_sunday`).
+    -   `behavior_{hour}` for hours of the day (for example, `behavior_0000`).
 -   `name` (string) is the user-visible name of the characteristic.
 -   `category` (string) is the category of the characteristic, which is always `behavior`.
 -   `percentage` (double) is the percentage of content items that occurred during that day of the week or hour of the day. For more information, see [Percentages for behavioral characteristics](/docs/services/personality-insights/numeric.html#percentages).
@@ -295,7 +295,7 @@ If the `consumption_preferences` query parameter is set to `true`, the `Profile`
 
 Each individual preference for a category is described via a `ConsumptionPreferences` object. Some categories have only a single preference, others have many more.
 
--   `consumption_preference_id` (string) is the unique ID of the consumption preference to which the results pertain in the form `consumption_preferences_preference`.
+-   `consumption_preference_id` (string) is the unique ID of the consumption preference to which the results pertain in the form `consumption_preferences_{preference}`.
 -   `name` (string) is the user-visible name of the consumption preference.
 -   `score` (double) is a score that indicates the author's likelihood of preferring the item. For more information, see [Scores for consumption preferences](/docs/services/personality-insights/numeric.html#scores).
 

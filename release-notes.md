@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-10"
+lastupdated: "2018-04-16"
 
 ---
 
@@ -30,7 +30,8 @@ The following sections document the new features and changes that were included 
 
 **Service version:** `3.4.4`<br/> **Interface version:** `2017-10-13`
 
-The {{site.data.keyword.personalityinsightsshort}} service was updated with small defect fixes. The changes were specific to the Arabic, Japanese, and Korean languages.
+-   The {{site.data.keyword.personalityinsightsshort}} service was updated with small defect fixes. The changes were specific to the Arabic, Japanese, and Korean languages.
+-   The `Accept` request header is now required with the `POST /v3/profile` method. You must specify either `application/json` or `text/csv`.
 
 ## 13 October 2017
 {: #October2017}
