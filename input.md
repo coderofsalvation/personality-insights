@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2018
+lastupdated: "2018-04-20"
 
 ---
 
@@ -30,7 +30,7 @@ The following sections describe the parameters of the `/v3/profile` method. For 
 ## Specifying request and response formats
 {: #formats}
 
-You can use the `Content-Type` and `Accept` header parameters to indicate the format of the content you are passing to the method and the format of the service's response. You can use any combination of supported formats for the request and response.
+You use the `Content-Type` and `Accept` header parameters to indicate the format of the content that you are passing to the method and the format of the service's response. You can use any combination of supported formats for the request and response.
 
 <table>
   <caption>Table 1. Specifying request and response formats</caption>
@@ -94,7 +94,7 @@ You can use the `Content-Type` and `Accept` header parameters to indicate the fo
       of <code>ContentItem</code> objects.
     </td>
     <td style="text-align:center; vertical-align:top">
-      Yes (default)<br/><br/>
+      Yes<br/><br/>
       The service returns its results as a <code>Profile</code>
       object.
     </td>
@@ -138,9 +138,9 @@ By using the `charset` parameter, you can avoid potential problems associated wi
 ### Using cURL
 {: #charsetCurl}
 
-To prevent errors when using cURL, always pass the content via the `--data-binary` option of the `curl` command to preserve any UTF-8 encoding for the content. If you use the `--data` option to pass the content as ASCII, the command can process the input, which can cause problems for data encoded in UTF-8.
+To prevent errors when using cURL, always pass the content via the `--data-binary` option of the `curl` command to preserve any UTF-8 encoding of the content. If you use the `--data` option to pass the content as ASCII, the command can process the input, which can cause problems for data encoded in UTF-8.
 
-For example, the following `curl` command correctly uses the `--data-binary` option to post the contents of the specified *filename* with no additional processing. The command also uses the `charset` parameter with the `Content-Type` header, and it explicitly requests the default JSON response format.
+For example, the following `curl` command correctly uses the `--data-binary` option to post the contents of the specified *filename* with no additional processing. The command specifies the `charset` parameter with the `Content-Type` header, and it requests the JSON response format with the `Accept` header.
 
 ```bash
 curl -X POST --user {username}:{password}
@@ -185,7 +185,7 @@ Examples in the [Getting started tutorial](/docs/services/personality-insights/g
       "language": "en"
     },
     {
-      "content": ".@TheRock how did you Know to listen to your gut and Not go back to football? #Masterclass",
+      "content": ".@TheRock how did you Know to listen to your gut and Not go back to football? #MasterClass",
       "contenttype": "text/plain",
       "created": 1447638226000,
       "id": "666069114889179136",
@@ -476,6 +476,6 @@ For more information about the different consumption preferences, see [Consumpti
 ## Specifying the interface version
 {: #version}
 
-All calls to the `/v3/profile` method must include the `version` query parameter to indicate the version of the service's API and response format that you want to use. You specify the version as a date in the format `YYYY-MM-DD`; for example, specify `2017-10-13` for October 13, 2017. The parameter allows the service to update its API and response format for new versions without breaking existing clients.
+All calls to the `/v3/profile` method must include the `version` query parameter to indicate the version of the service's API and response format that you want to use. You specify the version as a date in the format `YYYY-MM-DD`; for example, specify `2017-10-13` for October 13, 2017 (the latest version). The parameter allows the service to update its API and response format for new versions without breaking existing clients. For information about all available versions, see the [Release notes](/docs/services/personality-insights/release-notes.html).
 
-The date that you specify does not need to match a version of the service exactly; the service uses the version that is no later than the date you provide. If you specify a date that is earlier than the initial release of version 3, the service uses version 3 of the API. If you specify a date that is in the future or otherwise later than the most recent version, the service uses the latest version.
+The date that you specify does not need to match a version of the service exactly; the service uses the version that is no later than the date you provide. If you specify a date that is earlier than the initial release of version 3 (`2016-10-19`), the service uses that version of the API. If you specify a date that is in the future or otherwise later than the most recent version, the service uses the latest version.

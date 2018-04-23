@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2018
+lastupdated: "2018-04-16"
 
 ---
 
@@ -37,86 +37,91 @@ The following studies conducted by {{site.data.keyword.IBM_notm}} researchers in
     characteristics</th>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       <a href="#IBMrespond"><strong>Responding to tweets</strong></a>
       <br/>(information collection)
     </td>
-    <td style="text-align:center">2000 Twitter users</td>
-    <td>
-      <strong>More likely to respond:</strong> Score high on Big Five dimensions
-      and facets excitement-seeking, friendliness, activity level,
-      gregariousness, trust, morality, extraversion, and
+    <td style="text-align:center; vertical-align:top">2000 Twitter users</td>
+    <td style="vertical-align:top">
+      <strong>More likely to respond:</strong> Score high on Big Five
+      dimensions and facets excitement-seeking, friendliness, activity
+      level, gregariousness, trust, morality, extraversion, and
       agreeableness<br/><br/>
-      <strong>Less likely to respond:</strong> Score high on Big Five facets
-      cautiousness and anxiety
+      <strong>Less likely to respond:</strong> Score high on Big Five
+      facets cautiousness and anxiety
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       <a href="#IBMretweet"><strong>Re-tweeting</strong></a>
       <br/>(information spreading)
     </td>
-    <td style="text-align:center">3500 Twitter users</td>
-    <td>
+    <td style="text-align:center; vertical-align:top">3500 Twitter users</td>
+    <td style="vertical-align:top">
       <strong>More likely to re-tweet:</strong> Score high on Big Five
       dimensions and facets modesty, openness, and friendliness
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       <a href="#IBMtarget"><strong>Targeted advertising</strong></a>
       <br/>(unsolicited advertising)
     </td>
-    <td style="text-align:center">More than 6000 Twitter users
+    <td style="text-align:center; vertical-align:top">More than 6000
+      Twitter users
     </td>
-    <td>
-      <strong>Respond more favorably:</strong> Score high on Big Five dimension
-      openness, and score low on Big Five dimension emotional range
+    <td style="vertical-align:top">
+      <strong>Respond more favorably:</strong> Score high on Big Five
+      dimension openness, and score low on Big Five dimension emotional
+      range
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       <a href="#IBMcampaign"><strong>Marketing campaigns</strong></a>
       <br/>(coupon redemption)
     </td>
-    <td style="text-align:center">Thousands of retail customers</td>
-    <td>
-      <strong>More likely to respond:</strong> Score high on Big Five facets
-      orderliness, self-discipline, and cautiousness, and score low
-      on Big Five facet immoderation
+    <td style="text-align:center; vertical-align:top">Thousands of retail
+      customers</td>
+    <td style="vertical-align:top">
+      <strong>More likely to respond:</strong> Score high on Big Five
+      facets orderliness, self-discipline, and cautiousness, and score
+      low on Big Five facet immoderation
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       <a href="#IBMbrand"><strong>Brand preference</strong></a>
       <br/>(brand affinity)
     </td>
-    <td style="text-align:center">600 Twitter users</td>
-    <td>
+    <td style="text-align:center; vertical-align:top">600 Twitter users</td>
+    <td style="vertical-align:top">
       <strong>Predictors of brand preference:</strong> Big Five dimensions
       and facets conscientiousness, conservation, self-enhancement,
       and agreeableness; Needs love and ideal; and Value hedonism
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       <a href="#IBMmember"><strong>Member satisfaction</strong></a>
       <br/>(community fulfillment)
     </td>
-    <td style="text-align:center">More than 3000 community members</td>
-    <td>
-      <strong>Predictors of member satisfaction:</strong> Characteristics such
-      as anger, anxiety, work, leisure, inhibition, assent, and use of the
-      first-person pronoun
+    <td style="text-align:center; vertical-align:top">More than 3000
+      community members</td>
+    <td style="vertical-align:top">
+      <strong>Predictors of member satisfaction:</strong> Characteristics
+      such as anger, anxiety, work, leisure, inhibition, assent, and use
+      of the first-person pronoun
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       <a href="#IBMreading"><strong>Reading preference</strong></a>
       <br/>(content interest)
     </td>
-    <td style="text-align:center">More than 200 participants</td>
-    <td>
+    <td style="text-align:center; vertical-align:top">More than 200
+      participants</td>
+    <td style="vertical-align:top">
       <strong>Interest in environmental articles:</strong> Score high on Value
       self-transcendence<br/><br/>
       <strong>Interest in work-related articles:</strong> Score high on Value
@@ -124,12 +129,13 @@ The following studies conducted by {{site.data.keyword.IBM_notm}} researchers in
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       <a href="#IBMpreferences"><strong>Predicting consumption
       preferences</strong></a><br/>(consumer purchasing)
     </td>
-    <td style="text-align:center">Hundreds of thousands of data records</td>
-    <td>
+    <td style="text-align:center; vertical-align:top">Hundreds of thousands
+      of data records</td>
+    <td style="vertical-align:top">
       <strong>Predicting consumer preferences:</strong> Demographic data and
       personality characteristics
     </td>

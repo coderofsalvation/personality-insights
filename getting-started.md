@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-18"
+  years: 2015, 2018
+lastupdated: "2018-04-16"
 
 ---
 
@@ -52,16 +52,19 @@ If you use {{site.data.keyword.Bluemix_dedicated_notm}}, you create a service in
 ## Step 1: Send plain text input and receive basic JSON output
 {: #example1}
 
-The first example passes the plain text file `profile.txt` to the `POST /v3/profile` method and implicitly requests the default JSON response.
+The first example passes the plain text file `profile.txt` to the `POST /v3/profile` method and requests a JSON response.
 
 1.  Download the sample file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.txt" download="profile.txt">profile.txt <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>.
-1.  Issue the following command to send the file to the `/v3/profile` method and request the default JSON response. The `charset` parameter included with the `Content-Type` header specifies the character encoding of the input text.
+1.  Issue the following command to send the file to the `/v3/profile` method and request a JSON response.
+    -   The `Content-Type` header specifies that the input is plain text, `text/plain`. The `charset` parameter included with the header identifies the character encoding of the input text.
+    -   The `Accept` header specifies `application/json` to indicate that JSON output is requested.
     -   Replace `{username}` and `{password}` with your service credentials from the previous step.
     -   Modify `{path_to_file}` to specify the location of the `profile.txt` file.
 
     ```bash
     curl -X POST --user {username}:{password} \
     --header "Content-Type: text/plain;charset=utf-8" \
+    --header "Accept: application/json" \
     --data-binary "@{path_to_file}profile.txt" \
     "https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13"
     ```
@@ -74,14 +77,15 @@ The profile includes information about the Big Five personality, Needs, and Valu
 ## Step 2: Send JSON input and receive detailed JSON output
 {: #example2}
 
-The second example passes the JSON file `profile.json` to the `/v3/profile` method, again accepting the default JSON response. The example requests consumption preferences and raw scores for a more detailed analysis of the input.
+The second example passes the JSON file `profile.json` to the `/v3/profile` method, again requesting a JSON response. The example requests consumption preferences and raw scores for a more detailed analysis of the input.
 
 1.  Download the sample file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>, which contains a collection of Twitter messages.
-1.  Issue the following command to send the file to the `/v3/profile` method. The example specifies `application/json` for the `Content-Type` header; the `charset` parameter is not needed for JSON input. The example sets the `consumption_preferences` and `raw_scores` query parameters to `true`.
+1.  Issue the following command to send the file to the `/v3/profile` method. The example specifies `application/json` for the `Content-Type` and `Accept` headers; the `charset` parameter is not needed for JSON input. The example sets the `consumption_preferences` and `raw_scores` query parameters to `true`.
 
     ```bash
     curl -X POST --user {username}:{password} \
     --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --data-binary "@{path_to_file}profile.json" \
     "https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13&consumption_preferences=true&raw_scores=true"
     ```
@@ -98,7 +102,7 @@ The service also reports scores for its collection of consumption preferences. T
 
 The third example is similar to the second: it passes the same JSON content and requests the same results. But this example specifies `text/csv` for the `Accept` header to request the response in comma-separated values (CSV) format. It uses the `--output` option of the cURL command to direct the results to a file named `profile.csv`. The example sets the `csv_headers` query parameter to `true` to request that column headers be returned with the output.
 
-1.  Issue the following command to send the JSON file to the `/v3/profile` method.
+1.  Issue the following command to send the JSON file to the `/v3/profile` method. The `Content-Type` header identifies the input content as `application/json`, and the `Accept` header requests CSV output, `text/csv`.
 
     ```bash
     curl -X POST --user {username}:{password} \
