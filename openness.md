@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2018
+lastupdated: "2018-04-28"
 
 ---
 
@@ -74,62 +74,138 @@ Brief descriptions of the dimension's facets and of individuals who score high i
 
 General descriptions that might apply to individuals whose scores evidence more or less of each facet of the dimension, as well as terms that might describe such individuals.
 
-<table>
+<table summary="For the facet listed in the middle column of each row, the first two columns provide a description and a term for individuals with low scores for the facet, and the last two columns provide a term and a description for individuals with high scores for the facet.">
   <caption>Table 2. Range of characteristics (openness)</caption>
   <tr>
-    <th colspan="2" style="text-align:center">Description of low value</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">Description of high value</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+      Description of low value
+    </th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+      Description of high value
+    </th>
   </tr>
   <tr>
-    <th style="text-align:left; width: 23%">Description</th>
-    <th style="text-align:center; width: 16%">Term</th>
-    <th style="text-align:center; width: 16%">Facet</th>
-    <th style="text-align:center; width: 16%">Term</th>
-    <th style="text-align:right">Description</th>
-  </tr>
-    <tr>
-    <td style="text-align:left">You enjoy familiar routines and prefer not to deviate from them.</td>
-    <td style="text-align:center">Consistent</td>
-    <td style="text-align:center"><strong>Adventurousness</strong></td>
-    <td style="text-align:center">Adventurous</td>
-    <td style="text-align:right">You are eager to experience new things.</td>
-  </tr>
-  <tr>
-    <td style="text-align:left">You are less concerned with artistic or creative activities than most people.</td>
-    <td style="text-align:center">Unconcerned with art</td>
-    <td style="text-align:center"><strong>Artistic interests</strong></td>
-    <td style="text-align:center">Appreciative of art</td>
-    <td style="text-align:right">You enjoy beauty and seek out creative experiences.</td>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width: 23%">
+      Description
+    </th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width: 16%">
+      Term
+    </th>
+    <th id="facet" headers="blank" style="text-align:center; width: 16%">
+      Facet
+    </th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width: 16%">
+      Term
+    </th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+      Description
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">You do not frequently think about or openly express your emotions.</td>
-    <td style="text-align:center">Dispassionate</td>
-    <td style="text-align:center"><strong>Emotionality</strong></td>
-    <td style="text-align:center">Emotionally aware</td>
-    <td style="text-align:right">You are aware of your feelings and how to express them.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You enjoy familiar routines and prefer not to deviate from them.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Consistent
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Adventurousness</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Adventurous
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You are eager to experience new things.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You prefer facts over fantasy.</td>
-    <td style="text-align:center">Down-to-earth</td>
-    <td style="text-align:center"><strong>Imagination</strong></td>
-    <td style="text-align:center">Imaginative</td>
-    <td style="text-align:right">You have a wild imagination.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You are less concerned with artistic or creative activities than
+      most people.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Unconcerned with art
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Artistic interests</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Appreciative of art
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You enjoy beauty and seek out creative experiences.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You prefer dealing with the world as it is, rarely considering
-    abstract ideas.</td>
-    <td style="text-align:center">Concrete</td>
-    <td style="text-align:center"><strong>Intellect</strong></td>
-    <td style="text-align:center">Philosophical</td>
-    <td style="text-align:right">You are open to and intrigued by new ideas and love to explore them.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You do not frequently think about or openly express your emotions.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Dispassionate
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Emotionality</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Emotionally aware
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You are aware of your feelings and how to express them.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You prefer following with tradition to maintain a sense of stability.</td>
-    <td style="text-align:center">Respectful of authority</td>
-    <td style="text-align:center"><strong>Liberalism</strong></td>
-    <td style="text-align:center">Authority-challenging</td>
-    <td style="text-align:right">You prefer to challenge authority and traditional values to help bring about change.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You prefer facts over fantasy.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Down-to-earth
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Imagination</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Imaginative
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You have a wild imagination.
+    </td>
+  </tr>
+  <tr>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You prefer dealing with the world as it is, rarely considering
+      abstract ideas.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Concrete
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Intellect</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Philosophical
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You are open to and intrigued by new ideas and love to explore them.
+    </td>
+  </tr>
+  <tr>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You prefer following with tradition to maintain a sense of stability.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Respectful of authority
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Liberalism</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Authority-challenging
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You prefer to challenge authority and traditional values to help
+      bring about change.
+    </td>
   </tr>
 </table>
 

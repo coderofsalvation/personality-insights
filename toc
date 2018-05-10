@@ -50,6 +50,7 @@ Personality Insights
 
     {: .navgroup id="reference"}
     [API reference](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/)
+    information-security.md
 
     {: .topicgroup}
     Sample apps

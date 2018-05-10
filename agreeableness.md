@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2018
+lastupdated: "2018-04-28"
 
 ---
 
@@ -72,61 +72,137 @@ Brief descriptions of the dimension's facets and of individuals who score high i
 
 General descriptions that might apply to individuals whose scores evidence more or less of each facet of the dimension, as well as terms that might describe such individuals.
 
-<table>
+<table summary="For the facet listed in the middle column of each row, the first two columns provide a description and a term for individuals with low scores for the facet, and the last two columns provide a term and a description for individuals with high scores for the facet.">
   <caption>Table 2. Range of characteristics (agreeableness)</caption>
   <tr>
-    <th colspan="2" style="text-align:center">Description of low value</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">Description of high value</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+      Description of low value
+    </th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+      Description of high value
+    </th>
   </tr>
   <tr>
-    <th style="text-align:left; width:23%">Description</th>
-    <th style="text-align:center; width:16%">Term</th>
-    <th style="text-align:center; width:16%">Facet</th>
-    <th style="text-align:center; width:16%">Term</th>
-    <th style="text-align:right">Description</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width:23%">
+      Description
+    </th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width:16%">
+      Term
+    </th>
+    <th id="facet" headers="blank" style="text-align:center; width:16%">
+      Facet
+    </th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width:16%">
+      Term
+    </th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+      Description
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">You are more concerned with taking care of yourself than taking time for others.</td>
-    <td style="text-align:center">Self-focused</td>
-    <td style="text-align:center"><strong>Altruism</strong></td>
-    <td style="text-align:center">Altruistic</td>
-    <td style="text-align:right">You feel fulfilled when helping others and will go out of your way to do so.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You are more concerned with taking care of yourself than taking time
+      for others.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Self-focused
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Altruism</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Altruistic
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You feel fulfilled when helping others and will go out of your way to
+      do so.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You do not shy away from contradicting others.</td>
-    <td style="text-align:center">Contrary</td>
-    <td style="text-align:center"><strong>Cooperation</strong></td>
-    <td style="text-align:center">Accommodating</td>
-    <td style="text-align:right">You are easy to please and try to avoid confrontation.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You do not shy away from contradicting others.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Contrary</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Cooperation</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Accommodating
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You are easy to please and try to avoid confrontation.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You hold yourself in high regard and are satisfied with who you are.</td>
-    <td style="text-align:center">Proud</td>
-    <td style="text-align:center"><strong>Modesty</strong></td>
-    <td style="text-align:center">Modest</td>
-    <td style="text-align:right">You are uncomfortable being the center of attention.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You hold yourself in high regard and are satisfied with who you are.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Proud
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Modesty</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Modest
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You are uncomfortable being the center of attention.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You are comfortable using every trick in the book to get what you want.</td>
-    <td style="text-align:center">Compromising</td>
-    <td style="text-align:center"><strong>Morality</strong></td>
-    <td style="text-align:center">Uncompromising</td>
-    <td style="text-align:right">You think it is wrong to take advantage of others to get ahead.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You are comfortable using every trick in the book to get what you want.
+    </td>
+    <td headers="lowValue lowTerm"style="text-align:center">
+      Compromising
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Morality</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Uncompromising
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You think it is wrong to take advantage of others to get ahead.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You think people should generally rely more on themselves than on others.</td>
-    <td style="text-align:center">Hard-hearted</td>
-    <td style="text-align:center"><strong>Sympathy</strong></td>
-    <td style="text-align:center">Empathetic</td>
-    <td style="text-align:right">You feel what others feel and are compassionate toward them.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You think people should generally rely more on themselves than on
+      others.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Hard-hearted
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Sympathy</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Empathetic
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You feel what others feel and are compassionate toward them.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You are wary of other people's intentions and do not trust easily.</td>
-    <td style="text-align:center">Cautious of others</td>
-    <td style="text-align:center"><strong>Trust</strong></td>
-    <td style="text-align:center">Trusting of others</td>
-    <td style="text-align:right">You believe the best of others and trust people easily.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You are wary of other people's intentions and do not trust easily.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Cautious of others
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Trust</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Trusting of others
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You believe the best of others and trust people easily.
+    </td>
   </tr>
 </table>
 
