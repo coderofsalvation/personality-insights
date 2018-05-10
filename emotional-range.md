@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2018
+lastupdated: "2018-04-28"
 
 ---
 
@@ -73,61 +73,135 @@ Brief descriptions of the dimension's facets and of individuals who score high i
 
 General descriptions that might apply to individuals whose scores evidence more or less of each facet of the dimension, as well as terms that might describe such individuals.
 
-<table>
+<table summary="For the facet listed in the middle column of each row, the first two columns provide a description and a term for individuals with low scores for the facet, and the last two columns provide a term and a description for individuals with high scores for the facet.">
   <caption>Table 2. Range of characteristics (emotional range)</caption>
   <tr>
-    <th colspan="2" style="text-align:center">Description of low value</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">Description of high value</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+      Description of low value
+    </th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+      Description of high value
+    </th>
   </tr>
   <tr>
-    <th style="text-align:left; width: 23%">Description</th>
-    <th style="text-align:center; width: 16%">Term</th>
-    <th style="text-align:center; width: 16%">Facet</th>
-    <th style="text-align:center; width: 16%">Term</th>
-    <th style="text-align:right">Description</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width: 23%">
+      Description
+    </th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width: 16%">
+      Term
+    </th>
+    <th id="facet" headers="blank" style="text-align:center; width: 16%">
+      Facet
+    </th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width: 16%">
+      Term
+    </th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+      Description
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">It takes a lot to get you angry.</td>
-    <td style="text-align:center">Mild-tempered</td>
-    <td style="text-align:center"><strong>Anger</strong></td>
-    <td style="text-align:center">Fiery</td>
-    <td style="text-align:right">You have a fiery temper, especially when things do not go your way.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      It takes a lot to get you angry.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Mild-tempered
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Anger</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Fiery
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You have a fiery temper, especially when things do not go your way.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You tend to feel calm and self-assured.</td>
-    <td style="text-align:center">Self-assured</td>
-    <td style="text-align:center"><strong>Anxiety</strong></td>
-    <td style="text-align:center">Prone to worry</td>
-    <td style="text-align:right">You tend to worry about things that might happen.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You tend to feel calm and self-assured.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Self-assured
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Anxiety</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Prone to worry
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You tend to worry about things that might happen.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You are generally comfortable with yourself as you are.</td>
-    <td style="text-align:center">Content</td>
-    <td style="text-align:center"><strong>Depression</strong></td>
-    <td style="text-align:center">Melancholy</td>
-    <td style="text-align:right">You think quite often about the things you are unhappy about.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You are generally comfortable with yourself as you are.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Content
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Depression</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Melancholy
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You think quite often about the things you are unhappy about.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You have control over your desires, which are not particularly intense.</td>
-    <td style="text-align:center">Self-controlled</td>
-    <td style="text-align:center"><strong>Immoderation</strong></td>
-    <td style="text-align:center">Hedonistic</td>
-    <td style="text-align:right">You feel your desires strongly and are easily tempted by them.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You have control over your desires, which are not particularly intense.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Self-controlled
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Immoderation</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Hedonistic
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You feel your desires strongly and are easily tempted by them.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You are hard to embarrass and are self-confident most of the time.</td>
-    <td style="text-align:center">Confident</td>
-    <td style="text-align:center"><strong>Self-consciousness</strong></td>
-    <td style="text-align:center">Self-conscious</td>
-    <td style="text-align:right">You are sensitive about what others might be thinking of you.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You are hard to embarrass and are self-confident most of the time.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Confident
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Self-consciousness</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Self-conscious
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You are sensitive about what others might be thinking of you.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You handle unexpected events calmly and effectively.</td>
-    <td style="text-align:center">Calm under pressure</td>
-    <td style="text-align:center"><strong>Vulnerability</strong></td>
-    <td style="text-align:center">Susceptible to stress</td>
-    <td style="text-align:right">You are easily overwhelmed in stressful situations.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You handle unexpected events calmly and effectively.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Calm under pressure
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Vulnerability</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Susceptible to stress
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You are easily overwhelmed in stressful situations.
+    </td>
   </tr>
 </table>
 

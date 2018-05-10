@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2018
+lastupdated: "2018-04-28"
 
 ---
 
@@ -70,61 +70,137 @@ Brief descriptions of the dimension's facets and of individuals who score high i
 
 General descriptions that might apply to individuals whose scores evidence more or less of each facet of the dimension, as well as terms that might describe such individuals.
 
-<table>
+<table summary="For the facet listed in the middle column of each row, the first two columns provide a description and a term for individuals with low scores for the facet, and the last two columns provide a term and a description for individuals with high scores for the facet.">
   <caption>Table 2. Range of characteristics (extraversion)</caption>
   <tr>
-    <th colspan="2" style="text-align:center">Description of low value</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">Description of high value</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+      Description of low value
+    </th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+      Description of high value
+    </th>
   </tr>
   <tr>
-    <th style="text-align:left; width:23%">Description</th>
-    <th style="text-align:center; width:16%">Term</th>
-    <th style="text-align:center; width:16%">Facet</th>
-    <th style="text-align:center; width:16%">Term</th>
-    <th style="text-align:right">Description</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width:23%">
+      Description
+    </th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width:16%">
+      Term
+    </th>
+    <th id="facet" headers="blank" style="text-align:center; width:16%">
+      Facet
+    </th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width:16%">
+      Term
+    </th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+      Description
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">You appreciate a relaxed pace in life.</td>
-    <td style="text-align:center">Laid-back</td>
-    <td style="text-align:center"><strong>Activity level</strong></td>
-    <td style="text-align:center">Energetic</td>
-    <td style="text-align:right">You enjoy a fast-paced, busy schedule with many activities.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You appreciate a relaxed pace in life.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Laid-back
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Activity level</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Energetic
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You enjoy a fast-paced, busy schedule with many activities.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You prefer to listen than to talk, especially in group settings.</td>
-    <td style="text-align:center">Demure</td>
-    <td style="text-align:center"><strong>Assertiveness</strong></td>
-    <td style="text-align:center">Assertive</td>
-    <td style="text-align:right">You tend to speak up and take charge of situations, and you are comfortable leading groups.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You prefer to listen than to talk, especially in group settings.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Demure
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Assertiveness</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Assertive
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You tend to speak up and take charge of situations, and you are
+      comfortable leading groups.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You are generally serious and do not joke much.</td>
-    <td style="text-align:center">Solemn</td>
-    <td style="text-align:center"><strong>Cheerfulness</strong></td>
-    <td style="text-align:center">Cheerful</td>
-    <td style="text-align:right">You are a joyful person and share that joy with the world.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You are generally serious and do not joke much.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Solemn
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Cheerfulness</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Cheerful
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You are a joyful person and share that joy with the world.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You prefer activities that are quiet, calm, and safe.</td>
-    <td style="text-align:center">Calm-seeking</td>
-    <td style="text-align:center"><strong>Excitement-seeking</strong></td>
-    <td style="text-align:center">Excitement-seeking</td>
-    <td style="text-align:right">You are excited by taking risks and feel bored without lots of action going on.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You prefer activities that are quiet, calm, and safe.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Calm-seeking
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Excitement-seeking</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Excitement-seeking
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You are excited by taking risks and feel bored without lots of action
+      going on.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You are a private person and do not let many people in.</td>
-    <td style="text-align:center">Reserved</td>
-    <td style="text-align:center"><strong>Friendliness</strong></td>
-    <td style="text-align:center">Outgoing</td>
-    <td style="text-align:right">You make friends easily and feel comfortable around other people.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You are a private person and do not let many people in.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Reserved
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Friendliness</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Outgoing
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You make friends easily and feel comfortable around other people.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">You have a strong desire to have time to yourself.</td>
-    <td style="text-align:center">Independent</td>
-    <td style="text-align:center"><strong>Gregariousness</strong></td>
-    <td style="text-align:center">Sociable</td>
-    <td style="text-align:right">You enjoy being in the company of others.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      You have a strong desire to have time to yourself.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Independent
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Gregariousness</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Sociable
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      You enjoy being in the company of others.
+    </td>
   </tr>
 </table>
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2018
+lastupdated: "2018-04-28"
 
 ---
 
@@ -84,217 +84,217 @@ Earlier versions of the service used the Linguistic Inquiry and Word Count (LIWC
 
 The following table shows per-language average MAE and correlation results for the {{site.data.keyword.personalityinsightsshort}} service. The results place the service at the cutting edge of personality inference from textual data as indicated by [Schwartz et al. (2013)](/docs/services/personality-insights/references.html#schwartz2013) and [Plank and Hovy (2015)](/docs/services/personality-insights/references.html#plank2015).
 
-<table>
+<table summary="For each row that identifies a language in the first column, the following two rows provide the average MAE and the average correlation for the Big Five dimensions, the Big Five facets, the Needs, and the Values.">
   <caption>Table 1. Average MAE and correlation by language</caption>
   <tr>
-    <th style="text-align:left; vertical-align:bottom">
+    <th id="language" style="text-align:left; vertical-align:bottom">
       Language
     </th>
-    <th style="text-align:center; vertical-align:bottom">
+    <th id="dimensions" style="text-align:center; vertical-align:bottom">
       Big Five dimensions
     </th>
-    <th style="text-align:center; vertical-align:bottom">
+    <th id="facets" style="text-align:center; vertical-align:bottom">
       Big Five facets
     </th>
-    <th style="text-align:center; vertical-align:bottom">
+    <th id="needs" style="text-align:center; vertical-align:bottom">
       Needs
     </th>
-    <th style="text-align:center; vertical-align:bottom">
+    <th id="values" style="text-align:center; vertical-align:bottom">
       Values
     </th>
   </tr>
   <tr>
-    <td colspan="5" style="text-align:left">
+    <th id="english" headers="language" colspan="5" style="text-align:left">
       **English**
-    </td>
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">
+    <td headers="language english" style="text-align:left">
       Average MAE
     </td>
-    <td style="text-align:center">
+    <td headers="dimensions english" style="text-align:center">
       0.12
     </td>
-    <td style="text-align:center">
+    <td headers="facets english" style="text-align:center">
       0.12
     </td>
-    <td style="text-align:center">
+    <td headers="needs english" style="text-align:center">
       0.11
     </td>
-    <td style="text-align:center">
+    <td headers="values english" style="text-align:center">
       0.11
     </td>
   </tr>
   <tr>
-    <td style="text-align:left">
+    <td headers="language english" style="text-align:left">
       Average correlation
     </td>
-    <td style="text-align:center">
+    <td headers="dimensions english" style="text-align:center">
       0.33
     </td>
-    <td style="text-align:center">
+    <td headers="facets english" style="text-align:center">
       0.28
     </td>
-    <td style="text-align:center">
+    <td headers="needs english" style="text-align:center">
       0.22
     </td>
-    <td style="text-align:center">
+    <td headers="values english" style="text-align:center">
       0.24
     </td>
   </tr>
   <tr>
-    <td colspan="5" style="text-align:left">
+    <th id="spanish" headers="language" colspan="5" style="text-align:left">
       **Spanish**
-    </td>
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">
+    <td headers="language spanish" style="text-align:left">
       Average MAE
     </td>
-    <td style="text-align:center">
+    <td headers="dimensions spanish" style="text-align:center">
       0.10
     </td>
-    <td style="text-align:center">
+    <td headers="facets spanish" style="text-align:center">
       0.12
     </td>
-    <td style="text-align:center">
+    <td headers="needs spanish" style="text-align:center">
       0.12
     </td>
-    <td style="text-align:center">
+    <td headers="values spanish" style="text-align:center">
       0.11
     </td>
   </tr>
   <tr>
-    <td style="text-align:left">
+    <td headers="language spanish" style="text-align:left">
       Average correlation
     </td>
-    <td style="text-align:center">
+    <td headers="dimensions spanish" style="text-align:center">
       0.35
     </td>
-    <td style="text-align:center">
+    <td headers="facets spanish" style="text-align:center">
       0.21
     </td>
-    <td style="text-align:center">
+    <td headers="needs spanish" style="text-align:center">
       0.24
     </td>
-    <td style="text-align:center">
+    <td headers="values spanish" style="text-align:center">
       0.19
     </td>
   </tr>
   <tr>
-    <td colspan="5" style="text-align:left">
+    <th id="japanese" headers="language" colspan="5" style="text-align:left">
       **Japanese**
-    </td>
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">
+    <td headers="language japanese" style="text-align:left">
       Average MAE
     </td>
-    <td style="text-align:center">
+    <td headers="dimensions japanese" style="text-align:center">
       0.11
     </td>
-    <td style="text-align:center">
+    <td headers="facets japanese" style="text-align:center">
       0.12
     </td>
-    <td style="text-align:center">
+    <td headers="needs japanese" style="text-align:center">
       0.11
     </td>
-    <td style="text-align:center">
+    <td headers="values japanese" style="text-align:center">
       0.11
     </td>
   </tr>
   <tr>
-    <td style="text-align:left">
+    <td headers="language japanese" style="text-align:left">
       Average correlation
     </td>
-    <td style="text-align:center">
+    <td headers="dimensions japanese" style="text-align:center">
       0.27
     </td>
-    <td style="text-align:center">
+    <td headers="facets japanese" style="text-align:center">
       0.22
     </td>
-    <td style="text-align:center">
+    <td headers="needs japanese" style="text-align:center">
       0.25
     </td>
-    <td style="text-align:center">
+    <td headers="values japanese" style="text-align:center">
       0.19
     </td>
   </tr>
   <tr>
-    <td colspan="5" style="text-align:left">
+    <th id="arabic" headers="language" colspan="5" style="text-align:left">
       **Arabic**
-    </td>
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">
+    <td headers="language arabic" style="text-align:left">
       Average MAE
     </td>
-    <td style="text-align:center">
+    <td headers="dimensions arabic" style="text-align:center">
       0.09
     </td>
-    <td style="text-align:center">
+    <td headers="facets arabic" style="text-align:center">
       0.12
     </td>
-    <td style="text-align:center">
+    <td headers="needs arabic" style="text-align:center">
       0.11
     </td>
-    <td style="text-align:center">
+    <td headers="values arabic" style="text-align:center">
       0.10
     </td>
   </tr>
   <tr>
-    <td style="text-align:left">
+    <td headers="language arabic" style="text-align:left">
       Average correlation
     </td>
-    <td style="text-align:center">
+    <td headers="dimensions arabic" style="text-align:center">
       0.17
     </td>
-    <td style="text-align:center">
+    <td headers="facets arabic" style="text-align:center">
       0.14
     </td>
-    <td style="text-align:center">
+    <td headers="needs arabic" style="text-align:center">
       0.13
     </td>
-    <td style="text-align:center">
+    <td headers="values arabic" style="text-align:center">
       0.14
     </td>
   </tr>
   <tr>
-    <td colspan="5" style="text-align:left">
+    <th id="korean" headers="language" colspan="5" style="text-align:left">
       **Korean**
-    </td>
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">
+    <td headers="language korean" style="text-align:left">
       Average MAE
     </td>
-    <td style="text-align:center">
+    <td headers="dimensions korean" style="text-align:center">
       0.11
     </td>
-    <td style="text-align:center">
+    <td headers="facets korean" style="text-align:center">
       0.12
     </td>
-    <td style="text-align:center">
+    <td headers="needs korean" style="text-align:center">
       0.11
     </td>
-    <td style="text-align:center">
+    <td headers="values korean" style="text-align:center">
       0.11
     </td>
   </tr>
   <tr>
-    <td style="text-align:left">
+    <td headers="language korean" style="text-align:left">
       Average correlation
     </td>
-    <td style="text-align:center">
+    <td headers="dimensions korean" style="text-align:center">
       0.21
     </td>
-    <td style="text-align:center">
+    <td headers="facets korean" style="text-align:center">
       0.21
     </td>
-    <td style="text-align:center">
+    <td headers="needs korean" style="text-align:center">
       0.13
     </td>
-    <td style="text-align:center">
+    <td headers="values korean" style="text-align:center">
       0.12
     </td>
   </tr>

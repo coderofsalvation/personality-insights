@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2018
+lastupdated: "2018-05-04"
 
 ---
 
@@ -90,7 +90,7 @@ For more information about the research behind the {{site.data.keyword.personali
 1.  <a id="rentfrow2003" style="border-bottom:none; color:black">Rentfrow, Peter J., and Samuel D. Gosling.</a> [*The Do Re Mi's of Everyday Life: The Structure and Personality Correlates of Music Preferences.* ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ncbi.nlm.nih.gov/pubmed/12793587){: new_window} Journal of Personality and Social Psychology, Vol. 84(6) (June 2003): pp. 1236-1256.
 1.  <a id="roberts2007" style="border-bottom:none; color:black">Roberts, Brent W., Nathan Kuncel, Rebecca L. Shiner, Avshalom Caspi, and Lewis R. Goldberg.</a> [*The Power of Personality: The Comparative Validity of Personality Traits, Socioeconomic Status, and Cognitive Ability for Predicting Important Life Outcomes.* ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://pps.sagepub.com/content/2/4/313.short?rss=1&ssource=mfc){: new_window} Perspectives on Psychological Science, Vol. 2(4) (December 2007): pp. 313-345.
 1.  <a id="roberts2008" style="border-bottom:none; color:black">Roberts, Brent W., and Daniel Mroczek.</a> [*Personality Trait Change in Adulthood.* ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2743415/){: new_window} Current Directions in Psychological Science, Vol. 17(1) (February 2008): pp. 31-35.
-1.  <a id="sarli2011" style="border-bottom:none; color:black">Sarli, Abduljalil, and Huam Hon Tat.</a> [*Attracting Consumers by Finding out Their Psychographic Traits.* ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://fundamentaljournals.org/ijfpss/downloads/2-Sarli%20N1%20pp%20%286-10%29.pdf){: new_window} International Journal of Fundamental Psychology &amp; Social Sciences, Vol. 1(1) (September 2011): pp. 6-10.
+1.  <a id="sarli2011" style="border-bottom:none; color:black">Sarli, Abduljalil, and Huam Hon Tat.</a> [*Attracting Consumers by Finding out Their Psychographic Traits.* ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.academia.edu/3586683/Attracting_Consumers_by_Finding_out_Their_Psychographic_Traits){: new_window} International Journal of Fundamental Psychology &amp; Social Sciences, Vol. 1(1) (September 2011): pp. 6-10.
 1.  <a id="schlegelmilch1996" style="border-bottom:none; color:black">Schlegelmilch, Bodo B., Greg M. Bohlen, and Adamantios Diamantopoulos.</a> [*The Link between Green Purchasing Decisions and Measures of Environmental Consciousness.* ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.emeraldinsight.com/doi/abs/10.1108/03090569610118740){: new_window} European Journal of Marketing, Vol. 30(5) (1996): pp. 35-55.
 1.  <a id="schwartz2013" style="border-bottom:none; color:black">Schwartz, H. Andrew, Johannes C. Eichstaedt, Margaret L. Kern, Lukasz Dziurzynski, Stephanie M. Ramones, Megha Agrawal, Achal Shah, Michal Kosinski, David Stillwell, Martin E. P. Seligman, and Lyle H. Ungar.</a> [*Personality, Gender, and Age in the Language of Social Media: The Open-Vocabulary Approach.* ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0073791){: new_window} PLoS One, Vol. 8(9) (September 2013).
 1.  <a id="schwartz1992" style="border-bottom:none; color:black">Schwartz, Shalom H.</a> [*Universals in the content and structure of values: Theoretical advances and empirical tests in 20 countries.* ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.220.3674&rep=rep1&type=pdf){: new_window} Advances in Experimental Social Psychology, Vol. 25 (1992).
