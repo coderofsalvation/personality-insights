@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-16"
+lastupdated: "2018-05-13"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-04-16"
 The service returns the results of its analysis in comma-separated values (CSV) format when you specify `text/csv` with the `Accept` header of a request. CSV output provides information that is similar to the information provided by JSON output. As with JSON, the information in the CSV output depends on whether the input represents timestamped data and whether the user requests raw scores and consumption preferences.
 {: shortdesc}
 
-Unlike JSON, however, CSV output is returned as a fixed number of columns. The first row of the output consists of optional column labels, which are included only if you set the `csv_headers` query parameter of the request to `true`. The second row of the output, which is always present, contains the results of the analysis.
+CSV output, unlike JSON, is returned as a fixed number of columns. The first row of the output consists of optional column labels, which are included only if you set the `csv_headers` query parameter of the request to `true`. The second row of the output, which is always present, contains the results of the analysis.
 
 The following sections list and briefly describe all columns of the CSV output in the exact order in which they appear in the results. The tables describe the columns by logical grouping, including the number of columns in each group and their optional labels. Other than the word count, all numeric data are returned as double values.
 
@@ -53,8 +53,8 @@ The following columns are always present in the CSV output for all requests.
       facet_trust
     </td>
     <td style="vertical-align:top">
-      Normalized percentile score for the author of the text with respect
-      to the named dimension or facet.
+      Normalized percentile score for the author of the text for the
+      named dimension or facet.
     </td>
   </tr>
   <tr>
@@ -68,8 +68,8 @@ The following columns are always present in the CSV output for all requests.
       facet_self_efficacy
     </td>
     <td style="vertical-align:top">
-      Normalized percentile score for the author of the text with respect
-      to the named dimension or facet.
+      Normalized percentile score for the author of the text for the
+      named dimension or facet.
     </td>
   </tr>
   <tr>
@@ -83,8 +83,8 @@ The following columns are always present in the CSV output for all requests.
       facet_gregariousness
     </td>
     <td style="vertical-align:top">
-      Normalized percentile score for the author of the text with respect
-      to the named dimension or facet.
+      Normalized percentile score for the author of the text for the
+      named dimension or facet.
     </td>
   </tr>
   <tr>
@@ -98,8 +98,8 @@ The following columns are always present in the CSV output for all requests.
       facet_vulnerability
     </td>
     <td style="vertical-align:top">
-      Normalized percentile score for the author of the text with respect
-      to the named dimension or facet.
+      Normalized percentile score for the author of the text for the
+      named dimension or facet.
     </td>
   </tr>
   <tr>
@@ -113,8 +113,8 @@ The following columns are always present in the CSV output for all requests.
       facet_liberalism
     </td>
     <td style="vertical-align:top">
-      Normalized percentile score for the author of the text with respect
-      to the named dimension or facet.
+      Normalized percentile score for the author of the text for the
+      named dimension or facet.
     </td>
   </tr>
   <tr>
@@ -130,8 +130,8 @@ The following columns are always present in the CSV output for all requests.
       need_excitement<br/>need_harmony
     </td>
     <td style="vertical-align:top">
-      Normalized percentile score for the author of the text with respect
-      to the named need.
+      Normalized percentile score for the author of the text for the
+      named need.
     </td>
   </tr>
   <tr>
@@ -144,8 +144,8 @@ The following columns are always present in the CSV output for all requests.
       value_self_transcendence
     </td>
     <td style="vertical-align:top">
-      Normalized percentile score for the author of the text with respect
-      to the named value.
+      Normalized percentile score for the author of the text for the
+      named value.
     </td>
   </tr>
   <tr>
@@ -160,8 +160,8 @@ The following columns are always present in the CSV output for all requests.
     </td>
     <td style="vertical-align:top">
       <em>If the input text is timestamped,</em> the percentage of the
-      input associated with each day of the week; if the input is not
-      timestamped, the percentages are all <code>0.0</code>.
+      input that is associated with each day of the week. If the input
+      is not timestamped, the percentages are all <code>0.0</code>.
     </td>
   </tr>
   <tr>

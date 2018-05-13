@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2018
+lastupdated: "2018-05-13"
 
 ---
 
@@ -23,9 +23,13 @@ lastupdated: "2017-10-12"
 The {{site.data.keyword.personalityinsightsshort}} service infers an author's personality characteristics for three models: Big Five, Needs, and Values. Based on its results for these models, the service can also produce consumption preferences for the author of the input text. Set the `consumption_preferences` query parameter to `true` for a request to obtain consumption preferences.
 {: shortdesc}
 
-Grouped into eight high-level categories, the more than 40 consumption preferences indicate the author's likelihood to prefer different products, services, and activities. For instance, the service can identify the author's inclinations when shopping for clothing (comfort versus fashion) and automobiles (cost versus safety); their leanings toward different genres of music, movies, and reading; and their attitudes toward the environment and volunteering, among other things.
+The service groups the more than 40 consumption preferences into eight high-level categories. The preferences indicate the author's likelihood to prefer different products, services, and activities. For instance, the service can identify
 
-Businesses use the service's personality models to better understand their customers and to design and develop more personalized and targeted campaigns, products, and services. Consumption preferences make it even easier to take action based on the service's results. Businesses can easily obtain a list of preferences that are associated with an individual's dominant characteristics and respond accordingly. For more information about possible applications of the consumption preferences, see [Use cases](/docs/services/personality-insights/usecases.html) and [The service in action](/docs/services/personality-insights/applied.html).
+-   The author's inclinations for clothing (comfort versus fashion) and automobiles (cost versus safety).
+-   The author's leanings toward different genres of music, movies, and reading.
+-   The author's attitudes about the environment and volunteering.
+
+Businesses use the service's personality models to better understand their customers and to design and develop more personalized and targeted campaigns, products, and services. Consumption preferences make it even easier to act on the service's results. Businesses can easily obtain and respond to a list of preferences that are associated with an individual's dominant characteristics. For more information about possible applications of the consumption preferences, see [Use cases](/docs/services/personality-insights/usecases.html) and [The service in action](/docs/services/personality-insights/applied.html).
 
 The following sections list and describe the consumption preferences that the service can return. For more information about interpreting the numeric preferences, see [Scores for consumption preferences](/docs/services/personality-insights/numeric.html#scores). For information about how {{site.data.keyword.IBM_notm}} developed the preferences, see [The science behind the service](/docs/services/personality-insights/science.html).
 

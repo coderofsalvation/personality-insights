@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-05-13"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-04-04"
 # About
 {: #about}
 
-> **Service update:** *The {{site.data.keyword.personalityinsightsshort}} service was updated with small fixes on March 23, 2018. The interface version remains `2017-10-13`. For more information about this and all updates to the service, see the [Release notes](/docs/services/personality-insights/release-notes.html).*
+> **Service update:** *The {{site.data.keyword.personalityinsightsshort}} service was updated with small fixes on March 23, 2018. The interface version remains `2017-10-13`. For more information about all recent updates to the service, see the [Release notes](/docs/services/personality-insights/release-notes.html).*
 
 The {{site.data.keyword.personalityinsightsfull}} service provides an Application Programming Interface (API) for deriving insights from social media, enterprise data, or other digital communications. The service uses linguistic analytics to infer individuals' intrinsic personality characteristics from digital communications such as email, text messages, tweets, and forum posts.
 {: shortdesc}
@@ -33,7 +33,7 @@ The service infers, from potentially noisy social media, portraits of individual
 The {{site.data.keyword.personalityinsightsshort}} service infers personality characteristics based on three primary models:
 
 -   **Big Five** personality characteristics represent the most widely used model for generally describing how a person engages with the world. The model includes five primary dimensions: *Agreeableness*, *Conscientiousness*, *Extraversion*, *Emotional range*, and *Openness*. Each dimension has six facets that further characterize an individual according to the dimension.
--   **Needs** describe which aspects of a product will resonate with a person. The model includes twelve characteristic needs: *Excitement*, *Harmony*, *Curiosity*, *Ideal*, *Closeness*, *Self-expression*, *Liberty*, *Love*, *Practicality*, *Stability*, *Challenge*, and *Structure*.
+-   **Needs** describe which aspects of a product are likely to resonate with a person. The model includes twelve characteristic needs: *Excitement*, *Harmony*, *Curiosity*, *Ideal*, *Closeness*, *Self-expression*, *Liberty*, *Love*, *Practicality*, *Stability*, *Challenge*, and *Structure*.
 -   **Values** describe motivating factors that influence a person's decision making. The model includes five values: *Self-transcendence / Helping others*, *Conservation / Tradition*, *Hedonism / Taking pleasure in life*, *Self-enhancement / Achieving success*, and *Open to change / Excitement*.
 
 For more information, see [Personality models](/docs/services/personality-insights/models.html).
@@ -41,7 +41,7 @@ For more information, see [Personality models](/docs/services/personality-insigh
 ## Consumption preferences
 {: #preferences}
 
-Based on the personality characteristics inferred from the input text, the service can also return an indication of the author's consumption preferences. Consumption preferences indicate the author's likelihood to pursue different products, services, and activities. The service groups the individual preferences into eight categories: *Shopping*, *Music*, *Movies*, *Reading and learning*, *Health and activity*, *Volunteering*, *Environmental concern*, and *Entrepreneurship*. Each category contains from one to as many as a dozen individual preferences.
+Based on the personality characteristics that are inferred from the input text, the service can also return an indication of the author's consumption preferences. Consumption preferences indicate the author's likelihood to pursue different products, services, and activities. The service groups the individual preferences into eight categories: *Shopping*, *Music*, *Movies*, *Reading and learning*, *Health and activity*, *Volunteering*, *Environmental concern*, and *Entrepreneurship*. Each category contains from one to as many as a dozen individual preferences.
 
 For more information, see [Consumption preferences](/docs/services/personality-insights/preferences.html).
 
@@ -98,7 +98,7 @@ The service supports the following languages. You can use any combination of sup
 ## Learn more about the service
 {: #learn}
 
--   A [quick demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://personality-insights-demo.ng.bluemix.net/){: new_window} of the {{site.data.keyword.personalityinsightsshort}} service lets you analyze input text to develop a personality portrait that includes consumption preferences for the author.
+-   A [quick demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://personality-insights-demo.ng.bluemix.net/){: new_window} of the {{site.data.keyword.personalityinsightsshort}} service analyzes input text to develop a personality portrait that includes consumption preferences for the author.
 -   Applications in {{site.data.keyword.watson}} Developer Cloud [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/watson/developercloud/starter-kits.html){: new_window} demonstrate the service.
 -   [The service in action](/docs/services/personality-insights/applied.html) and [The science behind the service](/docs/services/personality-insights/science.html) provide information about the research that underlies the service.
 -   The [{{site.data.keyword.personalityinsightsshort}} service in the {{site.data.keyword.Bluemix_short}} Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/catalog/services/personality-insights/){: new_window} describes the pricing plans that are available for the service.

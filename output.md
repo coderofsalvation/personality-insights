@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-16"
+lastupdated: "2018-05-13"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-04-16"
 # Understanding a JSON profile
 {: #output}
 
-When you use the `POST /v3/profile` method to analyze content, the service returns the results of its analysis as a JSON `Profile` object when you specify `application/json` with the `Accept` header of a request. The scope of the JSON output depends on the parameters you specify with the request and on whether the input text represents timestamped data, such as the text associated with a Twitter feed.
+When you use the `POST /v3/profile` method to analyze content, the service returns the results of its analysis as a JSON `Profile` object when you specify `application/json` with the `Accept` header of a request. The scope of the JSON output depends on the parameters you specify with the request. It also depends on whether the input text represents timestamped data, such as the text associated with a Twitter feed.
 {: shortdesc}
 
 The following sections describe the contents of a response in JSON format. All example output is produced by the sample JSON file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> that is used in the [Getting started tutorial](/docs/services/personality-insights/getting-started.html). For information about CSV output, see [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html).
@@ -28,16 +28,16 @@ The following sections describe the contents of a response in JSON format. All e
 ## The Profile object
 {: #outputJSON}
 
-The `Profile` object is the top-level JSON object returned by the service. The object has the following fields:
+The `Profile` object is the top-level JSON object that is returned by the service. The object has the following fields:
 
--   `word_count` (integer) provides the number of words from the input content that were used to generate the profile. This can be less than the number of words in the input if the request submitted a large amount of content. If the number of words fails to meet a minimum threshold, the output also includes a `word_count_message` field that provides additional guidance.
+-   `word_count` (integer) provides the number of words from the input content that were used to generate the profile. This figure can be less than the number of words in the input if the request submitted a large amount of content. If the number of words fails to meet a minimum threshold, the output includes a `word_count_message` field that provides further guidance.
 -   `processed language` (string) describes the language model that the service used to process the input: `ar` (Arabic), `en` (English), `es` (Spanish), `ja` (Japanese), or `ko` (Korean).
--   `personality` is a recursive array of `Trait` objects that describes the Big Five dimensions and facets inferred from the input text.
--   `needs` is an array of `Trait` objects that describes the Needs inferred from the input text.
--   `values` is an array of `Trait` objects that describes the Values inferred from the input text.
+-   `personality` is a recursive array of `Trait` objects that describes the Big Five dimensions and facets that are inferred from the input text.
+-   `needs` is an array of `Trait` objects that describes the Needs that are inferred from the input text.
+-   `values` is an array of `Trait` objects that describes the Values that are inferred from the input text.
 -   `behavior` is an array of `Behavior` objects that describes the distribution of the content over the days of the week and the hours of the day. The service returns the field only for JSON input that is timestamped.
 -   `consumption_preferences` is an array of `ConsumptionPreferencesCategory` objects that provides results for each category of consumption preferences. The elements of the array provide information for the individual preferences of that category. The service returns the field only if the `consumption_preferences` query parameter of the request is set to `true`.
--   `warnings` is an array of `Warning` objects that provides messages associated with the input text. The array is empty if the input generated no warnings.
+-   `warnings` is an array of `Warning` objects that provides messages about the input text. The array is empty if the input generated no warnings.
 
 ### Example response
 {: #JSONExample}
@@ -293,7 +293,7 @@ If the `consumption_preferences` query parameter is set to `true`, the `Profile`
 -   `name` (string) is the user-visible name of the consumption preferences category.
 -   `consumption_preferences` is an array of `ConsumptionPreferences` objects that provides results for the individual preferences of the category.
 
-Each individual preference for a category is described via a `ConsumptionPreferences` object. Some categories have only a single preference, others have many more.
+Each individual preference for a category is described via a `ConsumptionPreferences` object. Some categories have only a single preference; other categories have many more.
 
 -   `consumption_preference_id` (string) is the unique ID of the consumption preference to which the results pertain in the form `consumption_preferences_{preference}`.
 -   `name` (string) is the user-visible name of the consumption preference.
