@@ -22,7 +22,7 @@ lastupdated: "2018-05-13"
 
 > **Service update:** *The {{site.data.keyword.personalityinsightsshort}} service was updated with small fixes on March 23, 2018. The interface version remains `2017-10-13`. For more information about all recent updates to the service, see the [Release notes](/docs/services/personality-insights/release-notes.html).*
 
-The {{site.data.keyword.personalityinsightsfull}} service provides an Application Programming Interface (API) for deriving insights from social media, enterprise data, or other digital communications. The service uses linguistic analytics to infer individuals' intrinsic personality characteristics from digital communications such as email, text messages, tweets, and forum posts.
+The {{site.data.keyword.personalityinsightsfull}} service provides an application programming interface (API) for deriving insights from social media, enterprise data, or other digital communications. The service uses linguistic analytics to infer individuals' intrinsic personality characteristics from digital communications such as email, text messages, tweets, and forum posts.
 {: shortdesc}
 
 The service infers, from potentially noisy social media, portraits of individuals that reflect their personality characteristics. It can also determine individuals' consumption preferences, which indicate their likelihood to prefer various products, services, and activities.
