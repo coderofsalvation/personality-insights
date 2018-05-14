@@ -20,7 +20,7 @@ lastupdated: "2018-05-13"
 # Release notes
 {: #release-notes}
 
-The following sections document the new features and changes that were included for each release of the {{site.data.keyword.personalityinsightsshort}} service. Unless otherwise noted, all changes were backward-compatible and were automatically and transparently available to all new and existing applications.
+The following sections document the new features and changes that were included for each release of the {{site.data.keyword.personalityinsightsshort}} service. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing applications.
 {: shortdesc}
 
 > **Note:** The release notes document the *service version* and *interface version* for all recent updates. You specify the *interface version* with the `version` query parameter to use new features and functionality made available with that update. The service returns both versions with the `X-Service-Api-Version` response header.
