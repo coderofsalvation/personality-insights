@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-27"
+lastupdated: "2018-05-13"
 
 ---
 
@@ -20,14 +20,14 @@ lastupdated: "2018-04-27"
 # Requesting a profile
 {: #input}
 
-To analyze content, you use the HTTP `POST` request method to call the `/v3/profile` method of the {{site.data.keyword.personalityinsightsshort}} service. You can pass the service a maximum of 20 MB of content to be analyzed via the body of the request, but the service requires far less input to produce an accurate personality profile; for more information, see [Providing sufficient input](#sufficient).
+To analyze content, you use the HTTP `POST` request method to call the `/v3/profile` method of the {{site.data.keyword.personalityinsightsshort}} service. You can pass the service a maximum of 20 MB of content to be analyzed via the body of the request. However, the service requires far less input to produce an accurate personality profile. For more information, see [Providing sufficient input](#sufficient).
 {: shortdesc}
 
-The `/v3/profile` method includes parameters that let you specify the type of content to be passed to and returned by the service, as well as the language of each type of content. The service always returns a profile that provides insight into the personality characteristics of the author of the input text. You can also request that the service return raw scores and consumption preferences.
+The `/v3/profile` method includes parameters that specify the type of content to be passed to and returned by the service, as well as the language of each type of content. The service always returns a profile that provides insight into the personality characteristics of the author of the input text. You can also request raw scores and consumption preferences.
 
 The following sections describe the parameters of the `/v3/profile` method. For information about the results of a request, see [Understanding a JSON profile](/docs/services/personality-insights/output.html) and [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html). For detailed information about the `/v3/profile` method, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}.
 
-> **Note:** Request logging is disabled for the {{site.data.keyword.personalityinsightsshort}} service. Regardless of whether you set the `X-Watson-Learning-Opt-Out` request header, the service neither logs nor retains data from requests and responses.
+> **Note:** Request logging is disabled for the {{site.data.keyword.personalityinsightsshort}} service. Regardless of whether you set the `X-Watson-Learning-Opt-Out` request header, the service does not log or retain data from requests and responses.
 
 ## Specifying request and response formats
 {: #formats}
@@ -76,7 +76,7 @@ You use the `Content-Type` and `Accept` header parameters to indicate the format
     </td>
     <td style="text-align:center; vertical-align:top">
       Yes<br/><br/>
-      The service strips tags from the content before processing it.
+      The service strips tags from the content before it processes the text.
     </td>
     <td style="text-align:center; vertical-align:top">
       No
@@ -135,7 +135,7 @@ Content-Type: text/plain;charset=utf-8
 ```
 {: codeblock}
 
-By using the `charset` parameter, you can avoid potential problems associated with non-ASCII or non-printable characters. If you pass UTF-8 data without specifying the character set, special characters can result in incorrect results or in HTTP 4*nn* or 5*nn* errors.
+By using the `charset` parameter, you can avoid potential problems that are associated with non-ASCII or non-printable characters. If you pass UTF-8 data without specifying the character set, special characters can result in incorrect results or in HTTP 400- or 500-level errors.
 
 ### Using cURL
 {: #charsetCurl}
@@ -153,23 +153,23 @@ curl -X POST --user {username}:{password}
 ```
 {: pre}
 
-For additional examples of calling the service with different request and response formats, see the [Getting started tutorial](/docs/services/personality-insights/getting-started.html).
+For more examples of calling the service with different request and response formats, see the [Getting started tutorial](/docs/services/personality-insights/getting-started.html).
 
 ## Specifying JSON input
 {: #json}
 
-To pass JSON input, you use the `Content` object. The object includes an array of `ContentItem` objects, each of which contains an element of the content. The only required field of the object is `content`, which provides the text to be analyzed. Other optional fields let you specify the following:
+To pass JSON input, you use the `Content` object. The object includes an array of `ContentItem` objects, each of which contains an element of the content. The only required field of the object is `content`, which provides the text to be analyzed. Other optional fields are
 
 -   `id` (string) is a unique ID for the content item.
 -   `created` (integer) is a UNIX timestamp that indicates when the content item was created.
 -   `updated` (integer) is a UNIX timestamp that indicates when the content item was last updated.
--   `contenttype` (string) indicates the type of the content item, `text/plain` or `text/html`.
+-   `contenttype` (string) indicates the type of the content item: `text/plain` or `text/html`.
 -   `language` (string) indicates the language of the content item: `ar` (Arabic), `en` (English), `es` (Spanish), `ja` (Japanese), or `ko` (Korean). See [Specifying request and response languages](#languages).
 -   `parentid` (string) is the `id` of the content item's parent item.
 -   `reply` (boolean) indicates whether the content item is a reply to another item.
 -   `forward` (boolean) indicates whether the content item is a forward or copy of another item.
 
-JSON input is well suited for content from Twitter or other social networks that consist of multiple conversations or posts. Instead of concatenating all of the author's text into a single string, you can use JSON to submit the data as it exists. This has the further advantage of letting the service know which pieces of text are related.
+JSON input is well suited for content from Twitter or other social networks that consist of multiple conversations or posts. Instead of concatenating all of the author's text into a single string, you can use JSON to submit the data as it exists. This approach has the further advantage of letting the service know which pieces of text are related.
 
 ### Example JSON input
 {: jsonExample}
@@ -383,16 +383,16 @@ Submit all text in the same language; do not mix multiple languages in the same 
 ### Specifying a language for JSON content
 {: #languageJSON}
 
-For plain text and HTML input, the `Content-Language` header is the only way to specify the language. For JSON input, you can also specify the language of each individual content item by using the `language` parameter of the `ContentItem` object. However, a language specified with the `Content-Language` header overrides a language specified for a content item; the service ignores content items that specify a different language.
+For plain text and HTML input, the `Content-Language` header is the only way to specify the language. For JSON input, you can also specify the language of each individual content item by using the `language` parameter of the `ContentItem` object. For JSON, a language specified with the `Content-Language` header overrides a language that is specified for a content item; the service ignores content items that specify a different language.
 
 Omit the `Content-Type` header to base the language solely on the specification of the content items. The service uses the most prevalent language from among the content items, which yields the best possible results. It counts the number of content items for each language and selects the language with the highest frequency. If multiple languages have the same maximum frequency, the service uses the language that reaches that value first. Again, the service ignores content items that specify a different language.
 
 ### Language considerations
 {: #languageNotes}
 
-Consider the following when submitting input text:
+Consider the following details when you submit input text:
 
--   *For English,* results are based on US cultural norms. If you analyze English text from a different culture, you might need to adjust the results accordingly.
+-   *For English,* the service bases results on US cultural norms. If you analyze English text from a different culture, you might need to adjust the results.
 -   *For Arabic,* the service can trim the amount of input text for performance reasons. At a certain threshold, the accuracy of Arabic results does not improve with more words. If the service trims Arabic input, it returns a warning message to inform you that it reduced the amount of input text that it used for the profile.
 -   *For Arabic and Korean,* the service is unable to return meaningful results for a subset of characteristics. For more information, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations).
 
@@ -401,19 +401,19 @@ For general information about using translated text, see [Inferring personality 
 ## Providing sufficient input
 {: #sufficient}
 
-A meaningful personality profile can be created only where sufficient data of suitable quantity and quality is provided. Because language use varies naturally from document to document and from time to time, a small sample of text might not be representative of an individual's overall language patterns. Moreover, different characteristics and different media converge at somewhat different rates.
+A meaningful personality profile can be created only where sufficient data of suitable quantity and quality is provided. Because language use varies naturally from document to document and from time to time, a small sample of text might not be representative of an individual's overall language patterns. Moreover, different characteristics and different media converge at different rates.
 
-Up to a point, more words are likely to produce better results, improving the service's precision by reducing the deviation between the predicted results and the author's actual score. You can send the service up to 20 MB of input content, but accuracy levels off at around 3000 words of input; additional content does not contribute further to the accuracy of the profile. Therefore, the service extracts and uses only the first 250 KB of content, not counting any HTML or JSON markup, from large requests.
+You can send the service up to 20 MB of input content. Up to a point, more words are likely to produce better results, improving the service's precision by reducing the deviation between the predicted results and the author's actual score. But accuracy levels off at around 3000 words of input, and more content does not contribute to the accuracy of the profile. Therefore, the service extracts and uses only the first 250 KB of content, not counting any HTML or JSON markup, from large requests.
 
-This figure does not map to an exact number of words, which varies based on the language and nature of the text. In English, for example, average word length is between four and five characters, so this figure provides around 50,000 words, which is at least 15 times more words than the service needs to produce an accurate profile. By truncating long input, the service improves response time without sacrificing precision. The `word_count` field of the response JSON indicates the number of words that the service actually uses for a request, which can be less than the number of words submitted.
+This figure does not map to an exact number of words, which varies based on the language and nature of the text. In English, for example, average word length is between four and five characters, so this figure provides around 50,000 words. This number is at least 15 times more words than the service needs to produce an accurate profile. By truncating long input, the service improves response time without sacrificing precision. The `word_count` field of the response JSON indicates the number of words that the service uses for a request, which can be less than the number of words submitted.
 
 ### Guidelines and recommendations
 {: #sufficientGuidelines}
 
 The following table reports two values for different quantities of input text:
 
--   The *Average Mean Absolute Error (MAE)* across all characteristics based on the number of words provided as input. The smaller the MAE, the closer the service's results are to the scores the author would receive by taking an actual personality test.
--   The *Average correlation* between inferred and actual scores across all characteristics. The closer the correlation is to 1, the better the predictions, although correlations above 0.2 are considered acceptable and those above 0.4 are rare.
+-   The *Average Mean Absolute Error (MAE)* across all characteristics based on the number of words that are provided as input. The smaller the MAE, the closer the service's results are to the scores the author would receive by taking a personality test.
+-   The *Average correlation* between inferred and actual scores across all characteristics. The closer the correlation is to 1, the better the predictions. Correlations greater than 0.2 are considered acceptable; correlation higher than 0.4 are rare.
 
 The information is based on English-language data, but the general guidelines apply to all languages. For more information about average MAE and correlation, including language-specific statistics, see [How precise is the service](/docs/services/personality-insights/science.html#researchPrecise).
 
@@ -461,17 +461,17 @@ As the following guidelines indicate, {{site.data.keyword.IBM_notm}} recommends 
 -   Fewer than 600 words generate a warning, but the service still analyzes the input.
 -   Fewer than 100 words generate an error.
 
-These guidelines can help you accommodate the reliability of the results to your application. For example, for a casual application that recommends movies, you might be comfortable with less precision; for an application that makes more critical recommendations, you likely require more precise results. For more information about how the service infers personality characteristics, see [How personality characteristics are inferred](/docs/services/personality-insights/science.html#researchInfer).
+These guidelines can help you accommodate the reliability of the results to your application. For example, for a casual application that recommends movies, you might be comfortable with less precision. For an application that makes more critical recommendations, you likely require more precise results. For more information about how the service infers personality characteristics, see [How personality characteristics are inferred](/docs/services/personality-insights/science.html#researchInfer).
 
 ## Requesting raw scores
 {: #rawScores}
 
-The service always returns normalized scores for each personality characteristic (Big Five dimension and facet, Need, and Value) as part of its response. The service can also report a `raw_score` for each characteristic if you set the `raw_scores` query parameter to `true`. Raw scores represent the scores for the characteristics based solely on the author's text and the model for that characteristic, without comparing the results to a sample population. For more information about using raw scores, see [Raw scores for personality characteristics](/docs/services/personality-insights/numeric.html#rawScores).
+The service always returns normalized scores for each personality characteristic (Big Five dimension and facet, Need, and Value) as part of its response. The service can also report a `raw_score` for each characteristic if you set the `raw_scores` query parameter to `true`. Raw scores represent results for the characteristics that are based solely on the author's text and the model for that characteristic, without comparing the results to a sample population. For more information about using raw scores, see [Raw scores for personality characteristics](/docs/services/personality-insights/numeric.html#rawScores).
 
 ## Requesting consumption preferences
 {: #preferences}
 
-The service always returns results for the personality models. When you set the `consumption_preferences` query parameter to `true`, the service also returns `scores` for a variety of consumption preferences based on the personality characteristics it infers from the input text. These results indicate the author's tendency to prefer different products, services, and activities. Businesses can use the results to better understand the author's inclinations and to personalize communications and offers for the author.
+The service always returns results for the personality models. When you set the `consumption_preferences` query parameter to `true`, the service also returns `scores` for various consumption preferences. The service bases the preferences on the personality characteristics that it infers from the input text. These results indicate the author's tendency to prefer different products, services, and activities. Businesses can use the results to better understand the author's inclinations and to personalize communications and offers for the author.
 
 For more information about the different consumption preferences, see [Consumption preferences](/docs/services/personality-insights/preferences.html). For information about interpreting the numeric results for a preference, see [Scores for consumption preferences](/docs/services/personality-insights/numeric.html#scores).
 
