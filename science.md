@@ -117,6 +117,45 @@ The following table shows per-language average MAE and correlation results for t
     </th>
   </tr>
   <tr>
+    <th id="arabic" headers="language" colspan="5" style="text-align:left">
+      **Arabic**
+    </th>
+  </tr>
+  <tr>
+    <td headers="language arabic" style="text-align:left">
+      Average MAE
+    </td>
+    <td headers="dimensions arabic" style="text-align:center">
+      0.09
+    </td>
+    <td headers="facets arabic" style="text-align:center">
+      0.12
+    </td>
+    <td headers="needs arabic" style="text-align:center">
+      0.11
+    </td>
+    <td headers="values arabic" style="text-align:center">
+      0.10
+    </td>
+  </tr>
+  <tr>
+    <td headers="language arabic" style="text-align:left">
+      Average correlation
+    </td>
+    <td headers="dimensions arabic" style="text-align:center">
+      0.17
+    </td>
+    <td headers="facets arabic" style="text-align:center">
+      0.14
+    </td>
+    <td headers="needs arabic" style="text-align:center">
+      0.13
+    </td>
+    <td headers="values arabic" style="text-align:center">
+      0.14
+    </td>
+  </tr>
+  <tr>
     <th id="english" headers="language" colspan="5" style="text-align:left">
       **English**
     </th>
@@ -153,45 +192,6 @@ The following table shows per-language average MAE and correlation results for t
     </td>
     <td headers="values english" style="text-align:center">
       0.24
-    </td>
-  </tr>
-  <tr>
-    <th id="spanish" headers="language" colspan="5" style="text-align:left">
-      **Spanish**
-    </th>
-  </tr>
-  <tr>
-    <td headers="language spanish" style="text-align:left">
-      Average MAE
-    </td>
-    <td headers="dimensions spanish" style="text-align:center">
-      0.10
-    </td>
-    <td headers="facets spanish" style="text-align:center">
-      0.12
-    </td>
-    <td headers="needs spanish" style="text-align:center">
-      0.12
-    </td>
-    <td headers="values spanish" style="text-align:center">
-      0.11
-    </td>
-  </tr>
-  <tr>
-    <td headers="language spanish" style="text-align:left">
-      Average correlation
-    </td>
-    <td headers="dimensions spanish" style="text-align:center">
-      0.35
-    </td>
-    <td headers="facets spanish" style="text-align:center">
-      0.21
-    </td>
-    <td headers="needs spanish" style="text-align:center">
-      0.24
-    </td>
-    <td headers="values spanish" style="text-align:center">
-      0.19
     </td>
   </tr>
   <tr>
@@ -234,45 +234,6 @@ The following table shows per-language average MAE and correlation results for t
     </td>
   </tr>
   <tr>
-    <th id="arabic" headers="language" colspan="5" style="text-align:left">
-      **Arabic**
-    </th>
-  </tr>
-  <tr>
-    <td headers="language arabic" style="text-align:left">
-      Average MAE
-    </td>
-    <td headers="dimensions arabic" style="text-align:center">
-      0.09
-    </td>
-    <td headers="facets arabic" style="text-align:center">
-      0.12
-    </td>
-    <td headers="needs arabic" style="text-align:center">
-      0.11
-    </td>
-    <td headers="values arabic" style="text-align:center">
-      0.10
-    </td>
-  </tr>
-  <tr>
-    <td headers="language arabic" style="text-align:left">
-      Average correlation
-    </td>
-    <td headers="dimensions arabic" style="text-align:center">
-      0.17
-    </td>
-    <td headers="facets arabic" style="text-align:center">
-      0.14
-    </td>
-    <td headers="needs arabic" style="text-align:center">
-      0.13
-    </td>
-    <td headers="values arabic" style="text-align:center">
-      0.14
-    </td>
-  </tr>
-  <tr>
     <th id="korean" headers="language" colspan="5" style="text-align:left">
       **Korean**
     </th>
@@ -309,6 +270,45 @@ The following table shows per-language average MAE and correlation results for t
     </td>
     <td headers="values korean" style="text-align:center">
       0.12
+    </td>
+  </tr>
+  <tr>
+    <th id="spanish" headers="language" colspan="5" style="text-align:left">
+      **Spanish**
+    </th>
+  </tr>
+  <tr>
+    <td headers="language spanish" style="text-align:left">
+      Average MAE
+    </td>
+    <td headers="dimensions spanish" style="text-align:center">
+      0.10
+    </td>
+    <td headers="facets spanish" style="text-align:center">
+      0.12
+    </td>
+    <td headers="needs spanish" style="text-align:center">
+      0.12
+    </td>
+    <td headers="values spanish" style="text-align:center">
+      0.11
+    </td>
+  </tr>
+  <tr>
+    <td headers="language spanish" style="text-align:left">
+      Average correlation
+    </td>
+    <td headers="dimensions spanish" style="text-align:center">
+      0.35
+    </td>
+    <td headers="facets spanish" style="text-align:center">
+      0.21
+    </td>
+    <td headers="needs spanish" style="text-align:center">
+      0.24
+    </td>
+    <td headers="values spanish" style="text-align:center">
+      0.19
     </td>
   </tr>
 </table>
