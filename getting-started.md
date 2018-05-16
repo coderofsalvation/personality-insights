@@ -111,5 +111,5 @@ For a detailed description of the CSV response and headers, see [Understanding a
 -   Learn more about [Requesting a profile](/docs/services/personality-insights/input.html) and about [Understanding a JSON profile](/docs/services/personality-insights/output.html) and [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html).
 -   Learn about the Big Five, Needs, and Values [Personality models](/docs/services/personality-insights/models.html).
 -   Learn more about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}
--   Interact with the API in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/personality-insights-v3){: new_window}.
+-   Interact with the API in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.ng.bluemix.net/apis/personality-insights-v3){: new_window}.
 -   Explore the [Node.js sample application ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/personality-insights-nodejs){: new_window} to learn more about application development with the service.
