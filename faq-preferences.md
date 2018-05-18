@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-08-13"
+  years: 2015, 2018
+lastupdated: "2018-05-18"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-08-13"
 # Consumption preferences
 {: #preferences}
 
-1.  <span style="color:#003F69">What consumption preferences does the service return and how would I use them?</span>
+1.  <span style="color:#003F69">What consumption preferences does the service return and how are they used?</span>
 
     -   [Consumption preferences](/docs/services/personality-insights/preferences.html) introduces how businesses can leverage the consumption preferences and describes each preference and its range of possible values.
 

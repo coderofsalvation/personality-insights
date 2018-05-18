@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-13"
+lastupdated: "2018-05-18"
 
 ---
 
@@ -20,12 +20,12 @@ lastupdated: "2018-05-13"
 # Understanding a CSV profile
 {: #outputCSV}
 
-The service returns the results of its analysis in comma-separated values (CSV) format when you specify `text/csv` with the `Accept` header of a request. CSV output provides information that is similar to the information provided by JSON output. As with JSON, the information in the CSV output depends on whether the input represents timestamped data and whether the user requests raw scores and consumption preferences.
+The service returns the results of its analysis in comma-separated values (CSV) format when you specify `text/csv` with the `Accept` header of a request. CSV output provides information that is similar to the information provided by JSON output. As with JSON, the information in the CSV output depends on whether the input data is timestamped and whether you request raw scores and consumption preferences.
 {: shortdesc}
 
 CSV output, unlike JSON, is returned as a fixed number of columns. The first row of the output consists of optional column labels, which are included only if you set the `csv_headers` query parameter of the request to `true`. The second row of the output, which is always present, contains the results of the analysis.
 
-The following sections list and briefly describe all columns of the CSV output in the exact order in which they appear in the results. The tables describe the columns by logical grouping, including the number of columns in each group and their optional labels. Other than the word count, all numeric data are returned as double values.
+The following sections list and briefly describe all columns of the CSV output in the exact order in which they appear in the results. The tables describe the columns by logical grouping, including the number of columns in each group and their optional labels. Other than the word count, all numeric data is returned as double values.
 
 For more information about the meaning of the CSV columns, see [Understanding a JSON profile](/docs/services/personality-insights/output.html) and [Interpreting the numeric results](/docs/services/personality-insights/numeric.html).
 
@@ -38,13 +38,13 @@ The following columns are always present in the CSV output for all requests.
   <caption>Table 1. CSV columns for basic characteristics and
     metadata</caption>
   <tr>
-    <th style="width:25%; text-align:left; vertical-align:bottom">Grouping<br/>(number of columns)</th>
+    <th style="width:25%; text-align:left; vertical-align:bottom">Grouping<br/>(Number of columns)</th>
     <th style="width:25%; text-align:left; vertical-align:bottom">Optional labels</th>
     <th style="text-align:left; vertical-align:bottom">Description</th>
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Big Five Agreeableness<br/>percentiles<br/>(7 columns)
+      Big Five Agreeableness percentiles<br/>(Seven columns)
     </td>
     <td style="vertical-align:top">
       big5_agreeableness<br/>facet_altruism<br/>
@@ -59,7 +59,7 @@ The following columns are always present in the CSV output for all requests.
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Big Five Conscientiousness<br/>percentiles<br/>(7 columns)
+      Big Five Conscientiousness percentiles<br/>(Seven columns)
     </td>
     <td style="vertical-align:top">
       big5_conscientiousness<br/>facet_achievement_striving
@@ -74,7 +74,7 @@ The following columns are always present in the CSV output for all requests.
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Big Five Extraversion<br/>percentiles<br/>(7 columns)
+      Big Five Extraversion percentiles<br/>(Seven columns)
     </td>
     <td style="vertical-align:top">
       big5_extraversion<br/>facet_activity_level
@@ -89,7 +89,7 @@ The following columns are always present in the CSV output for all requests.
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Big Five Emotional range<br/>percentiles<br/>(7 columns)
+      Big Five Emotional range percentiles<br/>(Seven columns)
     </td>
     <td style="vertical-align:top">
       big5_neuroticism<br/>facet_anger<br/>
@@ -104,7 +104,7 @@ The following columns are always present in the CSV output for all requests.
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Big Five Openness<br/>percentiles<br/>(7 columns)
+      Big Five Openness percentiles<br/>(Seven columns)
     </td>
     <td style="vertical-align:top">
       big5_openness<br/>facet_adventurousness<br/>
@@ -119,7 +119,7 @@ The following columns are always present in the CSV output for all requests.
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Needs percentiles<br/>(12 columns)
+      Needs percentiles<br/>(Twelve columns)
     </td>
     <td style="vertical-align:top">
       need_liberty<br/>need_ideal<br/>
@@ -136,7 +136,7 @@ The following columns are always present in the CSV output for all requests.
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Values percentiles<br/>(5 columns)
+      Values percentiles<br/>(Five columns)
     </td>
     <td style="vertical-align:top">
       value_conservation<br/>value_hedonism<br/>
@@ -150,7 +150,7 @@ The following columns are always present in the CSV output for all requests.
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Days of the week<br/>percentages<br/>(7 columns)
+      Days of the week percentages<br/>(Seven columns)
     </td>
     <td style="vertical-align:top">
       behavior_sunday<br/>behavior_monday<br/>
@@ -160,26 +160,26 @@ The following columns are always present in the CSV output for all requests.
     </td>
     <td style="vertical-align:top">
       <em>If the input text is timestamped,</em> the percentage of the
-      input that is associated with each day of the week. If the input
-      is not timestamped, the percentages are all <code>0.0</code>.
+      input that is associated with each day of the week. Otherwise,
+      all percentages are <code>0.0</code>.
     </td>
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Hours of the day<br/>percentages<br/>(24 columns)
+      Hours of the day percentages<br/>(Twenty-four columns)
     </td>
     <td style="vertical-align:top">
-      behavior_0000<br/><em>through</em><br/>behavior_2300
+      behavior_0000 <em>through</em> behavior_2300
     </td>
     <td style="vertical-align:top">
       <em>If the input text is timestamped,</em> the percentage of the
-      input associated with each hour of the day; if the input is not
-      timestamped, the percentages are all <code>0.0</code>.
+      input that is associated with each hour of the day. Otherwise,
+      all percentages are <code>0.0</code>.
     </td>
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Word count and<br/>language<br/>(2 columns)
+      Word count and language<br/>(Two columns)
     </td>
     <td style="vertical-align:top">
       word_count<br/>processed_language
@@ -200,12 +200,12 @@ The following columns are present only if you request raw scores by setting the 
 <table>
   <caption>Table 2. CSV columns for raw scores</caption>
   <tr>
-    <th style="width:40%; text-align:left; vertical-align:bottom">Grouping<br/>(number of columns)</th>
+    <th style="width:40%; text-align:left; vertical-align:bottom">Grouping<br/>(Number of columns)</th>
     <th style="width:60%; text-align:left; vertical-align:bottom">Optional labels</th>
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Big Five Agreeableness<br/>raw scores<br/>(7 columns)
+      Big Five Agreeableness raw scores<br/>(Seven columns)
     </td>
     <td>
       big5_agreeableness_raw<br/>facet_altruism_raw<br/>
@@ -216,7 +216,7 @@ The following columns are present only if you request raw scores by setting the 
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Big Five Conscientiousness<br/>raw scores<br/>(7 columns)
+      Big Five Conscientiousness raw scores<br/>(Seven columns)
     </td>
     <td>
       big5_conscientiousness_raw<br/>facet_achievement_striving_raw<br/>
@@ -227,7 +227,7 @@ The following columns are present only if you request raw scores by setting the 
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Big Five Extraversion<br/>raw scores<br/>(7 columns)
+      Big Five Extraversion raw scores<br/>(Seven columns)
     </td>
     <td>
       big5_extraversion_raw<br/>facet_activity_level_raw<br/>
@@ -238,7 +238,7 @@ The following columns are present only if you request raw scores by setting the 
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Big Five Emotional range<br/>raw scores<br/>(7 columns)
+      Big Five Emotional range raw scores<br/>(Seven columns)
     </td>
     <td>
       big5_neuroticism_raw<br/>facet_anger_raw<br/>
@@ -249,7 +249,7 @@ The following columns are present only if you request raw scores by setting the 
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Big Five Openness<br/>raw scores<br/>(7 columns)
+      Big Five Openness raw scores<br/>(Seven columns)
     </td>
     <td>
       big5_openness_raw<br/>facet_adventurousness_raw<br/>
@@ -260,7 +260,7 @@ The following columns are present only if you request raw scores by setting the 
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Needs raw scores<br/>(12 columns)
+      Needs raw scores<br/>(Twelve columns)
     </td>
     <td>
       need_liberty_raw<br/>need_ideal_raw<br/>
@@ -273,7 +273,7 @@ The following columns are present only if you request raw scores by setting the 
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Values raw scores<br/>(5 columns)
+      Values raw scores<br/>(Five columns)
     </td>
     <td>
       value_conservation_raw<br/>value_hedonism_raw<br/>
@@ -291,12 +291,12 @@ The following columns are always present in the CSV output for all requests. In 
 <table>
   <caption>Table 3. CSV columns for significance</caption>
   <tr>
-    <th style="width:40%; text-align:left; vertical-align:bottom">Grouping<br/>(number of columns)</th>
+    <th style="width:40%; text-align:left; vertical-align:bottom">Grouping<br/>(Number of columns)</th>
     <th style="width:60%; text-align:left; vertical-align:bottom">Optional labels</th>
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Big Five Agreeableness<br/>significance<br/>(7 columns)
+      Big Five Agreeableness significance<br/>(Seven columns)
     </td>
     <td>
       big5_agreeableness_significant<br/>facet_altruism_significant<br/>
@@ -307,7 +307,7 @@ The following columns are always present in the CSV output for all requests. In 
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Big Five Conscientiousness<br/>significance<br/>(7 columns)
+      Big Five Conscientiousness significance<br/>(Seven columns)
     </td>
     <td>
       big5_conscientiousness_significant<br/>
@@ -319,7 +319,7 @@ The following columns are always present in the CSV output for all requests. In 
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Big Five Extraversion<br/>significance<br/>(7 columns)
+      Big Five Extraversion significance<br/>(Seven columns)
     </td>
     <td>
       big5_extraversion_significant<br/>facet_activity_level_significant<br/>
@@ -330,7 +330,7 @@ The following columns are always present in the CSV output for all requests. In 
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Big Five Emotional range<br/>significance<br/>(7 columns)
+      Big Five Emotional range significance<br/>(Seven columns)
     </td>
     <td>
       big5_neuroticism_significant<br/>facet_anger_significant<br/>
@@ -341,7 +341,7 @@ The following columns are always present in the CSV output for all requests. In 
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Big Five Openness<br/>significance<br/>(7 columns)
+      Big Five Openness significance<br/>(Seven columns)
     </td>
     <td>
       big5_openness_significant<br/>facet_adventurousness_significant<br/>
@@ -352,7 +352,7 @@ The following columns are always present in the CSV output for all requests. In 
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Needs raw significance<br/>(12 columns)
+      Needs raw significance<br/>(Twelve columns)
     </td>
     <td>
       need_liberty_significant<br/>need_ideal_significant<br/>
@@ -365,7 +365,7 @@ The following columns are always present in the CSV output for all requests. In 
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Values significance<br/>(5 columns)
+      Values significance<br/>(Five columns)
     </td>
     <td>
       value_conservation_significant<br/>value_hedonism_significant<br/>
@@ -384,12 +384,12 @@ The following columns are present only if you request consumption preferences by
 <table style="width:90%">
   <caption>Table 4. CSV columns for consumption preferences</caption>
   <tr>
-    <th style="width:40%; text-align:left; vertical-align:bottom">Grouping<br/>(number of columns)</th>
+    <th style="width:40%; text-align:left; vertical-align:bottom">Grouping<br/>(Number of columns)</th>
     <th style="width:60%; text-align:left; vertical-align:bottom">Optional labels</th>
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Purchasing preferences<br/>category scores<br/>(12 columns)
+      Purchasing preferences category scores<br/>(Twelve columns)
     </td>
     <td style="vertical-align:top">
       consumption_preferences_spur_of_moment<br/>
@@ -408,7 +408,7 @@ The following columns are present only if you request consumption preferences by
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Music preferences<br/>category scores<br/>(9 columns)
+      Music preferences category scores<br/>(Nine columns)
     </td>
     <td style="vertical-align:top">
       consumption_preferences_music_rap<br/>
@@ -424,7 +424,7 @@ The following columns are present only if you request consumption preferences by
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Health and activity preferences<br/>category scores<br/>(3 columns)
+      Health and activity preferences category scores<br/>(Three columns)
     </td>
     <td style="vertical-align:top">
       consumption_preferences_gym_membership<br/>
@@ -434,7 +434,7 @@ The following columns are present only if you request consumption preferences by
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Movie preferences<br/>category scores<br/>(10 columns)
+      Movie preferences category scores<br/>(Ten columns)
     </td>
     <td style="vertical-align:top">
       consumption_preferences_movie_romance<br/>
@@ -451,7 +451,7 @@ The following columns are present only if you request consumption preferences by
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Reading preferences<br/>category scores<br/>(5 columns)
+      Reading preferences category scores<br/>(Five columns)
     </td>
     <td style="vertical-align:top">
       consumption_preferences_read_frequency<br/>
@@ -463,7 +463,7 @@ The following columns are present only if you request consumption preferences by
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Volunteering preferences<br/>category scores<br/>(1 column)
+      Volunteering preferences category scores<br/>(One column)
     </td>
     <td style="vertical-align:top">
       consumption_preferences_volunteer
@@ -471,7 +471,7 @@ The following columns are present only if you request consumption preferences by
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Environmental concern preferences<br/>category scores<br/>(1 column)
+      Environmental concern preferences category scores<br/>(One column)
     </td>
     <td style="vertical-align:top">
       consumption_preferences_concerned_environment
@@ -479,7 +479,7 @@ The following columns are present only if you request consumption preferences by
   </tr>
   <tr>
     <td style="vertical-align:top">
-      Entrepreneurship preferences<br/>category scores<br/>(1 column)
+      Entrepreneurship preferences category scores<br/>(One column)
     </td>
     <td style="vertical-align:top">
       consumption_preferences_start_business
