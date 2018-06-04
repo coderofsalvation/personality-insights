@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-18"
+lastupdated: "2018-06-02"
 
 ---
 
@@ -24,6 +24,60 @@ The following sections document the new features and changes that were included 
 {: shortdesc}
 
 > **Note:** The release notes document the *service version* and *interface version* for all recent updates. You specify the *interface version* with the `version` query parameter to use new features and functionality made available with that update. The service returns both versions with the `X-Service-Api-Version` response header.
+
+## 4 June 2018
+{: #June2018}
+
+**Service version** - `3.4.4`<br/> **Interface version** - `2017-10-13`
+
+For applications that are hosted in Sydney (**au-syd**), the service now supports a new API authentication process for service instances. {{site.data.keyword.Bluemix}} is in the process of migrating to token-based Identity and Access Management (IAM) authentication. IAM uses access tokens rather than service credentials for authentication with a service.
+
+In the Sydney region, you use IAM access tokens with the {{site.data.keyword.personalityinsightsshort}} service for
+
+-   *New service instances* that you create after June 4. For more information, see [Authenticating with IAM tokens](/docs/services/watson/getting-started-iam.html).
+-   *Existing service instances* that you migrate from Cloud Foundry to a resource group that is managed by the Resource Controller (RC). Service instances that you created before June 4 continue to use service credentials for authentication until you migrate them. For more information, see [Migrating Cloud Foundry service instances to a resource group](/docs/account/instance_migration.html).
+
+All new and existing service instances in other regions continue to use service credentials (`{username}:{password}`) for authentication. IAM access tokens will be enabled for applications that are hosted in other regions soon.
+
+### Using an IAM access token to authenticate
+
+When you use IAM access tokens, you authenticate before you send a request to the {{site.data.keyword.personalityinsightsshort}} service.
+
+1.  Get an API key from IBM Cloud. Use that key to generate an IAM access token. For more information, see [How to get an IAM token by using a {{site.data.keyword.watson}} service API key](/docs/services/watson/getting-started-iam.html#iamtoken).
+1.  Pass the IAM access token to the {{site.data.keyword.personalityinsightsshort}} service by using the `Authorization` header. In the header, indicate that the access token is a `Bearer` token by specifying `Authorization: Bearer {access_token}`.
+
+    The following simple cURL example for a request to the `profile` method specifies the access token:
+
+    ```bash
+    curl -X POST
+    --header "Authorization: Bearer eyJhbGciOiJIUz......sgrKIi8hdFs"
+    --header "Content-Type: text/plain;charset=utf-8"
+    --header "Accept: application/json"
+    --data-binary @profile.txt
+    "https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13"
+    ```
+    {: pre}
+
+    For more information, see [Using a token to authenticate](/docs/services/watson/getting-started-iam.html#use_token).
+
+### Refreshing an IAM access token
+
+IAM access tokens that you generate have the following structure. You use the value of the `access_token` field to make an authenticated request to the service.
+
+```javascript
+{
+  "access_token": "eyJhbGciOiJIUz......sgrKIi8hdFs",
+  "refresh_token": "SPrXw5tBE3......KBQ+luWQVY=",
+  "token_type": "Bearer",
+  "expires_in": 3600,
+  "expiration": 1473188353
+}
+```
+{: codeblock}
+
+Access tokens have a limited time to live. The `expires_in` field indicates how long the token lasts, in this case one hour. The `expiration` field shows when the token expires as a UNIX timestamp that specifies the number of seconds since January 1, 1970 (midnight UTC/GMT).
+
+In your application, check the access token's expiration time before you use it to make an authenticated request. If it is expired, you must refresh the access token before you can use it. You use the value of the `refresh_token` field to refresh the access token. For more information, see [Refreshing a token](/docs/services/watson/getting-started-iam.html#refresh_token).
 
 ## 23 March 2018
 {: #March2018}
@@ -47,18 +101,10 @@ The following sections document the new features and changes that were included 
 -   CSV output also now includes columns whose headings are named `*_significant`. Each column provides a boolean value to indicate whether a characteristic is meaningful. For more information about the service's CSV response content, see [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html).
 -   To use this latest version of the interface, specify the interface version `2017-10-13` with the `version` parameter.
 
-## 18 September 2017
-{: #September2017}
-
-**Service version** - `3.3.0`<br/> **Interface version** - `2016-10-19`
-
-The service now supports input content in Korean (`ko`). For more information about the average Mean Absolute Error (MAE) and average correlation for Korean input, see [Per-language average MAE and correlation](/docs/services/personality-insights/science.html#precisePerLanguage).
-
-The service's models are unable to produce meaningful percentiles and raw scores for a few personality characteristics of Korean input. For more information about the results for these characteristics, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations).
-
 ## Older releases
 {: #older}
 
+-   [18 September 2017](#September2017)
 -   [10 April 2017](#April2017)
 -   [1 March 2017](#March2017)
 -   [20 February 2017](#February2017b)
@@ -77,6 +123,15 @@ The service's models are unable to produce meaningful percentiles and raw scores
 -   [18 March 2016](#March2016)
 -   [9 July 2015](#July2015)
 -   [23 February 2015](#February2015)
+
+### 18 September 2017
+{: #September2017}
+
+**Service version** - `3.3.0`<br/> **Interface version** - `2016-10-19`
+
+The service now supports input content in Korean (`ko`). For more information about the average Mean Absolute Error (MAE) and average correlation for Korean input, see [Per-language average MAE and correlation](/docs/services/personality-insights/science.html#precisePerLanguage).
+
+The service's models are unable to produce meaningful percentiles and raw scores for a few personality characteristics of Korean input. For more information about the results for these characteristics, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations).
 
 ### 10 April 2017
 {: #April2017}

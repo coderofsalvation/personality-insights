@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-12"
+lastupdated: "2018-06-02"
 
 ---
 
@@ -23,6 +23,10 @@ lastupdated: "2018-05-12"
 
 The {{site.data.keyword.personalityinsightsfull}} service derives insights about personality characteristics from social media, enterprise data, or other digital communications. This tutorial can help you get started quickly with the {{site.data.keyword.personalityinsightsshort}} service. The examples show you how to call the service's `POST /v3/profile` method with different types of input and how to request different types of output and output formats.
 {: shortdesc}
+
+> **Important:** The tutorial uses service instance credentials to authenticate to the {{site.data.keyword.personalityinsightsshort}} service. In some regions, new service instances instead use {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) tokens for authentication. Authenticate by using the approach that is right for your region and service instance.
+
+For more information about where the service uses IAM access tokens and how to use them for authentication, see the June 4 service update in the [Release notes](/docs/services/personality-insights/release-notes.html#June2018).
 
 ## Before you begin
 {: #before-you-begin}
@@ -55,7 +59,7 @@ The first example passes the plain text file `profile.txt` to the `POST /v3/prof
     curl -X POST --user {username}:{password} \
     --header "Content-Type: text/plain;charset=utf-8" \
     --header "Accept: application/json" \
-    --data-binary "@{path_to_file}profile.txt" \
+    --data-binary @{path_to_file}profile.txt \
     "https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13"
     ```
     {: pre}
@@ -76,7 +80,7 @@ The second example passes the JSON file `profile.json` to the `/v3/profile` meth
     curl -X POST --user {username}:{password} \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
-    --data-binary "@{path_to_file}profile.json" \
+    --data-binary @{path_to_file}profile.json \
     "https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13&consumption_preferences=true&raw_scores=true"
     ```
     {: pre}
@@ -98,7 +102,7 @@ The third example is similar to the second: it passes the same JSON content and 
     curl -X POST --user {username}:{password} \
     --header "Content-Type: application/json" \
     --header "Accept: text/csv" \
-    --data-binary "@{path_to_file}profile.json" \
+    --data-binary @{path_to_file}profile.json \
     --output profile.csv \
     "https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13&consumption_preferences=true&raw_scores=true&csv_headers=true"
     ```
