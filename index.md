@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-02"
+lastupdated: "2018-06-11"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-06-02"
 # About
 {: #about}
 
-> **Service update:** *The {{site.data.keyword.personalityinsightsshort}} service was updated on June 4, 2018. In some regions, new service instances use {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) tokens for authentication. For more information, see the [Release notes](/docs/services/personality-insights/release-notes.html).*
+> **Service update:** *The {{site.data.keyword.personalityinsightsshort}} service was updated on June 11, 2018. In addition to Sydney and AP North, the service now uses {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) tokens for authentication for applications that are hosted in Washington, DC (US East). For more information, see the [Release notes](/docs/services/personality-insights/release-notes.html).*
 
 The {{site.data.keyword.personalityinsightsfull}} service provides an application programming interface (API) for deriving insights from social media, enterprise data, or other digital communications. The service uses linguistic analytics to infer individuals' intrinsic personality characteristics from digital communications such as email, text messages, tweets, and forum posts.
 {: shortdesc}
