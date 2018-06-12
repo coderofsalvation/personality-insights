@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-02"
+lastupdated: "2018-06-11"
 
 ---
 
@@ -26,7 +26,7 @@ The {{site.data.keyword.personalityinsightsfull}} service derives insights about
 
 > **Important:** The tutorial uses service instance credentials to authenticate to the {{site.data.keyword.personalityinsightsshort}} service. In some regions, new service instances instead use {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) tokens for authentication. Authenticate by using the approach that is right for your region and service instance.
 
-For more information about where the service uses IAM access tokens and how to use them for authentication, see the June 4 service update in the [Release notes](/docs/services/personality-insights/release-notes.html#June2018).
+For more information about where the service uses IAM access tokens and how to use them for authentication, see the June 11 and June 4 service updates in the [Release notes](/docs/services/personality-insights/release-notes.html).
 
 ## Before you begin
 {: #before-you-begin}

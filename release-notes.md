@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-02"
+lastupdated: "2018-06-11"
 
 ---
 
@@ -25,17 +25,22 @@ The following sections document the new features and changes that were included 
 
 > **Note:** The release notes document the *service version* and *interface version* for all recent updates. You specify the *interface version* with the `version` query parameter to use new features and functionality made available with that update. The service returns both versions with the `X-Service-Api-Version` response header.
 
+## 11 June 2018
+{: #June2018b}
+
+For applications that are hosted in Washington, DC (US East), the service now supports token-based Identity and Access Management (IAM) authentication. IAM uses access tokens rather than service credentials for authentication with a service. For more information about using IAM tokens with existing and new applications, see the [4 June 2018](#June2018a) release update.
+
 ## 4 June 2018
-{: #June2018}
+{: #June2018a}
 
 **Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
 
-For applications that are hosted in Sydney (**au-syd**), the service now supports a new API authentication process for service instances. {{site.data.keyword.Bluemix}} is in the process of migrating to token-based Identity and Access Management (IAM) authentication. IAM uses access tokens rather than service credentials for authentication with a service.
+For applications that are hosted in Sydney and AP North (**au-syd**), the service now supports a new API authentication process for service instances. {{site.data.keyword.Bluemix}} is in the process of migrating to token-based Identity and Access Management (IAM) authentication. IAM uses access tokens rather than service credentials for authentication with a service.
 
 In the Sydney region, you use IAM access tokens with the {{site.data.keyword.personalityinsightsshort}} service for
 
 -   *New service instances* that you create after June 4. For more information, see [Authenticating with IAM tokens](/docs/services/watson/getting-started-iam.html).
--   *Existing service instances* that you migrate from Cloud Foundry to a resource group that is managed by the Resource Controller (RC). Service instances that you created before June 4 continue to use service credentials for authentication until you migrate them. For more information, see [Migrating Cloud Foundry service instances to a resource group](/docs/account/instance_migration.html).
+-   *Existing service instances* that you migrate from Cloud Foundry to a resource group that is managed by the Resource Controller (RC). Service instances that you created before June 4 continue to use service credentials for authentication until you migrate them. For more information, see [Migrating Cloud Foundry service instances to a resource group](/docs/resources/instance_migration.html).
 
 All new and existing service instances in other regions continue to use service credentials (`{username}:{password}`) for authentication. IAM access tokens will be enabled for applications that are hosted in other regions soon.
 
@@ -87,23 +92,10 @@ In your application, check the access token's expiration time before you use it 
 -   The service was updated with small defect fixes. The changes were specific to the Arabic, Japanese, and Korean languages.
 -   The `Accept` request header is now required with the `POST /v3/profile` method. You must specify either `application/json` or `text/csv`.
 
-## 13 October 2017
-{: #October2017}
-
-**Service version** - `3.4.0`<br/> **Interface version** - `2017-10-13`
-
--   The `Trait` object of a personality profile now includes a `significant` field. A separate `Trait` object reports the results for each Big Five dimension, Big Five facet, Need, and Value. The `significant` field of each instance of the object identifies whether the results for the characteristic are meaningful for the input language (`Content-Language`) of the request:
-
-    -   For English, Spanish, and Japanese, the field is always `true` for all personality characteristics.
-    -   For Arabic and Korean, the field is `true` for most personality characteristics but is `false` for characteristics for which the service's models are unable to produce meaningful results. The field is `false` for a constant set of characteristics. For a complete list, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations). Do not rely on the results for any characteristic for which the field is `false`.
-
-    For more information about the service's JSON response content, see [Understanding a JSON profile](/docs/services/personality-insights/output.html).
--   CSV output also now includes columns whose headings are named `*_significant`. Each column provides a boolean value to indicate whether a characteristic is meaningful. For more information about the service's CSV response content, see [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html).
--   To use this latest version of the interface, specify the interface version `2017-10-13` with the `version` parameter.
-
 ## Older releases
 {: #older}
 
+-   [13 October 2017](#October2017)
 -   [18 September 2017](#September2017)
 -   [10 April 2017](#April2017)
 -   [1 March 2017](#March2017)
@@ -123,6 +115,20 @@ In your application, check the access token's expiration time before you use it 
 -   [18 March 2016](#March2016)
 -   [9 July 2015](#July2015)
 -   [23 February 2015](#February2015)
+
+### 13 October 2017
+{: #October2017}
+
+**Service version** - `3.4.0`<br/> **Interface version** - `2017-10-13`
+
+-   The `Trait` object of a personality profile now includes a `significant` field. A separate `Trait` object reports the results for each Big Five dimension, Big Five facet, Need, and Value. The `significant` field of each instance of the object identifies whether the results for the characteristic are meaningful for the input language (`Content-Language`) of the request:
+
+    -   For English, Spanish, and Japanese, the field is always `true` for all personality characteristics.
+    -   For Arabic and Korean, the field is `true` for most personality characteristics but is `false` for characteristics for which the service's models are unable to produce meaningful results. The field is `false` for a constant set of characteristics. For a complete list, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations). Do not rely on the results for any characteristic for which the field is `false`.
+
+    For more information about the service's JSON response content, see [Understanding a JSON profile](/docs/services/personality-insights/output.html).
+-   CSV output also now includes columns whose headings are named `*_significant`. Each column provides a boolean value to indicate whether a characteristic is meaningful. For more information about the service's CSV response content, see [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html).
+-   To use this latest version of the interface, specify the interface version `2017-10-13` with the `version` parameter.
 
 ### 18 September 2017
 {: #September2017}
