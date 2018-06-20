@@ -35,7 +35,7 @@ The {{site.data.keyword.personalityinsightsfull}} service derives insights about
     1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
     1.  Click **Create**.
 -   Copy the credentials to authenticate to your service instance:
-    1.  From the [{{site.data.keyword.Bluemix_notm}} dashboard](https://console.{DomainName}/dashboard/apps), click on your {{site.data.keyword.personalityinsightsshort}} service instance to go to the {{site.data.keyword.personalityinsightsshort}} service dashboard page.
+    1.  From the [{{site.data.keyword.Bluemix_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/dashboard/apps){: new_window}, click on your {{site.data.keyword.personalityinsightsshort}} service instance to go to the {{site.data.keyword.personalityinsightsshort}} service dashboard page.
     1.  On the **Manage** page, click **Show** to view your credentials.
     1.  Copy the `apikey` and `url` values.
 -   Make sure that you have cURL. The examples use cURL to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
