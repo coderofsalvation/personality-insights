@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -24,24 +24,21 @@ lastupdated: "2018-06-14"
 The {{site.data.keyword.personalityinsightsfull}} service derives insights about personality characteristics from social media, enterprise data, or other digital communications. This tutorial can help you get started quickly with the {{site.data.keyword.personalityinsightsshort}} service. The examples show you how to call the service's `POST /v3/profile` method with different types of input and how to request different types of output and output formats.
 {: shortdesc}
 
-> **Important:** The tutorial uses service instance credentials to authenticate to the {{site.data.keyword.personalityinsightsshort}} service. In some regions, new service instances instead use {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) authentication. Authenticate by using the approach that is right for your region and service instance.
-
-For more information about where and how the service uses IAM authentication, see the [Release notes](/docs/services/personality-insights/release-notes.html).
+> **Important:** The tutorial uses {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) API keys for authentication. Some service instances continue to use service credentials (`{username}:{password}`) for authentication. Authenticate by using the approach that is right for your region and service instance. For more information about where and how the service uses IAM authentication, see the [Release notes](/docs/services/personality-insights/release-notes.html).
 
 ## Before you begin
 {: #before-you-begin}
 
-- {: download} If you're seeing this, you created your service instance. Now get your credentials.
-- Create an instance of the service:
+-   {: download} If you're seeing this, you created your service instance. Now get your credentials.
+-   Create an instance of the service:
     1.  Go to the [{{site.data.keyword.personalityinsightsshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/personality-insights){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
     1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
     1.  Click **Create**.
-- Copy the credentials to authenticate to your service instance:
-    1.  On the service dashboard, click the **Service credentials** tab.
-    1.  Click **View credentials** under **Actions**.
-    1.  Copy the `username`, `password`, and `url` values.
-- Make sure that you have cURL:
-    - The examples use cURL to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
+-   Copy the credentials to authenticate to your service instance:
+    1.  From the [{{site.data.keyword.Bluemix_notm}} dashboard](https://console.{DomainName}/dashboard/apps), click on your {{site.data.keyword.personalityinsightsshort}} service instance to go to the {{site.data.keyword.personalityinsightsshort}} service dashboard page.
+    1.  On the **Manage** page, click **Show** to view your credentials.
+    1.  Copy the `apikey` and `url` values.
+-   Make sure that you have cURL. The examples use cURL to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
 
 ## Step 1: Send plain text input and receive basic JSON output
 {: #example1}
@@ -52,11 +49,11 @@ The first example passes the plain text file `profile.txt` to the `POST /v3/prof
 1.  Issue the following command to send the file to the `/v3/profile` method and request a JSON response.
     -   The `Content-Type` header specifies that the input is plain text, `text/plain`. The `charset` parameter included with the header identifies the character encoding of the input text.
     -   The `Accept` header specifies `application/json` to indicate that JSON output is requested.
-    -   Replace `{username}` and `{password}` with your service credentials from the previous step.
+    -   Replace `{apikey}` with your IAM API key from the previous step.
     -   Modify `{path_to_file}` to specify the location of the `profile.txt` file.
 
     ```bash
-    curl -X POST --user {username}:{password} \
+    curl -X POST --user "apikey:{apikey}" \
     --header "Content-Type: text/plain;charset=utf-8" \
     --header "Accept: application/json" \
     --data-binary @{path_to_file}profile.txt \
@@ -77,7 +74,7 @@ The second example passes the JSON file `profile.json` to the `/v3/profile` meth
 1.  Issue the following command to send the file to the `/v3/profile` method. The example specifies `application/json` for the `Content-Type` and `Accept` headers; the `charset` parameter is not needed for JSON input. The example sets the `consumption_preferences` and `raw_scores` query parameters to `true`.
 
     ```bash
-    curl -X POST --user {username}:{password} \
+    curl -X POST --user "apikey:{apikey}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data-binary @{path_to_file}profile.json \
@@ -99,7 +96,7 @@ The third example is similar to the second: it passes the same JSON content and 
 1.  Issue the following command to send the JSON file to the `/v3/profile` method. The `Content-Type` header identifies the input content as `application/json`, and the `Accept` header requests CSV output, `text/csv`.
 
     ```bash
-    curl -X POST --user {username}:{password} \
+    curl -X POST --user "apikey:{apikey}" \
     --header "Content-Type: application/json" \
     --header "Accept: text/csv" \
     --data-binary @{path_to_file}profile.json \
