@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-28"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -20,8 +20,13 @@ lastupdated: "2018-04-28"
 # Big Five emotional range
 {: #emotionalRange}
 
-*Emotional range*, also referred to as *Neuroticism* or *Natural reactions*, is the extent to which a person's emotions are sensitive to the individual's environment.
+*Emotional range*, also referred to as *Neuroticism* or *Natural reactions*, is the extent to which a person's emotions are sensitive to the individual's environment.  The tables that follow qualify results for characteristics as *high* or *low*:
 {: shortdesc}
+
+-   Any score above the mean of 0.5 indicates a greater than average tendency for a characteristic. A score at or above 0.75 indicates readily discernible aspects of the characteristic; such scores are considered *high*.
+-   The opposite statements are true of scores below 0.50 and 0.25, which are considered *low*.
+
+For more information, see [Percentiles for personality characteristics](/docs/services/personality-insights/numeric.html#percentiles).
 
 ## Facets
 {: #facets}
