@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-06"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -49,11 +49,11 @@ The first example passes the plain text file `profile.txt` to the `POST /v3/prof
 1.  Issue the following command to send the file to the `/v3/profile` method and request a JSON response.
     -   The `Content-Type` header specifies that the input is plain text, `text/plain`. The `charset` parameter included with the header identifies the character encoding of the input text.
     -   The `Accept` header specifies `application/json` to indicate that JSON output is requested.
-    -   Replace `{apikey}` with your IAM API key from the previous step.
+    -   Replace `{api_key}` with your IAM API key from the previous step.
     -   Modify `{path_to_file}` to specify the location of the `profile.txt` file.
 
     ```bash
-    curl -X POST --user "apikey:{apikey}" \
+    curl -X POST --user "apikey:{api_key}" \
     --header "Content-Type: text/plain;charset=utf-8" \
     --header "Accept: application/json" \
     --data-binary @{path_to_file}profile.txt \
@@ -74,7 +74,7 @@ The second example passes the JSON file `profile.json` to the `/v3/profile` meth
 1.  Issue the following command to send the file to the `/v3/profile` method. The example specifies `application/json` for the `Content-Type` and `Accept` headers; the `charset` parameter is not needed for JSON input. The example sets the `consumption_preferences` and `raw_scores` query parameters to `true`.
 
     ```bash
-    curl -X POST --user "apikey:{apikey}" \
+    curl -X POST --user "apikey:{api_key}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data-binary @{path_to_file}profile.json \
@@ -96,7 +96,7 @@ The third example is similar to the second: it passes the same JSON content and 
 1.  Issue the following command to send the JSON file to the `/v3/profile` method. The `Content-Type` header identifies the input content as `application/json`, and the `Accept` header requests CSV output, `text/csv`.
 
     ```bash
-    curl -X POST --user "apikey:{apikey}" \
+    curl -X POST --user "apikey:{api_key}" \
     --header "Content-Type: application/json" \
     --header "Accept: text/csv" \
     --data-binary @{path_to_file}profile.json \
