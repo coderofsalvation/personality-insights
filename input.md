@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-17"
 
 ---
 
@@ -137,10 +137,10 @@ Content-Type: text/plain;charset=utf-8
 
 By using the `charset` parameter, you can avoid potential problems that are associated with non-ASCII or non-printable characters. If you pass UTF-8 data without specifying the character set, special characters can result in incorrect results or in HTTP 400- or 500-level errors.
 
-### Using cURL
+### Using the curl command
 {: #charsetCurl}
 
-To prevent errors when using cURL, always pass the content via the `--data-binary` option of the `curl` command to preserve any UTF-8 encoding of the content. If you use the `--data` option to pass the content as ASCII, the command can process the input, which can cause problems for data encoded in UTF-8.
+To prevent errors when using the `curl` command, always pass the content via the `--data-binary` option of the `curl` command to preserve any UTF-8 encoding of the content. If you use the `--data` option to pass the content as ASCII, the command can process the input, which can cause problems for data encoded in UTF-8.
 
 For example, the following `curl` command correctly uses the `--data-binary` option to post the contents of the specified *filename* with no additional processing. The command specifies the `charset` parameter with the `Content-Type` header, and it requests the JSON response format with the `Accept` header.
 
