@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-17"
+lastupdated: "2018-10-28"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-10-17"
 The {{site.data.keyword.personalityinsightsfull}} service derives insights about personality characteristics from social media, enterprise data, or other digital communications. This tutorial can help you get started quickly with the {{site.data.keyword.personalityinsightsshort}} service. The examples show you how to call the service's `POST /v3/profile` method with different types of input and how to request different types of output and output formats.
 {: shortdesc}
 
-> **Important:** The tutorial uses {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) API keys for authentication. Some service instances continue to use service credentials (`{username}:{password}`) for authentication. Authenticate by using the approach that is right for your region and service instance. For more information about where and how the service uses IAM authentication, see the [Release notes](/docs/services/personality-insights/release-notes.html).
+> **Important:** The tutorial uses {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) API keys for authentication. Older service instances might continue to use the `{username}` and `{password}` from their existing service credentials for authentication. Authenticate by using the approach that is right for your service instance. For more information about the service's use of IAM authentication, see the [30 October 2018 service update](/docs/services/personality-insights/release-notes.html#October2018) in the release notes.
 
 ## Before you begin
 {: #before-you-begin}
@@ -41,7 +41,7 @@ The {{site.data.keyword.personalityinsightsfull}} service derives insights about
 -   Make sure that you have the `curl` command.
     -   The examples use the `curl` command to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
 
-**Note:** When you enter a command, replace `{api_key}` with your actual API key. Omit the braces, which indicate a variable value, from the command. An actual value resembles the following example:
+**Note:** When you enter a command, replace `{apikey}` with your actual API key. Omit the braces, which indicate a variable value, from the command. An actual value resembles the following example:
 
 ```bash
 curl -X POST --user "apikey:L_HALhLVIksh1b73l97LSs6R_3gLo4xkujAaxm7i-b9x"
@@ -58,11 +58,11 @@ The first example passes the plain text file `profile.txt` to the `POST /v3/prof
 1.  Issue the following command to send the file to the `/v3/profile` method and request a JSON response.
     -   The `Content-Type` header specifies that the input is plain text, `text/plain`. The `charset` parameter included with the header identifies the character encoding of the input text.
     -   The `Accept` header specifies `application/json` to indicate that JSON output is requested.
-    -   Replace `{api_key}` with your IAM API key from the previous step.
+    -   Replace `{apikey}` with your IAM API key from the previous step.
     -   Modify `{path_to_file}` to specify the location of the `profile.txt` file.
 
     ```bash
-    curl -X POST --user "apikey:{api_key}" \
+    curl -X POST --user "apikey:{apikey}" \
     --header "Content-Type: text/plain;charset=utf-8" \
     --header "Accept: application/json" \
     --data-binary @{path_to_file}profile.txt \
@@ -83,7 +83,7 @@ The second example passes the JSON file `profile.json` to the `/v3/profile` meth
 1.  Issue the following command to send the file to the `/v3/profile` method. The example specifies `application/json` for the `Content-Type` and `Accept` headers; the `charset` parameter is not needed for JSON input. The example sets the `consumption_preferences` and `raw_scores` query parameters to `true`.
 
     ```bash
-    curl -X POST --user "apikey:{api_key}" \
+    curl -X POST --user "apikey:{apikey}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data-binary @{path_to_file}profile.json \
@@ -105,7 +105,7 @@ The third example is similar to the second: it passes the same JSON content and 
 1.  Issue the following command to send the JSON file to the `/v3/profile` method. The `Content-Type` header identifies the input content as `application/json`, and the `Accept` header requests CSV output, `text/csv`.
 
     ```bash
-    curl -X POST --user "apikey:{api_key}" \
+    curl -X POST --user "apikey:{apikey}" \
     --header "Content-Type: application/json" \
     --header "Accept: text/csv" \
     --data-binary @{path_to_file}profile.json \

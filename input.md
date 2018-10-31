@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-17"
+lastupdated: "2018-10-27"
 
 ---
 
@@ -145,7 +145,7 @@ To prevent errors when using the `curl` command, always pass the content via the
 For example, the following `curl` command correctly uses the `--data-binary` option to post the contents of the specified *filename* with no additional processing. The command specifies the `charset` parameter with the `Content-Type` header, and it requests the JSON response format with the `Accept` header.
 
 ```bash
-curl -X POST --user "apikey:{api_key}"
+curl -X POST --user "apikey:{apikey}"
 --header "Content-Type: text/plain;charset=utf-8"
 --header "Accept: application/json"
 --data-binary @{filename}
