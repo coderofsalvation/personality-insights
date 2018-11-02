@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-28"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -30,17 +30,17 @@ The following sections document the new features and changes that were included 
 
 **Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
 
-The {{site.data.keyword.personalityinsightsshort}} service has migrated to token-based Identity and Access Management (IAM) authentication for all regions. All {{site.data.keyword.Bluemix}} services now use IAM authentication. The {{site.data.keyword.personalityinsightsshort}} service migrated in each region on the following dates:
+The {{site.data.keyword.personalityinsightsshort}} service has migrated to token-based Identity and Access Management (IAM) authentication for all locations. All {{site.data.keyword.Bluemix}} services now use IAM authentication. The {{site.data.keyword.personalityinsightsshort}} service migrated in each location on the following dates:
 
--   *US South:* October 30, 2018
--   *Germany:* October 30, 2018
--   *US East:* June 11, 2018
--   *Sydney:* June 4, 2018
+-   Dallas (**us-south**): October 30, 2018
+-   Frankfurt (**eu-de**): October 30, 2018
+-   Washington, DC (**us-east**): June 11, 2018
+-   Sydney (**au-syd**): June 4, 2018
 
 The migration to IAM authentication affects new and existing service instances differently:
 
--   *All new service instances that you create in any region* now use IAM authentication to access the service. You can pass either a bearer token or an API key: Tokens support authenticated requests without embedding service credentials in every call; API keys use HTTP basic authentication. When you use any of the {{site.data.keyword.watson}} SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens.
--   *Existing service instances that you created in a region before the indicated migration date* continue to use the `{username}` and `{password}` from their previous service credentials for authentication until you update them to use IAM authentication. xoBecause the {{site.data.keyword.personalityinsightsshort}} service is stateless, you can perform the following steps to convert an existing service instance to use IAM authentication:
+-   *All new service instances that you create in any location* now use IAM authentication to access the service. You can pass either a bearer token or an API key: Tokens support authenticated requests without embedding service credentials in every call; API keys use HTTP basic authentication. When you use any of the {{site.data.keyword.watson}} SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens.
+-   *Existing service instances that you created in a location before the indicated migration date* continue to use the `{username}` and `{password}` from their previous Cloud Foundry service credentials for authentication until you update them to use IAM authentication. Because the {{site.data.keyword.personalityinsightsshort}} service is stateless, you can perform the following steps to convert an existing service instance to use IAM authentication:
 
     1.  Delete and re-create the service instance.
     1.  Modify your application code to use IAM authentication.
@@ -57,14 +57,14 @@ For more information, see the following documentation:
 
 **Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
 
-For service instances and applications that are hosted in Washington, DC (US East), the service now supports a new API authentication process. For more information, see the [30 October 2018 service update](#October2018).
+For service instances and applications that are hosted in Washington, DC (**us-east**), the service now supports a new API authentication process. For more information, see the [30 October 2018 service update](#October2018).
 
 ## 4 June 2018
 {: #June2018a}
 
 **Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
 
-For service instances and applications that are hosted in Sydney and AP North (**au-syd**), the service now supports a new API authentication process. For more information, see the [30 October 2018 service update](#October2018).
+For service instances and applications that are hosted in Sydney (**au-syd**), the service now supports a new API authentication process. For more information, see the [30 October 2018 service update](#October2018).
 
 ## Older releases
 {: #older}
