@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-11-01"
 # About
 {: #about}
 
-> **Service update:** *The {{site.data.keyword.personalityinsightsshort}} service was updated on October 30, 2018. The service now uses {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) authentication in all locations. For more information, see the [October 30 2018 service update](/docs/services/personality-insights/release-notes.html#October2018) in the release notes.*
+> **Service update:** *The {{site.data.keyword.personalityinsightsshort}} service was updated on November 7, 2018. The service is now available in the IBM Cloud Tokyo location. For more information, see the [7 November 2018 service update](/docs/services/personality-insights/release-notes.html#November2018) in the release notes.*
 
 The {{site.data.keyword.personalityinsightsfull}} service provides an application programming interface (API) for deriving insights from social media, enterprise data, or other digital communications. The service uses linguistic analytics to infer individuals' intrinsic personality characteristics from digital communications such as email, text messages, tweets, and forum posts.
 {: shortdesc}

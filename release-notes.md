@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -24,6 +24,13 @@ The following sections document the new features and changes that were included 
 {: shortdesc}
 
 > **Note:** The release notes document the *service version* and *interface version* for all recent updates. You specify the *interface version* with the `version` query parameter to use new features and functionality made available with that update. The service returns both versions with the `X-Service-Api-Version` response header.
+
+## 7 November 2018
+{: #November2018}
+
+**Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
+
+The {{site.data.keyword.personalityinsightsshort}} service is now available in the IBM Cloud Tokyo location (**jp-tok**). Like all locations, Tokyo uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
 
 ## 30 October 2018
 {: #October2018}
@@ -59,16 +66,10 @@ For more information, see the following documentation:
 
 For service instances and applications that are hosted in Washington, DC (**us-east**), the service now supports a new API authentication process. For more information, see the [30 October 2018 service update](#October2018).
 
-## 4 June 2018
-{: #June2018a}
-
-**Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
-
-For service instances and applications that are hosted in Sydney (**au-syd**), the service now supports a new API authentication process. For more information, see the [30 October 2018 service update](#October2018).
-
 ## Older releases
 {: #older}
 
+-   [4 June 2018](#June2018a)
 -   [23 March 2018](#March2018)
 -   [13 October 2017](#October2017)
 -   [18 September 2017](#September2017)
@@ -90,6 +91,13 @@ For service instances and applications that are hosted in Sydney (**au-syd**), t
 -   [18 March 2016](#March2016)
 -   [9 July 2015](#July2015)
 -   [23 February 2015](#February2015)
+
+### 4 June 2018
+{: #June2018a}
+
+**Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
+
+For service instances and applications that are hosted in Sydney (**au-syd**), the service now supports a new API authentication process. For more information, see the [30 October 2018 service update](#October2018).
 
 ### 23 March 2018
 {: #March2018}
