@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-08"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -104,4 +104,4 @@ The service supports the following languages. You can use any combination of sup
 -   A [quick demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://personality-insights-demo.ng.bluemix.net/){: new_window} of the {{site.data.keyword.personalityinsightsshort}} service analyzes input text to develop a personality portrait that includes consumption preferences for the author.
 -   Applications in {{site.data.keyword.watson}} Developer Cloud [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/watson/developercloud/starter-kits.html){: new_window} demonstrate the service.
 -   [The service in action](/docs/services/personality-insights/applied.html) and [The science behind the service](/docs/services/personality-insights/science.html) provide information about the research that underlies the service.
--   The [{{site.data.keyword.personalityinsightsshort}} service in the {{site.data.keyword.Bluemix_short}} Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/catalog/services/personality-insights/){: new_window} describes the pricing plans that are available for the service.
+-   The {{site.data.keyword.personalityinsightsshort}} service in the [{{site.data.keyword.Bluemix_short}} Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/services/personality-insights/){: new_window} describes the pricing plans that are available for the service.
