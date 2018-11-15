@@ -364,7 +364,7 @@ For the new model used for English input, the service reports the average Mean A
 ### 1 July 2016
 {: #July2016a}
 
--   The pricing plans for the service now offer lower prices for {{site.data.keyword.personalityinsightsshort}} users. For more information, see the [{{site.data.keyword.personalityinsightsshort}} service in the {{site.data.keyword.Bluemix_short}} Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/catalog/services/personality-insights/){: new_window}.
+-   The pricing plans for the service now offer lower prices for {{site.data.keyword.personalityinsightsshort}} users. For more information, see the {{site.data.keyword.personalityinsightsshort}} service in the [{{site.data.keyword.Bluemix_short}} Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/personality-insights/){: new_window}.
 -   The list of supported response languages that you can specify with the `Accept-Language` header now includes
     -   `ar` (Arabic)
     -   `de` (German)
