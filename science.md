@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-13"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -325,7 +325,8 @@ To compute the percentile scores, {{site.data.keyword.IBM_notm}} collected a ver
 
 {{site.data.keyword.IBM_notm}} then compared the raw scores of each computed profile to the distribution of profiles from the data sets to determine the percentiles.
 
-> **Note:** For Arabic and Korean input, the service is unable to produce meaningful percentiles and raw scores for some personality characteristics. For more information, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations).
+For Arabic and Korean input, the service is unable to produce meaningful percentiles and raw scores for some personality characteristics. For more information, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations).
+{: note}
 
 ## Understanding consumption preferences
 {: #researchPrefs}
