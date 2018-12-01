@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-13"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -26,7 +26,8 @@ lastupdated: "2018-05-13"
 The {{site.data.keyword.personalityinsightsshort}} service returns numeric results for each of the personality and behavioral characteristics and for each consumption preference. The values differ in the information they provide.
 {: shortdesc}
 
-> **Note:** For Arabic and Korean input, the service is unable to produce meaningful percentiles and raw scores for a number of personality characteristics. For more information, see [Limitations for Arabic and Korean input](#limitations).
+For Arabic and Korean input, the service is unable to produce meaningful percentiles and raw scores for a number of personality characteristics. For more information, see [Limitations for Arabic and Korean input](#limitations).
+{: note}
 
 ## Percentiles for personality characteristics
 {: #percentiles}
@@ -35,7 +36,8 @@ For each request, the service always reports a normalized score as a `percentile
 
 For example, a percentile of `0.64980796071382` for the personality characteristic `big5_extraversion` indicates that the author's score for that characteristic is in the 65th percentile. The author's writing exhibits the tendency to an extent that is greater than 64 percent and less than 34 percent of the sample population. The precision of the percentile depends on the number of words that were submitted as input with the request. For more information, see [Providing sufficient input](/docs/services/personality-insights/input.html#sufficient).
 
-> **Note:** No mathematical relationship exists between the percentiles that are reported for Big Five dimensions and facets. The service calculates the normalized percentile for each dimension and facet independently based on correlations between survey participants' scores for that dimension or facet and the words that they use. Therefore, even though facets provide finer-grained descriptions of dimensions, adding the scores for the six facets of a dimension does not necessarily yield the percentile for that dimension. The same is true of raw scores.
+No mathematical relationship exists between the percentiles that are reported for Big Five dimensions and facets. The service calculates the normalized percentile for each dimension and facet independently based on correlations between survey participants' scores for that dimension or facet and the words that they use. Therefore, even though facets provide finer-grained descriptions of dimensions, adding the scores for the six facets of a dimension does not necessarily yield the percentile for that dimension. The same is true of raw scores.
+{: note}
 
 ## Raw scores for personality characteristics
 {: #rawScores}

@@ -49,7 +49,7 @@ Personality Insights
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API reference](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/)
+    [API reference](https://bluemix.net/apidocs/personality-insights)
     information-security.md
 
     {: .topicgroup}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-27"
+lastupdated: "2018-12-01"
 
 ---
 
@@ -28,9 +28,10 @@ To analyze content, you use the HTTP `POST` request method to call the `/v3/prof
 
 The `/v3/profile` method includes parameters that specify the type of content to be passed to and returned by the service, as well as the language of each type of content. The service always returns a profile that provides insight into the personality characteristics of the author of the input text. You can also request raw scores and consumption preferences.
 
-The following sections describe the parameters of the `/v3/profile` method. For information about the results of a request, see [Understanding a JSON profile](/docs/services/personality-insights/output.html) and [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html). For detailed information about the `/v3/profile` method, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}.
+The following sections describe the parameters of the `/v3/profile` method. For information about the results of a request, see [Understanding a JSON profile](/docs/services/personality-insights/output.html) and [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html). For detailed information about the `/v3/profile` method, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/personality-insights){: new_window}.
 
-> **Note:** Request logging is disabled for the {{site.data.keyword.personalityinsightsshort}} service. Regardless of whether you set the `X-Watson-Learning-Opt-Out` request header, the service does not log or retain data from requests and responses.
+Request logging is disabled for the {{site.data.keyword.personalityinsightsshort}} service. Regardless of whether you set the `X-Watson-Learning-Opt-Out` request header, the service does not log or retain data from requests and responses.
+{: note}
 
 ## Specifying request and response formats
 {: #formats}

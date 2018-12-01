@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-15"
+lastupdated: "2018-12-01"
 
 ---
 
@@ -27,7 +27,8 @@ lastupdated: "2018-11-15"
 The {{site.data.keyword.personalityinsightsfull}} service derives insights about personality characteristics from social media, enterprise data, or other digital communications. This tutorial can help you get started quickly with the {{site.data.keyword.personalityinsightsshort}} service. The examples show you how to call the service's `POST /v3/profile` method with different types of input and how to request different types of output and output formats.
 {: shortdesc}
 
-> **Important:** The tutorial uses {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) API keys for authentication. Older service instances might continue to use the `{username}` and `{password}` from their existing Cloud Foundry service credentials for authentication. Authenticate by using the approach that is right for your service instance. For more information about the service's use of IAM authentication, see the [30 October 2018 service update](/docs/services/personality-insights/release-notes.html#October2018) in the release notes.
+The tutorial uses {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) API keys for authentication. Older service instances might continue to use the `{username}` and `{password}` from their existing Cloud Foundry service credentials for authentication. Authenticate by using the approach that is right for your service instance. For more information about the service's use of IAM authentication, see the [30 October 2018 service update](/docs/services/personality-insights/release-notes.html#October2018) in the release notes.
+{: important}
 
 ## Before you begin
 {: #before-you-begin}
@@ -40,11 +41,11 @@ The {{site.data.keyword.personalityinsightsfull}} service derives insights about
 -   Copy the credentials to authenticate to your service instance:
     1.  From the [{{site.data.keyword.Bluemix_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/dashboard/apps){: new_window}, click on your {{site.data.keyword.personalityinsightsshort}} service instance to go to the {{site.data.keyword.personalityinsightsshort}} service dashboard page.
     1.  On the **Manage** page, click **Show** to view your credentials.
-    1.  Copy the `apikey` and `url` values.
+    1.  Copy the `API Key` and `URL` values.
 -   Make sure that you have the `curl` command.
     -   The examples use the `curl` command to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
 
-**Note:** When you enter a command, replace `{apikey}` with your actual API key. Omit the braces, which indicate a variable value, from the command. An actual value resembles the following example:
+When you enter a command, replace `{apikey}` with your actual API key. Omit the braces, which indicate a variable value, from the command. An actual value resembles the following example:
 
 ```bash
 curl -X POST --user "apikey:L_HALhLVIksh1b73l97LSs6R_3gLo4xkujAaxm7i-b9x"
@@ -123,5 +124,5 @@ For a detailed description of the CSV response and headers, see [Understanding a
 
 -   Learn more about [Requesting a profile](/docs/services/personality-insights/input.html) and about [Understanding a JSON profile](/docs/services/personality-insights/output.html) and [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html).
 -   Learn about the Big Five, Needs, and Values [Personality models](/docs/services/personality-insights/models.html).
--   Learn more about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}
+-   Learn more about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/personality-insights){: new_window}
 -   Explore the [Node.js sample application ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/personality-insights-nodejs){: new_window} to learn more about application development with the service.
