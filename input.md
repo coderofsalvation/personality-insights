@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-01"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -410,6 +410,9 @@ A meaningful personality profile can be created only where sufficient data of su
 You can send the service up to 20 MB of input content. Up to a point, more words are likely to produce better results, improving the service's precision by reducing the deviation between the predicted results and the author's actual score. But accuracy levels off at around 3000 words of input, and more content does not contribute to the accuracy of the profile. Therefore, the service extracts and uses only the first 250 KB of content, not counting any HTML or JSON markup, from large requests.
 
 This figure does not map to an exact number of words, which varies based on the language and nature of the text. In English, for example, average word length is between four and five characters, so this figure provides around 50,000 words. This number is at least 15 times more words than the service needs to produce an accurate profile. By truncating long input, the service improves response time without sacrificing precision. The `word_count` field of the response JSON indicates the number of words that the service uses for a request, which can be less than the number of words submitted.
+
+The service validates only the number of words that you submit. If you submit enough words, the service produces a profile. The service does not check for duplicate words or sentences. Such validation is subjective and better left to the user, who might have valid reasons to submit such input. Therefore, it is possible to obtain a profile by submitting the same word or sentence many times, but the resulting profile is not necessarily meaningful.
+{: note}
 
 ### Guidelines and recommendations
 {: #sufficientGuidelines}
