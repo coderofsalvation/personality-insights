@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-01"
+lastupdated: "2018-12-06"
 
 ---
 
@@ -48,7 +48,7 @@ The tutorial uses {{site.data.keyword.Bluemix}} Identity and Access Management (
 When you enter a command, replace `{apikey}` with your actual API key. Omit the braces, which indicate a variable value, from the command. An actual value resembles the following example:
 
 ```bash
-curl -X POST --user "apikey:L_HALhLVIksh1b73l97LSs6R_3gLo4xkujAaxm7i-b9x"
+curl -X POST -u "apikey:L_HALhLVIksh1b73l97LSs6R_3gLo4xkujAaxm7i-b9x"
 . . .
 ```
 {:pre}
@@ -66,7 +66,7 @@ The first example passes the plain text file `profile.txt` to the `POST /v3/prof
     -   Modify `{path_to_file}` to specify the location of the `profile.txt` file.
 
     ```bash
-    curl -X POST --user "apikey:{apikey}" \
+    curl -X POST -u "apikey:{apikey}" \
     --header "Content-Type: text/plain;charset=utf-8" \
     --header "Accept: application/json" \
     --data-binary @{path_to_file}profile.txt \
@@ -87,7 +87,7 @@ The second example passes the JSON file `profile.json` to the `/v3/profile` meth
 1.  Issue the following command to send the file to the `/v3/profile` method. The example specifies `application/json` for the `Content-Type` and `Accept` headers; the `charset` parameter is not needed for JSON input. The example sets the `consumption_preferences` and `raw_scores` query parameters to `true`.
 
     ```bash
-    curl -X POST --user "apikey:{apikey}" \
+    curl -X POST -u "apikey:{apikey}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data-binary @{path_to_file}profile.json \
@@ -109,7 +109,7 @@ The third example is similar to the second: it passes the same JSON content and 
 1.  Issue the following command to send the JSON file to the `/v3/profile` method. The `Content-Type` header identifies the input content as `application/json`, and the `Accept` header requests CSV output, `text/csv`.
 
     ```bash
-    curl -X POST --user "apikey:{apikey}" \
+    curl -X POST -u "apikey:{apikey}" \
     --header "Content-Type: application/json" \
     --header "Accept: text/csv" \
     --data-binary @{path_to_file}profile.json \
