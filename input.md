@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-06"
+lastupdated: "2018-12-10"
 
 ---
 
@@ -178,7 +178,7 @@ JSON input is well suited for content from Twitter or other social networks that
 ### Example JSON input
 {: jsonExample}
 
-Examples in the [Getting started tutorial](/docs/services/personality-insights/getting-started.html) use the sample JSON file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>. The file includes a series of Twitter messages. The following example shows the first few tweets from the file.
+Examples in the [Getting started tutorial](/docs/services/personality-insights/getting-started.html) use the sample JSON file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>. The file includes a series of Twitter messages. The following example shows the first few tweets from the file.
 
 ```javascript
 {
