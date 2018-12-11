@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-10"
+lastupdated: "2018-12-11"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-12-10"
 # About
 {: #about}
 
-> **Service update:** *The {{site.data.keyword.personalityinsightsshort}} service was updated on November 18, 2018. The service is now available in the IBM Cloud London location. For more information, see the [18 November 2018 service update](/docs/services/personality-insights/release-notes.html#November2018b) in the release notes.*
+> **Service update:** *The {{site.data.keyword.personalityinsightsshort}} service was updated on November 18, 2018. The service is now available in the {{site.data.keyword.cloud}} London location. For more information, see the [18 November 2018 service update](/docs/services/personality-insights/release-notes.html#November2018b) in the release notes.*
 
 The {{site.data.keyword.personalityinsightsfull}} service provides an application programming interface (API) for deriving insights from social media, enterprise data, or other digital communications. The service uses linguistic analytics to infer individuals' intrinsic personality characteristics from digital communications such as email, text messages, tweets, and forum posts.
 {: shortdesc}
@@ -104,4 +104,4 @@ The service supports the following languages. You can use any combination of sup
 -   A [quick demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://personality-insights-demo.ng.bluemix.net/){: new_window} of the {{site.data.keyword.personalityinsightsshort}} service analyzes input text to develop a personality portrait that includes consumption preferences for the author.
 -   Applications in {{site.data.keyword.watson}} Developer Cloud [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/watson/developercloud/starter-kits.html){: new_window} demonstrate the service.
 -   [The service in action](/docs/services/personality-insights/applied.html) and [The science behind the service](/docs/services/personality-insights/science.html) provide information about the research that underlies the service.
--   The {{site.data.keyword.personalityinsightsshort}} service in the [{{site.data.keyword.Bluemix_short}} Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/personality-insights/){: new_window} describes the pricing plans that are available for the service.
+-   The {{site.data.keyword.personalityinsightsshort}} service in the [{{site.data.keyword.cloud_notm}} Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/personality-insights/){: new_window} describes the pricing plans that are available for the service.
