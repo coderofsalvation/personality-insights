@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-10"
+lastupdated: "2018-12-11"
 
 ---
 
@@ -34,21 +34,21 @@ The release notes document the *service version* and *interface version* for all
 
 **Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
 
-The {{site.data.keyword.personalityinsightsshort}} service is now available in the IBM Cloud London location (**eu-gb**). Like all locations, London uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
+The {{site.data.keyword.personalityinsightsshort}} service is now available in the {{site.data.keyword.cloud}} London location (**eu-gb**). Like all locations, London uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
 
 ## 7 November 2018
 {: #November2018a}
 
 **Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
 
-The {{site.data.keyword.personalityinsightsshort}} service is now available in the IBM Cloud Tokyo location (**jp-tok**). Like all locations, Tokyo uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
+The {{site.data.keyword.personalityinsightsshort}} service is now available in the {{site.data.keyword.cloud_notm}} Tokyo location (**jp-tok**). Like all locations, Tokyo uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
 
 ## 30 October 2018
 {: #October2018}
 
 **Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
 
-The {{site.data.keyword.personalityinsightsshort}} service has migrated to token-based Identity and Access Management (IAM) authentication for all locations. All {{site.data.keyword.Bluemix}} services now use IAM authentication. The {{site.data.keyword.personalityinsightsshort}} service migrated in each location on the following dates:
+The {{site.data.keyword.personalityinsightsshort}} service has migrated to token-based Identity and Access Management (IAM) authentication for all locations. All {{site.data.keyword.cloud_notm}} services now use IAM authentication. The {{site.data.keyword.personalityinsightsshort}} service migrated in each location on the following dates:
 
 -   Dallas (**us-south**): October 30, 2018
 -   Frankfurt (**eu-de**): October 30, 2018
@@ -65,7 +65,7 @@ The migration to IAM authentication affects new and existing service instances d
 
 For more information, see the following documentation:
 
--   To learn which authentication mechanism your service instance uses, view your service credentials by clicking the instance on the [{{site.data.keyword.Bluemix_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/dashboard/apps){: new_window}.
+-   To learn which authentication mechanism your service instance uses, view your service credentials by clicking the instance on the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/dashboard/apps){: new_window}.
 -   For more information about using IAM tokens with Watson services, see [Authenticating with IAM tokens](/docs/services/watson/getting-started-iam.html).
 -   For more information about using IAM API keys with Watson services, see [IAM service API keys](/docs/services/watson/apikey-bp.html).
 -   For examples that use IAM authentication, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/personality-insights){: new_window}.
@@ -228,7 +228,7 @@ For Arabic input text, the {{site.data.keyword.personalityinsightsshort}} servic
 
 The {{site.data.keyword.personalityinsightsshort}} service and its API were updated significantly. The API was incremented from version 2 to version 3 and offers new features. The remaining sections of this release note describe the changes in detail.
 
-Version 3 is not compatible with version 2. You are encouraged to migrate to version 3 to take advantage of the new features and changes. Migration to version 3 consists only of updating and redeploying your applications to use the changes that are described in these release notes for the new version. You do not need to create a new instance of the service in {{site.data.keyword.Bluemix_notm}}; you only need to call the `v3` API.
+Version 3 is not compatible with version 2. You are encouraged to migrate to version 3 to take advantage of the new features and changes. Migration to version 3 consists only of updating and redeploying your applications to use the changes that are described in these release notes for the new version. You do not need to create a new instance of the service in {{site.data.keyword.cloud_notm}}; you only need to call the `v3` API.
 
 Version 2 of the {{site.data.keyword.personalityinsightsshort}} API is to be removed from service soon. You are strongly encouraged to migrate to version 3 as soon as possible.
 {: note}
@@ -375,7 +375,7 @@ For the new model used for English input, the service reports the average Mean A
 ### 1 July 2016
 {: #July2016a}
 
--   The pricing plans for the service now offer lower prices for {{site.data.keyword.personalityinsightsshort}} users. For more information, see the {{site.data.keyword.personalityinsightsshort}} service in the [{{site.data.keyword.Bluemix_short}} Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/personality-insights/){: new_window}.
+-   The pricing plans for the service now offer lower prices for {{site.data.keyword.personalityinsightsshort}} users. For more information, see the {{site.data.keyword.personalityinsightsshort}} service in the [{{site.data.keyword.cloud_notm}} Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/personality-insights/){: new_window}.
 -   The list of supported response languages that you can specify with the `Accept-Language` header now includes
     -   `ar` (Arabic)
     -   `de` (German)
@@ -440,7 +440,7 @@ Because it requires significantly more computing cycles to analyze than other la
 As of February 23, 2015, the {{site.data.keyword.personalityinsightsshort}} service is the generally available (GA) version of the former User Modeling service, which was available as a beta release. The GA release requires that users migrate to an instance of the new service. The following differences exist between the beta and GA versions of the service.
 
 -   The {{site.data.keyword.personalityinsightsshort}} service is compatible with the User Modeling service. The differences that are described provide more flexibility and improved results without affecting current applications.
--   The parameters with which you create the service in {{site.data.keyword.Bluemix_short}} changed. You now use a service name of `personality_insights` instead of `user_modeling` and a service plan of `"IBM Watson Personality Insights Monthly Plan"` instead of `user_modeling_free_plan`.
+-   The parameters with which you create the service in {{site.data.keyword.cloud_notm}} changed. You now use a service name of `personality_insights` instead of `user_modeling` and a service plan of `"IBM Watson Personality Insights Monthly Plan"` instead of `user_modeling_free_plan`.
 -   The `/v2/profile` method accepts two new input formats. The `Content-Type` header now accepts the input formats plain text (`text/plain`), which is the default, and HTML (`text/html`), in addition to JSON (`application/json`).
 -   The `/v2/profile` method now returns a new output format. The `Accept` header now accepts the output format CSV (`text/csv`) in addition to JSON (`application/json`), which is the default.
 -   The `/v2/profile` method now includes a new output element, `sampling_error`, for each characteristic for which it reports a percentage value. The sampling error is returned as a double value that indicates the service's level of confidence in the author's percentile based on the input text.

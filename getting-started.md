@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-10"
+lastupdated: "2018-12-11"
 
 ---
 
@@ -27,7 +27,7 @@ lastupdated: "2018-12-10"
 The {{site.data.keyword.personalityinsightsfull}} service derives insights about personality characteristics from social media, enterprise data, or other digital communications. This tutorial can help you get started quickly with the {{site.data.keyword.personalityinsightsshort}} service. The examples show you how to call the service's `POST /v3/profile` method with different types of input and how to request different types of output and output formats.
 {: shortdesc}
 
-The tutorial uses {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) API keys for authentication. Older service instances might continue to use the `{username}` and `{password}` from their existing Cloud Foundry service credentials for authentication. Authenticate by using the approach that is right for your service instance. For more information about the service's use of IAM authentication, see the [30 October 2018 service update](/docs/services/personality-insights/release-notes.html#October2018) in the release notes.
+The tutorial uses {{site.data.keyword.cloud}} Identity and Access Management (IAM) API keys for authentication. Older service instances might continue to use the `{username}` and `{password}` from their existing Cloud Foundry service credentials for authentication. Authenticate by using the approach that is right for your service instance. For more information about the service's use of IAM authentication, see the [30 October 2018 service update](/docs/services/personality-insights/release-notes.html#October2018) in the release notes.
 {: important}
 
 ## Before you begin
@@ -35,11 +35,11 @@ The tutorial uses {{site.data.keyword.Bluemix}} Identity and Access Management (
 
 -   {: download} If you're seeing this, you created your service instance. Now get your credentials.
 -   Create an instance of the service:
-    1.  Go to the [{{site.data.keyword.personalityinsightsshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/personality-insights){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
-    1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
+    1.  Go to the [{{site.data.keyword.personalityinsightsshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/personality-insights){: new_window} page in the {{site.data.keyword.cloud_notm}} Catalog.
+    1.  Sign up for a free {{site.data.keyword.cloud_notm}} account or log in.
     1.  Click **Create**.
 -   Copy the credentials to authenticate to your service instance:
-    1.  From the [{{site.data.keyword.Bluemix_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/dashboard/apps){: new_window}, click on your {{site.data.keyword.personalityinsightsshort}} service instance to go to the {{site.data.keyword.personalityinsightsshort}} service dashboard page.
+    1.  From the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/dashboard/apps){: new_window}, click on your {{site.data.keyword.personalityinsightsshort}} service instance to go to the {{site.data.keyword.personalityinsightsshort}} service dashboard page.
     1.  On the **Manage** page, click **Show** to view your credentials.
     1.  Copy the `API Key` and `URL` values.
 -   Make sure that you have the `curl` command.
