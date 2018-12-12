@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-11"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -54,7 +54,7 @@ By using CORS, web pages can request resources from a foreign domain, one that i
 ## Using Software Development Kits
 {: #sdks}
 
-SDKs are available for the {{site.data.keyword.personalityinsightsshort}} service to simplify application development. {{site.data.keyword.watson}} SDKs are available for many popular programming languages and platforms.
+SDKs are available for the {{site.data.keyword.personalityinsightsshort}} service to simplify application development. {{site.data.keyword.ibmwatson}} SDKs are available for many popular programming languages and platforms.
 
 -   For a complete list of SDKs and links to the SDKs on GitHub, see [Using SDKs](/docs/services/watson/getting-started-sdks.html).
 -   For detailed information about all methods of the Node, Java, Python, and Ruby SDKs for the {{site.data.keyword.personalityinsightsshort}} service, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/personality-insights){: new_window}.
@@ -62,7 +62,7 @@ SDKs are available for the {{site.data.keyword.personalityinsightsshort}} servic
 ## Learning more about application development
 {: #learn}
 
-For more information about working with {{site.data.keyword.watson}} Developer Cloud services and {{site.data.keyword.cloud}}, see the following sections:
+For more information about working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud}}, see the following sections:
 
 -   For an introduction to working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud_notm}}, see [Getting started with {{site.data.keyword.watson}} and {{site.data.keyword.cloud_notm}}](/docs/services/watson/index.html).
 -   All new service instances use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) for authentication. Older service instances might continue to use the `{username}` and `{password}` from their existing Cloud Foundry service credentials for authentication. For more information about authenticating to the service, see the [30 October 2018 service update](/docs/services/personality-insights/release-notes.html#October2018) in the release notes.
