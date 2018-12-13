@@ -54,6 +54,7 @@ When you enter a command, replace `{apikey}` and `{url}` with your actual API ke
 ```bash
 curl -X POST -u "apikey:L_HALhLVIksh1b73l97LSs6R_3gLo4xkujAaxm7i-b9x"
 . . .
+"https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13"
 ```
 {:pre}
 {: hide-dashboard}
