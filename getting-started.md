@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-11"
+lastupdated: "2018-12-13"
 
 ---
 
@@ -16,10 +16,14 @@ lastupdated: "2018-12-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
+{:go: .ph data-hd-programlang='go'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 {:download: .download}
+{:apikey: data-credential-placeholder='apikey'}
+{:url: data-credential-placeholder='url'}
+{:hide-dashboard: .hide-dashboard}
 
 # Getting started tutorial
 {: #gettingStarted}
@@ -33,25 +37,26 @@ The tutorial uses {{site.data.keyword.cloud}} Identity and Access Management (IA
 ## Before you begin
 {: #before-you-begin}
 
--   {: download} If you're seeing this, you created your service instance. Now get your credentials.
--   Create an instance of the service:
-    1.  Go to the [{{site.data.keyword.personalityinsightsshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/personality-insights){: new_window} page in the {{site.data.keyword.cloud_notm}} Catalog.
-    1.  Sign up for a free {{site.data.keyword.cloud_notm}} account or log in.
-    1.  Click **Create**.
+-   {: hide-dashboard} Create an instance of the service:
+    1.  {: hide-dashboard} Go to the [{{site.data.keyword.personalityinsightsshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/personality-insights){: new_window} page in the {{site.data.keyword.cloud_notm}} Catalog.
+    1.  {: hide-dashboard} Sign up for a free {{site.data.keyword.cloud_notm}} account or log in.
+    1.  {: hide-dashboard} Click **Create**.
 -   Copy the credentials to authenticate to your service instance:
-    1.  From the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/dashboard/apps){: new_window}, click on your {{site.data.keyword.personalityinsightsshort}} service instance to go to the {{site.data.keyword.personalityinsightsshort}} service dashboard page.
+    1.  {: hide-dashboard} From the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/dashboard/apps){: new_window}, click on your {{site.data.keyword.personalityinsightsshort}} service instance to go to the {{site.data.keyword.personalityinsightsshort}} service dashboard page.
     1.  On the **Manage** page, click **Show** to view your credentials.
     1.  Copy the `API Key` and `URL` values.
 -   Make sure that you have the `curl` command.
     -   The examples use the `curl` command to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
 
-When you enter a command, replace `{apikey}` with your actual API key. Omit the braces, which indicate a variable value, from the command. An actual value resembles the following example:
+When you enter a command, replace `{apikey}` and `{url}` with your actual API key and URL. Omit the braces, which indicate a variable value, from the command. An actual value resembles the following example:
+{: hide-dashboard}
 
 ```bash
 curl -X POST -u "apikey:L_HALhLVIksh1b73l97LSs6R_3gLo4xkujAaxm7i-b9x"
 . . .
 ```
 {:pre}
+{: hide-dashboard}
 
 ## Step 1: Send plain text input and receive basic JSON output
 {: #example1}
@@ -62,15 +67,15 @@ The first example passes the plain text file `profile.txt` to the `POST /v3/prof
 1.  Issue the following command to send the file to the `/v3/profile` method and request a JSON response.
     -   The `Content-Type` header specifies that the input is plain text, `text/plain`. The `charset` parameter included with the header identifies the character encoding of the input text.
     -   The `Accept` header specifies `application/json` to indicate that JSON output is requested.
-    -   Replace `{apikey}` with your IAM API key from the previous step.
+    -   {: hide-dashboard} Replace `{apikey}` and `{url}` with your information.
     -   Modify `{path_to_file}` to specify the location of the `profile.txt` file.
 
     ```bash
-    curl -X POST -u "apikey:{apikey}" \
+    curl -X POST -u "apikey:{apikey}"{: apikey} \
     --header "Content-Type: text/plain;charset=utf-8" \
     --header "Accept: application/json" \
     --data-binary @{path_to_file}profile.txt \
-    "https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13"
+    "{url}/v3/profile?version=2017-10-13"{: url}
     ```
     {: pre}
 
@@ -87,11 +92,11 @@ The second example passes the JSON file `profile.json` to the `/v3/profile` meth
 1.  Issue the following command to send the file to the `/v3/profile` method. The example specifies `application/json` for the `Content-Type` and `Accept` headers; the `charset` parameter is not needed for JSON input. The example sets the `consumption_preferences` and `raw_scores` query parameters to `true`.
 
     ```bash
-    curl -X POST -u "apikey:{apikey}" \
+    curl -X POST -u "apikey:{apikey}"{: apikey} \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data-binary @{path_to_file}profile.json \
-    "https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13&consumption_preferences=true&raw_scores=true"
+    "{url}/v3/profile?version=2017-10-13&consumption_preferences=true&raw_scores=true"{: url}
     ```
     {: pre}
 
@@ -109,12 +114,12 @@ The third example is similar to the second: it passes the same JSON content and 
 1.  Issue the following command to send the JSON file to the `/v3/profile` method. The `Content-Type` header identifies the input content as `application/json`, and the `Accept` header requests CSV output, `text/csv`.
 
     ```bash
-    curl -X POST -u "apikey:{apikey}" \
+    curl -X POST -u "apikey:{apikey}"{: apikey} \
     --header "Content-Type: application/json" \
     --header "Accept: text/csv" \
     --data-binary @{path_to_file}profile.json \
     --output profile.csv \
-    "https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13&consumption_preferences=true&raw_scores=true&csv_headers=true"
+    "{url}/v3/profile?version=2017-10-13&consumption_preferences=true&raw_scores=true&csv_headers=true"{: url}
     ```
     {: pre}
 
