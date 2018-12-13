@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-11"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -51,7 +51,7 @@ For more information, see [Consumption preferences](/docs/services/personality-i
 ## Benefits of the service
 {: #benefits}
 
-As a core service of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} platform, the {{site.data.keyword.personalityinsightsshort}} service can provide insights that help businesses
+As a core service of the {{site.data.keyword.ibmwatson}} platform, the {{site.data.keyword.personalityinsightsshort}} service can provide insights that help businesses
 
 -   Understand their customers at a deeper level by learning their clients' preferences, improving customer satisfaction, and strengthening client relations.
 -   Improve client acquisition, retention, and engagement.
@@ -102,6 +102,6 @@ The service supports the following languages. You can use any combination of sup
 {: #learn}
 
 -   A [quick demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://personality-insights-demo.ng.bluemix.net/){: new_window} of the {{site.data.keyword.personalityinsightsshort}} service analyzes input text to develop a personality portrait that includes consumption preferences for the author.
--   Applications in {{site.data.keyword.watson}} Developer Cloud [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/watson/developercloud/starter-kits.html){: new_window} demonstrate the service.
+-   Applications in {{site.data.keyword.watson}} [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/watson/developercloud/starter-kits.html){: new_window} demonstrate the service.
 -   [The service in action](/docs/services/personality-insights/applied.html) and [The science behind the service](/docs/services/personality-insights/science.html) provide information about the research that underlies the service.
 -   The {{site.data.keyword.personalityinsightsshort}} service in the [{{site.data.keyword.cloud_notm}} Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/personality-insights/){: new_window} describes the pricing plans that are available for the service.
