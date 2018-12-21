@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-11"
+lastupdated: "2018-12-21"
 
 ---
 
@@ -29,6 +29,13 @@ The following sections document the new features and changes that were included 
 The release notes document the *service version* and *interface version* for all recent updates. You specify the *interface version* with the `version` query parameter to use new features and functionality made available with that update. The service returns both versions with the `X-Service-Api-Version` response header.
 {: note}
 
+## 21 December 2018
+{: #December2018}
+
+**Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
+
+Version 2 of the {{site.data.keyword.personalityinsightsshort}} API has been removed from service. Version 3 of the service was released on 19 October 2016. At that time, users were strongly encouraged to migrate from version 2 as soon as possible.
+
 ## 18 November 2018
 {: #November2018b}
 
@@ -43,7 +50,35 @@ The {{site.data.keyword.personalityinsightsshort}} service is now available in t
 
 The {{site.data.keyword.personalityinsightsshort}} service is now available in the {{site.data.keyword.cloud_notm}} Tokyo location (**jp-tok**). Like all locations, Tokyo uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
 
-## 30 October 2018
+## Older releases
+{: #older}
+
+-   [30 October 2018](#October2018)
+-   [11 June 2018](#June2018b)
+-   [4 June 2018](#June2018a)
+-   [23 March 2018](#March2018)
+-   [13 October 2017](#October2017)
+-   [18 September 2017](#September2017)
+-   [10 April 2017](#April2017)
+-   [1 March 2017](#March2017)
+-   [20 February 2017](#February2017b)
+-   [13 February 2017](#February2017)
+-   [13 January 2017](#January2017)
+-   [15 December 2016](#December2016)
+-   [15 November 2016](#November2016)
+-   [20 October 2016](#October2016b)
+-   [12 October 2016](#October2016a)
+-   [31 August 2016](#August2016)
+-   [14 July 2016](#July2016b)
+-   [1 July 2016](#July2016a)
+-   [7 June 2016](#June2016b)
+-   [1 June 2016](#June2016a)
+-   [17 May 2016](#May2016)
+-   [18 March 2016](#March2016)
+-   [9 July 2015](#July2015)
+-   [23 February 2015](#February2015)
+
+### 30 October 2018
 {: #October2018}
 
 **Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
@@ -69,33 +104,6 @@ For more information, see the following documentation:
 -   For more information about using IAM tokens with Watson services, see [Authenticating with IAM tokens](/docs/services/watson/getting-started-iam.html).
 -   For more information about using IAM API keys with Watson services, see [IAM service API keys](/docs/services/watson/apikey-bp.html).
 -   For examples that use IAM authentication, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/personality-insights){: new_window}.
-
-## Older releases
-{: #older}
-
--   [11 June 2018](#June2018b)
--   [4 June 2018](#June2018a)
--   [23 March 2018](#March2018)
--   [13 October 2017](#October2017)
--   [18 September 2017](#September2017)
--   [10 April 2017](#April2017)
--   [1 March 2017](#March2017)
--   [20 February 2017](#February2017b)
--   [13 February 2017](#February2017)
--   [13 January 2017](#January2017)
--   [15 December 2016](#December2016)
--   [15 November 2016](#November2016)
--   [20 October 2016](#October2016b)
--   [12 October 2016](#October2016a)
--   [31 August 2016](#August2016)
--   [14 July 2016](#July2016b)
--   [1 July 2016](#July2016a)
--   [7 June 2016](#June2016b)
--   [1 June 2016](#June2016a)
--   [17 May 2016](#May2016)
--   [18 March 2016](#March2016)
--   [9 July 2015](#July2015)
--   [23 February 2015](#February2015)
 
 ### 11 June 2018
 {: #June2018b}
