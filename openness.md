@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-12-31"
 
 ---
 
@@ -269,12 +269,12 @@ Information that relates the dimension to other dimensions, describing combinati
     <td style="text-align:left"><strong>Emotional range</strong></td>
     <td style="text-align:center"><em>High</em></td>
     <td>Passionate, excitable, sensual</td>
-    <td>Creative, intellectual, insightful, versatile, inventive</td>
+    <td>Easily rattled, easily irked, apprehensive</td>
   </tr>
   <tr>
     <td></td>
     <td style="text-align:center"><em>Low</em></td>
-    <td>Easily rattled, easily irked, apprehensive</td>
+    <td>Creative, intellectual, insightful, versatile, inventive</td>
     <td>Imperturbable, insensitive</td>
   </tr>
 </table>
