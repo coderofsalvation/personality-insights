@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-05-13"
+  years: 2015, 2019
+lastupdated: "2019-01-07"
 
 ---
 
@@ -26,7 +26,7 @@ lastupdated: "2018-05-13"
 Users are applying the {{site.data.keyword.personalityinsightsshort}} service to an increasing number of use cases. They apply the service to offer personalized product recommendations to customers via in-store kiosks. They explore and analyze differences in the personalities of US presidents as inferred from their State of the Union Addresses. And they integrate the service with another product in the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} portfolio, {{site.data.keyword.watson}} Explorer, to demonstrate how an investment advisor can offer suitable options based on investors' personality portraits. (For more information, see [Use cases](/docs/services/personality-insights/usecases.html).)
 {: shortdesc}
 
-Throughout the development of these and other prospective use cases, {{site.data.keyword.IBM_notm}} has talked with banks, healthcare providers, customer experience management companies, and federal agencies. These conversations often generate questions about applicable usage scenarios. Some of these questions and links to their answers are available as FAQs. {{site.data.keyword.IBM_notm}}'s perspective on other questions follows:
+Throughout the development of these and other prospective use cases, {{site.data.keyword.IBM_notm}} has talked with banks, healthcare providers, customer experience management companies, and federal agencies. These conversations often generate questions about applicable usage scenarios.
 
 -   What type of text is best for inferring an individual's personality? Does the text have to be reflective in nature? If so, how reflective and how does one measure reflection? See [What type of text is optimal for inferring personality?](#optimal)
 -   How does one interpret text that is written by one person about another person? Can an author's personality be inferred from the author's fictional works? Can text that is written by multiple individuals be combined to obtain a personality portrait? See [Interpreting results from different types of text](#interpreting).

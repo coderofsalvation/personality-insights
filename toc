@@ -75,13 +75,6 @@ Personality Insights
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    {: .topicgroup}
-    FAQs
-        faq-basic-usage.md
-        faq-requesting.md
-        faq-understanding.md
-        faq-preferences.md
-
     release-notes.md
 
     {: .topicgroup}
