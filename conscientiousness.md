@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-21"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2018-08-21"
 For more information, see [Percentiles for personality characteristics](/docs/services/personality-insights/numeric.html#percentiles).
 
 ## Facets
-{: #facets}
+{: #facets-consc}
 
 Brief descriptions of the dimension's facets and of individuals who score high in each facet.
 
@@ -73,7 +73,7 @@ Brief descriptions of the dimension's facets and of individuals who score high i
 </table>
 
 ## Range of characteristics
-{: #range}
+{: #range-consc}
 
 General descriptions that might apply to individuals whose scores evidence more or less of each facet of the dimension, as well as terms that might describe such individuals.
 
@@ -215,7 +215,7 @@ General descriptions that might apply to individuals whose scores evidence more 
 </table>
 
 ## Primary and secondary dimensions
-{: #dimensions}
+{: #dimensions-consc}
 
 Information that relates the dimension to other dimensions, describing combinations of personality characteristics. Provides insight into how primary and secondary characteristics might interrelate to represent an individual's composite personality.
 

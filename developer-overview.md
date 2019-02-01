@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-13"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -60,7 +60,7 @@ SDKs are available for the {{site.data.keyword.personalityinsightsshort}} servic
 -   For detailed information about all methods of the Node, Java, Python, Ruby, and Go SDKs for the {{site.data.keyword.personalityinsightsshort}} service, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/personality-insights){: new_window}.
 
 ## Learning more about application development
-{: #learn}
+{: #learn-overview}
 
 For more information about working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud}}, see the following sections:
 

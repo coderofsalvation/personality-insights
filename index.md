@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-12"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -31,7 +31,7 @@ The {{site.data.keyword.personalityinsightsfull}} service provides an applicatio
 The service infers, from potentially noisy social media, portraits of individuals that reflect their personality characteristics. It can also determine individuals' consumption preferences, which indicate their likelihood to prefer various products, services, and activities.
 
 ## Personality characteristics
-{: #models}
+{: #models-index}
 
 The {{site.data.keyword.personalityinsightsshort}} service infers personality characteristics based on three primary models:
 
@@ -42,7 +42,7 @@ The {{site.data.keyword.personalityinsightsshort}} service infers personality ch
 For more information, see [Personality models](/docs/services/personality-insights/models.html).
 
 ## Consumption preferences
-{: #preferences}
+{: #preferences-index}
 
 Based on the personality characteristics that are inferred from the input text, the service can also return an indication of the author's consumption preferences. Consumption preferences indicate the author's likelihood to pursue different products, services, and activities. The service groups the individual preferences into eight categories: *Shopping*, *Music*, *Movies*, *Reading and learning*, *Health and activity*, *Volunteering*, *Environmental concern*, and *Entrepreneurship*. Each category contains from one to as many as a dozen individual preferences.
 
@@ -60,9 +60,9 @@ As a core service of the {{site.data.keyword.ibmwatson}} platform, the {{site.da
 For more information about how you can benefit from the service, see [Use cases](/docs/services/personality-insights/usecases.html).
 
 ## Language support
-{: #languages}
+{: #languages-index}
 
-The service supports the following languages. You can use any combination of supported languages for the request and response, but all input text must be in the same language. For more information, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages).
+The service supports the following languages. You can use any combination of supported languages for the request and response, but all input text must be in the same language. For more information, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages-input).
 
 <table style="width:75%">
   <caption>Table 1. Supported languages</caption>
@@ -99,7 +99,7 @@ The service supports the following languages. You can use any combination of sup
 </table>
 
 ## Learn more about the service
-{: #learn}
+{: #learn-index}
 
 -   A [quick demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://personality-insights-demo.ng.bluemix.net/){: new_window} of the {{site.data.keyword.personalityinsightsshort}} service analyzes input text to develop a personality portrait that includes consumption preferences for the author.
 -   Applications in {{site.data.keyword.watson}} [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/watson/developercloud/starter-kits.html){: new_window} demonstrate the service.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-15"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -40,7 +40,7 @@ No mathematical relationship exists between the percentiles that are reported fo
 {: note}
 
 ## Raw scores for personality characteristics
-{: #rawScores}
+{: #rawScores-numeric}
 
 If you specify `true` for the `raw_scores` query parameter of the request, the service reports a `raw_score` for each personality characteristic. Raw scores represent the score for a characteristic that is based solely on the author's text and the model for that characteristic. When it generates raw scores, the service does not compare the results to a sample population. Raw scores can be interpreted as the scores the author would receive from taking a personality test.
 

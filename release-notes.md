@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-21"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -397,7 +397,7 @@ For the new model used for English input, the service reports the average Mean A
     -   `zh-cn` (Simplified Chinese)
     -   `zh-tw` (Traditional Chinese)
 
-    For more information, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages).
+    For more information, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages-input).
 -   The `/v2/profile` method can now return the following HTTP status codes:
     -   429 *Too Many Requests*: The service is processing too many requests for the content language. Wait a short time and try the request again. If you are submitting many requests for the language, consider throttling the rate at which you submit requests.
     -   504 *Gateway Timeout*: The request timed out or took too long to process. Wait a short time and try the request again. If the input contained too many words (for example, more than 20,000), consider reducing the number of words but maintain the guidelines for meaningful input.
@@ -430,7 +430,7 @@ The service now supports the following languages:
 -   The service supports four languages for its input text: Arabic (`ar`), English (`en`), Spanish (`es`), and Japanese (`ja`). To specify the language, use the HTTP `Content-Language` header for plain text and HTML input or the `language` property of the `ContentItem` object for JSON input.
 -   The service supports the same four languages for its response. To specify the language of the response, use the `Accept-Language` header.
 
-You can use any combination of languages for the input and response. If you do not indicate a language, the service defaults to English. For more information, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages). You can also refer to the blog post [Arabic and Japanese support is now available for {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.personalityinsightsshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/watson/2016/04/arabic-japanese-support-now-available-ibm-watson-personality-insights/){: new_window}.
+You can use any combination of languages for the input and response. If you do not indicate a language, the service defaults to English. For more information, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages-input). You can also refer to the blog post [Arabic and Japanese support is now available for {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.personalityinsightsshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/watson/2016/04/arabic-japanese-support-now-available-ibm-watson-personality-insights/){: new_window}.
 
 Because it requires significantly more computing cycles to analyze than other languages, Arabic content takes markedly longer to process. Although the service supports the same 20 MB restriction on the amount of input text for all languages, the practical limit for Arabic content might be lower to avoid timeouts. Japanese content also takes longer to process, but the delays are of less meaningful significance than they are for Arabic.
 {: note}
@@ -438,7 +438,7 @@ Because it requires significantly more computing cycles to analyze than other la
 ### 9 July 2015
 {: #July2015}
 
--   *Language support.* You can analyze both English and Spanish content. You indicate the language of the input text with the `Content-Language` header of the `/v2/profile` method. For more information about specifying a language, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages).
+-   *Language support.* You can analyze both English and Spanish content. You indicate the language of the input text with the `Content-Language` header of the `/v2/profile` method. For more information about specifying a language, see [Specifying request and response languages](/docs/services/personality-insights/input.html#languages-input).
 -   *Raw scores.* You can request raw scores and raw sampling errors that are computed from the input text and the service's models. The values are not normalized or compared with a sample population. Raw scores are useful for customers who want to apply a custom normalization for a specific scenario or who do not require a comparison with a sample population. You request raw scores by setting the `include_raw` query parameter of the `/v2/profile` method to `true`. For more information, see [Interpreting the numeric results](/docs/services/personality-insights/numeric.html).
 -   *Model enhancements.* Based on its latest studies, {{site.data.keyword.IBM_notm}} further improved some of its approaches to inferring personality characteristics. The changes are transparent to the service's users; they do not invalidate any previous results that were obtained from the service. For more information about the studies and the service's approach to inference, see [How personality characteristics are inferred](/docs/services/personality-insights/science.html#researchInfer).
 

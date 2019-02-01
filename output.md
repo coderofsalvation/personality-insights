@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-10"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -87,7 +87,7 @@ The `Profile` object always includes `personality`, `needs`, and `values` fields
     -   `needs` for Needs
     -   `values` for Values
 -   `percentile` (double) is the normalized percentile score for the characteristic. For more information, see [Percentiles for personality characteristics](/docs/services/personality-insights/numeric.html#percentiles).
--   `raw_score` (double) is the raw score for the characteristic. The field is returned only if you request raw scores by setting the `raw_scores` query parameter to `true`. For more information, see [Raw scores for personality characteristics](/docs/services/personality-insights/numeric.html#rawScores).
+-   `raw_score` (double) is the raw score for the characteristic. The field is returned only if you request raw scores by setting the `raw_scores` query parameter to `true`. For more information, see [Raw scores for personality characteristics](/docs/services/personality-insights/numeric.html#rawScores-numeric).
 -   `significant` (boolean) indicates whether the characteristic is meaningful for the input language. The field is always `true` for all characteristics of English, Spanish, and Japanese input. The field is `false` for the subset of characteristics of Arabic and Korean input for which the service's models are unable to generate meaningful results. For more information, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations).
 -   `children` is an array of `Trait` objects that provides more detailed results for the facets of each Big Five dimension as inferred from the input text. The array is returned only for Big Five dimensions.
 
