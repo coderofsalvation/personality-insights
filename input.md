@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-10"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -168,7 +168,7 @@ To pass JSON input, you use the `Content` object. The object includes an array o
 -   `created` (integer) is a UNIX timestamp that indicates when the content item was created.
 -   `updated` (integer) is a UNIX timestamp that indicates when the content item was last updated.
 -   `contenttype` (string) indicates the type of the content item: `text/plain` or `text/html`.
--   `language` (string) indicates the language of the content item: `ar` (Arabic), `en` (English), `es` (Spanish), `ja` (Japanese), or `ko` (Korean). See [Specifying request and response languages](#languages).
+-   `language` (string) indicates the language of the content item: `ar` (Arabic), `en` (English), `es` (Spanish), `ja` (Japanese), or `ko` (Korean). See [Specifying request and response languages](#languages-input).
 -   `parentid` (string) is the `id` of the content item's parent item.
 -   `reply` (boolean) indicates whether the content item is a reply to another item.
 -   `forward` (boolean) indicates whether the content item is a forward or copy of another item.
@@ -204,7 +204,7 @@ Examples in the [Getting started tutorial](/docs/services/personality-insights/g
 {: codeblock}
 
 ## Specifying request and response languages
-{: #languages}
+{: #languages-input}
 
 You can use the `Content-Language` and `Accept-Language` header parameters to indicate the language of the input content and the language of the service's response. You can use any combination of supported languages for the request and response. If you do not indicate a language, the service uses its English-trained models for its analysis and English for its results. The following table lists the supported input and output languages and identifies the arguments that you use with the language-related parameters.
 
@@ -471,12 +471,12 @@ As the following guidelines indicate, {{site.data.keyword.IBM_notm}} recommends 
 These guidelines can help you accommodate the reliability of the results to your application. For example, for a casual application that recommends movies, you might be comfortable with less precision. For an application that makes more critical recommendations, you likely require more precise results. For more information about how the service infers personality characteristics, see [How personality characteristics are inferred](/docs/services/personality-insights/science.html#researchInfer).
 
 ## Requesting raw scores
-{: #rawScores}
+{: #rawScores-input}
 
-The service always returns normalized scores for each personality characteristic (Big Five dimension and facet, Need, and Value) as part of its response. The service can also report a `raw_score` for each characteristic if you set the `raw_scores` query parameter to `true`. Raw scores represent results for the characteristics that are based solely on the author's text and the model for that characteristic, without comparing the results to a sample population. For more information about using raw scores, see [Raw scores for personality characteristics](/docs/services/personality-insights/numeric.html#rawScores).
+The service always returns normalized scores for each personality characteristic (Big Five dimension and facet, Need, and Value) as part of its response. The service can also report a `raw_score` for each characteristic if you set the `raw_scores` query parameter to `true`. Raw scores represent results for the characteristics that are based solely on the author's text and the model for that characteristic, without comparing the results to a sample population. For more information about using raw scores, see [Raw scores for personality characteristics](/docs/services/personality-insights/numeric.html#rawScores-numeric).
 
 ## Requesting consumption preferences
-{: #preferences}
+{: #preferences-input}
 
 The service always returns results for the personality models. When you set the `consumption_preferences` query parameter to `true`, the service also returns `scores` for various consumption preferences. The service bases the preferences on the personality characteristics that it infers from the input text. These results indicate the author's tendency to prefer different products, services, and activities. Businesses can use the results to better understand the author's inclinations and to personalize communications and offers for the author.
 
