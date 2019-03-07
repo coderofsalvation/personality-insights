@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-10"
+  years: 2015, 2019
+lastupdated: "2019-03-06"
 
 ---
 
@@ -41,7 +41,7 @@ The following studies by {{site.data.keyword.IBM_notm}} researchers indicate tha
   </tr>
   <tr>
     <td style="vertical-align:top">
-      <a href="#IBMrespond"><strong>Responding to tweets</strong></a>
+      [Responding to tweets](#IBMrespond)
       <br/>(information-collection)
     </td>
     <td style="text-align:center; vertical-align:top">2000 Twitter users</td>
@@ -56,7 +56,7 @@ The following studies by {{site.data.keyword.IBM_notm}} researchers indicate tha
   </tr>
   <tr>
     <td style="vertical-align:top">
-      <a href="#IBMretweet"><strong>Retweeting</strong></a>
+      [Retweeting](#IBMretweet)
       <br/>(information-spreading)
     </td>
     <td style="text-align:center; vertical-align:top">3500 Twitter users</td>
@@ -67,7 +67,7 @@ The following studies by {{site.data.keyword.IBM_notm}} researchers indicate tha
   </tr>
   <tr>
     <td style="vertical-align:top">
-      <a href="#IBMtarget"><strong>Targeted advertising</strong></a>
+      [Targeted advertising](#IBMtarget)
       <br/>(unsolicited advertising)
     </td>
     <td style="text-align:center; vertical-align:top">More than 6000
@@ -81,7 +81,7 @@ The following studies by {{site.data.keyword.IBM_notm}} researchers indicate tha
   </tr>
   <tr>
     <td style="vertical-align:top">
-      <a href="#IBMcampaign"><strong>Marketing campaigns</strong></a>
+      [Marketing campaigns](#IBMcampaign)
       <br/>(coupon redemption)
     </td>
     <td style="text-align:center; vertical-align:top">Thousands of retail
@@ -94,7 +94,7 @@ The following studies by {{site.data.keyword.IBM_notm}} researchers indicate tha
   </tr>
   <tr>
     <td style="vertical-align:top">
-      <a href="#IBMbrand"><strong>Brand preference</strong></a>
+      [Brand preference](#IBMbrand)
       <br/>(brand affinity)
     </td>
     <td style="text-align:center; vertical-align:top">600 Twitter users</td>
@@ -106,7 +106,7 @@ The following studies by {{site.data.keyword.IBM_notm}} researchers indicate tha
   </tr>
   <tr>
     <td style="vertical-align:top">
-      <a href="#IBMmember"><strong>Member satisfaction</strong></a>
+      [Member satisfaction](#IBMmember)
       <br/>(community fulfillment)
     </td>
     <td style="text-align:center; vertical-align:top">More than 3000
@@ -119,7 +119,7 @@ The following studies by {{site.data.keyword.IBM_notm}} researchers indicate tha
   </tr>
   <tr>
     <td style="vertical-align:top">
-      <a href="#IBMreading"><strong>Reading preference</strong></a>
+      [Reading preference](#IBMreading)
       <br/>(content interest)
     </td>
     <td style="text-align:center; vertical-align:top">More than 200
@@ -133,8 +133,8 @@ The following studies by {{site.data.keyword.IBM_notm}} researchers indicate tha
   </tr>
   <tr>
     <td style="vertical-align:top">
-      <a href="#IBMpreferences"><strong>Predicting consumption
-      preferences</strong></a><br/>(consumer purchasing)
+      [Predicting consumption preferences](#IBMpreferences)<br/>
+      (consumer purchasing)
     </td>
     <td style="text-align:center; vertical-align:top">Hundreds of thousands
       of data records</td>
