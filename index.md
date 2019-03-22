@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-14"
 
 subcollection: personality-insights
 
@@ -99,6 +99,11 @@ The service supports the following languages. You can use any combination of sup
     </td>
   </tr>
 </table>
+
+## HIPAA
+{: hipaa}
+
+US Health Insurance Portability and Accountability Act (HIPAA) support does not apply to the {{site.data.keyword.personalityinsightsshort}} service. The service is stateless. It stores no user data on {{site.data.keyword.cloud_notm}}.
 
 ## Learn more about the service
 {: #learn-index}
