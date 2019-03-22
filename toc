@@ -38,6 +38,7 @@ Personality Insights
         values.md
 
     preferences.md
+    ha-dr.md
 
     {: topicgroup}
     Service background
