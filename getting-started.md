@@ -33,7 +33,7 @@ subcollection: personality-insights
 The {{site.data.keyword.personalityinsightsfull}} service derives insights about personality characteristics from social media, enterprise data, or other digital communications. This tutorial can help you get started quickly with the {{site.data.keyword.personalityinsightsshort}} service. The examples show you how to call the service's `POST /v3/profile` method with different types of input and how to request different types of output and output formats.
 {: shortdesc}
 
-The tutorial uses {{site.data.keyword.cloud}} Identity and Access Management (IAM) API keys for authentication. Older service instances might continue to use the `{username}` and `{password}` from their existing Cloud Foundry service credentials for authentication. Authenticate by using the approach that is right for your service instance. For more information about the service's use of IAM authentication, see the [30 October 2018 service update](/docs/services/personality-insights/release-notes.html#October2018) in the release notes.
+The tutorial uses {{site.data.keyword.cloud}} Identity and Access Management (IAM) API keys for authentication. Older service instances might continue to use the `{username}` and `{password}` from their existing Cloud Foundry service credentials for authentication. Authenticate by using the approach that is right for your service instance. For more information about the service's use of IAM authentication, see the [30 October 2018 service update](/docs/services/personality-insights?topic=personality-insights-release-notes#October2018) in the release notes.
 {: important}
 
 ## Before you begin
@@ -82,9 +82,9 @@ The first example passes the plain text file `profile.txt` to the `POST /v3/prof
     ```
     {: pre}
 
-The service returns a JSON `Profile` object that includes basic metadata such as the number of words in the input, the language model with which the input was processed, and any warnings associated with the input. For more information, see [The Profile object](/docs/services/personality-insights/output.html#outputJSON).
+The service returns a JSON `Profile` object that includes basic metadata such as the number of words in the input, the language model with which the input was processed, and any warnings associated with the input. For more information, see [The Profile object](/docs/services/personality-insights?topic=personality-insights-output#outputJSON).
 
-The profile includes information about the Big Five personality, Needs, and Values characteristics for the author as inferred from the input text. The service reports a `percentile`, or normalized score, for each characteristic. The service computes the percentile by comparing the author's results with the results from a sample population. For more information, see [Personality characteristics output](/docs/services/personality-insights/output.html#traitJSON).
+The profile includes information about the Big Five personality, Needs, and Values characteristics for the author as inferred from the input text. The service reports a `percentile`, or normalized score, for each characteristic. The service computes the percentile by comparing the author's results with the results from a sample population. For more information, see [Personality characteristics output](/docs/services/personality-insights?topic=personality-insights-output#traitJSON).
 
 ## Step 2: Send JSON input and receive detailed JSON output
 {: #example2}
@@ -105,9 +105,9 @@ The second example passes the JSON file `profile.json` to the `/v3/profile` meth
 
 The service returns a JSON profile that includes the metadata and characteristics returned with the previous example. For each characteristic, the service also includes a `raw_score`, which represents the author's score for the characteristic based solely on the input text, without comparing the results to a sample population.
 
-Because the input content includes timestamps, the service also reports behavioral characteristics. These are temporal characteristics that indicate the `percentage` of the content items that were created on each day of the week and hour of the day. For more information, see [Behavioral output](/docs/services/personality-insights/output.html#behaviorJSON).
+Because the input content includes timestamps, the service also reports behavioral characteristics. These are temporal characteristics that indicate the `percentage` of the content items that were created on each day of the week and hour of the day. For more information, see [Behavioral output](/docs/services/personality-insights?topic=personality-insights-output#behaviorJSON).
 
-The service also reports scores for its collection of consumption preferences. The scores indicate the author's likelihood to prefer different products, services, and activities based on the inferred characteristics. For more information, see [Consumption preferences output](/docs/services/personality-insights/output.html#preferenceJSON).
+The service also reports scores for its collection of consumption preferences. The scores indicate the author's likelihood to prefer different products, services, and activities based on the inferred characteristics. For more information, see [Consumption preferences output](/docs/services/personality-insights?topic=personality-insights-output#preferenceJSON).
 
 ## Step 3: Send JSON input and receive detailed CSV output
 {: #example3}
@@ -126,11 +126,12 @@ The third example is similar to the second: it passes the same JSON content and 
     ```
     {: pre}
 
-For a detailed description of the CSV response and headers, see [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html).
+For a detailed description of the CSV response and headers, see [Understanding a CSV profile](/docs/services/personality-insights?topic=personality-insights-outputCSV).
 
 ## Next steps
+{: #gsns}
 
--   Learn more about [Requesting a profile](/docs/services/personality-insights/input.html) and about [Understanding a JSON profile](/docs/services/personality-insights/output.html) and [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html).
--   Learn about the Big Five, Needs, and Values [Personality models](/docs/services/personality-insights/models.html).
+-   Learn more about [Requesting a profile](/docs/services/personality-insights?topic=personality-insights-input) and about [Understanding a JSON profile](/docs/services/personality-insights?topic=personality-insights-output) and [Understanding a CSV profile](/docs/services/personality-insights?topic=personality-insights-outputCSV).
+-   Learn about the Big Five, Needs, and Values [Personality models](/docs/services/personality-insights?topic=personality-insights-models).
 -   Learn more about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/personality-insights){: new_window}
 -   Explore the [Node.js sample application ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/personality-insights-nodejs){: new_window} to learn more about application development with the service.

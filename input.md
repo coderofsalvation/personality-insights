@@ -30,7 +30,7 @@ To analyze content, you use the HTTP `POST` request method to call the `/v3/prof
 
 The `/v3/profile` method includes parameters that specify the type of content to be passed to and returned by the service, as well as the language of each type of content. The service always returns a profile that provides insight into the personality characteristics of the author of the input text. You can also request raw scores and consumption preferences.
 
-The following sections describe the parameters of the `/v3/profile` method. For information about the results of a request, see [Understanding a JSON profile](/docs/services/personality-insights/output.html) and [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html). For detailed information about the `/v3/profile` method, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/personality-insights){: new_window}.
+The following sections describe the parameters of the `/v3/profile` method. For information about the results of a request, see [Understanding a JSON profile](/docs/services/personality-insights?topic=personality-insights-output) and [Understanding a CSV profile](/docs/services/personality-insights?topic=personality-insights-outputCSV). For detailed information about the `/v3/profile` method, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/personality-insights){: new_window}.
 
 Request logging is disabled for the {{site.data.keyword.personalityinsightsshort}} service. Regardless of whether you set the `X-Watson-Learning-Opt-Out` request header, the service does not log or retain data from requests and responses.
 {: note}
@@ -159,7 +159,7 @@ curl -X POST -u "apikey:{apikey}"
 ```
 {: pre}
 
-For more examples of calling the service with different request and response formats, see the [Getting started tutorial](/docs/services/personality-insights/getting-started.html).
+For more examples of calling the service with different request and response formats, see the [Getting started tutorial](/docs/services/personality-insights?topic=personality-insights-gettingStarted).
 
 ## Specifying JSON input
 {: #json}
@@ -180,7 +180,7 @@ JSON input is well suited for content from Twitter or other social networks that
 ### Example JSON input
 {: jsonExample}
 
-Examples in the [Getting started tutorial](/docs/services/personality-insights/getting-started.html) use the sample JSON file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>. The file includes a series of Twitter messages. The following example shows the first few tweets from the file.
+Examples in the [Getting started tutorial](/docs/services/personality-insights?topic=personality-insights-gettingStarted) use the sample JSON file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>. The file includes a series of Twitter messages. The following example shows the first few tweets from the file.
 
 ```javascript
 {
@@ -400,9 +400,9 @@ Consider the following details when you submit input text:
 
 -   *For English,* the service bases results on US cultural norms. If you analyze English text from a different culture, you might need to adjust the results.
 -   *For Arabic,* the service can trim the amount of input text for performance reasons. At a certain threshold, the accuracy of Arabic results does not improve with more words. If the service trims Arabic input, it returns a warning message to inform you that it reduced the amount of input text that it used for the profile.
--   *For Arabic and Korean,* the service is unable to return meaningful results for a subset of characteristics. For more information, see [Limitations for Arabic and Korean input](/docs/services/personality-insights/numeric.html#limitations).
+-   *For Arabic and Korean,* the service is unable to return meaningful results for a subset of characteristics. For more information, see [Limitations for Arabic and Korean input](/docs/services/personality-insights?topic=personality-insights-numeric#limitations).
 
-For general information about using translated text, see [Inferring personality from translated text](/docs/services/personality-insights/guidance.html#translation).
+For general information about using translated text, see [Inferring personality from translated text](/docs/services/personality-insights?topic=personality-insights-guidance#translation).
 
 ## Providing sufficient input
 {: #sufficient}
@@ -424,7 +424,7 @@ The following table reports two values for different quantities of input text:
 -   The *Average Mean Absolute Error (MAE)* across all characteristics based on the number of words that are provided as input. The smaller the MAE, the closer the service's results are to the scores the author would receive by taking a personality test.
 -   The *Average correlation* between inferred and actual scores across all characteristics. The closer the correlation is to 1, the better the predictions. Correlations greater than 0.2 are considered acceptable; correlation higher than 0.4 are rare.
 
-The information is based on English-language data, but the general guidelines apply to all languages. For more information about average MAE and correlation, including language-specific statistics, see [How precise is the service](/docs/services/personality-insights/science.html#researchPrecise).
+The information is based on English-language data, but the general guidelines apply to all languages. For more information about average MAE and correlation, including language-specific statistics, see [How precise is the service](/docs/services/personality-insights?topic=personality-insights-science#researchPrecise).
 
 <table style="width:80%">
   <caption>Table 3. Average MAE and correlation</caption>
@@ -470,23 +470,23 @@ As the following guidelines indicate, {{site.data.keyword.IBM_notm}} recommends 
 -   Fewer than 600 words generate a warning, but the service still analyzes the input.
 -   Fewer than 100 words generate an error.
 
-These guidelines can help you accommodate the reliability of the results to your application. For example, for a casual application that recommends movies, you might be comfortable with less precision. For an application that makes more critical recommendations, you likely require more precise results. For more information about how the service infers personality characteristics, see [How personality characteristics are inferred](/docs/services/personality-insights/science.html#researchInfer).
+These guidelines can help you accommodate the reliability of the results to your application. For example, for a casual application that recommends movies, you might be comfortable with less precision. For an application that makes more critical recommendations, you likely require more precise results. For more information about how the service infers personality characteristics, see [How personality characteristics are inferred](/docs/services/personality-insights?topic=personality-insights-science#researchInfer).
 
 ## Requesting raw scores
 {: #rawScores-input}
 
-The service always returns normalized scores for each personality characteristic (Big Five dimension and facet, Need, and Value) as part of its response. The service can also report a `raw_score` for each characteristic if you set the `raw_scores` query parameter to `true`. Raw scores represent results for the characteristics that are based solely on the author's text and the model for that characteristic, without comparing the results to a sample population. For more information about using raw scores, see [Raw scores for personality characteristics](/docs/services/personality-insights/numeric.html#rawScores-numeric).
+The service always returns normalized scores for each personality characteristic (Big Five dimension and facet, Need, and Value) as part of its response. The service can also report a `raw_score` for each characteristic if you set the `raw_scores` query parameter to `true`. Raw scores represent results for the characteristics that are based solely on the author's text and the model for that characteristic, without comparing the results to a sample population. For more information about using raw scores, see [Raw scores for personality characteristics](/docs/services/personality-insights?topic=personality-insights-numeric#rawScores-numeric).
 
 ## Requesting consumption preferences
 {: #preferences-input}
 
 The service always returns results for the personality models. When you set the `consumption_preferences` query parameter to `true`, the service also returns `scores` for various consumption preferences. The service bases the preferences on the personality characteristics that it infers from the input text. These results indicate the author's tendency to prefer different products, services, and activities. Businesses can use the results to better understand the author's inclinations and to personalize communications and offers for the author.
 
-For more information about the different consumption preferences, see [Consumption preferences](/docs/services/personality-insights/preferences.html). For information about interpreting the numeric results for a preference, see [Scores for consumption preferences](/docs/services/personality-insights/numeric.html#scores).
+For more information about the different consumption preferences, see [Consumption preferences](/docs/services/personality-insights?topic=personality-insights-preferences). For information about interpreting the numeric results for a preference, see [Scores for consumption preferences](/docs/services/personality-insights?topic=personality-insights-numeric#scores).
 
 ## Specifying the interface version
 {: #version}
 
-All calls to the `/v3/profile` method must include the `version` query parameter to indicate the version of the service's API and response format that you want to use. You specify the version as a date in the format `YYYY-MM-DD`; for example, specify `2017-10-13` for October 13, 2017 (the latest version). The parameter allows the service to update its API and response format for new versions without breaking existing clients. For information about all available versions, see the [Release notes](/docs/services/personality-insights/release-notes.html).
+All calls to the `/v3/profile` method must include the `version` query parameter to indicate the version of the service's API and response format that you want to use. You specify the version as a date in the format `YYYY-MM-DD`; for example, specify `2017-10-13` for October 13, 2017 (the latest version). The parameter allows the service to update its API and response format for new versions without breaking existing clients. For information about all available versions, see the [Release notes](/docs/services/personality-insights?topic=personality-insights-release-notes).
 
 The date that you specify does not need to match a version of the service exactly; the service uses the version that is no later than the date you provide. If you specify a date that is earlier than the initial release of version 3 (`2016-10-19`), the service uses that version of the API. If you specify a date that is in the future or otherwise later than the most recent version, the service uses the latest version.

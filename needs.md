@@ -28,7 +28,7 @@ subcollection: personality-insights
 *Needs* describe at a high level those aspects of a product that are likely to resonate with the author of the input text. The following table describes the twelve needs that the service evaluates.
 {: shortdesc}
 
-A score above the mean of 0.5 indicates a greater than average tendency for a characteristic. A score at or above 0.75 indicates readily discernible aspects of the characteristic; such scores are considered *high*. For more information, see [Percentiles for personality characteristics](/docs/services/personality-insights/numeric.html#percentiles).
+A score above the mean of 0.5 indicates a greater than average tendency for a characteristic. A score at or above 0.75 indicates readily discernible aspects of the characteristic; such scores are considered *high*. For more information, see [Percentiles for personality characteristics](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
 
 <table>
   <caption>Table 1. Needs</caption>

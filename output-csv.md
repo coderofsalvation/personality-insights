@@ -32,7 +32,7 @@ CSV output, unlike JSON, is returned as a fixed number of columns. The first row
 
 The following sections list and briefly describe all columns of the CSV output in the exact order in which they appear in the results. The tables describe the columns by logical grouping, including the number of columns in each group and their optional labels. Other than the word count, all numeric data is returned as double values.
 
-For more information about the meaning of the CSV columns, see [Understanding a JSON profile](/docs/services/personality-insights/output.html) and [Interpreting the numeric results](/docs/services/personality-insights/numeric.html).
+For more information about the meaning of the CSV columns, see [Understanding a JSON profile](/docs/services/personality-insights?topic=personality-insights-output) and [Interpreting the numeric results](/docs/services/personality-insights?topic=personality-insights-numeric).
 
 ## Basic characteristics and metadata
 {: #basicCSV}
