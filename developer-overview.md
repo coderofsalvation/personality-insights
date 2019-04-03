@@ -37,9 +37,9 @@ For each personality characteristic, the service reports a *percentile*. The per
 
 For more information about using the service, see
 
--   [Requesting a profile](/docs/services/personality-insights/input.html)
--   [Understanding a JSON profile](/docs/services/personality-insights/output.html)
--   [Understanding a CSV profile](/docs/services/personality-insights/output-csv.html)
+-   [Requesting a profile](/docs/services/personality-insights?topic=personality-insights-input)
+-   [Understanding a JSON profile](/docs/services/personality-insights?topic=personality-insights-output)
+-   [Understanding a CSV profile](/docs/services/personality-insights?topic=personality-insights-outputCSV)
 
 ### Visualizing a profile
 {: #visualize}
@@ -58,7 +58,7 @@ By using CORS, web pages can request resources from a foreign domain, one that i
 
 SDKs are available for the {{site.data.keyword.personalityinsightsshort}} service to simplify application development. {{site.data.keyword.ibmwatson}} SDKs are available for many popular programming languages and platforms.
 
--   For a complete list of SDKs and links to the SDKs on GitHub, see [Using SDKs](/docs/services/watson/getting-started-sdks.html).
+-   For a complete list of SDKs and links to the SDKs on GitHub, see [Using SDKs](/docs/services/watson?topic=watson-using-sdks).
 -   For detailed information about all methods of the Node, Java, Python, Ruby, and Go SDKs for the {{site.data.keyword.personalityinsightsshort}} service, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/personality-insights){: new_window}.
 
 ## Learning more about application development
@@ -66,6 +66,6 @@ SDKs are available for the {{site.data.keyword.personalityinsightsshort}} servic
 
 For more information about working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud}}, see the following sections:
 
--   For an introduction to working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud_notm}}, see [Getting started with {{site.data.keyword.watson}} and {{site.data.keyword.cloud_notm}}](/docs/services/watson/index.html).
--   All new service instances use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) for authentication. Older service instances might continue to use the `{username}` and `{password}` from their existing Cloud Foundry service credentials for authentication. For more information about authenticating to the service, see the [30 October 2018 service update](/docs/services/personality-insights/release-notes.html#October2018) in the release notes.
+-   For an introduction to working with {{site.data.keyword.watson}} services and {{site.data.keyword.cloud_notm}}, see [Getting started with {{site.data.keyword.watson}} and {{site.data.keyword.cloud_notm}}](/docs/services/watson?topic=watson-about).
+-   All new service instances use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) for authentication. Older service instances might continue to use the `{username}` and `{password}` from their existing Cloud Foundry service credentials for authentication. For more information about authenticating to the service, see the [30 October 2018 service update](/docs/services/personality-insights?topic=personality-insights-release-notes#October2018) in the release notes.
 -   Request logging is disabled for the {{site.data.keyword.personalityinsightsshort}} service. The service does not log or retain data from requests and responses, regardless of whether the `X-Watson-Learning-Opt-Out` request header is set.

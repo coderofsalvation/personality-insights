@@ -29,17 +29,17 @@ The {{site.data.keyword.personalityinsightsshort}} service is based on the psych
 {: shortdesc}
 
 -   *Big Five* personality characteristics represent the most widely used model for generally describing how a person engages with the world. The model includes five primary dimensions:
-    -   [*Agreeableness*](/docs/services/personality-insights/agreeableness.html) is a person's tendency to be compassionate and cooperative toward others.
-    -   [*Conscientiousness*](/docs/services/personality-insights/conscientiousness.html) is a person's tendency to act in an organized or thoughtful way.
-    -   [*Extraversion*](/docs/services/personality-insights/extraversion.html) is a person's tendency to seek stimulation in the company of others.
-    -   [*Emotional range*](/docs/services/personality-insights/emotional-range.html), also referred to as *Neuroticism* or *Natural reactions*, is the extent to which a person's emotions are sensitive to the person's environment.
-    -   [*Openness*](/docs/services/personality-insights/openness.html) is the extent to which a person is open to experiencing different activities.
+    -   [*Agreeableness*](/docs/services/personality-insights?topic=personality-insights-agreeableness) is a person's tendency to be compassionate and cooperative toward others.
+    -   [*Conscientiousness*](/docs/services/personality-insights?topic=personality-insights-conscientiousness) is a person's tendency to act in an organized or thoughtful way.
+    -   [*Extraversion*](/docs/services/personality-insights?topic=personality-insights-extraversion) is a person's tendency to seek stimulation in the company of others.
+    -   [*Emotional range*](/docs/services/personality-insights?topic=personality-insights-emotionalRange), also referred to as *Neuroticism* or *Natural reactions*, is the extent to which a person's emotions are sensitive to the person's environment.
+    -   [*Openness*](/docs/services/personality-insights?topic=personality-insights-openness) is the extent to which a person is open to experiencing different activities.
 
     Each of these top-level dimensions has six facets that further characterize an individual according to the dimension.
--   [Needs](/docs/services/personality-insights/needs.html) describe which aspects of a product resonate with a person. The model includes twelve characteristic needs.
--   [Values](/docs/services/personality-insights/values.html) describe motivating factors that influence a person's decision making. The model includes five values.
+-   [Needs](/docs/services/personality-insights?topic=personality-insights-needs) describe which aspects of a product resonate with a person. The model includes twelve characteristic needs.
+-   [Values](/docs/services/personality-insights?topic=personality-insights-values) describe motivating factors that influence a person's decision making. The model includes five values.
 
-For more information about how the models were developed and how the service uses them, see [The science behind the service](/docs/services/personality-insights/science.html).
+For more information about how the models were developed and how the service uses them, see [The science behind the service](/docs/services/personality-insights?topic=personality-insights-science).
 
 ## Descriptions of Big Five personality characteristics
 {: #bigFive}
