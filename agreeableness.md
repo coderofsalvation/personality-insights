@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-04-09"
 
 subcollection: personality-insights
 
@@ -166,7 +166,7 @@ General descriptions that might apply to individuals whose scores evidence more 
     <td headers="lowValue lowDescription" style="text-align:left">
       You are comfortable using every trick in the book to get what you want.
     </td>
-    <td headers="lowValue lowTerm"style="text-align:center">
+    <td headers="lowValue lowTerm" style="text-align:center">
       Compromising
     </td>
     <td headers="blank facet" style="text-align:center">
