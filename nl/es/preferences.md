@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,14 +25,18 @@ lastupdated: "2017-10-12"
 # Preferencias de consumo
 {: #preferences}
 
-El servicio de {{site.data.keyword.personalityinsightsshort}} deduce las características de personalidad de un autor para tres modelos: cinco grandes, necesidades y valores. Según sus resultados para estos modelos, el servicio también puede producir preferencias de consumo para el autor del texto de entrada. Establezca el parámetro de consulta `consumption_preferences` en `true` para que una solicitud obtenga las preferencias de consumo.
+El servicio {{site.data.keyword.personalityinsightsshort}} deduce las características de personalidad de un autor para tres modelos: cinco grandes, necesidades y valores. Según sus resultados para estos modelos, el servicio también puede producir preferencias de consumo para el autor del texto de entrada. Establezca el parámetro de consulta `consumption_preferences` en `true` para que una solicitud obtenga las preferencias de consumo.
 {: shortdesc}
 
-Agrupadas en ocho categorías de alto nivel, las más de 40 preferencias de consumo indican la probabilidad de que el autor prefiera distintos productos, servicios y actividades. Por ejemplo, el servicio puede identificar las inclinaciones del autor al comprar ropa (comodidad frente a moda) y automóviles (precio frente a seguridad); sus inclinaciones hacia distintos géneros de música, películas y lectura; y sus actitudes hacia el medio ambiente y el voluntariado, entre otras cosas.
+El servicio agrupa las más de 40 preferencias de consumo en ocho categorías de alto nivel. Las preferencias indican la probabilidad del autor para preferir distintos productos, servicios y actividades. Por ejemplo, el servicio puede identificar
 
-Las empresas utilizan los modelos de personalidad del servicio para comprender mejor a sus clientes y para diseñar y desarrollar campañas, productos y servicios más personalizados y selectivos. Las preferencias de consumo facilitan aún más actuar en función de los resultados del servicio. Las empresas pueden obtener fácilmente una lista de preferencias que están asociadas con las características dominantes de una persona y responder en consecuencia. Para obtener más información sobre posibles aplicaciones de las preferencias de consumo, consulte [Casos de uso](/docs/services/personality-insights/usecases.html) y [El servicio en acción](/docs/services/personality-insights/applied.html).
+-   Las inclinaciones del autor en cuanto a ropa (confort frente a moda) y automóviles (coste frente a seguridad).
+-   Las inclinaciones del autor hacia diferentes géneros de música, películas y lectura.
+-   Las actitudes del autor sobre el medio ambiente y el voluntariado.
 
-Las secciones siguientes enumeran y describen las preferencias de consumo que puede devolver el servicio. Para obtener más información sobre la interpretación de las preferencias numéricas, consulte [Puntuaciones para preferencias de consumo](/docs/services/personality-insights/numeric.html#scores). Para obtener información sobre cómo {{site.data.keyword.IBM_notm}} ha desarrollado las preferencias, consulte [La ciencia detrás del servicio](/docs/services/personality-insights/science.html).
+Las empresas utilizan los modelos de personalidad del servicio para comprender mejor a sus clientes y para diseñar y desarrollar campañas, productos y servicios más personalizados y selectivos. Las preferencias de consumo facilitan aún más actuar sobre los resultados del servicio. Las empresas pueden obtener fácilmente una lista de preferencias que están asociadas con las características dominantes de una persona y responder en consecuencia. Para obtener más información sobre posibles aplicaciones de las preferencias de consumo, consulte [Casos prácticos](/docs/services/personality-insights?topic=personality-insights-usecases) y [El servicio en acción](/docs/services/personality-insights?topic=personality-insights-applied).
+
+Las secciones siguientes enumeran y describen las preferencias de consumo que puede devolver el servicio. Para obtener más información sobre la interpretación de las preferencias numéricas, consulte [Puntuaciones para preferencias de consumo](/docs/services/personality-insights?topic=personality-insights-numeric#scores). Para obtener información sobre cómo {{site.data.keyword.IBM_notm}} ha desarrollado las preferencias, consulte [La ciencia detrás del servicio](/docs/services/personality-insights?topic=personality-insights-science).
 
 ## Preferencias de compra
 {: #shopping}
@@ -153,10 +162,10 @@ Las preferencias de compra indican el interés del autor en distintos tipos de c
     </td>
     <td style="text-align:left">
       Es probable que le influyan las redes sociales al adquirir un producto
-      </td>
+    </td>
     <td style="text-align:center">
       <code>0,0</code> (improbable)<br/>
-      <code>1,0</code> (probable)
+     <code>1,0</code> (probable)
     </td>
   </tr>
   <tr>

@@ -1,2 +1,0 @@
-# personality-insights
-personality-insights
