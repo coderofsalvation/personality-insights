@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,14 +25,14 @@ lastupdated: "2017-10-12"
 # CSV-Profil verstehen
 {: #outputCSV}
 
-Der Service gibt die Ergebnisse der Analyse im CSV-Format (mit durch Kommas getrennten Werten) zurück, wenn Sie `text/csv` mit dem Header `Accept` einer Anforderung angeben. Die CSV-Ausgabe stellt Informationen bereit, die den Informationen der JSON-Ausgabe ähnlich sind. Ebenso wie beim JSON-Objekt hängen die Informationen in der CSV-Ausgabe davon ab, ob die Eingabe Daten mit Zeitmarken darstellt und ob der Benutzer unaufbereitete Bewertungen und Verbraucherpräferenzen anfordert.
+Der Service gibt die Ergebnisse der Analyse im CSV-Format (mit durch Kommas getrennten Werten) zurück, wenn Sie `text/csv` mit dem Header `Accept` einer Anforderung angeben. Die CSV-Ausgabe stellt Informationen bereit, die den Informationen der JSON-Ausgabe ähnlich sind. Wie bei JSON richten sich die Informationen in der CSV-Ausgabe danach, ob die Eingabedaten mit einem Zeitstempel versehen sind und ob Sie unbearbeitete Bewertungen und Verbraucherpräferenzen anfordern.
 {: shortdesc}
 
-Im Gegensatz zum JSON-Objekt wird die CSV-Ausgabe in einer festen Anzahl von Spalten zurückgegeben. Die erste Zeile der Ausgabe besteht aus optionalen Spaltenbeschriftungen, die nur enthalten sind, wenn Sie den Abfrageparameter `csv_headers` der Anforderung auf `true` setzen. Die zweite Zeile der Ausgabe, die immer vorhanden ist, enthält die Ergebnisse der Analyse.
+Die CSV-Ausgabe wird im Gegensatz zur JSON-Ausgabe als feste Anzahl von Spalten zurückgegeben. Die erste Zeile der Ausgabe besteht aus optionalen Spaltenbeschriftungen, die nur enthalten sind, wenn Sie den Abfrageparameter `csv_headers` der Anforderung auf `true` setzen. Die zweite Zeile der Ausgabe, die immer vorhanden ist, enthält die Ergebnisse der Analyse.
 
-In den folgenden Abschnitten werden alle Spalten der CSV-Ausgabe genau in der Reihenfolge, in der sie in den Ergebnissen enthalten sind, aufgelistet und kurz beschrieben. Die Tabellen beschreiben die Spalten nach logischer Gruppierung und geben auch die Anzahl der Spalten in jeder Gruppe und deren optionale Beschriftungen an. Abgesehen von der Wortzahl werden alle numerische Daten als Werte vom Typ 'double' zurückgegeben.
+In den folgenden Abschnitten werden alle Spalten der CSV-Ausgabe genau in der Reihenfolge, in der sie in den Ergebnissen enthalten sind, aufgelistet und kurz beschrieben. Die Tabellen beschreiben die Spalten nach logischer Gruppierung und geben auch die Anzahl der Spalten in jeder Gruppe und deren optionale Beschriftungen an. Abgesehen von der Wortzahl werden alle numerischen Daten als Werte des Typs 'Double' zurückgegeben.
 
-Weitere Informationen zur Bedeutung der CSV-Spalten finden Sie unter [JSON-Profil verstehen](/docs/services/personality-insights/output.html) und [Numerische Ergebnisse interpretieren](/docs/services/personality-insights/numeric.html).
+Weitere Informationen zur Bedeutung der CSV-Spalten finden Sie unter [JSON-Profil verstehen](/docs/services/personality-insights?topic=personality-insights-output) und [Numerische Ergebnisse interpretieren](/docs/services/personality-insights?topic=personality-insights-numeric).
 
 ## Basismerkmale und Metadaten
 {: #basicCSV}
@@ -38,90 +43,90 @@ Die folgenden Spalten sind in der CSV-Ausgabe stets für alle Anforderungen vorh
   <caption>Tabelle 1. CSV-Spalten für Basismerkmale und
     Metadaten</caption>
   <tr>
-    <th style="width:25%; text-align:left; vertical-align:bottom">Gruppierung<br/>(Anzahl Spalten)</th>
+    <th style="width:25%; text-align:left; vertical-align:bottom">Gruppierung<br/>(Anzahl von Spalten)</th>
     <th style="width:25%; text-align:left; vertical-align:bottom">Optionale Beschriftungen</th>
     <th style="text-align:left; vertical-align:bottom">Beschreibung</th>
   </tr>
   <tr>
-    <td>
-      Big Five-Eigenschaften für Verträglichkeit:<br/>Perzentile<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Big Five-Perzentile der Verträglichkeit<br/>(Sieben Spalten)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_agreeableness<br/>facet_altruism<br/>
       facet_cooperation<br/>facet_modesty<br/>
       facet_morality<br/>facet_sympathy<br/>
       facet_trust
     </td>
-    <td>
-      Normalisierter Perzentilwert für den Autor des Texts in Bezug
-      auf die benannte Dimension oder Facette.
+    <td style="vertical-align:top">
+      Normalisierte Perzentilbewertung für den Autor des Texts hinsichtlich
+      der genannten Dimension oder Facette.
     </td>
   </tr>
   <tr>
-    <td>
-      Big Five-Eigenschaften für Gewissenhaftigkeit:<br/>Perzentile<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Big Five-Perzentile der Gewissenhaftigkeit<br/>(Sieben Spalten)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_conscientiousness<br/>facet_achievement_striving
       <br/>facet_cautiousness<br/>facet_dutifulness<br/>
       facet_orderliness<br/>facet_self_discipline<br/>
       facet_self_efficacy
     </td>
-    <td>
-      Normalisierter Perzentilwert für den Autor des Texts in Bezug
-      auf die benannte Dimension oder Facette.
+    <td style="vertical-align:top">
+      Normalisierte Perzentilbewertung für den Autor des Texts hinsichtlich
+      der genannten Dimension oder Facette.
     </td>
   </tr>
   <tr>
-    <td>
-      Big Five-Eigenschaften für Extraversion:<br/>Perzentile<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Big Five-Perzentile der Extraversion<br/>(Sieben Spalten)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_extraversion<br/>facet_activity_level
       <br/>facet_assertiveness<br/>facet_cheerfulness<br/>
       facet_excitement_seeking<br/>facet_friendliness<br/>
       facet_gregariousness
     </td>
-    <td>
-      Normalisierter Perzentilwert für den Autor des Texts in Bezug
-      auf die benannte Dimension oder Facette.
+    <td style="vertical-align:top">
+      Normalisierte Perzentilbewertung für den Autor des Texts hinsichtlich
+      der genannten Dimension oder Facette.
     </td>
   </tr>
   <tr>
-    <td>
-      Big Five-Eigenschaften für emotionale Bandbreite:<br/>Perzentile<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Big Five-Perzentile des emotionalen Spektrums<br/>(Sieben Spalten)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_neuroticism<br/>facet_anger<br/>
       facet_anxiety<br/>facet_depression<br/>
       facet_immoderation<br/>facet_self_consciousness<br/>
       facet_vulnerability
     </td>
-    <td>
-      Normalisierter Perzentilwert für den Autor des Texts in Bezug
-      auf die benannte Dimension oder Facette.
+    <td style="vertical-align:top">
+      Normalisierte Perzentilbewertung für den Autor des Texts hinsichtlich
+      der genannten Dimension oder Facette.
     </td>
   </tr>
   <tr>
-    <td>
-      Big Five-Eigenschaften für Offenheit:<br/>Perzentile<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Big Five-Perzentile der Offenheit<br/>(Sieben Spalten)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_openness<br/>facet_adventurousness<br/>
       facet_artistic_interests<br/>facet_emotionality<br/>
       facet_imagination<br/>facet_intellect<br/>
       facet_liberalism
     </td>
-    <td>
-      Normalisierter Perzentilwert für den Autor des Texts in Bezug
-      auf die benannte Dimension oder Facette.
+    <td style="vertical-align:top">
+      Normalisierte Perzentilbewertung für den Autor des Texts hinsichtlich
+      der genannten Dimension oder Facette.
     </td>
   </tr>
   <tr>
-    <td>
-      Bedürfnisse: Perzentile<br/>(12 Spalten)
+    <td style="vertical-align:top">
+      Perzentile: Bedürfnisse:<br/>(Zwölf Spalten)
     </td>
-    <td>
+    <td style="vertical-align:top">
       need_liberty<br/>need_ideal<br/>
       need_love<br/>need_practicality<br/>
       need_self_expression<br/>need_stability<br/>
@@ -129,62 +134,60 @@ Die folgenden Spalten sind in der CSV-Ausgabe stets für alle Anforderungen vorh
       need_closeness<br/>need_curiosity<br/>
       need_excitement<br/>need_harmony
     </td>
-    <td>
-      Normalisierter Perzentilwert für den Autor des Texts in Bezug
-      auf das benannte Bedürfnis.
+    <td style="vertical-align:top">
+      Normalisierte Perzentilbewertung für den Autor des Texts hinsichtlich
+      des genannten Bedürfnisses.
     </td>
   </tr>
   <tr>
-    <td>
-      Werte: Perzentile<br/>(5 Spalten)
+    <td style="vertical-align:top">
+      Perzentile: Werte<br/>(Fünf Spalten)
     </td>
-    <td>
+    <td style="vertical-align:top">
       value_conservation<br/>value_hedonism<br/>
       value_openness_to_change<br/>value_self_enhancement<br/>
       value_self_transcendence
     </td>
-    <td>
-      Normalisierter Perzentilwert für den Autor des Texts in Bezug
-      auf den benannten Wert.
+    <td style="vertical-align:top">
+      Normalisierte Perzentilbewertung für den Autor des Texts hinsichtlich
+      des genannten Werts.
     </td>
   </tr>
   <tr>
-    <td>
-      Tage der Woche:<br/>Prozentsätze<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Prozentsätze für Tage der Woche<br/>(Sieben Spalten)
     </td>
-    <td>
+    <td style="vertical-align:top">
       behavior_sunday<br/>behavior_monday<br/>
       behavior_tuesday<br/>behavior_wednesday<br/>
       behavior_thursday<br/>behavior_friday<br/>
       behavior_saturday
     </td>
-    <td>
-      Wenn der Eingabetext eine Zeitmarke hat, der Prozentsatz der Eingabe,
-      der den einzelnen Tagen der Woche zugeordnet ist; hat die Eingabe keine
-      Zeitmarke, sind alle Prozentsätze <code>0.0</code>.
+    <td style="vertical-align:top">
+      Wenn der <em>Eingabetext mit einer Zeitmarke versehen</em> ist, der Prozentsatz der Eingabe, der jedem einzelnen Tag der Woche zugeordnet ist. Andernfalls haben alle Prozentsätze den Wert <code>0,0</code>.
     </td>
   </tr>
   <tr>
-    <td>
-      Stunden des Tages:<br/>Prozentsätze<br/>(24 Spalten)
+    <td style="vertical-align:top">
+      Prozentsätze für Stunden des Tages<br/>(Vierundzwanzig Spalten)
     </td>
-    <td>
-      behavior_0000<br/><em>bis</em><br/>behavior_2300
+    <td style="vertical-align:top">
+      behavior_0000<em> bis </em>behavior_2300
     </td>
-    <td>
-      Wenn der Eingabetext eine Zeitmarke hat, der Prozentsatz der Eingabe,
-      der den einzelnen Stunden des Tages zugeordnet ist; hat die Eingabe keine
-      Zeitmarke, sind alle Prozentsätze <code>0.0</code>.
+    <td style="vertical-align:top">
+      Wenn der <em>Eingabetext mit einer Zeitmarke versehen</em> ist, der Prozentsatz der
+      Eingabe, der jeder einzelnen Stunde des Tages zugeordnet ist. Andernfalls haben
+      alle Prozentsätze den Wert <code>0,0</code>.
     </td>
   </tr>
   <tr>
-    <td>
-      Wortzahl und<br/>Sprache<br/>(2 Spalten)
+    <td style="vertical-align:top">
+      Wortzahl und Sprache<br/>(Zwei Spalten)
     </td>
-    <td>
+    <td style="vertical-align:top">
       word_count<br/>processed_language
     </td>
-    <td>
+    <td style="vertical-align:top">
       Ein Integerwert, der die Anzahl der Wörter angibt, die im Eingabetext
       vorhanden sind, und eine Kennung aus zwei Buchstaben für das Sprachmodell,
       das der Service zur Analyse des Texts verwendet hat.
@@ -195,17 +198,17 @@ Die folgenden Spalten sind in der CSV-Ausgabe stets für alle Anforderungen vorh
 ## Unaufbereitete Bewertungen
 {: #rawCSV}
 
-Die folgenden Spalten sind nur vorhanden, wenn Sie unaufbereitete Bewertungen anfordern, indem Sie den Abfrageparameter `raw_scores` auf den Wert `true` setzen. In allen Fällen enthält die Spalte einen Double-Wert, der die unaufbereitete Bewertung des Autors für die Dimension, die  Facette, das Bedürfnis oder den Wert angibt.
+Die folgenden Spalten sind nur vorhanden, wenn Sie unaufbereitete Bewertungen anfordern, indem Sie für den Abfrageparameter `raw_scores` den Wert `true` festlegen. In allen Fällen enthält die Spalte einen Double-Wert, der die unaufbereitete Bewertung des Autors für die Dimension, die  Facette, das Bedürfnis oder den Wert angibt.
 
 <table>
   <caption>Tabelle 2. CSV-Spalten für unaufbereitete Bewertungen</caption>
   <tr>
-    <th style="width:40%; text-align:left; vertical-align:bottom">Gruppierung<br/>(Anzahl Spalten)</th>
+    <th style="width:40%; text-align:left; vertical-align:bottom">Gruppierung<br/>(Anzahl von Spalten)</th>
     <th style="width:60%; text-align:left; vertical-align:bottom">Optionale Beschriftungen</th>
   </tr>
   <tr>
-    <td>
-      Big Five-Eigenschaften für Verträglichkeit:<br/>Unaufbereitete Bewertungen<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Big Five-Faktor der Verträglichkeit: Unaufbereitete Bewertungen<br/>(Sieben Spalten)
     </td>
     <td>
       big5_agreeableness_raw<br/>facet_altruism_raw<br/>
@@ -215,8 +218,8 @@ Die folgenden Spalten sind nur vorhanden, wenn Sie unaufbereitete Bewertungen an
     </td>
   </tr>
   <tr>
-    <td>
-      Big Five-Eigenschaften für Gewissenhaftigkeit:<br/>Unaufbereitete Bewertungen<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Big Five-Faktor der Gewissenhaftigkeit: Unaufbereitete Bewertungen<br/>(Sieben Spalten)
     </td>
     <td>
       big5_conscientiousness_raw<br/>facet_achievement_striving_raw<br/>
@@ -226,8 +229,8 @@ Die folgenden Spalten sind nur vorhanden, wenn Sie unaufbereitete Bewertungen an
     </td>
   </tr>
   <tr>
-    <td>
-      Big Five-Eigenschaften für Extraversion:<br/>Unaufbereitete Bewertungen<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Big Five-Faktor der Extraversion: Unaufbereitete Bewertungen<br/>(Sieben Spalten)
     </td>
     <td>
       big5_extraversion_raw<br/>facet_activity_level_raw<br/>
@@ -237,8 +240,8 @@ Die folgenden Spalten sind nur vorhanden, wenn Sie unaufbereitete Bewertungen an
     </td>
   </tr>
   <tr>
-    <td>
-      Big Five-Eigenschaften für emotionale Bandbreite:<br/>Unaufbereitete Bewertungen<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Big Five-Faktor des emotionalen Spektrums: Unaufbereitete Bewertungen<br/>(Sieben Spalten)
     </td>
     <td>
       big5_neuroticism_raw<br/>facet_anger_raw<br/>
@@ -248,8 +251,8 @@ Die folgenden Spalten sind nur vorhanden, wenn Sie unaufbereitete Bewertungen an
     </td>
   </tr>
   <tr>
-    <td>
-      Big Five-Eigenschaften für Offenheit:<br/>Unaufbereitete Bewertungen<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Big Five-Faktor der Offenheit: Unaufbereitete Bewertungen<br/>(Sieben Spalten)
     </td>
     <td>
       big5_openness_raw<br/>facet_adventurousness_raw<br/>
@@ -259,8 +262,8 @@ Die folgenden Spalten sind nur vorhanden, wenn Sie unaufbereitete Bewertungen an
     </td>
   </tr>
   <tr>
-    <td>
-      Bedürfnisse: Unaufbereitete Bewertungen<br/>(12 Spalten)
+    <td style="vertical-align:top">
+      Bedürfnisse: Unaufbereitete Bewertungen<br/>(Zwölf Spalten)
     </td>
     <td>
       need_liberty_raw<br/>need_ideal_raw<br/>
@@ -272,8 +275,8 @@ Die folgenden Spalten sind nur vorhanden, wenn Sie unaufbereitete Bewertungen an
     </td>
   </tr>
   <tr>
-    <td>
-      Werte: Unaufbereitete Bewertungen<br/>(5 Spalten)
+    <td style="vertical-align:top">
+      Werte: Unaufbereitete Bewertungen<br/>(Fünf Spalten)
     </td>
     <td>
       value_conservation_raw<br/>value_hedonism_raw<br/>
@@ -291,12 +294,12 @@ Die folgenden Spalten sind in der CSV-Ausgabe stets für alle Anforderungen vorh
 <table>
   <caption>Tabelle 3. CSV-Spalten für Signifikanz</caption>
   <tr>
-    <th style="width:40%; text-align:left; vertical-align:bottom">Gruppierung<br/>(Anzahl Spalten)</th>
+    <th style="width:40%; text-align:left; vertical-align:bottom">Gruppierung<br/>(Anzahl von Spalten)</th>
     <th style="width:60%; text-align:left; vertical-align:bottom">Optionale Beschriftungen</th>
   </tr>
   <tr>
-    <td>
-      Big Five-Eigenschaften für Verträglichkeit:<br/>Signifikanz<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Big Five-Faktor der Verträglichkeit: Signifikanz<br/>(Sieben Spalten)
     </td>
     <td>
       big5_agreeableness_significant<br/>facet_altruism_significant<br/>
@@ -306,8 +309,8 @@ Die folgenden Spalten sind in der CSV-Ausgabe stets für alle Anforderungen vorh
     </td>
   </tr>
   <tr>
-    <td>
-      Big Five-Eigenschaften für Gewissenhaftigkeit:<br/>Signifikanz<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Big Five-Faktor der Gewissenhaftigkeit: Signifikanz<br/>(Sieben Spalten)
     </td>
     <td>
       big5_conscientiousness_significant<br/>
@@ -318,8 +321,8 @@ Die folgenden Spalten sind in der CSV-Ausgabe stets für alle Anforderungen vorh
     </td>
   </tr>
   <tr>
-    <td>
-      Big Five-Eigenschaften für Extraversion:<br/>Signifikanz<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Big Five-Faktor der Extraversion: Signifikanz<br/>(Sieben Spalten)
     </td>
     <td>
       big5_extraversion_significant<br/>facet_activity_level_significant<br/>
@@ -329,8 +332,8 @@ Die folgenden Spalten sind in der CSV-Ausgabe stets für alle Anforderungen vorh
     </td>
   </tr>
   <tr>
-    <td>
-      Big Five-Eigenschaften für emotionale Bandbreite:<br/>Signifikanz<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Big Five-Faktor des emotionalen Spektrums: Signifikanz<br/>(Sieben Spalten)
     </td>
     <td>
       big5_neuroticism_significant<br/>facet_anger_significant<br/>
@@ -340,8 +343,8 @@ Die folgenden Spalten sind in der CSV-Ausgabe stets für alle Anforderungen vorh
     </td>
   </tr>
   <tr>
-    <td>
-      Big Five-Eigenschaften für Offenheit:<br/>Signifikanz<br/>(7 Spalten)
+    <td style="vertical-align:top">
+      Big Five-Faktor der Offenheit: Signifikanz<br/>(Sieben Spalten)
     </td>
     <td>
       big5_openness_significant<br/>facet_adventurousness_significant<br/>
@@ -351,8 +354,8 @@ Die folgenden Spalten sind in der CSV-Ausgabe stets für alle Anforderungen vorh
     </td>
   </tr>
   <tr>
-    <td>
-      Bedürfnisse: Unaufbereitete Bewertungen: Signifikanz<br/>(12 Spalten)
+    <td style="vertical-align:top">
+      Bedürfnisse: Unaufbereitete Bewertungen: Signifikanz<br/>(Zwölf Spalten)
     </td>
     <td>
       need_liberty_significant<br/>need_ideal_significant<br/>
@@ -364,8 +367,8 @@ Die folgenden Spalten sind in der CSV-Ausgabe stets für alle Anforderungen vorh
     </td>
   </tr>
   <tr>
-    <td>
-      Werte: Signifikanz<br/>(5 Spalten)
+    <td style="vertical-align:top">
+      Werte: Signifikanz<br/>(Fünf Spalten)
     </td>
     <td>
       value_conservation_significant<br/>value_hedonism_significant<br/>
@@ -379,19 +382,19 @@ Die folgenden Spalten sind in der CSV-Ausgabe stets für alle Anforderungen vorh
 ## Verbraucherpräferenzen
 {: #preferenceCSV}
 
-Die folgenden Spalten sind nur vorhanden, wenn Sie Verbraucherpräferenzen anfordern, indem Sie den Abfrageparameter `consumption_preferences` auf den Wert `true` setzen. In allen Fällen enthält die Spalte einen Double-Wert, der die Wahrscheinlichkeit angibt, mit der der Autor das genannte Verbraucherthema bevorzugt.
+Die folgenden Spalten sind nur vorhanden, wenn Sie Verbraucherpräferenzen anfordern, indem Sie für den Abfrageparameter `consumption_preferences` den Wert `true` festlegen. In allen Fällen enthält die Spalte einen Double-Wert, der die Wahrscheinlichkeit angibt, mit der der Autor das genannte Verbraucherthema bevorzugt.
 
 <table style="width:90%">
   <caption>Tabelle 4. CSV-Spalten für Verbraucherpräferenzen</caption>
   <tr>
-    <th style="width:40%; text-align:left; vertical-align:bottom">Gruppierung<br/>(Anzahl Spalten)</th>
+    <th style="width:40%; text-align:left; vertical-align:bottom">Gruppierung<br/>(Anzahl von Spalten)</th>
     <th style="width:60%; text-align:left; vertical-align:bottom">Optionale Beschriftungen</th>
   </tr>
   <tr>
-    <td>
-      Einkaufspräferenzen:<br/>Kategoriebewertungen<br/>(12 Spalten)
+    <td style="vertical-align:top">
+      Bewertungen in der Kategorie der Präferenzen im Bereich 'Kaufverhalten'<br/>(Zwölf Spalten)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_spur_of_moment<br/>
       consumption_preferences_credit_card_payment<br/>
       consumption_preferences_influence_brand_name<br/>
@@ -407,10 +410,10 @@ Die folgenden Spalten sind nur vorhanden, wenn Sie Verbraucherpräferenzen anfor
     </td>
   </tr>
   <tr>
-    <td>
-      Musikpräferenzen:<br/>Kategoriebewertungen<br/>(9 Spalten)
+    <td style="vertical-align:top">
+      Bewertungen in der Kategorie der Präferenzen im Bereich 'Musik'<br/>(Neun Spalten)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_music_rap<br/>
       consumption_preferences_music_country<br/>
       consumption_preferences_music_r_b<br/>
@@ -423,20 +426,20 @@ Die folgenden Spalten sind nur vorhanden, wenn Sie Verbraucherpräferenzen anfor
     </td>
   </tr>
   <tr>
-    <td>
-      Gesundheits- und Aktivitätspräferenzen:<br/>Kategoriebewertungen<br/>(3 Spalten)
+    <td style="vertical-align:top">
+      Bewertungen in der Kategorie der Präferenzen im Bereich 'Gesundheit und Aktivität'<br/>(Drei Spalten)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_gym_membership<br/>
       consumption_preferences_outdoor<br/>
       consumption_preferences_eat_out
     </td>
   </tr>
   <tr>
-    <td>
-      Filmpräferenzen:<br/>Kategoriebewertungen<br/>(10 Spalten)
+    <td style="vertical-align:top">
+      Bewertungen in der Kategorie der Präferenzen im Bereich 'Film'<br/>(Zehn Spalten)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_movie_romance<br/>
       consumption_preferences_movie_adventure<br/>
       consumption_preferences_movie_horror<br/>
@@ -450,10 +453,10 @@ Die folgenden Spalten sind nur vorhanden, wenn Sie Verbraucherpräferenzen anfor
     </td>
   </tr>
   <tr>
-    <td>
-      Lektürepräferenzen:<br/>Kategoriebewertungen<br/>(5 Spalten)
+    <td style="vertical-align:top">
+      Bewertungen in der Kategorie der Präferenzen im Bereich 'Lektüre'<br/>(Fünf Spalten)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_read_frequency<br/>
       consumption_preferences_books_entertainment_magazines<br/>
       consumption_preferences_books_non_fiction<br/>
@@ -462,26 +465,26 @@ Die folgenden Spalten sind nur vorhanden, wenn Sie Verbraucherpräferenzen anfor
     </td>
   </tr>
   <tr>
-    <td>
-      Ehrenamtliche Präferenzen:<br/>Kategoriebewertungen<br/>(1 Spalte)
+    <td style="vertical-align:top">
+      Bewertungen in der Kategorie der Präferenzen im Bereich 'Ehrenamtliche Mitarbeit'<br/>(Eine Spalte)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_volunteer
     </td>
   </tr>
   <tr>
-    <td>
-      Umweltbewusste Präferenzen:<br/>Kategoriebewertungen<br/>(1 Spalte)
+    <td style="vertical-align:top">
+      Bewertungen in der Kategorie der Präferenzen im Bereich 'Umweltbewusstsein'<br/>(Eine Spalte)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_concerned_environment
     </td>
   </tr>
   <tr>
-    <td>
-      Unternehmerische Präferenzen:<br/>Kategoriebewertungen<br/>(1 Spalte)
+    <td style="vertical-align:top">
+      Bewertungen in der Kategorie der Präferenzen im Bereich 'Unternehmergeist'<br/>(Eine Spalte)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_start_business
     </td>
   </tr>

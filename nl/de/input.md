@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,17 +25,20 @@ lastupdated: "2017-10-12"
 # Profil anfordern
 {: #input}
 
-Zum Analysieren von Inhalten verwenden Sie die HTTP-Anforderungsmethode `POST`, um die Methode `/v3/profile` des {{site.data.keyword.personalityinsightsshort}}-Service aufzurufen. Sie können dem Service im Hauptteil der Anforderung maximal 20 MB an Inhalt zur Analyse übergeben, jedoch erfordert der Service wesentlich weniger Eingabevolumen, um ein genaues Persönlichkeitsprofil zu erstellen. Weitere Informationen finden Sie unter [Ausreichende Eingabe bereitstellen](#sufficient).
+Zum Analysieren von Inhalten verwenden Sie die HTTP-Anforderungsmethode `POST`, um die Methode `/v3/profile` des {{site.data.keyword.personalityinsightsshort}}-Service aufzurufen. Sie können dem Service im Hauptteil der Anforderung maximal 20 MB an Inhalt zur Analyse übergeben. Der Service erfordert jedoch wesentlich weniger Eingabevolumen, um ein genaues Persönlichkeitsprofil zu erstellen. Weitere Informationen finden Sie unter [Ausreichende Eingabe bereitstellen](#sufficient).
 {: shortdesc}
 
-Die Methode `/v3/profile` enthält Parameter, durch die Sie den Typ des an den Service zu übergebenden Inhalts und den vom Service zurückzugebenden Typ von Inhalt sowie die Sprache jedes Typs von Inhalt angeben können. Der Service gibt immer ein Profil zurück, das Erkenntnisse über die Persönlichkeitsmerkmale des Autors des Eingabetexts bereitstellt. Sie können außerdem anfordern, dass der Service unaufbereitete Bewertungen und Verbraucherpräferenzen zurückgibt.
+Die Methode `/v3/profile` enthält Parameter, die den Typ des an den Service zu übergebenden Inhalts und den vom Service zurückzugebenden Typ von Inhalt sowie die Sprache eines jeden Typs von Inhalt angeben. Der Service gibt immer ein Profil zurück, das Erkenntnisse über die Persönlichkeitsmerkmale des Autors des Eingabetexts bereitstellt. Sie können außerdem die Rückgabe von unaufbereiteten Bewertungen und Verbraucherpräferenzen anfordern.
 
-In den folgenden Abschnitten werden die Parameter der Methode `/v3/profile` beschrieben. Informationen zu den Ergebnissen einer Anforderung finden Sie unter [JSON-Profil verstehen](/docs/services/personality-insights/output.html) und [CSV-Profil verstehen](/docs/services/personality-insights/output-csv.html). Detaillierte Informationen zur Methode `/v3/profile` finden Sie in der [API-Referenz ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/){: new_window}.
+In den folgenden Abschnitten werden die Parameter der Methode `/v3/profile` beschrieben. Informationen zu den Ergebnissen einer Anforderung finden Sie unter [JSON-Profil verstehen](/docs/services/personality-insights?topic=personality-insights-output) und [CSV-Profil verstehen](/docs/services/personality-insights?topic=personality-insights-outputCSV). Detaillierte Informationen zur Methode `/v3/profile` finden Sie in der [API-Referenz ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/personality-insights){: new_window}.
+
+Die Protokollierung von Anforderungen ist für den {{site.data.keyword.personalityinsightsshort}}-Service inaktiviert. Unabhängig davon, ob Sie den Anforderungsheader `X-Watson-Learning-Opt-Out` festlegen, protokolliert der Service Anforderungen und Antworten nicht und bewahrt auch keine Daten aus Anforderungen und Antworten auf.
+{: note}
 
 ## Anforderungs- und Antwortformat angeben
 {: #formats}
 
-Sie können die Parameter des Headers `Content-Type` und des Headers `Accept` zur Angabe des Formats des Inhalts, den Sie an die Methode übergeben, und zur Angabe des Formats der Antwort des Service verwenden. Sie können eine beliebige Kombination unterstützter Formate für die Anforderung und die Antwort verwenden.
+Verwenden Sie die Headerparameter `Content-Type` und `Accept` zur Angabe des Formats des Inhalts, den Sie an die Methode übergeben, und zur Angabe des Formats der Antwort des Service. Sie können eine beliebige Kombination unterstützter Formate für die Anforderung und die Antwort verwenden.
 
 <table>
   <caption>Tabelle 1. Anforderungs- und Antwortformat angeben</caption>
@@ -94,7 +102,7 @@ Sie können die Parameter des Headers `Content-Type` und des Headers `Accept` zu
       von Objekten <code>ContentItem</code> ist.
     </td>
     <td style="text-align:center; vertical-align:top">
-      Ja (Standard)<br/><br/>
+      Ja<br/><br/>
       Der Service gibt seine Ergebnisse als Objekt <code>Profile</code>
       zurück.
     </td>
@@ -133,17 +141,17 @@ Content-Type: text/plain;charset=utf-8
 ```
 {: codeblock}
 
-Durch die Verwendung des Parameters `charset` können Sie potenzielle Probleme mit Nicht-ASCII-Zeichen oder nicht druckbaren Zeichen vermeiden. Wenn Sie UTF8-Daten ohne Angabe des Zeichensatzes übergeben, können Sonderzeichen zu falschen Ergebnissen oder zu Fehlern HTTP 4*nn* oder 5*nn* führen.
+Durch die Verwendung des Parameters `charset` können Sie potenzielle Probleme im Zusammenhang mit Nicht-ASCII-Zeichen oder nicht druckbaren Zeichen vermeiden. Wenn Sie UTF8-Daten ohne Angabe des Zeichensatzes übergeben, können Sonderzeichen zu falschen Ergebnissen oder zu Fehlern vom Typ HTTP 4nn oder HTTP 5nn führen.
 
-### cURL verwenden
+### cURL-Befehl verwenden
 {: #charsetCurl}
 
-Zur Vermeidung von Fehlern bei der Verwendung von cURL übergeben Sie den Inhalt immer über die Option `--data-binary` des Befehls `curl`, um die UTF-8-Codierung für den Inhalt beizubehalten. Wenn Sie die Option `--data` zur Übergabe von Inhalt im ASCII-Format verwenden, kann der Befehl die Eingabe verarbeiten, was Probleme für in UTF-8 codierte Daten verursachen kann.
+Zur Vermeidung von Fehlern bei der Verwendung des `curl`-Befehls sollten Sie den Inhalt stets über die Option `--data-binary` des Befehls `curl` übergeben, um die UTF-8-Codierung des Inhalts beizubehalten. Wenn Sie die Option `--data` zur Übergabe von Inhalt im ASCII-Format verwenden, kann der Befehl die Eingabe verarbeiten, was Probleme für in UTF-8 codierte Daten verursachen kann.
 
-Beispiel: Der folgende Befehl `curl` verwendet die Option `--data-binary` korrekt, um den Inhalt der angegebenen Datei *filename* ohne weitere Verarbeitung in der Methode POST zu senden. Der Befehl verwenden außerdem den Parameter `charset` mit dem Header `Content-Type` und fordert explizit das JSON-Antwortformat an.
+Beispiel: Der folgende Befehl `curl` verwendet die Option `--data-binary` korrekt, um den Inhalt der angegebenen Datei *filename* ohne weitere Verarbeitung in der Methode POST zu senden. Der Befehl gibt außerdem den Parameter `charset` mit dem Header `Content-Type` an und fordert mit dem Header `Accept` das JSON-Antwortformat an.
 
 ```bash
-curl -X POST --user {username}:{password}
+curl -X POST -u "apikey:{apikey}"
 --header "Content-Type: text/plain;charset=utf-8"
 --header "Accept: application/json"
 --data-binary @{filename}
@@ -151,28 +159,28 @@ curl -X POST --user {username}:{password}
 ```
 {: pre}
 
-Weitere Beispiele für das Aufrufen des Service mit verschiedenen Anforderungs- und Antwortformaten finden Sie unter [Lernprogramm zur Einführung](/docs/services/personality-insights/getting-started.html).
+Weitere Beispiele für das Aufrufen des Service mit verschiedenen Anforderungs- und Antwortformaten finden Sie im [Lernprogramm zur Einführung](/docs/services/personality-insights?topic=personality-insights-gettingStarted).
 
 ## JSON-Eingabe angeben
 {: #json}
 
-Zur Übergabe einer JSON-Eingabe verwenden Sie das Objekt `Content`. Das Objekt enthält ein Array von Objekten `ContentItem`, die jeweils ein Element des Inhalts darstellen. Das einzige erforderliche Feld des Objekts ist `content`, das den zu analysierenden Text angibt. In den weiteren optionalen Feldern können Sie die folgenden Elemente angeben:
+Zur Übergabe einer JSON-Eingabe verwenden Sie das Objekt `Content`. Das Objekt enthält ein Array von Objekten `ContentItem`, die jeweils ein Element des Inhalts darstellen. Das einzige erforderliche Feld des Objekts ist `content`, das den zu analysierenden Text angibt. Die folgenden Felder sind weitere optionale Felder:
 
 -   `id` (Zeichenfolge) ist eine eindeutige ID für das Inhaltselement.
 -   `created` (Integer) ist eine UNIX-Zeitmarke, die angibt, wann das Inhaltselement erstellt wurde.
 -   `updated` (Integer) ist eine UNIX-Zeitmarke, die angibt, wann das Inhaltselement zuletzt aktualisiert wurde.
 -   `contenttype` (Zeichenfolge) gibt den Typ des Inhaltselements an: `text/plain` oder `text/html`.
--   `language` (Zeichenfolge) gibt die Sprache des Inhaltselements an: `ar` (Arabisch), `en` (Englisch), `es` (Spanisch), `ja` (Japanisch) oder `ko` (Koreanisch). Siehe [Anforderungs- und Antwortsprache angeben](#languages).
+-   `language` (Zeichenfolge) gibt die Sprache des Inhaltselements an: `ar` (Arabisch), `en` (Englisch), `es` (Spanisch), `ja` (Japanisch) oder `ko` (Koreanisch). Siehe [Anforderungs- und Antwortsprache angeben](#languages-input).
 -   `parentid` (Zeichenfolge) ist die ID (`id`) des übergeordneten Elements des Inhaltselements.
 -   `reply` (Boolesch) gibt an, ob das Inhaltselement eine Antwort auf ein anderes Element ist.
 -   `forward` (Boolesch) gibt an, ob das Inhaltselement eine Weiterleitung oder eine Kopie eines anderen Elements ist.
 
-JSON-Eingaben eignen sich gut für Inhalte aus Twitter oder anderen sozialen Netzwerken, die aus mehreren Wortmitteilungen oder Beiträgen (Posts) bestehen. Anstatt den gesamten Text des Autors zu einer einzigen Zeichenfolge zusammenzufassen, können Sie mithilfe von JSON die Daten so, wie sie sind, übergeben. Dies bietet den weiteren Vorteil, dass dem Service mitgeteilt wird, welche Teile des Texts zusammengehören.
+JSON-Eingaben eignen sich gut für Inhalte aus Twitter oder anderen sozialen Netzwerken, die aus mehreren Wortmitteilungen oder Beiträgen (Posts) bestehen. Anstatt den gesamten Text des Autors zu einer einzigen Zeichenfolge zusammenzufassen, können Sie mithilfe von JSON die Daten so, wie sie sind, übergeben. Dieser Ansatz bietet den weiteren Vorteil, dass dem Service mitgeteilt wird, welche Teile des Texts zusammengehören.
 
 ### Beispiel für eine JSON-Eingabe
 {: jsonExample}
 
-Beispiele im [Lernprogramm zur Einführung](/docs/services/personality-insights/getting-started.html) verwenden die JSON-Beispieldatei <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link" class="style-scope doc-content"></a>. Die Datei enthält eine Reihe von Twitter-Nachrichten. Das folgende Beispiel zeigt einige der ersten Tweets aus der Datei.
+Beispiele im [Lernprogramm zur Einführung](/docs/services/personality-insights?topic=personality-insights-gettingStarted) verwenden die JSON-Beispieldatei <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a>. Die Datei enthält eine Reihe von Twitter-Nachrichten. Das folgende Beispiel zeigt einige der ersten Tweets aus der Datei.
 
 ```javascript
 {
@@ -185,7 +193,7 @@ Beispiele im [Lernprogramm zur Einführung](/docs/services/personality-insights/
       "language": "en"
     },
     {
-      "content": ".@TheRock how did you Know to listen to your gut and Not go back to football? #Masterclass",
+      "content": ".@TheRock how did you Know to listen to your gut and Not go back to football? #MasterClass",
       "contenttype": "text/plain",
       "created": 1447638226000,
       "id": "666069114889179136",
@@ -198,7 +206,7 @@ Beispiele im [Lernprogramm zur Einführung](/docs/services/personality-insights/
 {: codeblock}
 
 ## Anforderungs- und Antwortsprache angeben
-{: #languages}
+{: #languages-input}
 
 Mit den Headerparametern `Content-Language` und `Accept-Language` können Sie die Sprache des Eingabeinhalts und die Sprache der Antwort des Service angeben. Sie können eine beliebige Kombination aus unterstützten Sprachen für die Anforderung und die Antwort verwenden. Wenn Sie eine Sprache nicht angeben, verwendet der Service seine in Englisch trainierten Modelle für die Analyse und die englische Sprache für die Ergebnisse. In der folgenden Tabelle sind die unterstützten Ein- und Ausgabesprachen zusammen mit den Argumenten aufgeführt, mit denen die sprachbezogenen Parameter angegeben werden.
 
@@ -381,39 +389,42 @@ Mit den Headerparametern `Content-Language` und `Accept-Language` können Sie di
 ### Sprache für JSON-Inhalt angeben
 {: #languageJSON}
 
-Für Eingaben mit einfachem Text oder HTML-Eingaben ist der Header `Content-Language` die einzige Möglichkeit, die Sprache anzugeben. Für JSON-Eingaben können Sie außerdem die Sprache für jedes einzelne Inhaltselement mit dem Parameter `language` des Objekts `ContentItem` angeben. Allerdings überschreibt die Sprache, die mit dem Header `Content-Language` angegeben wird, eine Sprache, die für ein Inhaltselement angegeben wird. Der Service ignoriert Inhaltselemente, für die eine andere Sprache angegeben ist.
+Für Eingaben mit einfachem Text oder HTML-Eingaben ist der Header `Content-Language` die einzige Möglichkeit, die Sprache anzugeben. Für JSON-Eingaben können Sie außerdem die Sprache für jedes einzelne Inhaltselement mit dem Parameter `language` des Objekts `ContentItem` angeben. Die Sprache, die mit dem Header `Content-Language` angegeben wird, überschreibt eine Sprache, die für ein Inhaltselement angegeben ist. Der Service ignoriert Inhaltselemente, für die eine andere Sprache angegeben ist.
 
-Lassen Sie den Header `Content-Type` weg, wenn die Sprache nur auf der Angabe der Inhaltselemente basieren soll. Der Service verwendet die vorherrschendste Sprache unter den Inhaltselementen aus, was die bestmöglichen Ergebnisse liefert. Er zählt die Anzahl der Inhaltselemente für jede Sprache und wählt die Sprache mit der höchsten Häufigkeit aus. Wenn mehrere Sprachen die gleiche Häufigkeit aufweisen, verwendet der Service die Sprache, die diesen Wert zuerst erreicht. Auch hier ignoriert der Service Inhaltselemente, die eine andere Sprache angeben.
+Lassen Sie den Header `Content-Type` weg, wenn die Sprache nur auf der Angabe der Inhaltselemente basieren soll. Der Service verwendet die am stärksten vorherrschende Sprache unter den Inhaltselementen aus, was die bestmöglichen Ergebnisse liefert. Er zählt die Anzahl der Inhaltselemente für jede Sprache und wählt die Sprache mit der höchsten Häufigkeit aus. Wenn mehrere Sprachen die gleiche Häufigkeit aufweisen, verwendet der Service die Sprache, die diesen Wert zuerst erreicht. Auch hier ignoriert der Service Inhaltselemente, die eine andere Sprache angeben.
 
 ### Hinweise zu Sprachen
 {: #languageNotes}
 
-Beachten Sie die folgenden Punkte für die Übergabe von Eingabetext:
+Beachten Sie die folgenden Informationsdetails bei der Übergabe von Eingabetext:
 
--   *Für Englisch* basieren die Ergebnisse auf US-Kulturnormen. Wenn Sie englischen Text aus einer anderen Kultur analysieren, müssen Sie die Ergebnisse möglicherweise entsprechend anpassen.
+-   *Für Englisch* stützen sich die Ergebnisse des Service auf Kulturnormen der Vereinigten Staaten. Wenn Sie englischen Text aus einer anderen Kultur analysieren, müssen Sie die Ergebnisse gegebenenfalls anpassen.
 -   *Für Arabisch* kann der Service die Menge an Eingabetext aus Leistungsgründen beschneiden. Ab einem bestimmten Schwellenwert verbessert sich die Genauigkeit arabischer Ergebnisse mit mehr Wörtern nicht mehr. Wenn der Service eine arabische Eingabe beschneidet, wird eine Warnung zurückgegeben, die Sie informiert, dass der Eingabetext reduziert wurde, der für das Profil verwendet wurde.
--   *Für Arabisch und Koreanisch* ist der Service nicht in der Lage, aussagefähige Ergebnisse für einen Teil der Merkmale zurückzugeben. Weitere Informationen finden Sie unter [Einschränkungen für arabische und koreanische Eingaben](/docs/services/personality-insights/numeric.html#limitations).
+-   *Für Arabisch und Koreanisch* ist der Service nicht in der Lage, aussagefähige Ergebnisse für einen Teil der Merkmale zurückzugeben. Weitere Informationen finden Sie unter [Einschränkungen für arabische und koreanische Eingaben](/docs/services/personality-insights?topic=personality-insights-numeric#limitations).
 
-Allgemeine Informationen zur Verwendung von übersetztem Text finden Sie unter [Persönlichkeit aus übersetztem Text ableiten](/docs/services/personality-insights/guidance.html#translation).
+Allgemeine Informationen zur Verwendung von übersetztem Text finden Sie unter [Persönlichkeit aus übersetztem Text ableiten](/docs/services/personality-insights?topic=personality-insights-guidance#translation).
 
 ## Ausreichende Eingabe bereitstellen
 {: #sufficient}
 
-Ein aussagefähiges Persönlichkeitsprofil kann nur dann erstellt werden, wenn ausreichende Daten in geeigneter Quantität und Qualität bereitgestellt werden. Da der Sprachgebrauch natürlicherweise von Dokument zu Dokument und von Zeit zu Zeit variiert, ist ein kleines Stück Text für die allgemeinen Sprachmuster einer Person möglicherweise nicht repräsentativ. Darüber hinaus konvergieren verschiedene Merkmale und verschiedene Medien unterschiedlich schnell.
+Ein aussagefähiges Persönlichkeitsprofil kann nur dann erstellt werden, wenn ausreichende Daten in geeigneter Quantität und Qualität bereitgestellt werden. Da der Sprachgebrauch natürlicherweise von Dokument zu Dokument und von Zeit zu Zeit variiert, ist ein kleines Stück Text für die allgemeinen Sprachmuster einer Person möglicherweise nicht repräsentativ. Darüber hinaus konvergieren verschiedene Merkmale und verschiedene Medien jeweils unterschiedlich schnell.
 
-Bis zu einem Punkt liefern mehr Wörter wahrscheinlich auch bessere Ergebnisse, weil sich die Genauigkeit des Service dadurch erhöht, dass sich die Abweichung zwischen den vorhergesagten Ergebnissen und den tatsächlichen Bewertungen des Autors verringert. Sie können bis zu 20 MB an Eingabeinhalt an den Service senden. Die Genauigkeit steigt jedoch ab einer Eingabe von ungefähr 3000 Wörtern nicht weiter an. Zusätzlicher Inhalt leistet keinen weiteren Beitrag zu einer höheren Genauigkeit des Profils. Daher extrahiert und verarbeitet der Service aus umfangreichen Anforderungen nur die ersten 250 KB des Inhalts (HTML- oder JSON-Markup nicht mitgezählt).
+Sie können bis zu 20 MB an Eingabeinhalt an den Service senden. Bis zu einem Punkt liefern mehr Wörter wahrscheinlich auch bessere Ergebnisse, weil sich die Genauigkeit des Service dadurch erhöht, dass sich die Abweichung zwischen den vorhergesagten Ergebnissen und den tatsächlichen Bewertungen des Autors verringert. Ab einer Eingabe von ungefähr 3000 Wörtern stagniert jedoch die Genauigkeit und zusätzlicher Inhalt trägt nicht zu einer gesteigerten Genauigkeit des Profils bei. Daher extrahiert und verarbeitet der Service aus umfangreichen Anforderungen nur die ersten 250 KB des Inhalts (HTML- oder JSON-Markup nicht mitgezählt).
 
-Diese Anzahl entspricht keiner exakten Wortzahl, die je nach Sprache und Spezifik des Texts variiert. In der englischen Sprache liegt die durchschnittliche Wortlänge zum Beispiel zwischen vier und fünf Buchstaben, sodass diese Zahl ungefähr 50.000 Wörtern entspricht. Dies sind 15-mal mehr Wörter, als der Service benötigt, um ein genaues Profil zu generieren. Durch Beschneiden langer Eingaben verbessert der Service die Antwortzeit, ohne an Genauigkeit einzubüßen. Im Feld `word_count` der JSON-Antwort wird die Anzahl der Wörter angegeben, die der Service tatsächlich für eine Anforderung verwendet. Diese Anzahl kann kleiner als die übergebene Anzahl der Wörter sein.
+Diese Anzahl entspricht keiner exakten Wortzahl, die je nach Sprache und Spezifik des Texts variiert. In der englischen Sprache liegt die durchschnittliche Wortlänge zum Beispiel zwischen vier und fünf Buchstaben, sodass diese Zahl ungefähr 50.000 Wörtern entspricht. Dies sind 15-mal mehr Wörter, als der Service benötigt, um ein genaues Profil zu generieren. Durch Abschneiden langer Eingaben verbessert der Service die Antwortzeit, ohne an Genauigkeit einzubüßen. Im Feld `word_count` der JSON-Antwort wird die Anzahl der Wörter angegeben, die der Service für eine Anforderung verwendet. Diese Anzahl kann kleiner als die übergebene Anzahl der Wörter sein.
+
+Der Service wertet nur die Anzahl der Wörter aus, die Sie übergeben. Wenn Sie genügend Wörter eingeben, erstellt der Service ein Profil. Der Service prüft nicht, ob Wörter oder Sätze doppelt vorhanden sind. Eine solche Validierung ist subjektiv und sollte dem Benutzer überlassen werden, der triftige Gründe für die Übermittlung solcher Eingaben haben könnte. Daher ist es möglich, durch die mehrfache Übergabe desselben Worts oder Satzes ein Profil zu erhalten, doch dieses Profil, das aus einer solchen Eingabe hervorgeht, ist nicht unbedingt aussagekräftig.
+{: note}
 
 ### Richtlinien und Empfehlungen
 {: #sufficientGuidelines}
 
 In der folgenden Tabelle werden zwei Werte für verschiedene Mengen an Eingabetext aufgeführt:
 
--   Der *durchschnittliche mittlere absolute Fehler (MAE)* über alle Merkmale hinweg auf der Basis der Anzahl der Wörter, die als Eingabe bereitgestellt werden. Je kleiner der MAE ist, desto näher liegen die Ergebnisse des Service an den Bewertungen, die der Autor erhalten würde, wenn er sich einem echten Persönlichkeitstest unterziehen würde.
--   Die *durchschnittliche Korrelation* zwischen abgeleiteten und tatsächlichen Bewertungen über alle Merkmale hinweg. Je näher die Korrelation an 1 liegt, desto besser sind die Vorhersagen, obgleich Korrelationen über 0,2 als akzeptabel gelten und Korrelationen über 0,4 selten sind.
+-   Der *durchschnittliche mittlere absolute Fehler (MAE)* über alle Merkmale hinweg auf der Basis der Anzahl der Wörter, die als Eingabe bereitgestellt werden. Je kleiner der MAE ist, desto näher liegen die Ergebnisse des Service an den Bewertungen, die der Autor erhalten würde, wenn er sich einem Persönlichkeitstest unterziehen würde.
+-   Die *durchschnittliche Korrelation* zwischen abgeleiteten und tatsächlichen Bewertungen über alle Merkmale hinweg. Je näher die Korrelation an 1 liegt, desto besser sind die Vorhersagen. Korrelationen größer als 0,2 gelten als akzeptabel, Korrelationen größer als 0,4 sind selten.
 
-Die Informationen basieren auf Daten in englischer Sprache, jedoch gelten die allgemeinen Richtlinien für alle Sprachen. Weitere Informationen zum durchschnittlichen mittleren absoluten Fehler (MAE) und zur durchschnittlichen Korrelation finden Sie unter [Genauigkeit des Service](/docs/services/personality-insights/science.html#researchPrecise).
+Die Informationen basieren auf Daten in englischer Sprache, jedoch gelten die allgemeinen Richtlinien für alle Sprachen. Weitere Informationen zum durchschnittlichen mittleren absoluten Fehler (MAE) und zur durchschnittlichen Korrelation finden Sie unter [Genauigkeit des Service](/docs/services/personality-insights?topic=personality-insights-science#researchPrecise).
 
 <table style="width:80%">
   <caption>Tabelle 3. Durchschnittlicher mittlerer absoluter Fehler (MAE) und durchschnittliche Korrelation</caption>
@@ -459,23 +470,23 @@ Wie die folgenden Richtlinien zeigen, empfiehlt {{site.data.keyword.IBM_notm}}, 
 -   Eine Wortzahl unter 600 Wörtern generiert eine Warnung, jedoch analysiert der Service die Eingabe trotzdem.
 -   Eine Wortzahl unter 100 Wörtern verursacht einen Fehler.
 
-Diese Richtlinien können Ihnen helfen, die Zuverlässigkeit der Ergebnisse Ihrer Anwendung anzupassen. Für eine Freizeitanwendung, die Filme empfiehlt, ist vielleicht weniger Genauigkeit durchaus akzeptabel. Für eine Anwendung, die kritischere Empfehlungen generiert, benötigen Sie wahrscheinlich genauere Ergebnisse. Weitere Informationen dazu, wie der Service Persönlichkeitsmerkmale ableitet, finden Sie unter [Ableitung von Persönlichkeitsmerkmalen](/docs/services/personality-insights/science.html#researchInfer).
+Diese Richtlinien können Ihnen helfen, die Zuverlässigkeit der Ergebnisse Ihrer Anwendung anzupassen. Für eine Freizeitanwendung, die Filme empfiehlt, ist vielleicht weniger Genauigkeit durchaus akzeptabel. Für eine Anwendung, die kritischere Empfehlungen generiert, benötigen Sie wahrscheinlich genauere Ergebnisse. Weitere Informationen dazu, wie der Service Persönlichkeitsmerkmale ableitet, finden Sie unter [Ableitung von Persönlichkeitsmerkmalen](/docs/services/personality-insights?topic=personality-insights-science#researchInfer).
 
 ## Unaufbereitete Bewertungen anfordern
-{: #rawScores}
+{: #rawScores-input}
 
-Der Service gibt immer normalisierte Bewertungen für jedes Persönlichkeitsmerkmal (Big Five-Dimension und -Facette, Bedürfnisse und Werte) in der Antwort zurück. Der Service kann außerdem eine unaufbereitete Bewertung (`raw_score`) für jedes Merkmal zurückgeben, wenn Sie den Abfrageparameter `raw_scores` auf den Wert `true` setzen. Unaufbereitete Bewertungen stellen die Bewertungen für die Merkmale ausschließlich auf der Basis des Texts des Autors und des Modells für dieses Merkmal dar, ohne die Ergebnisse mit einer Beispielpopulation zu vergleichen. Weitere Informationen zur Verwendung unaufbereiteter Bewertungen finden Sie unter [Unaufbereitete Bewertungen für Persönlichkeitsmerkmale](/docs/services/personality-insights/numeric.html#rawScores).
+Der Service gibt immer normalisierte Bewertungen für jedes Persönlichkeitsmerkmal (Big Five-Dimension und -Facette, Bedürfnisse und Werte) in der Antwort zurück. Der Service kann außerdem eine unaufbereitete Bewertung (`raw_score`) für jedes Merkmal zurückgeben, wenn Sie den Abfrageparameter `raw_scores` auf den Wert `true` setzen. Unaufbereitete Bewertungen Rohwerte stellen Ergebnisse für die Merkmale dar, die ausschließlich auf dem Text des Autors und dem Modell für dieses Merkmal basieren, ohne dass ein Vergleich der Ergebnisse mit einer Beispielpopulation gezogen wird. Weitere Informationen zur Verwendung unaufbereiteter Bewertungen finden Sie unter [Unaufbereitete Bewertungen für Persönlichkeitsmerkmale](/docs/services/personality-insights?topic=personality-insights-numeric#rawScores-numeric).
 
 ## Verbraucherpräferenzen anfordern
-{: #preferences}
+{: #preferences-input}
 
-Der Service gibt immer Ergebnisse für die Persönlichkeitsmodelle zurück. Wenn Sie den Abfrageparameter `consumption_preferences` auf den Wert `true` setzen, gibt der Service auch Bewertungen (`scores`) für eine Reihe von Verbraucherpräferenzen auf der Basis der Persönlichkeitsmerkmale zurück, die aus dem Eingabetext abgeleitet werden. Die Ergebnisse geben die Tendenz des Autors an, bestimmte Produkte, Services und Aktivitäten zu bevorzugen. Unternehmen können mithilfe der Ergebnisse die Neigungen des Autors besser verstehen und die Kommunikation mit dem Autor sowie Angebote für den Autor personalisieren.
+Der Service gibt immer Ergebnisse für die Persönlichkeitsmodelle zurück. Wenn Sie für den Abfrageparameter `consumption_preferences` den Wert `true` festlegen, gibt der Service für verschiedene Verbraucherpräferenzen auch `scores` (Bewertungen) zurück. Der Service stützt die Präferenzen auf die Persönlichkeitsmerkmale, der er aus dem Eingabetext ableitet. Die Ergebnisse geben die Tendenz des Autors an, bestimmte Produkte, Services und Aktivitäten zu bevorzugen. Unternehmen können mithilfe der Ergebnisse die Neigungen des Autors besser verstehen und die Kommunikation mit dem Autor sowie Angebote für den Autor personalisieren.
 
-Weitere Informationen zu den verschiedenen Verbraucherpräferenzen finden Sie unter [Verbraucherpräferenzen](/docs/services/personality-insights/preferences.html). Informationen zur Interpretation der numerischen Ergebnisse für eine Präferenz finden Sie unter [Bewertungen für Verbraucherpräferenzen](/docs/services/personality-insights/numeric.html#scores).
+Weitere Informationen zu den verschiedenen Verbraucherpräferenzen finden Sie unter [Verbraucherpräferenzen](/docs/services/personality-insights?topic=personality-insights-preferences). Informationen zur Interpretation der numerischen Ergebnisse für eine Präferenz finden Sie unter [Bewertungen für Verbraucherpräferenzen](/docs/services/personality-insights?topic=personality-insights-numeric#scores).
 
 ## Schnittstellenversion angeben
 {: #version}
 
-Alle Aufrufe an die Methode `/v3/profile` müssen den Abfrageparameter `version` einschließen, um die Version der API des Service und das gewünschte Antwortformat anzugeben. Sie geben die Version als Datum im Format `JJJJ-MM-TT` an. Geben Sie zum Beispiel `2017-10-13` für die Version vom 13. Oktober 2017 an. Der Parameter gibt dem Service die Möglichkeit, die API und das Antwortformat für neue Versionen zu aktualisieren, ohne die Funktionsfähigkeit vorhandener Clients zu beeinträchtigen.
+Alle Aufrufe an die Methode `/v3/profile` müssen den Abfrageparameter `version` einschließen, um die Version der API des Service und das gewünschte Antwortformat anzugeben. Sie geben die Version als Datum im Format `JJJJ-MM-TT` an. Geben Sie zum Beispiel `2017-10-13` für die Version vom 13. Oktober 2017 an. Der Parameter gibt dem Service die Möglichkeit, die API und das Antwortformat für neue Versionen zu aktualisieren, ohne die Funktionsfähigkeit vorhandener Clients zu beeinträchtigen. Informationen zu allen verfügbaren Versionen finden Sie in den [Releaseinformationen](/docs/services/personality-insights?topic=personality-insights-release-notes).
 
-Das Datum, das Sie angeben, muss nicht exakt einer Version des Service entsprechen. Der Service verwendet die Version, die nicht später als das angegebene Datum freigegeben wurde. Wenn Sie ein Datum angeben, dass vor dem ersten Release von Version 3 liegt, verwendet der Service Version 3 der API. Wenn Sie ein Datum angeben, das in der Zukunft liegt oder auf andere Weise nach dem Release der aktuellsten Version liegt, verwendet der Service die aktuellste Version.
+Das Datum, das Sie angeben, muss nicht exakt einer Version des Service entsprechen. Der Service verwendet die Version, die nicht später als das angegebene Datum freigegeben wurde. Wenn Sie ein Datum angeben, das vor dem ersten Release von Version 3 liegt (`2016-10-19`), verwendet der Service diese Version der API. Wenn Sie ein Datum angeben, das in der Zukunft liegt oder auf andere Weise nach dem Release der aktuellsten Version liegt, verwendet der Service die aktuellste Version.
