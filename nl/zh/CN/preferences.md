@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -23,11 +28,15 @@ lastupdated: "2017-10-12"
 {{site.data.keyword.personalityinsightsshort}} 服务针对三个模型推断作者的个性特征：“大五类人格”、“需求”和“价值观”。根据这些模型的结果，服务还可以生成输入文本作者的消费偏好。将请求的 `consumption_preferences` 查询参数设置为 `true` 可获取消费偏好。
 {: shortdesc}
 
-有超过 40 种消费偏好，分组为 8 个高级别类别，用于指示作者偏好不同产品、服务和活动的可能性。例如，服务可以识别作者购买服装（舒适度与时尚）和汽车（成本与安全）时的倾向；作者对不同类型音乐、电影和阅读的倾向；以及作者对环保和志愿活动的态度，等等。
+服务将超过 40 种消费偏好分组为 8 个高级别类别。偏好指示作者偏好不同产品、服务和活动的可能性。例如，服务可以识别：
 
-企业使用服务的个性模型可更好地了解客户，设计并开发更具个性化、更有针对性的营销活动、产品和服务。通过消费偏好，可更容易地根据服务的结果来采取行动。企业可以轻松获取与个人的主要特征关联的偏好列表，并相应做出响应。有关可能的消费偏好应用的更多信息，请参阅[用例](/docs/services/personality-insights/usecases.html)和[服务实战](/docs/services/personality-insights/applied.html)。
+-   作者购买服装（舒适与时尚）和汽车（成本与安全）时的倾向。
+-   作者对不同类型音乐、电影和阅读的倾向。
+-   作者对环保和志愿活动的态度。
 
-以下各部分列出并描述服务可返回的消费偏好。有关解读数字偏好的更多信息，请参阅[消费偏好的得分](/docs/services/personality-insights/numeric.html#scores)。有关 {{site.data.keyword.IBM_notm}} 如何开发偏好的信息，请参阅[服务背后的科学](/docs/services/personality-insights/science.html)。
+企业使用服务的个性模型可更好地了解客户，设计并开发更具个性化、更有针对性的营销活动、产品和服务。通过消费偏好，可更容易地根据服务的结果来采取行动。企业可以轻松获取与个人的主要特征关联的偏好列表，并做出响应。有关可能的消费偏好应用的更多信息，请参阅[用例](/docs/services/personality-insights?topic=personality-insights-usecases)和[服务实战](/docs/services/personality-insights?topic=personality-insights-applied)。
+
+以下各部分列出并描述服务可返回的消费偏好。有关解读数字偏好的更多信息，请参阅[消费偏好的得分](/docs/services/personality-insights?topic=personality-insights-numeric#scores)。有关 {{site.data.keyword.IBM_notm}} 如何开发偏好的信息，请参阅[服务背后的科学](/docs/services/personality-insights?topic=personality-insights-science)。
 
 ## 购买偏好
 {: #shopping}

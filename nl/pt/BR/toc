@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="personality-insights" audience="service" href="/docs/services/personality-insights/getting-started.html" path="services/personality-insights"}
+{: .toc subcollection="personality-insights" audience="service" arm="351" href="/docs/services/personality-insights/getting-started.html" path="services/personality-insights"}
 Personality Insights
 
     {: .navgroup id="learn"}
@@ -11,7 +11,7 @@ Personality Insights
 
     {: .topicgroup}
     Demos
-        [Quick demo](https://personality-insights-demo.ng.bluemix.net/)
+        [Demo rápida](https://personality-insights-demo.ng.bluemix.net/)
 
     {: .topicgroup}
     Recursos adicionais
@@ -27,7 +27,7 @@ Personality Insights
     numeric.md
 
     {: topicgroup}
-    Modelos de Personalidade
+    Modelos de personalidade
         models.md
         agreeableness.md
         conscientiousness.md
@@ -38,9 +38,10 @@ Personality Insights
         values.md
 
     preferences.md
+    ha-dr.md
 
     {: topicgroup}
-    Serviço de
+    Plano de fundo do serviço
         usecases.md
         guidance.md
         applied.md
@@ -49,39 +50,23 @@ Personality Insights
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Referência de API](https://www.ibm.com/watson/developercloud/personality-insights/api/v3/)
+    [Referência de API](https://cloud.ibm.com/apidocs/personality-insights)
+    informações-segurança.md
+    /watson/Watson-utilizando-sdks
+   [Repos GitHub do Watson](https://github.com/watson-developer-cloud/)
 
     {: .topicgroup}
-    Amostra de aplicativos
+    Apps de amostra
         [Watson Personality Insights](https://github.com/watson-developer-cloud/personality-insights-nodejs)
-        [David Bowie Pessoas](https://github.com/IBM-Bluemix/ziggy)
-        [Social Customer Care](https://www.ibm.com/watson/developercloud/starter-kits.html#social-customer-care)
-
-    {: .topicgroup}
-    Watson SDKs
-        [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
-        [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
-        [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
-        [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
-        [Swift SDK](https://github.com/watson-developer-cloud/swift-sdk)
-        [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
-
-    [Repositórios do Watson GitHub](https://github.com/watson-developer-cloud/)
+        [David Bowie Personas](https://github.com/IBM-Bluemix/ziggy)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    {: .topicgroup}
-    FAQs
-        faq-basic-usage.md
-        faq-requesting.md
-        faq-understanding.md
-        faq-preferences.md
-
     release-notes.md
 
     {: .topicgroup}
-    Desenvolvedor de comunidade
+    Comunidade do desenvolvedor
         [StackOverflow](http://stackoverflow.com/questions/tagged/personality-insights)
-        [developerWorks Answers](https://developer.ibm.com/answers/topics/personality-insights/)
-        [Canal WDC Slack](http://wdc-slack-inviter.mybluemix.net/)
+        [IBM Developer Answers](https://developer.ibm.com/answers/topics/personality-insights/)
+        [Canal Slack do WDC](http://wdc-slack-inviter.mybluemix.net/)
     {: .navgroup-end}

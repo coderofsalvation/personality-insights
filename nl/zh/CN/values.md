@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -22,6 +27,8 @@ lastupdated: "2017-10-12"
 
 *价值观*描述了会影响作者决策的激励因素。下表描述了服务推断的五项价值观。
 {: shortdesc}
+
+高于平均值 0.5 的分数指示某个特征高于平均值的倾向。等于或高于 0.75 的分数表示特征的非常易于区分的方面；此类分数被视为*高*。有关更多信息，请参阅[个性特征的百分位数](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles)。
 
 <table>
   <caption>表 1. 价值观</caption>

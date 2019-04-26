@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,11 +25,16 @@ lastupdated: "2017-10-12"
 # ビッグ・ファイブの外向性
 {: #extraversion}
 
-*外向性* は、他人との付き合いで刺激を求める個人の傾向です。
+*外向性* は、他人との付き合いで刺激を求める個人の傾向です。 以下の表では、特性に関する結果を*高い* または*低い* として特定しています。
 {: shortdesc}
 
+-   平均である 0.5 を超えるスコアは、特性の平均的傾向よりも大きいことを示しています。 0.75 以上のスコアは、特性の側面が容易に認められることを示しています。 そのようなスコアは、*高い* と見なされます。
+-   *低い* と見なされる 0.50 および 0.25 より下のスコアについては、その逆になります。
+
+詳しくは、『[パーソナリティー特性の百分位数](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles)』を参照してください。
+
 ## ファセット
-{: #facets}
+{: #facets-extra}
 
 ディメンションのファセットと、そのファセットでスコアが高い人の簡単な説明。
 
@@ -36,12 +46,12 @@ lastupdated: "2017-10-12"
   </tr>
   <tr>
     <td><strong>活発度 / 精力的</strong></td>
-    <td>テンポが速くて忙しい生活を送る。迅速、精力的、元気に物事を
+    <td>テンポが速くて忙しい生活を送る。 迅速、精力的、元気に物事を
     行ったり、動き回ったりし、多くの活動に関与する。</td>
   </tr>
   <tr>
     <td><strong>自己主張 / 独断的</strong></td>
-    <td>支配して、人の行動を指示したがる。グループのリーダーに
+    <td>支配して、人の行動を指示したがる。 グループのリーダーに
     なる傾向がある。</td>
   </tr>
   <tr>
@@ -66,72 +76,146 @@ lastupdated: "2017-10-12"
 </table>
 
 ## 特性の範囲
-{: #range}
+{: #range-extra}
 
 ディメンションの各ファセットのスコアが高い人または低い人に当てはまる可能性がある一般的な記述と、そうした人を表す言葉。
 
-<table>
+<table summary="各行の中央の列にリストされているファセットに対して、最初の 2 列にはファセットのスコアが低い人の説明と言葉が示されています。最後の 2 列にはファセットのスコアが高い人の言葉と説明が示されています。">
   <caption>表 2. 特性の範囲 (外向性)</caption>
   <tr>
-    <th colspan="2" style="text-align:center">低い値の人の記述</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">高い値の人の記述</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+      低い値の人の記述
+    </th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+      高い値の人の記述
+    </th>
   </tr>
   <tr>
-    <th style="text-align:left; width:23%">説明</th>
-    <th style="text-align:center; width:16%">言葉</th>
-    <th style="text-align:center; width:16%">ファセット</th>
-    <th style="text-align:center; width:16%">言葉</th>
-    <th style="text-align:right">説明</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width:23%">
+      説明
+    </th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width:16%">
+      言葉
+    </th>
+    <th id="facet" headers="blank" style="text-align:center; width:16%">
+      ファセット
+    </th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width:16%">
+      言葉
+    </th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+      説明
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">ゆったりしたペースの生活が好き。</td>
-    <td style="text-align:center">のんびり</td>
-    <td style="text-align:center"><strong>活発度</strong></td>
-    <td style="text-align:center">精力的</td>
-    <td style="text-align:right">スケジュールに予定が多く埋まっていて忙しい状態を好む。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      ゆったりしたペースの生活が好き。
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      のんびり
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>活発度</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      精力的
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      スケジュールに予定が多く埋まっていて忙しい状態を好む。
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">特にグループの中では、話すより聞くほうが好き。</td>
-    <td style="text-align:center">控えめ</td>
-    <td style="text-align:center"><strong>自己主張</strong></td>
-    <td style="text-align:center">自己主張が強い</td>
-    <td style="text-align:right">意見をはっきり述べ、場を支配する。グループを先導することに満足を覚える。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      特にグループの中では、話すより聞くほうが好き。
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      控えめ
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>自己主張</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      自己主張が強い
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      意見をはっきり述べ、場を支配する。グループを先導することに満足を覚える。
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">いつも真面目で、冗談をあまり言わない。</td>
-    <td style="text-align:center">険しい</td>
-    <td style="text-align:center"><strong>明朗性</strong></td>
-    <td style="text-align:center">陽気</td>
-    <td style="text-align:right">楽しい人で、その楽しさを人と分かち合う。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      いつも真面目で、冗談をあまり言わない。
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      険しい
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>明朗性</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      陽気
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      楽しい人で、その楽しさを人と分かち合う。
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">静かで、穏やかで、安全なことを好む。</td>
-    <td style="text-align:center">平穏を求める</td>
-    <td style="text-align:center"><strong>刺激希求性</strong></td>
-    <td style="text-align:center">刺激を求める</td>
-    <td style="text-align:right">リスクを負うことに興奮を覚え、いろいろ起こらないと退屈に感じる。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      静かで、穏やかで、安全なことを好む。
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      平穏を求める
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>刺激希求性</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      刺激を求める
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      リスクを負うことに興奮を覚え、いろいろ起こらないと退屈に感じる。
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">内向的で、人と打ち解けない。</td>
-    <td style="text-align:center">遠慮がち</td>
-    <td style="text-align:center"><strong>親しみやすさ</strong></td>
-    <td style="text-align:center">外向性</td>
-    <td style="text-align:right">すぐに友達ができ、人といると満足する。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      内向的で、人と打ち解けない。
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      遠慮がち
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>親しみやすさ</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      外向性
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      すぐに友達ができ、人といると満足する。
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">自分に時間を使いたいと強く思う。</td>
-    <td style="text-align:center">独立心が強い</td>
-    <td style="text-align:center"><strong>社交性</strong></td>
-    <td style="text-align:center">付き合い上手</td>
-    <td style="text-align:right">人と一緒にいることを楽しむ。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      自分に時間を使いたいと強く思う。
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      独立心が強い
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>社交性</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      付き合い上手
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      人と一緒にいることを楽しむ。
+    </td>
   </tr>
 </table>
 
 ## 1 次ディメンションと 2 次ディメンション
-{: #dimensions}
+{: #dimensions-extra}
 
-パーソナリティー特性の組み合わせを記述し、1 つのディメンションを他のディメンションと関連付ける情報。個人の複合的なパーソナリティーを表すために 1 次特性と 2 次特性が相互にどう関連するかを洞察します。
+パーソナリティー特性の組み合わせを記述し、1 つのディメンションを他のディメンションと関連付ける情報。 個人の複合的なパーソナリティーを表すために 1 次特性と 2 次特性が相互にどう関連するかを洞察します。
 
 <table>
   <caption>表 3. 1 次ディメンションと 2 次ディメンション (外向性)</caption>

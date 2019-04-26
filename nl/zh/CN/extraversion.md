@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,10 +26,16 @@ lastupdated: "2017-10-12"
 {: #extraversion}
 
 *外倾性*是指个人在寻求通过他人陪伴获得激励方面的倾向。
+随后的表格将特征结果限定为*高*或*低*：
 {: shortdesc}
 
+-   高于平均值 0.5 的任何分数都指示某个特征高于平均值的倾向。等于或高于 0.75 的分数表示特征的非常易于区分的方面；此类分数被视为*高*。
+-   对于低于 0.50 和 0.25 的分数（这些分数被视为*低*），则为相反的情况。
+
+有关更多信息，请参阅[个性特征的百分位数](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles)。
+
 ## 构面
-{: #facets}
+{: #facets-extra}
 
 简要描述维度的构面以及在每个构面中得分高的个人。
 
@@ -61,72 +72,109 @@ lastupdated: "2017-10-12"
 </table>
 
 ## 特征范围
-{: #range}
+{: #range-extra}
 
 可能适用于其得分或多或少证实了该维度每个构面的个人的一般描述，以及可能描述了此类个人的术语。
 
-<table>
+<table summary="对于每行中间列中列出的构面，前两列提供构面得分较低的个人的描述和术语，后两列提供构面得分较高的个人的术语和描述。">
   <caption>表 2. 特征范围（外倾性）</caption>
   <tr>
-    <th colspan="2" style="text-align:center">低值描述</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">高值描述</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+低值描述</th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+高值描述</th>
   </tr>
   <tr>
-    <th style="text-align:left; width:23%">描述</th>
-    <th style="text-align:center; width:16%">术语</th>
-    <th style="text-align:center; width:16%">构面</th>
-    <th style="text-align:center; width:16%">术语</th>
-    <th style="text-align:right">描述</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width:23%">
+描述</th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width:16%">
+术语</th>
+    <th id="facet" headers="blank" style="text-align:center; width:16%">
+构面</th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width:16%">
+术语</th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+描述</th>
   </tr>
   <tr>
-    <td style="text-align:left">喜欢节奏轻松的生活。</td>
-    <td style="text-align:center">悠闲</td>
-    <td style="text-align:center"><strong>活跃程度</strong></td>
-    <td style="text-align:center">精力充沛</td>
-    <td style="text-align:right">喜欢快节奏、忙碌、安排有许多活动的日程。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+喜欢节奏轻松的生活。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+悠闲</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>活跃程度</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+精力充沛</td>
+    <td headers="highValue highDescription" style="text-align:right">
+喜欢快节奏、忙碌、安排有许多活动的日程。</td>
   </tr>
   <tr>
-    <td style="text-align:left">宁可多听少说，尤其是在团队环境中。</td>
-    <td style="text-align:center">羞怯</td>
-    <td style="text-align:center"><strong>果敢</strong></td>
-    <td style="text-align:center">坚定而自信</td>
-    <td style="text-align:right">倾向于畅所欲言并主导事态发展，能自在地领导团队。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+宁可多听少说，尤其是在团队环境中。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+羞怯</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>果敢</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+坚定而自信</td>
+    <td headers="highValue highDescription" style="text-align:right">
+倾向于畅所欲言并主导事态发展，能自在地领导团队。</td>
   </tr>
   <tr>
-    <td style="text-align:left">通常很严肃，不苟言笑。</td>
-    <td style="text-align:center">严肃</td>
-    <td style="text-align:center"><strong>开朗</strong></td>
-    <td style="text-align:center">愉快</td>
-    <td style="text-align:right">您是一个快乐的人，并会与大家分享您的快乐。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+通常很严肃，不苟言笑。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+严肃</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>开朗</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+愉快</td>
+    <td headers="highValue highDescription" style="text-align:right">
+您是一个快乐的人，并会与大家分享您的快乐。</td>
   </tr>
   <tr>
-    <td style="text-align:left">偏好安静、平和且安全的活动。</td>
-    <td style="text-align:center">寻求平静</td>
-    <td style="text-align:center"><strong>寻求刺激</strong></td>
-    <td style="text-align:center">寻求刺激</td>
-    <td style="text-align:right">冒险时感到兴奋，而在长时间无所事事的情况下会感到无聊。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+偏好安静、平和且安全的活动。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+寻求平静</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>寻求刺激</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+寻求刺激</td>
+    <td headers="highValue highDescription" style="text-align:right">
+冒险时感到兴奋，而在长时间无所事事的情况下会感到无聊。</td>
   </tr>
   <tr>
-    <td style="text-align:left">比较孤僻，不喜欢身边有很多人。</td>
-    <td style="text-align:center">内向</td>
-    <td style="text-align:center"><strong>友好</strong></td>
-    <td style="text-align:center">外向</td>
-    <td style="text-align:right">很容易交到朋友，身边有其他人时感到很自在。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+比较孤僻，不喜欢身边有很多人。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+内向</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>友好</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+外向</td>
+    <td headers="highValue highDescription" style="text-align:right">
+很容易交到朋友，身边有其他人时感到很自在。</td>
   </tr>
   <tr>
-    <td style="text-align:left">强烈渴望独处。</td>
-    <td style="text-align:center">独立</td>
-    <td style="text-align:center"><strong>合群性</strong></td>
-    <td style="text-align:center">善于交际</td>
-    <td style="text-align:right">喜欢身边有其他人陪伴。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+强烈渴望独处。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+独立</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>合群性</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+善于交际</td>
+    <td headers="highValue highDescription" style="text-align:right">
+喜欢身边有其他人陪伴。</td>
   </tr>
 </table>
 
 ## 主维度和辅助维度
-{: #dimensions}
+{: #dimensions-extra}
 
-表达该维度与其他维度的关系的信息，描述了个性特征的组合。深入说明主特征和辅助特征之间可能如何相互关联，以表示个人的综合个性。
+说明该维度与其他维度的关系的信息，描述了个性特征的组合。深入了解主特征和辅助特征之间可能如何相互关联，以表示个人的综合个性。
 
 <table>
   <caption>表 3. 主维度和辅助维度（外倾性）</caption>

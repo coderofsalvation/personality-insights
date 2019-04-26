@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,10 +26,16 @@ lastupdated: "2017-10-12"
 {: #emotionalRange}
 
 *情绪程度*，也称为*情绪不稳定性*或*自然反应*，是指个人情绪对其周围环境敏感的程度高低。
+随后的表格将特征结果限定为*高*或*低*：
 {: shortdesc}
 
+-   高于平均值 0.5 的任何分数都指示某个特征高于平均值的倾向。等于或高于 0.75 的分数表示特征的非常易于区分的方面；此类分数被视为*高*。
+-   对于低于 0.50 和 0.25 的分数（这些分数被视为*低*），则为相反的情况。
+
+有关更多信息，请参阅[个性特征的百分位数](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles)。
+
 ## 构面
-{: #facets}
+{: #facets-emote}
 
 简要描述维度的构面以及在每个构面中得分高的个人。
 
@@ -48,7 +59,7 @@ lastupdated: "2017-10-12"
   </tr>
   <tr>
     <td><strong>无节制/自我放纵</strong></td>
-    <td>感到难以抗拒的强烈渴望和冲动，尽管自己清楚以后很可能会后悔。他们倾向于享受短暂的快乐和回报，而不是长期的结果。</td>
+    <td>尽管自己清楚以后很可能会后悔，还是感到难以抗拒的强烈渴望和冲动。他们倾向于享受短暂的快乐和回报，而不是长期的结果。</td>
   </tr>
   <tr>
     <td><strong>自我意识</strong></td>
@@ -61,72 +72,109 @@ lastupdated: "2017-10-12"
 </table>
 
 ## 特征范围
-{: #range}
+{: #range-emote}
 
 可能适用于其得分或多或少证实了该维度每个构面的个人的一般描述，以及可能描述了此类个人的术语。
 
-<table>
+<table summary="对于每行中间列中列出的构面，前两列提供构面得分较低的个人的描述和术语，后两列提供构面得分较高的个人的术语和描述。">
   <caption>表 2. 特征范围（情绪程度）</caption>
   <tr>
-    <th colspan="2" style="text-align:center">低值描述</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">高值描述</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+低值描述</th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+高值描述</th>
   </tr>
   <tr>
-    <th style="text-align:left; width: 23%">描述</th>
-    <th style="text-align:center; width: 16%">术语</th>
-    <th style="text-align:center; width: 16%">构面</th>
-    <th style="text-align:center; width: 16%">术语</th>
-    <th style="text-align:right">描述</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width: 23%">
+描述</th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width: 16%">
+术语</th>
+    <th id="facet" headers="blank" style="text-align:center; width: 16%">
+构面</th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width: 16%">
+术语</th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+描述</th>
   </tr>
   <tr>
-    <td style="text-align:left">不太容易发脾气。</td>
-    <td style="text-align:center">脾气温和</td>
-    <td style="text-align:center"><strong>愤怒</strong></td>
-    <td style="text-align:center">易怒</td>
-    <td style="text-align:right">脾气急躁，事情不顺心时尤其如此。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+不太容易发脾气。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+脾气温和</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>愤怒</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+易怒</td>
+    <td headers="highValue highDescription" style="text-align:right">
+脾气急躁，事情不顺心时尤其如此。</td>
   </tr>
   <tr>
-    <td style="text-align:left">通常感到冷静、自信。</td>
-    <td style="text-align:center">自信</td>
-    <td style="text-align:center"><strong>焦虑</strong></td>
-    <td style="text-align:center">易焦虑</td>
-    <td style="text-align:right">倾向于担心可能会发生的事情。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+通常感到冷静、自信。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+自信</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>焦虑</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+易焦虑</td>
+    <td headers="highValue highDescription" style="text-align:right">
+倾向于担心可能会发生的事情。</td>
   </tr>
   <tr>
-    <td style="text-align:left">通常对自己的现状感到满意。</td>
-    <td style="text-align:center">满足</td>
-    <td style="text-align:center"><strong>抑郁</strong></td>
-    <td style="text-align:center">忧郁</td>
-    <td style="text-align:right">经常会想起不开心的事。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+通常对自己的现状感到满意。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+满足</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>抑郁</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+忧郁</td>
+    <td headers="highValue highDescription" style="text-align:right">
+经常会想起不开心的事。</td>
   </tr>
   <tr>
-    <td style="text-align:left">能控制自己的欲望，并且欲望也不太强烈。</td>
-    <td style="text-align:center">自我控制</td>
-    <td style="text-align:center"><strong>无节制</strong></td>
-    <td style="text-align:center">享乐</td>
-    <td style="text-align:right">强烈地感觉到自己的欲望，并且很容易受这些欲望的诱惑。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+能控制自己的欲望，并且欲望也不太强烈。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+自我控制</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>无节制</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+享乐</td>
+    <td headers="highValue highDescription" style="text-align:right">
+强烈地感觉到自己的欲望，并且很容易受这些欲望的诱惑。</td>
   </tr>
   <tr>
-    <td style="text-align:left">不容易感到尴尬，大部分时间充满自信。</td>
-    <td style="text-align:center">自信</td>
-    <td style="text-align:center"><strong>自我意识</strong></td>
-    <td style="text-align:center">怕难为情</td>
-    <td style="text-align:right">对他人如何看待自己很敏感。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+不容易感到尴尬，大部分时间充满自信。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+自信</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>自我意识</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+怕难为情</td>
+    <td headers="highValue highDescription" style="text-align:right">
+对他人如何看待自己很敏感。</td>
   </tr>
   <tr>
-    <td style="text-align:left">可以冷静、有效地处理意外事件。</td>
-    <td style="text-align:center">在压力下保持冷静</td>
-    <td style="text-align:center"><strong>脆弱</strong></td>
-    <td style="text-align:center">容易感到压力</td>
-    <td style="text-align:right">在有压力的环境中很容易不堪重负。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+可以冷静、有效地处理意外事件。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+在压力下保持冷静</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>脆弱</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+容易感到压力</td>
+    <td headers="highValue highDescription" style="text-align:right">
+在有压力的环境中很容易不堪重负。</td>
   </tr>
 </table>
 
 ## 主维度和辅助维度
-{: #dimensions}
+{: #dimensions-emote}
 
-表达该维度与其他维度的关系的信息，描述了个性特征的组合。深入说明主特征和辅助特征之间可能如何相互关联，以表示个人的综合个性。
+说明该维度与其他维度的关系的信息，描述了个性特征的组合。深入了解主特征和辅助特征之间可能如何相互关联，以表示个人的综合个性。
 
 <table>
   <caption>表 3. 主维度和辅助维度（情绪程度）</caption>

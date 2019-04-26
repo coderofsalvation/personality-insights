@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,14 +25,14 @@ lastupdated: "2017-10-12"
 # Descrizione di un profilo CSV
 {: #outputCSV}
 
-Il servizio restituisce la sua analisi in formato CSV (comma-separated value) se specifichi `text/csv` con l'intestazione `Accept` di una richiesta. L'output CSV fornisce informazioni simili a quelle fornite dall'output JSON. Come con JSON, le informazioni nell'output CSV dipendono dal fatto che l'input rappresenti dati con data e ora e se l'utente richieda punteggi non elaborati e preferenze di consumo.
+Il servizio restituisce la sua analisi in formato CSV (comma-separated value) se specifichi `text/csv` con l'intestazione `Accept` di una richiesta. L'output CSV fornisce informazioni simili a quelle fornite dall'output JSON. Come con JSON, le informazioni nell'output CSV dipendono dal fatto che i dati di input vengano rappresentati con data e ora e se si richiedono punteggi non elaborati e preferenze di consumo.
 {: shortdesc}
 
-A differenza del JSON, tuttavia, l'output CSV viene restituito come un numero fisso di colonne. La prima riga dell'output è composta da etichette di colonna facoltative, che vengono incluse solo se imposti il parametro di query `csv_headers` della richiesta su `true`. La seconda riga dell'output, che è sempre presente, contiene i risultati dell'analisi.
+L'output CSV, a differenza di JSON, viene restituito come un numero fisso di colonne. La prima riga dell'output è composta da etichette di colonna facoltative, che vengono incluse solo se imposti il parametro di query `csv_headers` della richiesta su `true`. La seconda riga dell'output, che è sempre presente, contiene i risultati dell'analisi.
 
-Le seguenti sezioni elencano e descrivono brevemente tutte le colonne dell'output CSV nell'ordine esatto in cui vengono visualizzate nei risultati. Le tabelle descrivono le colonne per raggruppamento logico, incluso il numero di colonne in ciascun gruppo e le relative etichette facoltative. A parte il conteggio delle parole, tutti i dati numerici vengono restituiti come valori doppi.
+Le seguenti sezioni elencano e descrivono brevemente tutte le colonne dell'output CSV nell'ordine esatto in cui vengono visualizzate nei risultati. Le tabelle descrivono le colonne per raggruppamento logico, incluso il numero di colonne in ciascun gruppo e le relative etichette facoltative. A parte il conteggio delle parole, tutti i dati numerici vengono restituiti come valori doppi. 
 
-Per ulteriori informazioni sul significato delle colonne CSV, vedi [Descrizione di un profilo JSON](/docs/services/personality-insights/output.html) e [Interpretazione dei risultati numerici](/docs/services/personality-insights/numeric.html).
+Per ulteriori informazioni sul significato delle colonne CSV, vedi [Descrizione di un profilo JSON](/docs/services/personality-insights?topic=personality-insights-output) e [Interpretazione dei risultati numerici](/docs/services/personality-insights?topic=personality-insights-numeric).
 
 ## Caratteristiche di base e metadati
 {: #basicCSV}
@@ -38,90 +43,90 @@ Le seguenti colonne sono sempre presenti nell'output CSV per tutte le richieste.
   <caption>Tabella 1. Colonne CSV per le caratteristiche di base e i
     metadati</caption>
   <tr>
-    <th style="width:25%; text-align:left; vertical-align:bottom">Raggruppamento <br/>(numero di colonne)</th>
+    <th style="width:25%; text-align:left; vertical-align:bottom">Raggruppamento<br/>(Numero di colonne)</th>
     <th style="width:25%; text-align:left; vertical-align:bottom">Etichette facoltative</th>
     <th style="text-align:left; vertical-align:bottom">Descrizione</th>
   </tr>
   <tr>
-    <td>
-      Percentili di <br/>Gradevolezza Big Five<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Percentili di Gradevolezza Big Five<br/>(Sette colonne)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_agreeableness<br/>facet_altruism<br/>
       facet_cooperation<br/>facet_modesty<br/>
       facet_morality<br/>facet_sympathy<br/>
       facet_trust
     </td>
-    <td>
-      Punteggio percentile normalizzato per l'autore del testo rispetto
-      alla dimensione o all'aspetto denominato.
+    <td style="vertical-align:top">
+      Punteggio percentile normalizzato per l'autore del testo per la
+      dimensione o l'aspetto denominato.
     </td>
   </tr>
   <tr>
-    <td>
-      Percentili di <br/>Coscienziosità Big Five<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Percentili di Coscienziosità Big Five<br/>(Sette colonne)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_conscientiousness<br/>facet_achievement_striving
       <br/>facet_cautiousness<br/>facet_dutifulness<br/>
       facet_orderliness<br/>facet_self_discipline<br/>
       facet_self_efficacy
     </td>
-    <td>
-      Punteggio percentile normalizzato per l'autore del testo rispetto
-      alla dimensione o all'aspetto denominato.
+    <td style="vertical-align:top">
+      Punteggio percentile normalizzato per l'autore del testo per la
+      dimensione o l'aspetto denominato.
     </td>
   </tr>
   <tr>
-    <td>
-      Percentili di <br/>Estroversione Big Five<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Percentili di Estroversione Big Five<br/>(Sette colonne)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_extraversion<br/>facet_activity_level
       <br/>facet_assertiveness<br/>facet_cheerfulness<br/>
       facet_excitement_seeking<br/>facet_friendliness<br/>
       facet_gregariousness
     </td>
-    <td>
-      Punteggio percentile normalizzato per l'autore del testo rispetto
-      alla dimensione o all'aspetto denominato.
+    <td style="vertical-align:top">
+      Punteggio percentile normalizzato per l'autore del testo per la
+      dimensione o l'aspetto denominato.
     </td>
   </tr>
   <tr>
-    <td>
-      Percentili di <br/>Stabilità emotiva Big Five<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Percentili di Stabilità emotiva Big Five<br/>(Sette colonne)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_neuroticism<br/>facet_anger<br/>
       facet_anxiety<br/>facet_depression<br/>
       facet_immoderation<br/>facet_self_consciousness<br/>
       facet_vulnerability
     </td>
-    <td>
-      Punteggio percentile normalizzato per l'autore del testo rispetto
-      alla dimensione o all'aspetto denominato.
+    <td style="vertical-align:top">
+      Punteggio percentile normalizzato per l'autore del testo per la
+      dimensione o l'aspetto denominato.
     </td>
   </tr>
   <tr>
-    <td>
-      Percentili di <br/>Apertura mentale Big Five<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Percentili di Apertura mentale Big Five<br/>(Sette colonne)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_openness<br/>facet_adventurousness<br/>
       facet_artistic_interests<br/>facet_emotionality<br/>
       facet_imagination<br/>facet_intellect<br/>
       facet_liberalism
     </td>
-    <td>
-      Punteggio percentile normalizzato per l'autore del testo rispetto
-      alla dimensione o all'aspetto denominato.
+    <td style="vertical-align:top">
+      Punteggio percentile normalizzato per l'autore del testo per la
+      dimensione o l'aspetto denominato.
     </td>
   </tr>
   <tr>
-    <td>
-      Percentili di Esigenze<br/>(12 colonne)
+    <td style="vertical-align:top">
+      Percentili di Esigenze<br/>(Dodici colonne)
     </td>
-    <td>
+    <td style="vertical-align:top">
       need_liberty<br/>need_ideal<br/>
       need_love<br/>need_practicality<br/>
       need_self_expression<br/>need_stability<br/>
@@ -129,62 +134,62 @@ Le seguenti colonne sono sempre presenti nell'output CSV per tutte le richieste.
       need_closeness<br/>need_curiosity<br/>
       need_excitement<br/>need_harmony
     </td>
-    <td>
-      Punteggio percentile normalizzato per l'autore del testo rispetto
-      all'esigenza denominata.
+    <td style="vertical-align:top">
+      Punteggio percentile normalizzato per l'autore del testo per
+      l'esigenza denominata.
     </td>
   </tr>
   <tr>
-    <td>
-      Percentili di Valori<br/>(5 colonne)
+    <td style="vertical-align:top">
+      Percentili di Valori<br/>(Cinque colonne)
     </td>
-    <td>
+    <td style="vertical-align:top">
       value_conservation<br/>value_hedonism<br/>
       value_openness_to_change<br/>value_self_enhancement<br/>
       value_self_transcendence
     </td>
-    <td>
-      Punteggio percentile normalizzato per l'autore del testo rispetto
-      al valore denominato.
+    <td style="vertical-align:top">
+      Punteggio percentile normalizzato per l'autore del testo per
+      il valore denominato.
     </td>
   </tr>
   <tr>
-    <td>
-      Percentuali dei <br/>giorni della settimana<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Percentuali dei giorni della settimana<br/>(Sette colonne)
     </td>
-    <td>
+    <td style="vertical-align:top">
       behavior_sunday<br/>behavior_monday<br/>
       behavior_tuesday<br/>behavior_wednesday<br/>
       behavior_thursday<br/>behavior_friday<br/>
       behavior_saturday
     </td>
-    <td>
-      Se il testo di input ha un indicatore di data e ora, la percentuale dell'input
-      associato a ciascun giorno della settimana; se l'input non ha un
-      indicatore di data e ora, le percentuali sono tutte <code>0.0</code>.
+    <td style="vertical-align:top">
+      <em>Se il testo di input ha un indicatore di data e ora,</em> la percentuale dell'input
+      associato a ciascun giorno della settimana. Diversamente, le
+      percentuali sono tutte <code>0.0</code>.
     </td>
   </tr>
   <tr>
-    <td>
-      Percentuali delle <br/>ore del giorno<br/>(24 colonne)
+    <td style="vertical-align:top">
+      Percentuali delle ore del giorno<br/>(Ventiquattro colonne)
     </td>
-    <td>
-      da behavior_0000<br/><em> a </em><br/>behavior_2300
+    <td style="vertical-align:top">
+      da behavior_0000 <em>a</em> behavior_2300
     </td>
-    <td>
-      Se il testo di input ha un indicatore di data e ora, la percentuale dell'input
-      associato a ciascuna ora del giorno; se l'input non ha un
-      indicatore di data e ora, le percentuali sono tutte <code>0.0</code>.
+    <td style="vertical-align:top">
+      <em>Se il testo di input ha un indicatore di data e ora,</em> la percentuale
+      dell'input associato a ciascuna ora del giorno. Diversamente, le
+      percentuali sono tutte <code>0.0</code>.
     </td>
   </tr>
   <tr>
-    <td>
-      Conteggio delle parole e <br/>lingua<br/>(2 colonne)
+    <td style="vertical-align:top">
+      Conteggio delle parole e lingua<br/>(Due colonne)
     </td>
-    <td>
+    <td style="vertical-align:top">
       word_count<br/>processed_language
     </td>
-    <td>
+    <td style="vertical-align:top">
       Un numero intero che indica il numero di parole presenti nel testo di input
       e un identificativo di due lettere per il modello di lingua utilizzato dal
       servizio per analizzare il testo.
@@ -200,12 +205,12 @@ Le seguenti colonne sono presenti solo se richiedi i punteggi non elaborati impo
 <table>
   <caption>Tabella 2. Colonne CSV per i punteggi non elaborati</caption>
   <tr>
-    <th style="width:40%; text-align:left; vertical-align:bottom">Raggruppamento <br/>(numero di colonne)</th>
+    <th style="width:40%; text-align:left; vertical-align:bottom">Raggruppamento<br/>(Numero di colonne)</th>
     <th style="width:60%; text-align:left; vertical-align:bottom">Etichette facoltative</th>
   </tr>
   <tr>
-    <td>
-      Punteggi non elaborati <br/>di Gradevolezza Big Five<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Punteggi non elaborati di Gradevolezza Big Five<br/>(Sette colonne)
     </td>
     <td>
       big5_agreeableness_raw<br/>facet_altruism_raw<br/>
@@ -215,8 +220,8 @@ Le seguenti colonne sono presenti solo se richiedi i punteggi non elaborati impo
     </td>
   </tr>
   <tr>
-    <td>
-      Punteggi non elaborati <br/>di Coscienziosità Big Five<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Punteggi non elaborati di Coscienziosità Big Five<br/>(Sette colonne)
     </td>
     <td>
       big5_conscientiousness_raw<br/>facet_achievement_striving_raw<br/>
@@ -226,8 +231,8 @@ Le seguenti colonne sono presenti solo se richiedi i punteggi non elaborati impo
     </td>
   </tr>
   <tr>
-    <td>
-      Punteggi non elaborati <br/>di Estroversione Big Five<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Punteggi non elaborati di Estroversione Big Five<br/>(Sette colonne)
     </td>
     <td>
       big5_extraversion_raw<br/>facet_activity_level_raw<br/>
@@ -237,8 +242,8 @@ Le seguenti colonne sono presenti solo se richiedi i punteggi non elaborati impo
     </td>
   </tr>
   <tr>
-    <td>
-      Punteggi non elaborati <br/>di Stabilità emotiva Big Five<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Punteggi non elaborati di Stabilità emotiva Big Five<br/>(Sette colonne)
     </td>
     <td>
       big5_neuroticism_raw<br/>facet_anger_raw<br/>
@@ -248,8 +253,8 @@ Le seguenti colonne sono presenti solo se richiedi i punteggi non elaborati impo
     </td>
   </tr>
   <tr>
-    <td>
-      Punteggi non elaborati <br/>di Apertura mentale Big Five<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Punteggi non elaborati di Apertura mentale Big Five<br/>(Sette colonne)
     </td>
     <td>
       big5_openness_raw<br/>facet_adventurousness_raw<br/>
@@ -259,8 +264,8 @@ Le seguenti colonne sono presenti solo se richiedi i punteggi non elaborati impo
     </td>
   </tr>
   <tr>
-    <td>
-      Punteggi non elaborati di Esigenze<br/>(12 colonne)
+    <td style="vertical-align:top">
+      Punteggi non elaborati di Esigenze<br/>(Dodici colonne)
     </td>
     <td>
       need_liberty_raw<br/>need_ideal_raw<br/>
@@ -272,8 +277,8 @@ Le seguenti colonne sono presenti solo se richiedi i punteggi non elaborati impo
     </td>
   </tr>
   <tr>
-    <td>
-      Punteggi non elaborati di Valori<br/>(5 colonne)
+    <td style="vertical-align:top">
+      Punteggi non elaborati di Valori<br/>(Cinque colonne)
     </td>
     <td>
       value_conservation_raw<br/>value_hedonism_raw<br/>
@@ -291,12 +296,12 @@ Le seguenti colonne sono sempre presenti nell'output CSV per tutte le richieste.
 <table>
   <caption>Tabella 3. Colonne CSV per significatività</caption>
   <tr>
-    <th style="width:40%; text-align:left; vertical-align:bottom">Raggruppamento <br/>(numero di colonne)</th>
+    <th style="width:40%; text-align:left; vertical-align:bottom">Raggruppamento<br/>(Numero di colonne)</th>
     <th style="width:60%; text-align:left; vertical-align:bottom">Etichette facoltative</th>
   </tr>
   <tr>
-    <td>
-      Significatività di <br/>Gradevolezza Big Five<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Significatività di Gradevolezza Big Five<br/>(Sette colonne)
     </td>
     <td>
       big5_agreeableness_significant<br/>facet_altruism_significant<br/>
@@ -306,8 +311,8 @@ Le seguenti colonne sono sempre presenti nell'output CSV per tutte le richieste.
     </td>
   </tr>
   <tr>
-    <td>
-      Significatività di <br/>Coscienziosità Big Five<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Significatività di Coscienziosità Big Five<br/>(Sette colonne)
     </td>
     <td>
       big5_conscientiousness_significant<br/>
@@ -318,8 +323,8 @@ Le seguenti colonne sono sempre presenti nell'output CSV per tutte le richieste.
     </td>
   </tr>
   <tr>
-    <td>
-      Significatività di <br/>Estroversione Big Five<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Significatività di Estroversione Big Five<br/>(Sette colonne)
     </td>
     <td>
       big5_extraversion_significant<br/>facet_activity_level_significant<br/>
@@ -329,8 +334,8 @@ Le seguenti colonne sono sempre presenti nell'output CSV per tutte le richieste.
     </td>
   </tr>
   <tr>
-    <td>
-      Significatività di <br/>Stabilità emotiva Big Five<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Significatività di Stabilità emotiva Big Five<br/>(Sette colonne)
     </td>
     <td>
       big5_neuroticism_significant<br/>facet_anger_significant<br/>
@@ -340,8 +345,8 @@ Le seguenti colonne sono sempre presenti nell'output CSV per tutte le richieste.
     </td>
   </tr>
   <tr>
-    <td>
-      Significatività di <br/>Apertura mentale Big Five<br/>(7 colonne)
+    <td style="vertical-align:top">
+      Significatività di Apertura mentale Big Five<br/>(Sette colonne)
     </td>
     <td>
       big5_openness_significant<br/>facet_adventurousness_significant<br/>
@@ -351,8 +356,8 @@ Le seguenti colonne sono sempre presenti nell'output CSV per tutte le richieste.
     </td>
   </tr>
   <tr>
-    <td>
-      Significatività di Esigenze<br/>(12 colonne)
+    <td style="vertical-align:top">
+      Significatività di Esigenze<br/>(Dodici colonne)
     </td>
     <td>
       need_liberty_significant<br/>need_ideal_significant<br/>
@@ -364,8 +369,8 @@ Le seguenti colonne sono sempre presenti nell'output CSV per tutte le richieste.
     </td>
   </tr>
   <tr>
-    <td>
-      Significatività di Valori<br/>(5 colonne)
+    <td style="vertical-align:top">
+      Significatività di Valori<br/>(Cinque colonne)
     </td>
     <td>
       value_conservation_significant<br/>value_hedonism_significant<br/>
@@ -384,14 +389,14 @@ Le seguenti colonne sono presenti solo se richiedi le preferenze di consumo impo
 <table style="width:90%">
   <caption>Tabella 4. Colonne CSV per le preferenze di consumo</caption>
   <tr>
-    <th style="width:40%; text-align:left; vertical-align:bottom">Raggruppamento <br/>(numero di colonne)</th>
+    <th style="width:40%; text-align:left; vertical-align:bottom">Raggruppamento<br/>(Numero di colonne)</th>
     <th style="width:60%; text-align:left; vertical-align:bottom">Etichette facoltative</th>
   </tr>
   <tr>
-    <td>
-      Punteggi per la categoria <br/>preferenze di acquisto<br/>(12 colonne)
+    <td style="vertical-align:top">
+      Punteggi per la categoria preferenze di acquisto<br/>(Dodici colonne)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_spur_of_moment<br/>
       consumption_preferences_credit_card_payment<br/>
       consumption_preferences_influence_brand_name<br/>
@@ -407,10 +412,10 @@ Le seguenti colonne sono presenti solo se richiedi le preferenze di consumo impo
     </td>
   </tr>
   <tr>
-    <td>
-      Punteggi per la categoria <br/>preferenze musicali<br/>(9 colonne)
+    <td style="vertical-align:top">
+      Punteggi per la categoria preferenze musicali<br/>(Nove colonne)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_music_rap<br/>
       consumption_preferences_music_country<br/>
       consumption_preferences_music_r_b<br/>
@@ -423,20 +428,20 @@ Le seguenti colonne sono presenti solo se richiedi le preferenze di consumo impo
     </td>
   </tr>
   <tr>
-    <td>
-      Punteggi per la categoria preferenze <br/>di salute e attività<br/>(3 colonne)
+    <td style="vertical-align:top">
+      Punteggi per la categoria preferenze di salute e attività<br/>(Tre colonne)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_gym_membership<br/>
       consumption_preferences_outdoor<br/>
       consumption_preferences_eat_out
     </td>
   </tr>
   <tr>
-    <td>
-      Punteggi per la categoria <br/>preferenze di film<br/>(10 colonne)
+    <td style="vertical-align:top">
+      Punteggi per la categoria preferenze di film<br/>(Dieci colonne)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_movie_romance<br/>
       consumption_preferences_movie_adventure<br/>
       consumption_preferences_movie_horror<br/>
@@ -450,10 +455,10 @@ Le seguenti colonne sono presenti solo se richiedi le preferenze di consumo impo
     </td>
   </tr>
   <tr>
-    <td>
-      Punteggi per la categoria <br/>preferenze di lettura<br/>(5 colonne)
+    <td style="vertical-align:top">
+      Punteggi per la categoria preferenze di lettura<br/>(Cinque colonne)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_read_frequency<br/>
       consumption_preferences_books_entertainment_magazines<br/>
       consumption_preferences_books_non_fiction<br/>
@@ -462,26 +467,26 @@ Le seguenti colonne sono presenti solo se richiedi le preferenze di consumo impo
     </td>
   </tr>
   <tr>
-    <td>
-      Punteggi per la categoria <br/>preferenze di volontariato<br/>(1 colonna)
+    <td style="vertical-align:top">
+      Punteggi per la categoria preferenze di volontariato<br/>(Una colonna)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_volunteer
     </td>
   </tr>
   <tr>
-    <td>
-      Punteggi per la categoria preferenze <br/>di interesse ambientale<br/>(1 colonna)
+    <td style="vertical-align:top">
+      Punteggi per la categoria preferenze di interesse ambientale<br/>(Una colonna)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_concerned_environment
     </td>
   </tr>
   <tr>
-    <td>
-      Punteggi per la categoria <br/>preferenze di imprenditorialità<br/>(1 colonna)
+    <td style="vertical-align:top">
+      Punteggi per la categoria preferenze di imprenditorialità<br/>(Una colonna)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_start_business
     </td>
   </tr>

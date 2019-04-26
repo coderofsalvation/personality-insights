@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -23,27 +28,29 @@ lastupdated: "2017-10-12"
 Il servizio {{site.data.keyword.personalityinsightsshort}} restituisce risultati numerici per ciascuna delle caratteristiche di personalità e comportamentali e per ogni preferenza di consumo. I valori differiscono nelle informazioni fornite.
 {: shortdesc}
 
-> **Nota:** per l'input in arabo e coreano, il servizio non è in grado di produrre percentili e punteggi non elaborati significativi per alcune delle caratteristiche della personalità. Per ulteriori informazioni, vedi [Limitazioni per l'input in arabo e coreano](#limitations).
+Per l'input in arabo e coreano, il servizio non è in grado di produrre percentili e punteggi non elaborati significativi per alcune delle caratteristiche della personalità. Per ulteriori informazioni, vedi [Limitazioni per l'input in arabo e coreano](#limitations).
+{: note}
 
 ## Percentili per le caratteristiche della personalità
 {: #percentiles}
 
-Per ogni richiesta, il servizio riporta sempre un punteggio normalizzato come `percentile` per ogni caratteristica della personalità Big Five, Valori ed Esigenze. I punteggi normalizzati rappresentano una classificazione percentile per ogni caratteristica in base alle qualità dedotte dal testo di input. Il servizio calcola i punteggi normalizzati confrontando il punteggio non elaborato per il testo dell'autore con i risultati di una popolazione campione. Il servizio riporta ogni percentile come un doppio nell'intervallo da 0 a 1.
+Per ogni richiesta, il servizio riporta sempre un punteggio normalizzato come `percentile` per ogni caratteristica della personalità Big Five, Valori ed Esigenze. I punteggi normalizzati rappresentano una classificazione percentile per ogni caratteristica basata sulle qualità che il servizio deduce dal testo di input. Il servizio calcola i punteggi normalizzati confrontando il punteggio non elaborato per il testo dell'autore con i risultati di una popolazione campione. Il servizio riporta ogni percentile come un doppio nell'intervallo da 0 a 1.
 
-Ad esempio, un percentile di `0.64980796071382` per la caratteristica della personalità `big5_extraversion` indica che l'autore del testo ottenuto un punteggio nel 65° percentile per quella caratteristica. La scrittura dell'autore mostra la tendenza a una misura superiore al 64 percento e inferiore al 34 percento della popolazione campione. La precisione del percentile dipende dal numero di parole che sono state inoltrate come input con la richiesta; per ulteriori informazioni, vedi [Immissione di input sufficiente](/docs/services/personality-insights/input.html#sufficient).
+Ad esempio, un percentile di `0.64980796071382` per la caratteristica della personalità `big5_extraversion` indica che il punteggio dell'autore per tale caratteristica è nel 65° percentile. La scrittura dell'autore mostra la tendenza a una misura superiore al 64 percento e inferiore al 34 percento della popolazione campione. La precisione del percentile dipende dal numero di parole che sono state inoltrate come input con la richiesta. Per ulteriori informazioni, vedi [Immissione di input sufficiente](/docs/services/personality-insights?topic=personality-insights-input#sufficient).
 
-> **Nota:** non esiste alcuna relazione matematica tra i percentili riportati per le dimensioni e gli aspetti Big Five. Il servizio calcola il percentile normalizzato per ogni dimensione e aspetto in modo indipendente in base alle correlazioni tra i punteggi dei partecipanti all'indagine per tale dimensione o aspetto e le parole che utilizzano. Pertanto, anche se gli aspetti forniscono descrizioni più dettagliate delle dimensioni, l'aggiunta dei punteggi per i sei aspetti di una dimensione non produce necessariamente il percentile per quella dimensione. Lo stesso vale per i punteggi non elaborati.
+Non esiste alcuna relazione matematica tra i percentili riportati per le dimensioni e gli aspetti Big Five. Il servizio calcola il percentile normalizzato per ogni dimensione e aspetto in modo indipendente in base alle correlazioni tra i punteggi dei partecipanti all'indagine per tale dimensione o aspetto e le parole che utilizzano. Pertanto, anche se gli aspetti forniscono descrizioni più dettagliate delle dimensioni, l'aggiunta dei punteggi per i sei aspetti di una dimensione non produce necessariamente il percentile per quella dimensione. Lo stesso vale per i punteggi non elaborati.
+{: note}
 
 ## Punteggi non elaborati per le caratteristiche della personalità
-{: #rawScores}
+{: #rawScores-numeric}
 
-Se specifichi `true` per il parametro di query `raw_scores` della richiesta, il servizio riporta un `raw_score` per ogni caratteristica della personalità. I punteggi non elaborati rappresentano il punteggio per la specifica caratteristica basato esclusivamente sul testo dell'autore e sul modello di quella caratteristica, senza confrontare i risultati con una popolazione campione. I punteggi non elaborati possono essere interpretati come i punteggi che l'autore potrebbe ricevere effettuando un test della personalità.
+Se specifichi `true` per il parametro di query `raw_scores` della richiesta, il servizio riporta un `raw_score` per ogni caratteristica della personalità. I punteggi non elaborati rappresentano il punteggio per una caratteristica che si basa esclusivamente sul testo dell'autore e sul modello di quella caratteristica. Quando genera punteggi non elaborati, il servizio non confronta i risultati con una popolazione campione. I punteggi non elaborati possono essere interpretati come i punteggi che l'autore potrebbe ricevere effettuando un test della personalità.
 
 Il servizio riporta ogni punteggio non elaborato come un doppio nell'intervallo da 0 a 1. Un punteggio più alto indica generalmente una maggiore probabilità che l'autore abbia quella caratteristica. Tuttavia, i punteggi non elaborati devono essere considerati nell'insieme: l'intervallo di valori in pratica potrebbe essere molto più piccolo di da 0 a 1, quindi un singolo punteggio deve essere considerato nel contesto dei punteggi complessivi e del loro intervallo. Ma in generale, un punteggio non elaborato, come ad esempio `0.56817738781166` per la caratteristica della personalità `big5_extraversion` indica che l'autore avrebbe probabilmente raggiunto questo punteggio con un test della personalità. Confronta questo punteggio non elaborato con il percentile normalizzato riportato per lo stesso autore e la stessa caratteristica nella sezione precedente.
 
 Il servizio rende disponibili i punteggi non elaborati per gli utenti che desiderano applicare una normalizzazione personalizzata per uno scenario specifico o che non richiedono un confronto con una popolazione campione. Gli utenti che vogliono sapere come vengono confrontate le caratteristiche dell'autore con una vasta popolazione campione possono utilizzare i punteggi normalizzati. Gli utenti che vogliono ricavare i propri punteggi percentili normalizzati dai dati non elaborati possono confrontare i punteggi non elaborati con una popolazione campione diversa e applicare un diverso approccio alla normalizzazione.
 
-Per normalizzare un punteggio non elaborato in un percentile per una caratteristica specifica, confronta il punteggio non elaborato con una popolazione campione per la quale sono noti la media e la deviazione standard per la caratteristica. Ad esempio, {{site.data.keyword.IBM_notm}} ha condotto studi per raccogliere dati da una vasta popolazione di utenti di Twitter. {{site.data.keyword.IBM_notm}} ha calcolato i punteggi degli utenti per ciascuna delle caratteristiche della personalità e ha quindi stabilito la media e la deviazione standard per ogni caratteristica. Per calcolare il punteggio percentile per un punteggio non elaborato dedotto dalla sua analisi del testo di input, il servizio utilizza la media e la deviazione standard derivate dalla popolazione di Twitter campione per quella caratteristica.
+Per normalizzare un punteggio non elaborato in un percentile per una caratteristica specifica, confronta il punteggio non elaborato con una popolazione campione per la quale sono noti la media e la deviazione standard per la caratteristica. Ad esempio, {{site.data.keyword.IBM_notm}} ha condotto studi per raccogliere dati da una vasta popolazione di utenti di Twitter. {{site.data.keyword.IBM_notm}} ha calcolato i punteggi degli utenti per ciascuna delle caratteristiche della personalità e ha quindi stabilito la media e la deviazione standard per ogni caratteristica. Per calcolare il punteggio percentile per un punteggio non elaborato dedotto dalla sua analisi del testo di input, il servizio utilizza la media e la deviazione standard derivate dalla popolazione di Twitter campione per quella caratteristica. 
 
 ## Percentuali per le caratteristiche comportamentali
 {: #percentages}
@@ -55,15 +62,15 @@ Se inoltri dei dati JSON i cui elementi di contenuto includono indicatori di dat
 
 Se specifichi `true` per il parametro di query `consumption_preferences` della richiesta, il servizio riporta le preferenze di consumo che includono un `punteggio` per ogni preferenza. Il servizio ricava il punteggio dalle caratteristiche della personalità che deduce dal testo di input. Il punteggio è un doppio che indica quanto è probabile che l'autore del testo preferisca l'oggetto. Si tratta di un'indicazione di preferenza, non una percentuale normalizzata.
 
-Per alcune preferenze, il punteggio è uno dei seguenti tre valori:
+Per alcune preferenze, il punteggio è uno dei tre valori: 
 
--   `0.0`: è molto improbabile che l'autore preferisca l'oggetto. Per alcune preferenze, puoi interpretare il valore nel senso che l'autore ha un livello di interesse molto basso. 
--   `0.5`: l'autore è neutrale rispetto all'oggetto. Per alcune preferenze, il valore può significare che l'autore ha un livello medio di interesse.
+-   `0.0`: è molto improbabile che l'autore preferisca l'oggetto. Per alcune preferenze, puoi interpretare il valore nel senso che l'autore ha un livello di interesse basso. 
+-   `0.5`: l'autore è neutrale riguardo l'oggetto. Per alcune preferenze, il valore può significare che l'autore ha un livello medio di interesse.
 -   `1.0`: è molto probabile che l'autore preferisca l'oggetto. Per alcune preferenze, il valore indica un alto livello di interesse.
 
 Per altre preferenze, il punteggio rappresenta un valore binario. È improbabile (`0.0`) o probabile (`1.0`) che l'autore del testo di input abbia un interesse per l'oggetto o l'autore ha un livello di interesse basso o alto. In alcuni casi, il punteggio può rappresentare una semplice risposta sì o no (ad esempio, la probabilità che l'autore abbia esperienza di volontariato per cause sociali).
 
-Per un elenco completo di tutte le preferenze per categoria e l'intervallo dei loro risultati, vedi [Preferenze di consumo](/docs/services/personality-insights/preferences.html).
+Per un elenco completo di tutte le preferenze per categoria e l'intervallo dei loro risultati, vedi [Preferenze di consumo](/docs/services/personality-insights?topic=personality-insights-preferences).
 
 ## Limitazioni per l'input in arabo e coreano
 {: #limitations}
@@ -80,7 +87,7 @@ Per l'input in arabo e coreano, i modelli del servizio non sono in grado di prod
       Risultati in arabo che<br/>non sono significativi
     </th>
     <th style="text-align:left; vertical-align:bottom; width:40%">
-      Risultati in coreano che <br/>non sono significativi
+      Risultati in coreano che<br/>non sono significativi
     </th>
   </tr>
   <tr>

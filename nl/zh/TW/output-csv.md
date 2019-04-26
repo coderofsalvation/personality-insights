@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,14 +25,14 @@ lastupdated: "2017-10-12"
 # 瞭解 CSV 設定檔
 {: #outputCSV}
 
-當您以要求的 `Accept` 標頭來指定 `text/csv` 時，服務會以逗點區隔值 (CSV) 格式傳回其分析的結果。CSV 輸出提供的資訊與 JSON 輸出所提供的資訊類似。如同 JSON 一樣，CSV 輸出中的資訊取決於輸入是否代表時間戳記資料，以及使用者是否要求原始評分和消費喜好。
+當您以要求的 `Accept` 標頭來指定 `text/csv` 時，服務會以逗點區隔值 (CSV) 格式傳回其分析的結果。CSV 輸出提供的資訊與 JSON 輸出所提供的資訊類似。如同 JSON 一樣，CSV 輸出中的資訊取決於輸入資料是否為時間戳記，以及您是否要求原始評分和消費喜好。
 {: shortdesc}
 
-不過，與 JSON 不同的是，CSV 輸出是以固定數目的直欄傳回。輸出的第一列是由選用的直欄標籤組成，只有在您將要求的 `csv_headers` 查詢參數設為 `true` 時，才會包括這些直欄標籤。輸出的第二列一律會呈現，其中包含分析的結果。
+與 JSON 不同的是，CSV 輸出是以固定數目的直欄傳回。輸出的第一列是由選用的直欄標籤組成，只有在您將要求的 `csv_headers` 查詢參數設為 `true` 時，才會包括這些直欄標籤。輸出的第二列一律會呈現，其中包含分析的結果。
 
 下列各節會列出並簡短說明 CSV 輸出的所有直欄，並依其出現在結果中的精確順序排列。這些表格會依邏輯分組來說明直欄，包括每一個群組中的直欄數及其選用標籤。除了字數之外，所有數值資料都會以倍精準數值傳回。
 
-如需 CSV 直欄意義的相關資訊，請參閱[瞭解 JSON 設定檔](/docs/services/personality-insights/output.html)和[解譯數值結果](/docs/services/personality-insights/numeric.html)。
+如需 CSV 直欄意義的相關資訊，請參閱[瞭解 JSON 設定檔](/docs/services/personality-insights?topic=personality-insights-output)和[解譯數值結果](/docs/services/personality-insights?topic=personality-insights-numeric)。
 
 ## 基本特質和 meta 資料
 {: #basicCSV}
@@ -42,80 +47,80 @@ lastupdated: "2017-10-12"
     <th style="text-align:left; vertical-align:bottom">說明</th>
   </tr>
   <tr>
-    <td>
-      五大性格特質 - 隨和<br/>百分位數<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      五大性格特質隨和百分位數<br/>（7 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_agreeableness<br/>facet_altruism<br/>
       facet_cooperation<br/>facet_modesty<br/>
       facet_morality<br/>facet_sympathy<br/>
       facet_trust
     </td>
-    <td>
-      有關已指名維度或面向之文字作者的正規化百分位數評分。
+    <td style="vertical-align:top">
+      針對已指名維度或面向之文字作者的正規化百分位數評分。
     </td>
   </tr>
   <tr>
-    <td>
-      五大性格特質 - 責任感<br/>百分位數<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      五大性格特質責任感百分位數<br/>（7 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_conscientiousness<br/>facet_achievement_striving
       <br/>facet_cautiousness<br/>facet_dutifulness<br/>
       facet_orderliness<br/>facet_self_discipline<br/>
       facet_self_efficacy
     </td>
-    <td>
-      有關已指名維度或面向之文字作者的正規化百分位數評分。
+    <td style="vertical-align:top">
+      針對已指名維度或面向之文字作者的正規化百分位數評分。
     </td>
   </tr>
   <tr>
-    <td>
-      五大性格特質 - 外向<br/>百分位數<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      五大性格特質外向百分位數<br/>（7 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_extraversion<br/>facet_activity_level
       <br/>facet_assertiveness<br/>facet_cheerfulness<br/>
       facet_excitement_seeking<br/>facet_friendliness<br/>
       facet_gregariousness
     </td>
-    <td>
-      有關已指名維度或面向之文字作者的正規化百分位數評分。
+    <td style="vertical-align:top">
+      針對已指名維度或面向之文字作者的正規化百分位數評分。
     </td>
   </tr>
   <tr>
-    <td>
-      五大性格特質 - 情緒表達幅度<br/>百分位數<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      五大性格特質情緒表達幅度百分位數<br/>（7 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_neuroticism<br/>facet_anger<br/>
       facet_anxiety<br/>facet_depression<br/>
       facet_immoderation<br/>facet_self_consciousness<br/>
       facet_vulnerability
     </td>
-    <td>
-      有關已指名維度或面向之文字作者的正規化百分位數評分。
+    <td style="vertical-align:top">
+      針對已指名維度或面向之文字作者的正規化百分位數評分。
     </td>
   </tr>
   <tr>
-    <td>
-      五大性格特質 - 開放性<br/>百分位數<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      五大性格特質開放性百分位數<br/>（7 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_openness<br/>facet_adventurousness<br/>
       facet_artistic_interests<br/>facet_emotionality<br/>
       facet_imagination<br/>facet_intellect<br/>
       facet_liberalism
     </td>
-    <td>
-      有關已指名維度或面向之文字作者的正規化百分位數評分。
+    <td style="vertical-align:top">
+      針對已指名維度或面向之文字作者的正規化百分位數評分。
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       需求百分位數<br/>（12 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       need_liberty<br/>need_ideal<br/>
       need_love<br/>need_practicality<br/>
       need_self_expression<br/>need_stability<br/>
@@ -123,54 +128,56 @@ lastupdated: "2017-10-12"
       need_closeness<br/>need_curiosity<br/>
       need_excitement<br/>need_harmony
     </td>
-    <td>
-      有關已指名需求之文字作者的正規化百分位數評分。
+    <td style="vertical-align:top">
+      針對已指名需求之文字作者的正規化百分位數評分。
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       價值觀百分位數<br/>（5 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       value_conservation<br/>value_hedonism<br/>
       value_openness_to_change<br/>value_self_enhancement<br/>
       value_self_transcendence
     </td>
-    <td>
-      有關已指名價值觀之文字作者的正規化百分位數評分。
+    <td style="vertical-align:top">
+      針對已指名價值觀之文字作者的正規化百分位數評分。
     </td>
   </tr>
   <tr>
-    <td>
-      星期幾<br/>百分比<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      星期幾百分比<br/>（7 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       behavior_sunday<br/>behavior_monday<br/>
       behavior_tuesday<br/>behavior_wednesday<br/>
       behavior_thursday<br/>behavior_friday<br/>
       behavior_saturday
     </td>
-    <td>
-      如果輸入文字有時間戳記，則為與星期幾相關聯的輸入百分比；如果輸入沒有時間戳記，則百分比全部為 <code>0.0</code>。</td>
+    <td style="vertical-align:top">
+      <em>如果輸入文字有時間戳記，</em>則為與星期幾相關聯的輸入百分比。否則百分比全部為 <code>0.0</code>。
+    </td>
   </tr>
   <tr>
-    <td>
-      幾點<br/>百分比<br/>（24 個直欄）
+    <td style="vertical-align:top">
+      幾點百分比<br/>（24 個直欄）
     </td>
-    <td>
-      behavior_0000<br/><em>至</em><br/>behavior_2300
+    <td style="vertical-align:top">
+      behavior_0000 <em>到</em> behavior_2300
     </td>
-    <td>
-      如果輸入文字有時間戳記，則為與幾點相關聯的輸入百分比；如果輸入沒有時間戳記，則百分比全部為 <code>0.0</code>。</td>
+    <td style="vertical-align:top">
+      <em>如果輸入文字有時間戳記，</em>則為與幾點相關聯的輸入百分比。否則百分比全部為 <code>0.0</code>。
+    </td>
   </tr>
   <tr>
-    <td>
-      字數和<br/>語言<br/>（2 個直欄）
+    <td style="vertical-align:top">
+      字數和語言<br/>（2 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       word_count<br/>processed_language
     </td>
-    <td>
+    <td style="vertical-align:top">
       一個整數，指出輸入文字中的字數；以及一個雙字母 ID，代表服務用來分析文字的語言模型。
     </td>
   </tr>
@@ -188,8 +195,8 @@ lastupdated: "2017-10-12"
     <th style="width:60%; text-align:left; vertical-align:bottom">選用標籤</th>
   </tr>
   <tr>
-    <td>
-      五大性格特質 - 隨和<br/>原始評分<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      五大性格特質隨和原始評分<br/>（7 個直欄）
     </td>
     <td>
       big5_agreeableness_raw<br/>facet_altruism_raw<br/>
@@ -199,8 +206,8 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
-      五大性格特質 - 責任感<br/>原始評分<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      五大性格特質責任感原始評分<br/>（7 個直欄）
     </td>
     <td>
       big5_conscientiousness_raw<br/>facet_achievement_striving_raw<br/>
@@ -210,8 +217,8 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
-      五大性格特質 - 外向<br/>原始評分<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      五大性格特質外向原始評分<br/>（7 個直欄）
     </td>
     <td>
       big5_extraversion_raw<br/>facet_activity_level_raw<br/>
@@ -221,8 +228,8 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
-      五大性格特質 - 情緒表達幅度<br/>原始評分<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      五大性格特質情緒表達幅度原始評分<br/>（7 個直欄）
     </td>
     <td>
       big5_neuroticism_raw<br/>facet_anger_raw<br/>
@@ -232,8 +239,8 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
-      五大性格特質 - 開放性<br/>原始評分<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      五大性格特質開放性原始評分<br/>（7 個直欄）
     </td>
     <td>
       big5_openness_raw<br/>facet_adventurousness_raw<br/>
@@ -243,7 +250,7 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       需求原始評分<br/>（12 個直欄）
     </td>
     <td>
@@ -256,7 +263,7 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       價值觀原始評分<br/>（5 個直欄）
     </td>
     <td>
@@ -279,8 +286,8 @@ lastupdated: "2017-10-12"
     <th style="width:60%; text-align:left; vertical-align:bottom">選用標籤</th>
   </tr>
   <tr>
-    <td>
-      五大性格特質 - 隨和<br/>重要性<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      五大性格特質隨和重要性<br/>（7 個直欄）
     </td>
     <td>
       big5_agreeableness_significant<br/>facet_altruism_significant<br/>
@@ -290,8 +297,8 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
-      五大性格特質 - 責任感<br/>重要性<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      五大性格特質責任感重要性<br/>（7 個直欄）
     </td>
     <td>
       big5_conscientiousness_significant<br/>
@@ -302,8 +309,8 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
-      五大性格特質 - 外向<br/>重要性<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      五大性格特質外向重要性<br/>（7 個直欄）
     </td>
     <td>
       big5_extraversion_significant<br/>facet_activity_level_significant<br/>
@@ -313,8 +320,8 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
-      五大性格特質 - 情緒表達幅度<br/>重要性<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      五大性格特質情緒表達幅度重要性<br/>（7 個直欄）
     </td>
     <td>
       big5_neuroticism_significant<br/>facet_anger_significant<br/>
@@ -324,8 +331,8 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
-      五大性格特質 - 開放性<br/>重要性<br/>（7 個直欄）
+    <td style="vertical-align:top">
+      五大性格特質開放性重要性<br/>（7 個直欄）
     </td>
     <td>
       big5_openness_significant<br/>facet_adventurousness_significant<br/>
@@ -335,7 +342,7 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       需求原始重要性<br/>（12 個直欄）
     </td>
     <td>
@@ -348,7 +355,7 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       價值觀重要性<br/>（5 個直欄）
     </td>
     <td>
@@ -372,10 +379,10 @@ lastupdated: "2017-10-12"
     <th style="width:60%; text-align:left; vertical-align:bottom">選用標籤</th>
   </tr>
   <tr>
-    <td>
-      購物喜好<br/>種類評分<br/>（12 個直欄）
+    <td style="vertical-align:top">
+      採購喜好種類評分<br/>（12 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_spur_of_moment<br/>
       consumption_preferences_credit_card_payment<br/>
       consumption_preferences_influence_brand_name<br/>
@@ -391,10 +398,10 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
-      音樂喜好<br/>種類評分<br/>（9 個直欄）
+    <td style="vertical-align:top">
+      音樂喜好種類評分<br/>（9 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_music_rap<br/>
       consumption_preferences_music_country<br/>
       consumption_preferences_music_r_b<br/>
@@ -407,20 +414,20 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
-      健康和活動喜好<br/>種類評分<br/>（3 個直欄）
+    <td style="vertical-align:top">
+      健康和活動喜好種類評分<br/>（3 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_gym_membership<br/>
       consumption_preferences_outdoor<br/>
       consumption_preferences_eat_out
     </td>
   </tr>
   <tr>
-    <td>
-      電影喜好<br/>種類評分<br/>（10 個直欄）
+    <td style="vertical-align:top">
+      電影喜好種類評分<br/>（10 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_movie_romance<br/>
       consumption_preferences_movie_adventure<br/>
       consumption_preferences_movie_horror<br/>
@@ -434,10 +441,10 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
-      閱讀喜好<br/>種類評分<br/>（5 個直欄）
+    <td style="vertical-align:top">
+      閱讀喜好種類評分<br/>（5 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_read_frequency<br/>
       consumption_preferences_books_entertainment_magazines<br/>
       consumption_preferences_books_non_fiction<br/>
@@ -446,26 +453,26 @@ lastupdated: "2017-10-12"
     </td>
   </tr>
   <tr>
-    <td>
-      志願服務喜好<br/>種類評分<br/>（1 個直欄）
+    <td style="vertical-align:top">
+      志願服務喜好種類評分<br/>（1 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_volunteer
     </td>
   </tr>
   <tr>
-    <td>
-      環境關懷喜好<br/>種類評分<br/>（1 個直欄）
+    <td style="vertical-align:top">
+      環境關懷喜好種類評分<br/>（1 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_concerned_environment
     </td>
   </tr>
   <tr>
-    <td>
-      企業家精神喜好<br/>種類評分<br/>（1 個直欄）
+    <td style="vertical-align:top">
+      企業家精神喜好種類評分<br/>（1 個直欄）
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_start_business
     </td>
   </tr>

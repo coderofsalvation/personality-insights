@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-08-11"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -22,6 +27,8 @@ lastupdated: "2017-08-11"
 
 *需求* 在高層次上說明產品的哪些方面可能會與輸入文字的作者產生共鳴。下表說明服務所評估的十二種需求。
 {: shortdesc}
+
+大於 0.5 的平均值的評分，表示特質的平均趨勢為大於平均值。若評分等於或大於 0.75 ，表示特質在辨識方面較容易；這類評分被視為*高*。如需相關資訊，請參閱[性格特質的百分位數](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles)。
 
 <table>
   <caption>表 1. 需求</caption>

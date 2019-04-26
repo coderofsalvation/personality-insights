@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-28"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,29 +25,29 @@ lastupdated: "2017-10-28"
 # JSON プロファイルの解釈
 {: #output}
 
-コンテンツを分析するために `POST /v3/profile` メソッドを使用すると、要求の `Accept` ヘッダーで `application/json` が指定されている場合、またはデフォルトで、本サービスは分析結果を JSON `Profile` オブジェクトとして返します。JSON 出力のスコープは、要求で指定されたパラメーターと、入力テキストがタイム・スタンプ付きデータ (例えば、Twitter フィードに関連付けられたテキスト) を表しているかどうかに基づきます。
+コンテンツを分析するために `POST /v3/profile` メソッドを使用すると、要求の `Accept` ヘッダーで `application/json` が指定されている場合、本サービスは分析結果を JSON `Profile` オブジェクトとして返します。JSON 出力のスコープは、要求で指定されたパラメーターに基づきます。 さらに、JSON 出力のスコープは Twitter フィードに関連付けられたテキストなど、入力テキストがタイム・スタンプ付きデータを表しているかどうかによっても変わります。
 {: shortdesc}
 
-以降のセクションで、JSON フォーマットの応答のコンテンツを説明します。すべての出力例は、[入門チュートリアル](/docs/services/personality-insights/getting-started.html)で使用されているサンプル JSON ファイル <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン" class="style-scope doc-content"></a> によって生成されたものです。CSV 出力について詳しくは、『[CSV プロファイルの解釈](/docs/services/personality-insights/output-csv.html)』を参照してください。
+以降のセクションで、JSON フォーマットの応答のコンテンツを説明します。 すべての出力例は、[入門チュートリアル](/docs/services/personality-insights?topic=personality-insights-gettingStarted)で使用されているサンプル JSON ファイル <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> によって生成されたものです。 CSV 出力について詳しくは、『[CSV プロファイルの解釈](/docs/services/personality-insights?topic=personality-insights-outputCSV)』を参照してください。
 
 ## Profile オブジェクト
 {: #outputJSON}
 
-`Profile` オブジェクトは、本サービスによって返される最上位の JSON オブジェクトです。このオブジェクトには以下のフィールドがあります。
+`Profile` オブジェクトは、本サービスによって返される最上位の JSON オブジェクトです。 このオブジェクトには以下のフィールドがあります。
 
--   `word_count` (integer) は、入力コンテンツのうち、プロファイルを生成するために使用された単語の数を示します。要求が大量のコンテンツを送信した場合、この数は入力の単語数を下回ることがあります。単語数が最小しきい値に満たない場合、出力には追加ガイダンスを提供する `word_count_message` フィールドも含まれます。
+-   `word_count` (integer) は、入力コンテンツのうち、プロファイルを生成するために使用された単語の数を示します。 要求で大量のコンテンツを送信した場合、この数値は入力の単語数を下回ることがあります。単語数が最小しきい値に満たない場合、出力にはさらなるガイダンスを提供する `word_count_message` フィールドが含まれます。
 -   `processed language` (string) は、入力を処理するために本サービスが使用した言語モデルを示します。`ar` (アラビア語)、`en` (英語)、`es` (スペイン語)、`ja` (日本語)、または `ko` (韓国語) のいずれかです。
 -   `personality` は、入力テキストから推論されたビッグ・ファイブのディメンションおよびファセットを記述する `Trait` オブジェクトの再帰的配列です。
 -   `needs` は、入力テキストから推論されたニーズを記述する `Trait` オブジェクトの配列です。
 -   `values` は、入力テキストから推論された価値を記述する `Trait` オブジェクトの配列です。
--   `behavior` は、コンテンツが曜日および時刻にどのように分布しているのかを記述する `Behavior` オブジェクトの配列です。JSON 入力にタイム・スタンプが付いている場合のみ、本サービスはこのフィールドを返します。
--   `consumption_preferences` は、各消費嗜好性カテゴリーの結果を提供する `ConsumptionPreferencesCategory` オブジェクトの配列です。この配列の要素は、そのカテゴリーの個々の消費嗜好性の情報を提供します。要求の `consumption_preferences` 照会パラメーターが `true` に設定されている場合のみ、本サービスはこのフィールドを返します。
--   `warnings` は、入力テキストに関連するメッセージを提供する `Warning` オブジェクトの配列です。入力が警告を生成しなかった場合、この配列は空です。
+-   `behavior` は、コンテンツが曜日および時刻にどのように分布しているのかを記述する `Behavior` オブジェクトの配列です。 JSON 入力にタイム・スタンプが付いている場合のみ、本サービスはこのフィールドを返します。
+-   `consumption_preferences` は、各消費嗜好性カテゴリーの結果を提供する `ConsumptionPreferencesCategory` オブジェクトの配列です。 この配列の要素は、そのカテゴリーの個々の消費嗜好性の情報を提供します。 要求の `consumption_preferences` 照会パラメーターが `true` に設定されている場合のみ、本サービスはこのフィールドを返します。
+-   `warnings` は、入力テキストに関するメッセージを提供する `Warning` オブジェクトの配列です。入力が警告を生成しなかった場合、この配列は空です。
 
 ### 応答例
 {: #JSONExample}
 
-以下の出力例は、`Profile` オブジェクトの上位の構造を示します。出力には、`personality` フィールド、`needs` フィールド、および `values` フィールドが必ず含まれます。入力がタイム・スタンプ付き JSON の場合、応答には `behavior` フィールドが含まれます。また、要求で消費嗜好性が要求された場合、応答には `consumption_preferences` フィールドが含まれます。この例では、入力は警告を生成しません。
+以下の出力例は、`Profile` オブジェクトの上位の構造を示します。 出力には、`personality` フィールド、`needs` フィールド、および `values` フィールドが必ず含まれます。 入力がタイム・スタンプ付き JSON の場合、応答には `behavior` フィールドが含まれます。 また、要求で消費嗜好性が要求された場合、応答には `consumption_preferences` フィールドが含まれます。 この例では、入力は警告を生成しません。
 
 ```javascript
 {
@@ -71,27 +76,27 @@ lastupdated: "2017-10-28"
 ## パーソナリティー特性の出力
 {: #traitJSON}
 
-すべてのタイプの入力に対して、`Profile` オブジェクトには、`personality` フィールド、`needs` フィールド、および `values` フィールドが必ず含まれます。これらのフィールドには、それぞれ、特性のタイプに応じた属性についてのパーソナリティー特性を記述する `Trait` オブジェクトの配列が含まれます。ニーズおよび価値の特性の場合、配列は特性を記述する単一レベルからなります。ビッグ・ファイブの特性の場合、第 1 レベルの配列がディメンションを記述し、第 2 レベルの配列が各ディメンションのファセットを記述します。
+すべてのタイプの入力に対して、`Profile` オブジェクトには、`personality` フィールド、`needs` フィールド、および `values` フィールドが必ず含まれます。 これらのフィールドには、それぞれ、特性のタイプに応じた属性についてのパーソナリティー特性を記述する `Trait` オブジェクトの配列が含まれます。 ニーズおよび価値の特性の場合、配列は特性を記述する単一レベルからなります。 ビッグ・ファイブの特性の場合、第 1 レベルの配列がディメンションを記述し、第 2 レベルの配列が各ディメンションのファセットを記述します。
 
 -   `trait_id` (string) は、特性の固有 ID であり、結果がどの特性に関連したものなのかを示します。
-    -   `big5_characteristic`: ビッグ・ファイブのパーソナリティーのディメンション
-    -   `facet_characteristic`: ビッグ・ファイブのパーソナリティーのファセット
-    -   `need_characteristic`: ニーズ
-    -   `value_characteristic`: 価値
+    -   `big5_{characteristic}`: ビッグ・ファイブのパーソナリティーのディメンション
+    -   `facet_{characteristic}`: ビッグ・ファイブのパーソナリティーのファセット
+    -   `need_{characteristic}`: ニーズ
+    -   `value_{characteristic}`: 価値
 -   `name` (string) は、ユーザーに表示される、特性の名前です。
 -   `category` (string) は特性のカテゴリーです。
     -   `personality`: ビッグ・ファイブのパーソナリティー特性
     -   `needs`: ニーズ
     -   `values`: 価値
--   `percentile` (double) は、特性の正規化済み百分位数スコアです。詳しくは、『[パーソナリティー特性の百分位数](/docs/services/personality-insights/numeric.html#percentiles)』を参照してください。
--   `raw_score` (double) は、特性のロー・スコアです。このフィールドが返されるのは、`raw_scores` 照会パラメーターを `true` に設定することでロー・スコアを要求した場合のみです。詳しくは、『[パーソナリティー特性のロー・スコア](/docs/services/personality-insights/numeric.html#rawScores)』を参照してください。
--   `significant` (boolean) は、入力言語で特性が有意かどうかを示します。英語、スペイン語、および日本語の入力では、すべての特性でこのフィールドは常に `true` です。このフィールドは、アラビア語および韓国語の入力に対して本サービスのモデルが意味のある結果を生成できないような一部の特性では `false` です。詳しくは、『[アラビア語および韓国語の入力の制限事項](/docs/services/personality-insights/numeric.html#limitations)』を参照してください。
--   `children` は、入力テキストから推論されたビッグ・ファイブの各ディメンションのファセットに関する詳しい結果を提供する `Trait` オブジェクトの配列です。この配列は、ビッグ・ファイブのディメンションに対してのみ返されます。
+-   `percentile` (double) は、特性の正規化済み百分位数スコアです。 詳しくは、『[パーソナリティー特性の百分位数](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles)』を参照してください。
+-   `raw_score` (double) は、特性のロー・スコアです。 このフィールドが返されるのは、`raw_scores` 照会パラメーターを `true` に設定することでロー・スコアを要求した場合のみです。 詳しくは、『[パーソナリティー特性のロー・スコア](/docs/services/personality-insights?topic=personality-insights-numeric#rawScores-numeric)』を参照してください。
+-   `significant` (boolean) は、入力言語で特性が有意かどうかを示します。 英語、スペイン語、および日本語の入力では、すべての特性でこのフィールドは常に `true` です。 このフィールドは、アラビア語および韓国語の入力に対して本サービスのモデルが意味のある結果を生成できないような一部の特性では `false` です。 詳しくは、『[アラビア語および韓国語の入力の制限事項](/docs/services/personality-insights?topic=personality-insights-numeric#limitations)』を参照してください。
+-   `children` は、入力テキストから推論されたビッグ・ファイブの各ディメンションのファセットに関する詳しい結果を提供する `Trait` オブジェクトの配列です。 この配列は、ビッグ・ファイブのディメンションに対してのみ返されます。
 
 ### 応答例
 {: #traitExample}
 
-以下の出力例は、ビッグ・ファイブ、ニーズ、および価値の特性に関する出力の断片を示します。説明したように、ビッグ・ファイブの特性は、それぞれのファセットに対して `children` の配列を持ちます。
+以下の出力例は、ビッグ・ファイブ、ニーズ、および価値の特性に関する出力の断片を示します。 説明したように、ビッグ・ファイブの特性は、それぞれのファセットに対して `children` の配列を持ちます。
 
 ```javascript
 {
@@ -222,14 +227,14 @@ lastupdated: "2017-10-28"
 ## 行動出力
 {: #behaviorJSON}
 
-本サービスへの入力が、個々のコンテンツ・アイテムにタイム・スタンプが付いた JSON である場合、`Profile` オブジェクトに `behavior` フィールドが含まれます。このフィールドは、曜日および時刻ごとに 1 つの `Behavior` オブジェクトを含みます。
+本サービスへの入力が、個々のコンテンツ・アイテムにタイム・スタンプが付いた JSON である場合、`Profile` オブジェクトに `behavior` フィールドが含まれます。 このフィールドは、曜日および時刻ごとに 1 つの `Behavior` オブジェクトを含みます。
 
 -   `trait_id` (string) は、特性の固有 ID であり、結果がどの特性に関連したものなのかを示します。
-    -   `behavior_day` は、曜日を表します (例: `behavior_sunday`)。
-    -   `behavior_hour` は、時刻を表します (例: `behavior_0000`)。
+    -   `behavior_{day}` は、曜日を表します (例: `behavior_sunday`)。
+    -   `behavior_{hour}` は、時刻を表します (例: `behavior_0000`)。
 -   `name` (string) は、ユーザーに表示される、特性の名前です。
 -   `category` (string) は、特性のカテゴリーであり、常に `behavior` です。
--   `percentage` (double) は、その曜日または時刻に発生したコンテンツ・アイテムのパーセンテージです。詳しくは、『[行動特性のパーセンテージ](/docs/services/personality-insights/numeric.html#percentages)』を参照してください。
+-   `percentage` (double) は、その曜日または時刻に発生したコンテンツ・アイテムのパーセンテージです。 詳しくは、『[行動特性のパーセンテージ](/docs/services/personality-insights?topic=personality-insights-numeric#percentages)』を参照してください。
 
 ### 応答例
 {: #behaviorExample}
@@ -287,17 +292,17 @@ lastupdated: "2017-10-28"
 ## 消費嗜好性の出力
 {: #preferenceJSON}
 
-`consumption_preferences` 照会パラメーターが `true` に設定されている場合、`Profile` オブジェクトには `consumption_preferences` フィールドが含まれます。このフィールドには、消費嗜好性カテゴリーごとに 1 つの `ConsumptionPreferencesCategory` オブジェクトが含まれます。
+`consumption_preferences` 照会パラメーターが `true` に設定されている場合、`Profile` オブジェクトには `consumption_preferences` フィールドが含まれます。 このフィールドには、消費嗜好性カテゴリーごとに 1 つの `ConsumptionPreferencesCategory` オブジェクトが含まれます。
 
 -   `consumption_preference_category_id` (string) は、消費嗜好性カテゴリーの固有 ID であり、結果がどのカテゴリーに関連したものなのかを示します。形式は `consumption_preferences_{category}` です。
 -   `name` (string) は、ユーザーに表示される、消費嗜好性カテゴリーの名前です。
 -   `consumption_preferences` は、カテゴリーの個々の消費嗜好性の結果を提供する `ConsumptionPreferences` オブジェクトの配列です。
 
-カテゴリーの個々の消費嗜好性が、それぞれ 1 つの `ConsumptionPreferences` オブジェクトによって記述されます。消費嗜好性が 1 つしかないカテゴリーや、多くあるカテゴリーがあります。
+カテゴリーの個々の消費嗜好性が、それぞれ 1 つの `ConsumptionPreferences` オブジェクトによって記述されます。 消費嗜好性が 1 つしかないカテゴリーや、多くが含まれているカテゴリーがあります。
 
--   `consumption_preference_id` (string) は、消費嗜好性の固有 ID であり、結果がどの消費嗜好性に関連したものなのかを示します。形式は `consumption_preferences_preference` です。
+-   `consumption_preference_id` (string) は、消費嗜好性の固有 ID であり、結果がどの消費嗜好性に関連したものなのかを示します。形式は `consumption_preferences_{preference}` です。
 -   `name` (string) は、ユーザーに表示される、消費嗜好性の名前です。
--   `score` (double) は、筆者がそのアイテムを好む可能性を示すスコアです。詳しくは、『[消費嗜好性のスコア](/docs/services/personality-insights/numeric.html#scores)』を参照してください。
+-   `score` (double) は、筆者がそのアイテムを好む可能性を示すスコアです。 詳しくは、『[消費嗜好性のスコア](/docs/services/personality-insights?topic=personality-insights-numeric#scores)』を参照してください。
 
 ### 応答例
 {: #preferenceExample}

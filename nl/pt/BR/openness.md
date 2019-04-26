@@ -1,12 +1,19 @@
 ---
 
-Copyright: years: 2015, 2017 lastupdated: "2017-10-12"
+copyright:
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -15,14 +22,19 @@ Copyright: years: 2015, 2017 lastupdated: "2017-10-12"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Big Five abertura
+# Big Five aberturas
 {: #openness}
 
-*Abertura* ou *Aberto para experiência* é a medida em que uma pessoa está aberta a experimentar uma variedade de atividades.
+*Abertura* ou *Aberto para experiência* é até que ponto uma pessoa está aberta a experimentar uma variedade de atividades. As tabelas a seguir qualificam os resultados para as características como *altos* ou *baixos*:
 {: shortdesc}
 
+-   Qualquer pontuação acima da média de 0,5 indica uma tendência mais alta do que a média para uma característica. Uma pontuação de 0,75 ou acima indica aspectos prontamente discerníveis da característica. Essas pontuações são consideradas *altas*.
+-   As declarações opostas correspondem a pontuações abaixo de 0,50 e 0,25, que são consideradas *baixas*.
+
+Para obter mais informações, consulte [Percentis para características da personalidade](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
+
 ## Aspectos
-{: #facets}
+{: #facets-opens}
 
 Breves descrições dos aspectos da dimensão e de indivíduos que pontuam mais alto em cada aspecto.
 
@@ -30,105 +42,179 @@ Breves descrições dos aspectos da dimensão e de indivíduos que pontuam mais 
   <caption>Tabela 1. Aspectos (abertura)</caption>
   <tr>
     <th style="text-align:left">Aspecto</th>
-    <th style="text-align:left">Indivíduos que recorde ...</th>
+    <th style="text-align:left">Indivíduos que pontuam alto...</th>
   </tr>
   <tr>
-    <td><strong>Disposição / Adventurousness experimentar</strong></td>
-    <td>Tem vontade de experimentar novas atividades e experimentar coisas diferentes.
-    Eles encontraram familiaridade e entediante rotina.</td>
+    <td><strong>Aventura / Disposição para experimentar</strong></td>
+    <td>Anseiam por experimentar novas atividades e coisas diferentes.
+    Acham a familiaridade e a rotina entediantes.</td>
   </tr>
   <tr>
-    <td><strong>interesses artísticos</strong></td>
-    <td>Amo a beleza, tanto na arte e na natureza. Eles se tornam facilmente envolvido e absorvido em eventos artísticos e naturais. Com inteligência, esse aspecto é um dos dois mais importantes, os aspectos centrais dessa característica.</td>
+    <td><strong>Interesses artísticos</strong></td>
+    <td>Amam a beleza, tanto na arte quanto na natureza. São facilmente envolvidos e absorvidos por eventos artísticos e naturais. Com intelecto, este aspecto é um dos dois aspectos centrais mais importantes desta característica.</td>
   </tr>
   <tr>
-    <td><strong>Emotividade / -Emocionalmente ciente / Profundidade de emoções</strong></td>
-    <td>Ter acesso bom e para o reconhecimento de seus próprios sentimentos.</td>
+    <td><strong>Emotividade / Ciente emocionalmente / Profundidade de emoções</strong></td>
+    <td>Têm bom acesso e reconhecimento de seus próprios sentimentos.</td>
   </tr>
   <tr>
-    <td><strong>lmaginação</strong></td>
-    <td>Visualize o mundo real como sempre muito simples e comum. Eles usam fantasia não como uma fuga, mas como uma maneira de criar para si um rico e mais interessante interna mundo.</td>
+    <td><strong>Imaginação</strong></td>
+    <td>Veem o mundo real frequentemente como muito simples e comum. Usam a fantasia não como uma fuga, mas como uma maneira para criar para si um mundo interno mais rico e mais interessante.</td>
   </tr>
   <tr>
-    <td><strong>intelecto / curiosidade intelectual</strong></td>
-    <td>É intelectualmente curiosa e tendem a pensar em símbolos e abstrações. Com interesses artísticos, esse aspecto é um dos dois mais importantes, os aspectos centrais dessa característica.</td>
+    <td><strong>Intelecto / Curiosidade intelectual</strong></td>
+    <td>São intelectualmente curiosos e tendem a pensar em símbolos e abstrações. Com interesses artísticos, esse aspecto é um dos dois aspectos centrais mais importantes desta característica.</td>
   </tr>
   <tr>
-    <td><strong>Liberalismo/Autoridade desafiante/Tolerância pela diversidade</strong></td>
-    <td>Tenha um prontidão para desafiar autoridade, convenção, e valores tradicionais.</td>
+    <td><strong>Liberalismo / Desafiador de autoridade / Tolerância pela diversidade</strong></td>
+    <td>Estão sempre prontos para desafiar a autoridade, a convenção e os valores tradicionais.</td>
   </tr>
 </table>
 
-## Intervalo de características
-{: #range}
+## Faixa de características
+{: #range-opens}
 
-As descrições gerais que possam se aplicar a indivíduos cujas contas provas mais ou menos de cada aspecto da dimensão, bem como termos que pode descrever tais indivíduos.
+Descrições gerais que podem se aplicar a indivíduos cujas pontuações evidenciam mais ou menos de cada aspecto da dimensão, bem como termos que podem descrever esses indivíduos.
 
-<table>
+<table summary="Para o aspecto listado na coluna do meio de cada linha, as primeiras duas colunas fornecem uma descrição e um termo para indivíduos com pontuações baixas para o aspecto e as duas últimas colunas fornecem um termo e uma descrição para indivíduos com pontuações altas para o aspecto.">
   <caption>Tabela 2. Intervalo de características (abertura)</caption>
   <tr>
-    <th colspan="2" style="text-align:center">Descrição de valor baixo</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">Descrição de valor alto</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+      Descrição de valor baixo
+    </th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+      Descrição de valor alto
+    </th>
   </tr>
   <tr>
-    <th style="text-align:left; width: 23%">Descrição</th>
-    <th style="text-align:center; width: 16%">Termo</th>
-    <th style="text-align:center; width: 16%">Aspecto</th>
-    <th style="text-align:center; width: 16%">Termo</th>
-    <th style="text-align:right">Descrição</th>
-  </tr>
-    <tr>
-    <td style="text-align:left">Você gosta rotinas familiar e preferir não desviar delas.</td>
-    <td style="text-align:center">Consistente</td>
-    <td style="text-align:center"><strong>Adventurousness</strong></td>
-    <td style="text-align:center">Aventureiro</td>
-    <td style="text-align:right">Você está ansioso para experimentar coisas novas.</td>
-  </tr>
-  <tr>
-    <td style="text-align:left">Você está menos preocupada com atividades artísticas ou criativa do que a maioria das pessoas.</td>
-    <td style="text-align:center">Despreocupado com a arte</td>
-    <td style="text-align:center"><strong>interesses artísticos</strong></td>
-    <td style="text-align:center">Apreciativo de arte</td>
-    <td style="text-align:right">Você gosta de beleza e buscar experiências criativas.</td>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width: 23%">
+      Descrição
+    </th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width: 16%">
+      Termo
+    </th>
+    <th id="facet" headers="blank" style="text-align:center; width: 16%">
+      Aspecto
+    </th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width: 16%">
+      Termo
+    </th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+      Descrição
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">Você não frequentemente pensar ou expressar abertamente suas emoções.</td>
-    <td style="text-align:center">-Desapaixonada</td>
-    <td style="text-align:center"><strong>Emotividade</strong></td>
-    <td style="text-align:center">Emocionalmente consciente</td>
-    <td style="text-align:right">Você está ciente de seus sentimentos e como expressar a eles.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Você gosta de rotinas familiares e prefere não se desviar delas.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Consistente
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Aventuração</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Aventureiro
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Você anseia por experimentar coisas novas.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Você prefere fatos sobre fantasia.</td>
-    <td style="text-align:center">Down-to-earth</td>
-    <td style="text-align:center"><strong>lmaginação</strong></td>
-    <td style="text-align:center">Imaginativo</td>
-    <td style="text-align:right">Você tem uma imaginação fértil.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Você está menos preocupado com atividades artísticas ou criativas do que a maioria das pessoas.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Despreocupado com a arte
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Interesses artísticos</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Apreciador de arte
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Você gosta da beleza e busca experiências criativas.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Você prefere lidar com o mundo como ele é, raramente considerando ideias abstratas.</td>
-    <td style="text-align:center">Concreto</td>
-    <td style="text-align:center"><strong>Intelecto</strong></td>
-    <td style="text-align:center">Filosofia</td>
-    <td style="text-align:right">Você é aberto e intrigado com novas ideias e amor para explorar eles.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Você não pensa frequentemente sobre suas emoções nem as expressa abertamente.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Não apaixonado
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Emotividade</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Ciente emocionalmente
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Você está ciente de seus sentimentos e de como expressá-los.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Você prefere seguir a tradição de manter um senso de estabilidade.</td>
-    <td style="text-align:center">Respeitosa de autoridade</td>
-    <td style="text-align:center"><strong>liberalismo</strong></td>
-    <td style="text-align:center">Desafio</td>
-    <td style="text-align:right">Você prefere desafiar autoridade e valores tradicionais para ajudar a trazer a mudança.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Você prefere fatos em vez de fantasia.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Realista
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Imaginação</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Imaginativo
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Você tem uma imaginação fértil.
+    </td>
+  </tr>
+  <tr>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Você prefere lidar com o mundo como ele é, raramente considerando ideias abstratas.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Concreto
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Intelecto</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Filosófico
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Você é aberto e intrigado por novas ideias e ama explorá-las.
+    </td>
+  </tr>
+  <tr>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Você prefere seguir a tradição para manter um senso de estabilidade.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Respeitoso com a autoridade
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Liberalismo</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Desafiador de autoridade
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Você prefere desafiar a autoridade e os valores tradicionais para ajudar a realizar mudanças.
+    </td>
   </tr>
 </table>
 
-## Principal e dimensões secundárias
-{: #dimensions}
+## Dimensões primária e secundária
+{: #dimensions-opens}
 
-Informações que se relaciona a dimensão para outras dimensões, descrevendo combinações de características de personalidade. Fornece insight sobre como as características primário e secundário podem se relacionam para representar a personalidade composta de um indivíduo.
+As informações que relacionam a dimensão com outras dimensões, descrevendo combinações de características da personalidade. Fornece insight sobre como as características primária e secundária podem estar inter-relacionadas para representar a personalidade composta de um indivíduo.
 
 <table>
-  <caption>Tabela 3. Principal e dimensões secundário (abertura)</caption>
+  <caption>Tabela 3. Dimensões principais e secundárias (abertura)</caption>
   <tr>
     <th colspan="2" style="width:30%">Dimensão</th>
     <th style="width:35%">Alta abertura</th>
@@ -137,49 +223,49 @@ Informações que se relaciona a dimensão para outras dimensões, descrevendo c
   <tr>
     <td style="text-align:left"><strong>Afabilidade</strong></td>
     <td style="text-align:center"><em>Alto</em></td>
-    <td>Idealista, diplomática, profunda, discreta, amável</td>
+    <td>Idealista, diplomático, profunda, fino, cordial</td>
     <td>Simples, dependente</td>
   </tr>
   <tr>
     <td></td>
     <td style="text-align:center"><em>Baixo</em></td>
-    <td>Sagaz, excêntrico, individualista</td>
-    <td>Abrangente, grosseiro, rude, limitada e insensível mente</td>
+    <td>Perspicaz, excêntrico, individualista</td>
+    <td>Grosseiro, indelicado, rude, intolerante, insensível</td>
   </tr>
   <tr>
-    <td style="text-align:left"><strong>inteligênica</strong></td>
+    <td style="text-align:left"><strong>Estado consciente</strong></td>
     <td style="text-align:center"><em>Alto</em></td>
-    <td>Analítica, perspicaz, informativo, articulado, digno</td>
+    <td>Analítico, perceptivo, informativo, articulado, digno</td>
     <td>Convencional, tradicional</td>
   </tr>
   <tr>
     <td></td>
     <td style="text-align:center"><em>Baixo</em></td>
-    <td>Inconvencional, manias</td>
-    <td>Paciência, imprudente, ilógicas, imaturo, aleatória</td>
+    <td>Não convencional, extravagante</td>
+    <td>Desprovido de visão, temerário, ilógico, imaturo, desorganizado</td>
   </tr>
   <tr>
     <td style="text-align:left"><strong>Extroversão</strong></td>
     <td style="text-align:center"><em>Alto</em></td>
     <td>Experiente, teatral, eloquente, inquisitivo, intenso</td>
-    <td>Detalhado, sem escrúpulos, pomposo</td>
+    <td>Detalhado, inescrupuloso, pomposo</td>
   </tr>
   <tr>
     <td></td>
     <td style="text-align:center"><em>Baixo</em></td>
-    <td>Introspectivo, meditativo, contemplando, auto-examinar, inner-directed</td>
-    <td>Previsível, imaginação, sombria, apático, riscos</td>
+    <td>Introspectivo, meditativo, contemplador, reflexivo, ego-orientado</td>
+    <td>Previsível, não imaginativo, sombrio, apático, não aventureiro</td>
   </tr>
   <tr>
-    <td style="text-align:left"><strong>Emotivas intervalo</strong></td>
+    <td style="text-align:left"><strong>Escala emocional</strong></td>
     <td style="text-align:center"><em>Alto</em></td>
-    <td>Apaixonado, excitável, sensual</td>
-    <td>Criativo, intelectual, inteligente, versátil, criativo</td>
+    <td>Apaixonado, agitado, sensual</td>
+    <td>Facilmente agitado, facilmente irritado, apreensivo</td>
   </tr>
   <tr>
     <td></td>
     <td style="text-align:center"><em>Baixo</em></td>
-    <td>Facilmente abalado, facilmente irritado, apreensivo</td>
-    <td>Imperturbable, insensível</td>
+    <td>Criativo, intelectual, perspicaz, versátil, inventivo</td>
+    <td>Inabalável, indiferente</td>
   </tr>
 </table>

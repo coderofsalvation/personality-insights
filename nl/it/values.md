@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -22,6 +27,8 @@ lastupdated: "2017-10-12"
 
 I *Valori* descrivono i fattori motivanti che influenzano il processo decisionale dell'autore. La seguente tabella descrive i cinque valori dedotti dal servizio.
 {: shortdesc}
+
+Un punteggio al di sopra della media di 0,5 indica una tendenza superiore alla media per una caratteristica. Un punteggio pari o al di sopra di 0,75 indica aspetti facilmente distinguibili della caratteristica; tali punteggi vengono considerati *alti*.Per ulteriori informazioni, vedi [Percentili per le caratteristiche della personalità](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
 
 <table>
   <caption>Tabella 1. Valori</caption>

@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,14 +25,14 @@ lastupdated: "2017-10-12"
 # CSV プロファイルの解釈
 {: #outputCSV}
 
-要求の `Accept` ヘッダーで `text/csv` を指定すると、本サービスは分析結果を CSV (コンマ区切り値) 形式で返します。CSV 出力が提供する情報は、JSON 出力で提供される情報に似ています。JSON の場合と同様に、CSV 出力に含まれる情報は、入力がタイム・スタンプ付きデータを表しているかどうかと、ユーザーがロー・スコアおよび消費嗜好性を要求しているかどうかに基づきます。
+要求の `Accept` ヘッダーで `text/csv` を指定すると、本サービスは分析結果を CSV (コンマ区切り値) 形式で返します。 CSV 出力が提供する情報は、JSON 出力で提供される情報に似ています。 JSON の場合と同様に、CSV 出力に含まれる情報は、入力データにタイム・スタンプが付いているかどうかと、ロー・スコアおよび消費嗜好性を要求しているかどうかに基づきます。
 {: shortdesc}
 
-ただし、JSON とは異なり、CSV 出力は固定数の列として返されます。出力の先頭行は、要求の `csv_headers` 照会パラメーターが `true` に設定されている場合のみ組み込まれる、オプションの列ラベルからなります。出力の第 2 行は常に存在し、分析結果を含みます。
+CSV 出力は JSON とは異なり、固定数の列として返されます。出力の先頭行は、要求の `csv_headers` 照会パラメーターが `true` に設定されている場合のみ組み込まれる、オプションの列ラベルからなります。 出力の第 2 行は常に存在し、分析結果を含みます。
 
-以降のセクションでは、CSV 出力のすべての列を結果に含まれるとおりの順序でリストし、簡単に説明します。以降の表では、列を論理的なグループに分けて説明し、各グループ内の列の数と、オプションの列ラベルも示します。単語数以外は、すべての数値データは倍精度の値として返されます。
+以降のセクションでは、CSV 出力のすべての列を結果に含まれるとおりの順序でリストし、簡単に説明します。 以降の表では、列を論理的なグループに分けて説明し、各グループ内の列の数と、オプションの列ラベルも示します。 単語数以外は、すべての数値データは倍精度の値として返されます。
 
-CSV 列の意味について詳しくは、『[JSON プロファイルの解釈](/docs/services/personality-insights/output.html)』および『[数値結果の解釈](/docs/services/personality-insights/numeric.html)』を参照してください。
+CSV 列の意味について詳しくは、『[JSON プロファイルの解釈](/docs/services/personality-insights?topic=personality-insights-output)』および『[数値結果の解釈](/docs/services/personality-insights?topic=personality-insights-numeric)』を参照してください。
 
 ## 基本的な特性およびメタデータ
 {: #basicCSV}
@@ -42,80 +47,80 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     <th style="text-align:left; vertical-align:bottom">説明</th>
   </tr>
   <tr>
-    <td>
-      ビッグ・ファイブの協調性<br/>百分位数<br/>(7 列)
+    <td style="vertical-align:top">
+      ビッグ・ファイブの協調性の百分位数<br/>(7 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_agreeableness<br/>facet_altruism<br/>
       facet_cooperation<br/>facet_modesty<br/>
       facet_morality<br/>facet_sympathy<br/>
       facet_trust
     </td>
-    <td>
+    <td style="vertical-align:top">
       指定されたディメンションまたはファセットに関する、テキスト筆者の正規化済み百分位数スコア。
     </td>
   </tr>
   <tr>
-    <td>
-      ビッグ・ファイブの誠実性<br/>百分位数<br/>(7 列)
+    <td style="vertical-align:top">
+      ビッグ・ファイブの誠実性の百分位数<br/>(7 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_conscientiousness<br/>facet_achievement_striving
       <br/>facet_cautiousness<br/>facet_dutifulness<br/>
       facet_orderliness<br/>facet_self_discipline<br/>
       facet_self_efficacy
     </td>
-    <td>
+    <td style="vertical-align:top">
       指定されたディメンションまたはファセットに関する、テキスト筆者の正規化済み百分位数スコア。
     </td>
   </tr>
   <tr>
-    <td>
-      ビッグ・ファイブの外向性<br/>百分位数<br/>(7 列)
+    <td style="vertical-align:top">
+      ビッグ・ファイブの外向性の百分位数<br/>(7 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_extraversion<br/>facet_activity_level
       <br/>facet_assertiveness<br/>facet_cheerfulness<br/>
       facet_excitement_seeking<br/>facet_friendliness<br/>
       facet_gregariousness
     </td>
-    <td>
+    <td style="vertical-align:top">
       指定されたディメンションまたはファセットに関する、テキスト筆者の正規化済み百分位数スコア。
     </td>
   </tr>
   <tr>
-    <td>
-      ビッグ・ファイブの情緒不安定性<br/>百分位数<br/>(7 列)
+    <td style="vertical-align:top">
+      ビッグ・ファイブの情緒不安定性の百分位数<br/>(7 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_neuroticism<br/>facet_anger<br/>
       facet_anxiety<br/>facet_depression<br/>
       facet_immoderation<br/>facet_self_consciousness<br/>
       facet_vulnerability
     </td>
-    <td>
+    <td style="vertical-align:top">
       指定されたディメンションまたはファセットに関する、テキスト筆者の正規化済み百分位数スコア。
     </td>
   </tr>
   <tr>
-    <td>
-      ビッグ・ファイブの開放性<br/>百分位数<br/>(7 列)
+    <td style="vertical-align:top">
+      ビッグ・ファイブの開放性の百分位数<br/>(7 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_openness<br/>facet_adventurousness<br/>
       facet_artistic_interests<br/>facet_emotionality<br/>
       facet_imagination<br/>facet_intellect<br/>
       facet_liberalism
     </td>
-    <td>
+    <td style="vertical-align:top">
       指定されたディメンションまたはファセットに関する、テキスト筆者の正規化済み百分位数スコア。
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       ニーズの百分位数<br/>(12 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       need_liberty<br/>need_ideal<br/>
       need_love<br/>need_practicality<br/>
       need_self_expression<br/>need_stability<br/>
@@ -123,56 +128,56 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
       need_closeness<br/>need_curiosity<br/>
       need_excitement<br/>need_harmony
     </td>
-    <td>
+    <td style="vertical-align:top">
       指定されたニーズに関する、テキスト筆者の正規化済み百分位数スコア。
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       価値の百分位数<br/>(5 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       value_conservation<br/>value_hedonism<br/>
       value_openness_to_change<br/>value_self_enhancement<br/>
       value_self_transcendence
     </td>
-    <td>
+    <td style="vertical-align:top">
       指定された価値に関する、テキスト筆者の正規化済み百分位数スコア。
     </td>
   </tr>
   <tr>
-    <td>
-      曜日<br/>パーセンテージ<br/>(7 列)
+    <td style="vertical-align:top">
+      曜日のパーセンテージ<br/>(7 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       behavior_sunday<br/>behavior_monday<br/>
       behavior_tuesday<br/>behavior_wednesday<br/>
       behavior_thursday<br/>behavior_friday<br/>
       behavior_saturday
     </td>
-    <td>
-      入力テキストがタイム・スタンプ付きの場合、各曜日に関連付けられている入力のパーセンテージ。入力にタイム・スタンプがない場合、パーセンテージはすべて <code>0.0</code> です。
+    <td style="vertical-align:top">
+      <em>入力テキストがタイム・スタンプ付きの場合</em>、各曜日に関連付けられている入力のパーセンテージ。 タイム・スタンプが付いていない場合、すべてのパーセンテージは <code>0.0</code> になります。
     </td>
   </tr>
   <tr>
-    <td>
-      時刻<br/>パーセンテージ<br/>(24 列)
+    <td style="vertical-align:top">
+      時刻のパーセンテージ<br/>(24 列)
     </td>
-    <td>
-      behavior_0000<br/><em>から</em><br/>behavior_2300 まで
+    <td style="vertical-align:top">
+      behavior_0000 <em>から</em> behavior_2300
     </td>
-    <td>
-      入力テキストがタイム・スタンプ付きの場合、1 日のうちの各時刻に関連付けられている入力のパーセンテージ。入力にタイム・スタンプがない場合、パーセンテージはすべて <code>0.0</code> です。
+    <td style="vertical-align:top">
+      <em>入力テキストがタイム・スタンプ付きの場合</em>、1 日のうちの各時刻に関連付けられている入力のパーセンテージ。 タイム・スタンプが付いていない場合、すべてのパーセンテージは <code>0.0</code> になります。
     </td>
   </tr>
   <tr>
-    <td>
-      単語数および<br/>言語<br/>(2 列)
+    <td style="vertical-align:top">
+      単語数および言語<br/>(2 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       word_count<br/>processed_language
     </td>
-    <td>
+    <td style="vertical-align:top">
       入力テキスト内にある単語の数を示す整数と、本サービスがテキストを分析するために使用した言語モデルを表す 2 文字の識別子。
     </td>
   </tr>
@@ -181,7 +186,7 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
 ## ロー・スコア
 {: #rawCSV}
 
-以下の列は、`raw_scores` 照会パラメーターを `true` に設定することでロー・スコアを要求した場合にのみ存在します。すべてのケースで、列は、ディメンション、ファセット、ニーズ、または価値に関する筆者のロー・スコアを提供する倍精度値です。
+以下の列は、`raw_scores` 照会パラメーターを `true` に設定することでロー・スコアを要求した場合にのみ存在します。 すべてのケースで、列は、ディメンション、ファセット、ニーズ、または価値に関する筆者のロー・スコアを提供する倍精度値です。
 
 <table>
   <caption>表 2. ロー・スコアの CSV 列</caption>
@@ -190,8 +195,8 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     <th style="width:60%; text-align:left; vertical-align:bottom">オプションのラベル</th>
   </tr>
   <tr>
-    <td>
-      ビッグ・ファイブの協調性<br/>ロー・スコア<br/>(7 列)
+    <td style="vertical-align:top">
+      ビッグ・ファイブの協調性のロー・スコア<br/>(7 列)
     </td>
     <td>
       big5_agreeableness_raw<br/>facet_altruism_raw<br/>
@@ -201,8 +206,8 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
-      ビッグ・ファイブの誠実性<br/>ロー・スコア<br/>(7 列)
+    <td style="vertical-align:top">
+      ビッグ・ファイブの誠実性のロー・スコア<br/>(7 列)
     </td>
     <td>
       big5_conscientiousness_raw<br/>facet_achievement_striving_raw<br/>
@@ -212,8 +217,8 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
-      ビッグ・ファイブの外向性<br/>ロー・スコア<br/>(7 列)
+    <td style="vertical-align:top">
+      ビッグ・ファイブの外向性のロー・スコア<br/>(7 列)
     </td>
     <td>
       big5_extraversion_raw<br/>facet_activity_level_raw<br/>
@@ -223,8 +228,8 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
-      ビッグ・ファイブの情緒不安定性<br/>ロー・スコア<br/>(7 列)
+    <td style="vertical-align:top">
+      ビッグ・ファイブの情緒不安定性のロー・スコア<br/>(7 列)
     </td>
     <td>
       big5_neuroticism_raw<br/>facet_anger_raw<br/>
@@ -234,8 +239,8 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
-      ビッグ・ファイブの開放性<br/>ロー・スコア<br/>(7 列)
+    <td style="vertical-align:top">
+      ビッグ・ファイブの開放性のロー・スコア<br/>(7 列)
     </td>
     <td>
       big5_openness_raw<br/>facet_adventurousness_raw<br/>
@@ -245,7 +250,7 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       ニーズのロー・スコア<br/>(12 列)
     </td>
     <td>
@@ -258,7 +263,7 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       価値のロー・スコア<br/>(5 列)
     </td>
     <td>
@@ -272,7 +277,7 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
 ## 有意性
 {: #significantCSV}
 
-以下の列は、すべての要求の CSV 出力に常に含まれます。すべてのケースで、列は、ディメンション、ファセット、ニーズ、または価値が、処理される入力言語で意味があるかどうかを示すブール値です。
+以下の列は、すべての要求の CSV 出力に常に含まれます。 すべてのケースで、列は、ディメンション、ファセット、ニーズ、または価値が、処理される入力言語で意味があるかどうかを示すブール値です。
 
 <table>
   <caption>表 3. 有意性の CSV 列</caption>
@@ -281,8 +286,8 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     <th style="width:60%; text-align:left; vertical-align:bottom">オプションのラベル</th>
   </tr>
   <tr>
-    <td>
-      ビッグ・ファイブの協調性<br/>有意性<br/>(7 列)
+    <td style="vertical-align:top">
+      ビッグ・ファイブの協調性の有意性<br/>(7 列)
     </td>
     <td>
       big5_agreeableness_significant<br/>facet_altruism_significant<br/>
@@ -292,8 +297,8 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
-      ビッグ・ファイブの誠実性<br/>有意性<br/>(7 列)
+    <td style="vertical-align:top">
+      ビッグ・ファイブの誠実性の有意性<br/>(7 列)
     </td>
     <td>
       big5_conscientiousness_significant<br/>
@@ -304,8 +309,8 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
-      ビッグ・ファイブの外向性<br/>有意性<br/>(7 列)
+    <td style="vertical-align:top">
+      ビッグ・ファイブの外向性の有意性<br/>(7 列)
     </td>
     <td>
       big5_extraversion_significant<br/>facet_activity_level_significant<br/>
@@ -315,8 +320,8 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
-      ビッグ・ファイブの情緒不安定性<br/>有意性<br/>(7 列)
+    <td style="vertical-align:top">
+      ビッグ・ファイブの情緒不安定性の有意性<br/>(7 列)
     </td>
     <td>
       big5_neuroticism_significant<br/>facet_anger_significant<br/>
@@ -326,8 +331,8 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
-      ビッグ・ファイブの開放性<br/>有意性<br/>(7 列)
+    <td style="vertical-align:top">
+      ビッグ・ファイブの開放性の有意性<br/>(7 列)
     </td>
     <td>
       big5_openness_significant<br/>facet_adventurousness_significant<br/>
@@ -337,7 +342,7 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       ニーズのロー有意性<br/>(12 列)
     </td>
     <td>
@@ -350,7 +355,7 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
+    <td style="vertical-align:top">
       価値の有意性<br/>(5 列)
     </td>
     <td>
@@ -365,7 +370,7 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
 ## 消費嗜好性
 {: #preferenceCSV}
 
-以下の列は、`consumption_preferences` 照会パラメーターを `true` に設定することで消費嗜好性を要求した場合にのみ存在します。すべてのケースで、列は、指定された消費トピックを筆者が好む可能性を報告する倍精度値です。
+以下の列は、`consumption_preferences` 照会パラメーターを `true` に設定することで消費嗜好性を要求した場合にのみ存在します。 すべてのケースで、列は、指定された消費トピックを筆者が好む可能性を報告する倍精度値です。
 
 <table style="width:90%">
   <caption>表 4. 消費嗜好性の CSV 列</caption>
@@ -374,10 +379,10 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     <th style="width:60%; text-align:left; vertical-align:bottom">オプションのラベル</th>
   </tr>
   <tr>
-    <td>
-      ショッピングの消費嗜好性<br/>カテゴリー・スコア<br/>(12 列)
+    <td style="vertical-align:top">
+      購入の嗜好性カテゴリーのスコア<br/>(12 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_spur_of_moment<br/>
       consumption_preferences_credit_card_payment<br/>
       consumption_preferences_influence_brand_name<br/>
@@ -393,10 +398,10 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
-      音楽の消費嗜好性<br/>カテゴリー・スコア<br/>(9 列)
+    <td style="vertical-align:top">
+      音楽の嗜好性カテゴリーのスコア<br/>(9 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_music_rap<br/>
       consumption_preferences_music_country<br/>
       consumption_preferences_music_r_b<br/>
@@ -409,20 +414,20 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
-      健康および運動の消費嗜好性<br/>カテゴリー・スコア<br/>(3 列)
+    <td style="vertical-align:top">
+      健康および活動の嗜好性カテゴリーのスコア<br/>(3 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_gym_membership<br/>
       consumption_preferences_outdoor<br/>
       consumption_preferences_eat_out
     </td>
   </tr>
   <tr>
-    <td>
-      映画の消費嗜好性<br/>カテゴリー・スコア<br/>(10 列)
+    <td style="vertical-align:top">
+      映画の嗜好性カテゴリーのスコア<br/>(10 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_movie_romance<br/>
       consumption_preferences_movie_adventure<br/>
       consumption_preferences_movie_horror<br/>
@@ -436,10 +441,10 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
-      読書の消費嗜好性<br/>カテゴリー・スコア<br/>(5 列)
+    <td style="vertical-align:top">
+      読書の嗜好性カテゴリーのスコア<br/>(5 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_read_frequency<br/>
       consumption_preferences_books_entertainment_magazines<br/>
       consumption_preferences_books_non_fiction<br/>
@@ -448,26 +453,26 @@ CSV 列の意味について詳しくは、『[JSON プロファイルの解釈]
     </td>
   </tr>
   <tr>
-    <td>
-      ボランティア活動の消費嗜好性<br/>カテゴリー・スコア<br/>(1 列)
+    <td style="vertical-align:top">
+      ボランティア活動の嗜好性カテゴリーのスコア<br/>(1 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_volunteer
     </td>
   </tr>
   <tr>
-    <td>
-      環境への関心の消費嗜好性<br/>カテゴリー・スコア<br/>(1 列)
+    <td style="vertical-align:top">
+      環境への関心の嗜好性カテゴリーのスコア<br/>(1 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_concerned_environment
     </td>
   </tr>
   <tr>
-    <td>
-      起業家精神の消費嗜好性<br/>カテゴリー・スコア<br/>(1 列)
+    <td style="vertical-align:top">
+      起業家精神の嗜好性カテゴリーのスコア<br/>(1 列)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_start_business
     </td>
   </tr>
