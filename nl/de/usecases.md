@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-08-11"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,7 +25,7 @@ lastupdated: "2017-08-11"
 # Anwendungsfälle
 {: #usecases}
 
-Der {{site.data.keyword.personalityinsightsshort}}-Service bietet sich zu einer fast unbegrenzten Anzahl potenzieller Anwendungen an. Durch die Verwendung der Big Five-Persönlichkeitsmerkmale, Bedürfnisse und Werte können Unternehmen und Einzelpersonen gleichermaßen informiertere und fundiertere Entscheidungen treffen und begrenzte Ressourcen effektiver nutzen.
+Der {{site.data.keyword.personalityinsightsshort}}-Service bietet sich zu einer fast unbegrenzten Anzahl potenzieller Anwendungen an. Durch die Verwendung der Big Five-Persönlichkeitsmerkmale, Bedürfnisse und Werte können Unternehmen und Einzelpersonen gleichermaßen besser informierte und fundierte Entscheidungen treffen und begrenzte Ressourcen effektiver nutzen.
 {: shortdesc}
 
 Unternehmen ihr Marketing auf die empfänglichste Zielgruppe ausrichten, können mehr Kunden werben und binden und sie können Services entwickeln, die Einzelpersonen und Gruppen effektiver verbinden. Einzelpersonen können die Art und Weise optimieren, in der sie sich potenziellen Arbeitgebern präsentieren.
@@ -34,7 +39,7 @@ Stellen Sie sich eine Einkaufserfahrung in einem Geschäft mit einem interaktive
 
 Mit dem {{site.data.keyword.personalityinsightsshort}}-Service können Unternehmen diese Idee umsetzen. Durch die Nutzung einer Kombination aus Unternehmens- und Social Media-Daten können Unternehmen Analysen anwenden, um genauere Portraits einzelner Kunden zu entwickeln. Sie können die Ergebnisse für bessere Qualität der Lead-Generierung, für eine differenziertere Definition von Kundensegmenten sowie für ein fokussiertes Marketing nutzen, das den Kunden sowohl relevanter als auch persönlicher anspricht.
 
-Durch eine Kombination des {{site.data.keyword.personalityinsightsshort}}-Service mit anderen {{site.data.keyword.IBM_notm}} Angeboten, wie zum Beispiel Unica und BigInsights Social Data Accelerator (SDA), können Unternehmen Erkenntnisse aus einem breiten Pool an Transaktionsdaten und Social-Media-Daten ableiten. Diese Erkenntnisse können Unternehmen in folgenden Bereichen unterstützen:
+Unternehmen können den {{site.data.keyword.personalityinsightsshort}}-Service in Kombination mit anderen {{site.data.keyword.IBM_notm}} Angeboten verwenden, um Erkenntnisse aus einem umfangreichen Pool an transaktionsorientierten und Social-Media-Daten abzuleiten. Zu solchen Angeboten gehören unter anderem Unica und BigInsights Social Data Accelerator (SDA). Diese Erkenntnisse können Unternehmen in folgenden Bereichen unterstützen:
 
 -  Extrahieren früher, echtzeitnaher Signale der Einkaufabsichten von Kunden, um Qualitätsleads zu erkennen.
 -   Ableiten von Kundenportraits, die intrinsische psychologische Präferenzen einschließen, durch die die ökonomischen Entscheidungen von Kunden bestimmt werden.
@@ -49,13 +54,13 @@ Auf der Basis von Social-Media-Daten können Unternehmen wertvolle Kunden unter 
 ## Kundengewinnung
 {: #ucAcquisition}
 
-Persönlichkeitsportraits, die vom {{site.data.keyword.personalityinsightsshort}}-Service generiert werden, können Unternehmen bei der Stärkung ihrer Kundenbeziehungen und bei der Gewinnung neuer Kunden unterstützen. Zum Beispiel lösen Menschen, deren Persönlichkeiten eine höhere Tendenz zu Ordnungsliebe, Selbstdisziplin und Vorsicht und zu weniger Maßlosigkeit als die Grundgesamtheit aufweisen, mit höherer Wahrscheinlichkeit Coupons ein. In ähnlicher Weise lässt sich die Neigung von Menschen zum Kauf bestimmter Arten von Produkten mit deren Persönlichkeitsmerkmalen korrelieren. Zum Beispiel kaufen Kunden, deren Persönlichkeiten zu Offenheit und Gewissenhaftigkeit neigen, mit höherer Wahrscheinlichkeit Bio-Milch, Bio-Obst und Bio-Gemüse.
+Persönlichkeitsportraits, die vom {{site.data.keyword.personalityinsightsshort}}-Service generiert werden, können Unternehmen bei der Stärkung ihrer Kundenbeziehungen und bei der Gewinnung neuer Kunden unterstützen. Zum Beispiel lösen Menschen, deren Persönlichkeit eine höhere Tendenz zu Ordnungsliebe, Selbstdisziplin und Besonnenheit und zu weniger Impulsivität als die randomisierte Grundgesamtheit aufweisen, mit höherer Wahrscheinlichkeit Coupons ein. In ähnlicher Weise lässt sich die Neigung von Menschen zum Kauf bestimmter Arten von Produkten mit deren Persönlichkeitsmerkmalen korrelieren. Zum Beispiel kaufen Kunden, deren Persönlichkeiten zu Offenheit und Gewissenhaftigkeit neigen, mit höherer Wahrscheinlichkeit Bio-Milch, Bio-Obst und Bio-Gemüse.
 
-Einzelhandelsunternehmen können durch das Senden von Coupons an Menschen profitieren, deren Social-Media-Inhalte die Schnittmenge dieser Persönlichkeitsmerkmale aufweisen, unabhängig davon, ob sie bestehende oder potenzielle Kunden sind. Dadurch haben sie die Möglichkeit, Coupons nicht an Kunden zu senden, die nicht bereit sind, diese einzulösen, sodass Unternehmen Kosten für das Direktmarketing einsparen. Außerdem können sie vermeiden, Kunden mit Coupons zu überfluten, die diese nicht wünschen und wahrscheinlich verwerfen, wodurch Kunden letzten Endes veranlasst werden können, Coupons von diesem Einzelhandelsunternehmen völlig abzulehnen.
+Einzelhandelsunternehmen können durch das Senden von Coupons an Menschen profitieren, deren Social-Media-Inhalte die Schnittmenge dieser Persönlichkeitsmerkmale aufweisen, unabhängig davon, ob sie bestehende oder potenzielle Kunden sind. Dadurch, dass diese Unternehmen keine Coupons an Kunden zu senden, die diese nicht einlösen, können sie Kosten für das Direktmarketing einsparen. Sie vermeiden es außerdem, Kunden mit Coupons zu überschwemmen, die diese nicht wünschen, denn dieses Muster kann letztendlich dazu führen, dass Kunden Coupons von dem betreffenden Einzelhandelsunternehmen durchweg ablehnen.
 
-Die Kombination von Persönlichkeitsportraits und Lebensereignissen, die aus Social Media abgeleitet werden, mit vorhandenen demografischen Daten des Unternehmens kann zu aussagekräftigen Erkenntnissen über das Konsumverhalten und die Verbraucherpräferenzen einzelner Kunden führen. Zum Beispiel beginnen Familien mit neugeborenen Kindern wahrscheinlich mit dem Einkauf von Windeln. Einzelhandelsunternehmen können mithilfe des {{site.data.keyword.personalityinsightsshort}}-Service erschließen, ob solche Familien eher Stoff- oder Wegwerfwindeln bevorzugen, und sie können den Familien Coupons zusenden, die diesem Schlussfolgerung entsprechen. Durch eine solche Kombination von Persönlichkeitsmerkmalen und Lebensereignissen können Einzelhandelsunternehmen dank der zusätzlichen Erkenntnisse die Kundenantwort verbessern und neue Kunden generieren. <!-- Sending coupons for such products to customers whose personality characteristics and life situations make them more likely to use them can increase customer response and generate new customers. -->
+Die Kombination von Persönlichkeitsportraits mit Lebensereignissen, die aus Social Media abgeleitet werden, und mit vorhandenen demografischen Daten des Unternehmens kann aussagekräftige Erkenntnisse zu dem Konsumverhalten und den Verbraucherpräferenzen einzelner Kunden liefern. Zum Beispiel werden Familien mit einem Neugeborenen wahrscheinlich anfangen, Windeln zu kaufen. Einzelhandelsunternehmen können mithilfe des {{site.data.keyword.personalityinsightsshort}}-Service erschließen, ob solche Familien eher Stoffwindeln oder aber Wegwerfwindeln bevorzugen. Sie können dann den Familien Coupons schicken, die der getroffenen Inferenz entsprechen. Durch die Kombination von Persönlichkeitsmerkmalen und Lebensereignissen können Einzelhändler die zusätzlichen Erkenntnisse nutzen, um die Kundenresonanz (Kundenantwort) zu steigern und neue Kunden zu gewinnen.
 
-Unternehmen können darüber hinaus große Gruppen von Kunden auf der Basis der öffentlich zugänglichen Social-Media-Inhalte und der Verhaltensweisen dieser Kunden analysieren, um von gezielten umsatzgenerierenden Möglichkeiten zu profitieren. Der {{site.data.keyword.personalityinsightsshort}}-Service kann Unternehmen bei der Erhöhung der Erfolgsaussichten für zukünftige Marketingkampagnen unterstützen, indem er Ausschluss darüber gibt, welche Nachrichten oder Produkte welche Kundensegmente positiver ansprechen. Ein Unternehmen fasst zunächst Kunden mit bekanntem Verhalten in Bezug auf Persönlichkeitsmerkmale zu Gruppen zusammen. Anschließend leitet es Zuordnungsregeln zwischen der Persönlichkeit und dem Verhalten auf der Basis des Segmentierungswissens ab, die sich aus den Gruppen ablesen lassen.
+Unternehmen können darüber hinaus große Gruppen von Kunden auf der Basis der öffentlich zugänglichen Social-Media-Inhalte und der Verhaltensweisen dieser Kunden analysieren, um von gezielten umsatzgenerierenden Möglichkeiten zu profitieren. Der {{site.data.keyword.personalityinsightsshort}}-Service kann Unternehmen bei der Erhöhung der Erfolgsaussichten für zukünftige Marketingkampagnen unterstützen, indem er Ausschluss darüber gibt, welche Nachrichten oder Produkte welche Kundensegmente positiver ansprechen. Ein Unternehmen fasst zunächst Kunden mit bekanntem Verhalten in Bezug auf Persönlichkeitsmerkmale zu Gruppen zusammen. Anschließend leitet es auf der Grundlage der Segmentierungskenntnisse, die aus den Gruppen zusammengetragen wurden, Regeln für die Zuordnung von Persönlichkeit zu Verhalten ab.
 
 ## Kundenbetreuung
 {: #ucCare}
@@ -84,11 +89,11 @@ Healthcare provider to patient. A cognitive-care use case developed by the {{sit
 -   Kundenbetreuer zu Anrufer, indem Call-Center-Mitarbeiter auf Anrufer abgestimmt werden.
 -   Investmentbroker zu Investor, indem Broker mit Investoren in Kontakt gebracht werden, zu denen sie wahrscheinlich eine Verbindung herstellen können.
 
-Nehmen Sie an, dass ein Kunde ein Brokerunternehmen kontaktiert, um zu erfahren, welche Investmentfonds verfolgt werden sollten. Dieses Szenario legt einen Abgleichsanwendungsfall nahe, bei dem die Persönlichkeitsmerkmale des Kunden genutzt werden, um besser auf die Bedürfnisse des Kunden eingehen zu können. Mithilfe des {{site.data.keyword.personalityinsightsshort}}-Service kann das Unternehmen den Kunden mit einem Broker in Kontakt bringen, der der Persönlichkeit des Kunden entspricht, und kann Anlageoptionen vorschlagen, die auf die Präferenzen und Neigungen des Kunden zugeschnitten sind. Darüber hinaus kann der Broker, der dem Kunden zugewiesen wird, den Service nutzen, um eine personalisierte Nachricht für den Kunden vorzubereiten.
+Nehmen Sie an, dass ein Kunde ein Brokerunternehmen kontaktiert, um zu erfahren, welche Investmentfonds verfolgt werden sollten. Dieses Szenario legt einen Abgleichsanwendungsfall nahe, bei dem die Persönlichkeitsmerkmale des Kunden genutzt werden, um besser auf die Bedürfnisse des Kunden eingehen zu können. Durch die Verwendung des {{site.data.keyword.personalityinsightsshort}}-Service kann die Firma den Kunden mit einem Broker in Kontakt bringen, der der Persönlichkeit des Kunden entspricht. Die Firma kann außerdem Anlageoptionen vorschlagen, die auf die Präferenzen und Neigungen des Kunden zugeschnitten sind. Darüber hinaus kann der Broker, der dem Kunden zugewiesen wird, den Service nutzen, um eine personalisierte Nachricht für den Kunden vorzubereiten.
 
 ## Lebenslauf abfassen
 {: #ucResume}
 
 Ein frischgebackener Hochschulabsolvent muss einen Lebenslauf schreiben, die für Branchen optimiert ist, die dem Abschluss und den Interessen des Absolventen entsprechen. Eine Anwendung aus einem kürzlich durchgeführten {{site.data.keyword.watson}} Hackathon legt die Entwicklung optimaler, branchenspezifischer Lebensläufe aus exzellenten Beispielen der Vergangenheit nahe. Die Anwendung kann {{site.data.keyword.watson}}-Services verwenden, um die Merkmale optimaler Referenzlebensläufe zu bestimmen, um eine maximale Resonanz aus der jeweiligen Branche zu erzielen.
 
-Nach der Erstellung eines Lebenslaufs kann der Absolvent die Anwendung nutzen, um zu ermitteln, wie gut sein Lebenslauf im Vergleich zur optimalen Referenzbasis abschneidet. Die Anwendung verwendet den {{site.data.keyword.personalityinsightsshort}}-Service zur Analyse des Lebenslaufs. Sie hebt die potenziellen Probleme hervor und schlägt Änderungen vor, um die Persönlichkeitsmerkmale und Werte, die sich in dem Lebenslauf erkennen lassen, besser auf die Referenzbasis abzustimmen.
+Ein Absolvent kann einen Lebenslauf erstellen und die Anwendung nutzen, um zu ermitteln, wie gut sein Lebenslauf im Vergleich zur optimalen Baseline abschneidet. Die Anwendung verwendet den {{site.data.keyword.personalityinsightsshort}}-Service zur Analyse des Lebenslaufs. Sie hebt die potenziellen Probleme hervor und schlägt Änderungen vor, um die Persönlichkeitsmerkmale und Werte, die sich in dem Lebenslauf erkennen lassen, besser auf die Merkmale der Referenzbasis abzustimmen.

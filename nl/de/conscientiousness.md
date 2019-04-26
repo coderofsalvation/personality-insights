@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,11 +25,16 @@ lastupdated: "2017-10-12"
 # Big Five-Eigenschaften der Gewissenhaftigkeit
 {: #conscientiousness}
 
-*Gewissenhaftigkeit* ist die Tendenz einer Person, organisiert und umsichtig zu agieren.
+*Gewissenhaftigkeit* ist die Tendenz einer Person, organisiert und umsichtig zu agieren. In den nachfolgenden Tabellen werden die Ergebnisse für die entsprechenden Merkmale als *hoch* oder *niedrig* bezeichnet:
 {: shortdesc}
 
+-   Jede Bewertung über dem Mittelwert 0,5 weist auf eine überdurchschnittliche Neigung zu dem betreffenden Merkmal hin. Eine Bewertung von 0,75 und darüber gibt an, dass Aspekte des Merkmals problemlos erkennbar sind. Solche Werte gelten als *hoch*.
+-   Für Bewertungen unter 0,50 bzw. unter 0,25, die als *niedrig* eingestuft werden, gilt jeweils das Gegenteil der obigen Aussagen.
+
+Weitere Informationen finden Sie unter [Perzentile für Persönlichkeitsmerkmale](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
+
 ## Facetten
-{: #facets}
+{: #facets-consc}
 
 Kurzbeschreibungen der Facetten der Dimension und der Einzelpersonen, die in den einzelnen Facetten hohe Ergebnisse aufweisen.
 
@@ -41,7 +51,7 @@ Kurzbeschreibungen der Facetten der Dimension und der Einzelpersonen, die in den
     erreichen.</td>
   </tr>
   <tr>
-    <td><strong>Vorsicht / Bedacht / Bedachtsamkeit</strong></td>
+    <td><strong>Besonnenheit / Bedacht / Bedachtsamkeit</strong></td>
     <td>Sind geneigt, Möglichkeiten sorgfältig zu durchdenken, bevor
     sie handeln.</td>
   </tr>
@@ -65,73 +75,147 @@ Kurzbeschreibungen der Facetten der Dimension und der Einzelpersonen, die in den
 </table>
 
 ## Bereich der Merkmale
-{: #range}
+{: #range-consc}
 
 Allgemeine Beschreibungen, die möglicherweise auf Einzelpersonen zutreffen, deren Ergebnisse jeder Facette der Dimension mehr oder weniger entsprechen, und Begriffe, die solche Personen möglicherweise beschreiben.
 
-<table>
+<table summary="Für die in der mittleren Spalte einer jeden Zeile genannte Facette liefern die ersten beiden Spalten jeweils eine Beschreibung und einen bezeichnenden Begriff für Personen mit niedriger Bewertung für diese Facette, während die letzten beiden Spalten einen bezeichnenden Begriff sowie eine Beschreibung für Personen mit einer hohen Bewertung für die Facette angeben.">
   <caption>Tabelle 2. Bereich der Merkmale (Gewissenhaftigkeit)</caption>
   <tr>
-    <th colspan="2" style="text-align:center">Beschreibung für niedrigen Wert</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">Beschreibung für hohen Wert</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+      Beschreibung für niedrigen Wert
+    </th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+      Beschreibung für hohen Wert
+    </th>
   </tr>
   <tr>
-    <th style="text-align:left; width:23%">Beschreibung</th>
-    <th style="text-align:center; width:16%">Begriff</th>
-    <th style="text-align:center; width:16%">Facette</th>
-    <th style="text-align:center; width:16%">Begriff</th>
-    <th style="text-align:right">Beschreibung</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width:23%">
+      Beschreibung
+    </th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width:16%">
+      Begriff
+    </th>
+    <th id="facet" headers="blank" style="text-align:center; width:16%">
+      Facette
+    </th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width:16%">
+      Begriff
+    </th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+      Beschreibung
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">Sie sind mit ihrem Grad an Vervollkommnung zufrieden und
-      empfinden kein Bedarf, sich ambitionierte Ziele zu setzen.</td>
-    <td style="text-align:center">Zufrieden</td>
-    <td style="text-align:center"><strong>Leistungsstreben</strong></td>
-    <td style="text-align:center">Ehrgeizig</td>
-    <td style="text-align:right">Sie setzen sich selbst hohe Ziele und arbeiten
-      hart, um sie zu erreichen.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sie sind mit ihrem Grad an Vervollkommnung zufrieden und
+      empfinden keinen Bedarf, sich ambitionierte Ziele zu setzen.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Zufrieden
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Leistungsstreben</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Ehrgeizig
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Sie setzen sich selbst hohe Ziele und arbeiten
+      hart, um sie zu erreichen.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Sie würden lieber sofort handeln, als
-      Zeit auf Überlegungen zur Entscheidungsfindung zu verwenden.</td>
-    <td style="text-align:center">Kühn</td>
-    <td style="text-align:center"><strong>Vorsicht</strong></td>
-    <td style="text-align:center">Besonnen</td>
-    <td style="text-align:right">Sie denken Entscheidungen sorgfältig durch, bevor Sie sie treffen.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sie würden lieber sofort handeln, als
+      Zeit auf Überlegungen zur Entscheidungsfindung zu verwenden.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Kühn
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Besonnenheit</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Besonnen
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Sie denken Entscheidungen sorgfältig durch, bevor Sie sie treffen.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Sie tun, was Sie wollen ohne Rücksicht auf Regeln und Verpflichtungen.</td>
-    <td style="text-align:center">Sorglos</td>
-    <td style="text-align:center"><strong>Pflichtbewusstsein</strong></td>
-    <td style="text-align:center">Pflichtbewusst</td>
-    <td style="text-align:right">Sie nehmen Regeln und Verpflichtungen ernst, auch wenn sie unbequem sind.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sie tun, was Sie wollen ohne Rücksicht auf Regeln und Verpflichtungen.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Sorglos
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Pflichtbewusstsein</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Pflichtbewusst
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Sie nehmen Regeln und Verpflichtungen ernst, auch wenn sie unbequem sind.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Sie nehmen sich nicht viel Zeit für Organisation in Ihrem täglichen Leben.</td>
-    <td style="text-align:center">Unstrukturiert</td>
-    <td style="text-align:center"><strong>Ordnungsliebe</strong></td>
-    <td style="text-align:center">Organisiert</td>
-    <td style="text-align:right">Sie fühlen ein starkes Bedürfnis nach Struktur in Ihrem Leben.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sie nehmen sich nicht viel Zeit für Organisation in Ihrem täglichen Leben.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Unstrukturiert
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Ordnungsliebe</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Organisiert
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Sie fühlen ein starkes Bedürfnis nach Struktur in Ihrem Leben.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Es fällt Ihnen schwer, über einen langen Zeitraum an schwierigen Aufgaben dranzubleiben.</td>
-    <td style="text-align:center">Diskontinuierlich</td>
-    <td style="text-align:center"><strong>Selbstdisziplin</strong></td>
-    <td style="text-align:center">Beständig</td>
-    <td style="text-align:right">Sie können schwere Aufgaben bewältigen und halten bis zum Ende durch.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Es fällt Ihnen schwer, über einen langen Zeitraum an schwierigen Aufgaben dranzubleiben.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Diskontinuierlich
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Selbstdisziplin</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Beständig
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Sie können schwere Aufgaben bewältigen und halten bis zum Ende durch.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Sie haben häufig Zweifel an Ihrer Fähigkeit, Ihre Ziele zu erreichen.</td>
-    <td style="text-align:center">Selbstzweifelnd</td>
-    <td style="text-align:center"><strong>Selbstwirksamkeit</strong></td>
-    <td style="text-align:center">Selbstsicher</td>
-    <td style="text-align:right">Sie fühlen sich fähig, die Aufgaben, die Sie in Angriff genommen haben, erfolgreich zu erledigen.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sie haben häufig Zweifel an Ihrer Fähigkeit, Ihre Ziele zu erreichen.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Selbstzweifelnd
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Selbstwirksamkeit</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Selbstsicher
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Sie fühlen sich fähig, die Aufgaben, die Sie in Angriff genommen haben, erfolgreich zu erledigen.
+    </td>
   </tr>
 </table>
 
 ## Primäre und sekundäre Dimensionen
-{: #dimensions}
+{: #dimensions-consc}
 
 Informationen, die die Dimension zu anderen Dimensionen in Beziehung setzen und Kombinationen von Persönlichkeitsmerkmalen beschreiben. Geben Einblicke in die Beziehungen zwischen primären und sekundären Merkmalen zur Darstellung des kombinierten Persönlichkeitsbilds.
 
@@ -163,11 +247,11 @@ Informationen, die die Dimension zu anderen Dimensionen in Beziehung setzen und 
   <tr>
     <td></td>
     <td style="text-align:center"><em>Niedrig</em></td>
-    <td>Vorsichtig, selbstsicher, pünktlich, formell, sparsam</td>
+    <td>Besonnen, selbstsicher, pünktlich, formell, sparsam</td>
     <td>Unentschlossen, ziellos, lasch, unverbindlich, ohne Ehrgeiz</td>
   </tr>
   <tr>
-    <td style="text-align:left"><strong>Emotionale Bandbreite</strong></td>
+    <td style="text-align:left"><strong>Emotionales Spektrum</strong></td>
     <td style="text-align:center"><em>Hoch</em></td>
     <td>Wählerisch, überempfindlich</td>
     <td>Zerstreut, inkonsequent,unstet, vergesslich, impulsiv</td>

@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-08-11"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -22,6 +27,8 @@ lastupdated: "2017-08-11"
 
 *Bedürfnisse* beschreiben einen hohen Grad der Aspekte eines Produkts, die den Autor des Eingabetexts wahrscheinlich ansprechen. In der folgenden Tabelle werden die zwölf Bedürfnisse beschrieben, die der Service auswertet.
 {: shortdesc}
+
+Eine Bewertung über dem Mittelwert von 0,5 weist auf eine überdurchschnittliche Neigung zu dem betreffenden Merkmal hin. Eine Bewertung von 0,75 und darüber gibt an, dass Aspekte des Merkmals problemlos erkennbar sind. Solche Werte gelten als *hoch*. Weitere Informationen finden Sie unter [Perzentile für Persönlichkeitsmerkmale](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
 
 <table>
   <caption>Tabelle 1. Bedürfnisse</caption>
@@ -62,7 +69,7 @@ lastupdated: "2017-08-11"
   <tr>
     <td><strong>Liebe</strong></td>
     <td>Genießen soziale Kontakte, sowohl mit einzelnen als auch mit mehreren Personen. Jede Marke,
-      die damit verbunden wird, Menschen zuzammenzubringen, spricht dieses Bedürfnis an.</td>
+      die damit verbunden wird, Menschen zusammenzubringen, spricht dieses Bedürfnis an.</td>
   </tr>
   <tr>
     <td><strong>Sachlichkeit</strong></td>
@@ -81,6 +88,6 @@ lastupdated: "2017-08-11"
   <tr>
     <td><strong>Struktur</strong></td>
     <td>Zeigen Bodenständigkeit und ein Verlangen, Dinge zusammenzuhalten. Für sie
-      müssen Dinge gut organisiert und unter Kontrolle sein. </td>
+      müssen Dinge gut organisiert und unter Kontrolle sein.</td>
   </tr>
 </table>

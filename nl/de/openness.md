@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,11 +25,16 @@ lastupdated: "2017-10-12"
 # Big Five-Eigenschaften der Offenheit
 {: #openness}
 
-*Offenheit* oder *Offenheit für Erfahrungen* ist das Ausmaß, in dem eine Person offen für verschiedene Arten von Aktivitäten ist.
+*Offenheit* oder *Offenheit für Erfahrungen* ist das Ausmaß, in dem eine Person offen für verschiedene Arten von Aktivitäten ist. In den nachfolgenden Tabellen werden die Ergebnisse für die entsprechenden Merkmale als *hoch* oder *niedrig* bezeichnet:
 {: shortdesc}
 
+-   Jede Bewertung über dem Mittelwert 0,5 weist auf eine überdurchschnittliche Neigung zu dem betreffenden Merkmal hin. Eine Bewertung von 0,75 und darüber gibt an, dass Aspekte des Merkmals problemlos erkennbar sind. Solche Werte gelten als *hoch*.
+-   Für Bewertungen unter 0,50 bzw. unter 0,25, die als *niedrig* eingestuft werden, gilt jeweils das Gegenteil der obigen Aussagen.
+
+Weitere Informationen finden Sie unter [Perzentile für Persönlichkeitsmerkmale](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
+
 ## Facetten
-{: #facets}
+{: #facets-opens}
 
 Kurzbeschreibungen der Facetten der Dimension und der Einzelpersonen, die in den einzelnen Facetten hohe Ergebnisse aufweisen.
 
@@ -42,7 +52,7 @@ Kurzbeschreibungen der Facetten der Dimension und der Einzelpersonen, die in den
   <tr>
     <td><strong>Offenheit für Ästhetik</strong></td>
     <td>Lieben Schönheit in Kunst und Natur. Sie lassen sich leicht für Kunst-
-    und Naturerlebnisse begeistern. Zusammen mit dem Intellekt ist diese Facette
+    und Naturerlebnisse begeistern. Zusammen mit Offenheit für Ideen ist diese Facette
     einer der beiden wichtigsten und zentralen Aspekte dieses
     Merkmals.</td>
   </tr>
@@ -57,7 +67,7 @@ Kurzbeschreibungen der Facetten der Dimension und der Einzelpersonen, die in den
     interessantere innere Welt zu schaffen.</td>
   </tr>
   <tr>
-    <td><strong>Intellekt / Neugier für Ideen</strong></td>
+    <td><strong>Offenheit für Ideen / Neugier für Ideen</strong></td>
     <td>Sind intellektuell neugierig und neigen dazu, in Symbolen und
     Abstraktionen zu denken. Zusammen mit der Offenheit für Ästhetik ist diese Facette
     einer der beiden wichtigsten und zentralen Aspekte dieses Merkmals.</td>
@@ -70,71 +80,145 @@ Kurzbeschreibungen der Facetten der Dimension und der Einzelpersonen, die in den
 </table>
 
 ## Bereich der Merkmale
-{: #range}
+{: #range-opens}
 
 Allgemeine Beschreibungen, die möglicherweise auf Einzelpersonen zutreffen, deren Ergebnisse jeder Facette der Dimension mehr oder weniger entsprechen, und Begriffe, die solche Personen möglicherweise beschreiben.
 
-<table>
+<table summary="Für die in der mittleren Spalte einer jeden Zeile genannte Facette liefern die ersten beiden Spalten jeweils eine Beschreibung und einen bezeichnenden Begriff für Personen mit niedriger Bewertung für diese Facette, während die letzten beiden Spalten einen bezeichnenden Begriff sowie eine Beschreibung für Personen mit einer hohen Bewertung für die Facette angeben.">
   <caption>Tabelle 2. Bereich der Merkmale (Offenheit)</caption>
   <tr>
-    <th colspan="2" style="text-align:center">Beschreibung für niedrigen Wert</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">Beschreibung für hohen Wert</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+      Beschreibung für niedrigen Wert
+    </th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+      Beschreibung für hohen Wert
+    </th>
   </tr>
   <tr>
-    <th style="text-align:left; width: 23%">Beschreibung</th>
-    <th style="text-align:center; width: 16%">Begriff</th>
-    <th style="text-align:center; width: 16%">Facette</th>
-    <th style="text-align:center; width: 16%">Begriff</th>
-    <th style="text-align:right">Beschreibung</th>
-  </tr>
-    <tr>
-    <td style="text-align:left">Sie genießen vertraute Routine und bevorzugen es, nicht von ihr abzuweichen.</td>
-    <td style="text-align:center">Beständig</td>
-    <td style="text-align:center"><strong>Abenteuerlust</strong></td>
-    <td style="text-align:center">Abenteuerlustig</td>
-    <td style="text-align:right">Sie möchten neue Dinge erleben.</td>
-  </tr>
-  <tr>
-    <td style="text-align:left">Sie interessieren sich weniger für künstlerische oder kreative Aktivitäten als die meisten Menschen.</td>
-    <td style="text-align:center">Unbeeindruckt von Ästhetik</td>
-    <td style="text-align:center"><strong>Offenheit für Ästhetik</strong></td>
-    <td style="text-align:center">Empfänglich für Ästhetik</td>
-    <td style="text-align:right">Sie schätzen Schönheit und suchen kreative Erfahrungen.</td>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width: 23%">
+      Beschreibung
+    </th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width: 16%">
+      Begriff
+    </th>
+    <th id="facet" headers="blank" style="text-align:center; width: 16%">
+      Facette
+    </th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width: 16%">
+      Begriff
+    </th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+      Beschreibung
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">Sie denken nicht oft über Ihre Gefühle nach und drücken sie auch nicht offen aus.</td>
-    <td style="text-align:center">Leidenschaftslos</td>
-    <td style="text-align:center"><strong>Offenheit für Gefühle</strong></td>
-    <td style="text-align:center">Gefühlsbewusst</td>
-    <td style="text-align:right">Sie sind sich Ihrer Gefühle bewusst und können sie ausdrücken.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sie genießen vertraute Routine und bevorzugen es, nicht von ihr abzuweichen.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Beständig
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Abenteuerlust</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Abenteuerlustig
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Sie möchten neue Dinge erleben.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Ihnen sind Fakten lieber als Fantasie.</td>
-    <td style="text-align:center">Bodenständig</td>
-    <td style="text-align:center"><strong>Offenheit für Fantasie</strong></td>
-    <td style="text-align:center">Kreativ</td>
-    <td style="text-align:right">Sie haben eine blühende Fantasie.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sie interessieren sich weniger für künstlerische oder kreative Aktivitäten als die meisten Menschen.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Unbeeindruckt von Ästhetik
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Offenheit für Ästhetik</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Empfänglich für Ästhetik
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Sie schätzen Schönheit und suchen kreative Erfahrungen.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Sie bevorzugen es, die Welt so zu sehen, wie sie ist, und ziehen
-    selten abstrakte Ideen in Betracht.</td>
-    <td style="text-align:center">Konkret</td>
-    <td style="text-align:center"><strong>Offenheit für Ideen</strong></td>
-    <td style="text-align:center">Philosophisch</td>
-    <td style="text-align:right">Sie sind offen und begeisterungsfähig für neue Ideen und erforschen sie gerne.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sie denken nicht oft über Ihre Gefühle nach und drücken sie auch nicht offen aus.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Leidenschaftslos
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Offenheit für Gefühle</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Gefühlsbewusst
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Sie sind sich Ihrer Gefühle bewusst und können sie ausdrücken.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Sie bevorzugen die Beachtung von Tradition, um ein Gefühl von Stabilität aufrechtzuerhalten.</td>
-    <td style="text-align:center">Respekt gegenüber Autorität</td>
-    <td style="text-align:center"><strong>Liberalismus</strong></td>
-    <td style="text-align:center">Autoritätskritisch</td>
-    <td style="text-align:right">Sie bevorzugen es, Autorität und traditionelle Werte zu hinterfragen, um Änderungen herbeizuführen.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Ihnen sind Fakten lieber als Fantasie.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Bodenständig
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Offenheit für Fantasie</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Kreativ
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Sie haben eine blühende Fantasie.
+    </td>
+  </tr>
+  <tr>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sie bevorzugen es, die Welt so zu sehen, wie sie ist, und ziehen
+    selten abstrakte Ideen in Betracht.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Konkret
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Offenheit für Ideen</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Philosophisch
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Sie sind offen und begeisterungsfähig für neue Ideen und erforschen sie gerne.
+    </td>
+  </tr>
+  <tr>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sie bevorzugen die Beachtung von Tradition, um ein Gefühl von Stabilität aufrechtzuerhalten.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Respekt gegenüber Autorität
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Liberalismus</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Autoritätskritisch
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Sie bevorzugen es, Autorität und traditionelle Werte zu hinterfragen, um Änderungen herbeizuführen.
+    </td>
   </tr>
 </table>
 
 ## Primäre und sekundäre Dimensionen
-{: #dimensions}
+{: #dimensions-opens}
 
 Informationen, die die Dimension zu anderen Dimensionen in Beziehung setzen und Kombinationen von Persönlichkeitsmerkmalen beschreiben. Geben Einblicke in die Beziehungen zwischen primären und sekundären Merkmalen zur Darstellung des kombinierten Persönlichkeitsbilds.
 
@@ -182,15 +266,15 @@ Informationen, die die Dimension zu anderen Dimensionen in Beziehung setzen und 
     <td>Vorhersagbar, fantasielos, finster, apathisch, bieder</td>
   </tr>
   <tr>
-    <td style="text-align:left"><strong>Emotionale Bandbreite</strong></td>
+    <td style="text-align:left"><strong>Emotionales Spektrum</strong></td>
     <td style="text-align:center"><em>Hoch</em></td>
     <td>Leidenschaftlich, erregbar, sinnlich</td>
-    <td>Kreativ, intellektuell, einsichtsvoll, vielseitig, erfinderisch</td>
+    <td>Leicht verunsichert, schnell verärgert,besorgt</td>
   </tr>
   <tr>
     <td></td>
     <td style="text-align:center"><em>Niedrig</em></td>
-    <td>Leicht verunsichert, schnell verärgert,besorgt</td>
+    <td>Kreativ, intellektuell, einsichtsvoll, vielseitig, erfinderisch</td>
     <td>Unerschütterlich, unsensibel</td>
   </tr>
 </table>

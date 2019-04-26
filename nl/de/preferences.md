@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,22 +25,26 @@ lastupdated: "2017-10-12"
 # Verbraucherpräferenzen
 {: #preferences}
 
-Der {{site.data.keyword.personalityinsightsshort}}-Service leitet Persönlichkeitsmerkmale eines Autors nach drei Modellen ab: Big Five, Bedürfnisse (Needs) und Werte (Values). Auf der Basis der Ergebnisse für diese Modelle kann der Service außerdem Verbraucherpräferenzen für den Autor des Eingabetexts generieren. Setzen Sie den Abfrageparameter `consumption_preferences` für eine Anforderung auf `true`, um Verbraucherpräferenzen abzurufen.
+Der {{site.data.keyword.personalityinsightsshort}}-Service leitet Persönlichkeitsmerkmale eines Autors nach drei Modellen ab: Big Five, Bedürfnisse (Needs) und Werte (Values). Auf der Basis der Ergebnisse für diese Modelle kann der Service außerdem Verbraucherpräferenzen für den Autor des Eingabetexts generieren. Legen Sie für eine Anforderung für den Abfrageparameter `consumption_preferences` den Wert `true` fest, um Verbraucherpräferenzen abzurufen.
 {: shortdesc}
 
-Die über 40 Verbraucherpräferenzen in acht übergeordneten Gruppen geben die Wahrscheinlichkeit des Autors an, mit der er verschiedene Produkte, Services und Aktivitäten bevorzugt. Der Service kann zum Beispiel die Neigungen des Autors, wenn er sich im Geschäft Kleidung (bequem oder modisch) oder Automobile (kostengünstig oder sicherheitsorientiert) ansieht, seine Neigungen zu verschiedenen Genres in den Bereichen Musik, Film und Literatur sowie seine Haltung zu Umwelt und ehrenamtlicher Tätigkeit unter anderem erschließen.
+Der Service fasst die über 40 Verbraucherpräferenzen in acht übergeordneten Kategorien zusammen. Die Präferenzen geben die Wahrscheinlichkeit an, mit der der Autor verschiedene Produkte, Services und Aktivitäten bevorzugt. Der Service kann beispielsweise Folgendes feststellen: 
 
-Unternehmen verwenden die Persönlichkeitsmodelle des Service, um ihre Kunden besser zu verstehen und personalisiertere und zielorientiertere Kampagnen, Produkte und Services zu entwerfen und zu entwickeln. Verbraucherpräferenzen vereinfachen die Aufgabe, Maßnahmen auf der Grundlage der Ergebnisse des Services zu ergreifen. Unternehmen können ohne großen Aufwand eine Liste von Präferenzen abrufen, die den dominanten Merkmalen einer Person zugeordnet sind, und entsprechend reagieren. Weitere Informationen zu möglichen Anwendungen der Verbraucherpräferenzen finden Sie unter [Anwendungsfälle](/docs/services/personality-insights/usecases.html) und [Service in Aktion](/docs/services/personality-insights/applied.html).
+-   Die Neigungen des Autors bei Kleidung (Komfort vs. Mode) und bei Autos (Preis vs. Sicherheit).
+-   Die Tendenz des Autors zu unterschiedlichen Genres von Musik, Filmen und Lektüre.
+-   Die Einstellung des Autors zur Umwelt und zu ehrenamtlichen Tätigkeiten.
 
-In den folgenden Abschnitten werden die Verbraucherpräferenzen aufgeführt und beschrieben, die der Service zurückgeben kann. Weitere Informationen zur Interpretation der numerischen Werte für Präferenzen finden Sie unter [Bewertungen für Verbraucherpräferenzen](/docs/services/personality-insights/numeric.html#scores). Informationen dazu, wie die Präferenzen von {{site.data.keyword.IBM_notm}} entwickelt wurden, finden Sie unter [Wissenschaftliche Grundlagen des Service](/docs/services/personality-insights/science.html).
+Unternehmen verwenden die Persönlichkeitsmodelle des Service, um ihre Kunden besser zu verstehen und personalisiertere und zielorientiertere Kampagnen, Produkte und Services zu entwerfen und zu entwickeln. Mit Verbraucherpräferenzen wird es noch einfacher, auf der Grundlage der Ergebnisse des Service tätig zu werden. Unternehmen können ohne großen Aufwand eine Liste von Präferenzen erhalten, die mit den dominanten Merkmalen einer Person verbunden sind, und entsprechend darauf reagieren. Weitere Informationen zu möglichen Anwendungen der Verbraucherpräferenzen finden Sie unter [Anwendungsfälle](/docs/services/personality-insights?topic=personality-insights-usecases) und [Service in Aktion](/docs/services/personality-insights?topic=personality-insights-applied).
 
-## Einkaufspräferenzen
+In den folgenden Abschnitten werden die Verbraucherpräferenzen aufgeführt und beschrieben, die der Service zurückgeben kann. Weitere Informationen zur Interpretation der numerischen Werte für Präferenzen finden Sie unter [Bewertungen für Verbraucherpräferenzen](/docs/services/personality-insights?topic=personality-insights-numeric#scores). Informationen dazu, wie die Präferenzen von {{site.data.keyword.IBM_notm}} entwickelt wurden, finden Sie unter [Wissenschaftliche Grundlagen des Service](/docs/services/personality-insights?topic=personality-insights-science).
+
+## Präferenzen im Bereich 'Kaufverhalten'
 {: #shopping}
 
-Einkaufspräferenzen geben das Interesse des Autors an verschiedenen Typen von Einkäufen, das Ausmaß, in dem die Einkaufsgewohnheiten des Autors durch verschiedene externe Quellen beeinflusst werden, sowie das Geldausgabeverhalten des Autors an. Die Kategorie-ID und der Name sind `consumption_preferences_shopping` und `Präferenzen im Bereich Kaufverhalten`. Die Kategorie besitzt 12 Präferenzen.
+Einkaufspräferenzen geben das Interesse des Autors an verschiedenen Typen von Einkäufen, das Ausmaß, in dem die Einkaufsgewohnheiten des Autors durch verschiedene externe Quellen beeinflusst werden, sowie das Geldausgabeverhalten des Autors an. Die Kategorie-ID und der Name sind `consumption_preferences_shopping` und `Präferenzen im Bereich 'Kaufverhalten'`. Die Kategorie umfasst 12 Präferenzen.
 
 <table>
-  <caption>Tabelle 1. Einkaufspräferenzen</caption>
+  <caption>Tabelle 1. Präferenzen im Bereich 'Kaufverhalten'</caption>
   <tr>
     <th style="width:45%; text-align:left">
       ID der Verbraucherpräferenz
@@ -200,13 +209,13 @@ Einkaufspräferenzen geben das Interesse des Autors an verschiedenen Typen von E
   </tr>
 </table>
 
-## Filmpräferenzen
+## Präferenzen im Bereich 'Film'
 {: #movie}
 
-Filmpräferenzen geben Aufschluss über das Interesse des Autors an verschiedenen Arten von Filmen. Die Kategorie-ID und der Name sind `consumption_preferences_movie` und `Präferenzen im Bereich Film`. Die Kategorie besitzt 10 Präferenzen.
+Präferenzen im Bereich 'Film' geben Aufschluss über das Interesse des Autors an verschiedenen Arten von Filmen. Die Kategorie-ID und der Name sind `consumption_preferences_movie` und `Präferenzen im Bereich 'Film'`. Die Kategorie umfasst 10 Präferenzen.
 
 <table>
-  <caption>Tabelle 2. Filmpräferenzen</caption>
+  <caption>Tabelle 2. Präferenzen im Bereich 'Film'</caption>
   <tr>
     <th style="width:45%; text-align:left">
       ID der Verbraucherpräferenz
@@ -340,13 +349,13 @@ Filmpräferenzen geben Aufschluss über das Interesse des Autors an verschiedene
   </tr>
 </table>
 
-## Musikpräferenzen
+## Präferenzen im Bereich 'Musik'
 {: #music}
 
-Musikpräferenzen geben das Interesse des Autors an verschiedenen Typen von Musik an und zeigen, ob der Autor gerne Musik macht. Die Kategorie-ID und der Name sind `consumption_preferences_music` und `Präferenzen im Bereich Musik`. Die Kategorie besitzt neun Präferenzen.
+Präferenzen im Bereich 'Musik' geben das Interesse des Autors an verschiedenen Typen von Musik an und zeigen, ob der Autor gerne Musik macht. Die Kategorie-ID und der Name sind `consumption_preferences_music` und `Präferenzen im Bereich 'Musik'`. Die Kategorie umfasst neun Präferenzen.
 
 <table>
-  <caption>Tabelle 3. Musikpräferenzen</caption>
+  <caption>Tabelle 3. Präferenzen im Bereich 'Musik'</caption>
   <tr>
     <th style="width:45%; text-align:left">
       ID der Verbraucherpräferenz
@@ -475,13 +484,13 @@ Musikpräferenzen geben das Interesse des Autors an verschiedenen Typen von Musi
   </tr>
 </table>
 
-## Lektüre- und Bildungspräferenzen
+## Präferenzen im Bereich 'Lektüre und Lernen'
 {: #reading}
 
-Lektüre- und Bildungspräferenzen geben die Wahrscheinlichkeit, mit der der Autor liest, die Lesemotivation des Autors sowie die Typen von Inhalten, die der Autor gerne liest, an. Die Kategorie-ID und der Name sind `consumption_preferences_reading` und `Präferenzen im Bereich Literatur`. Die Kategorie besitzt fünf Präferenzen.
+Präferenzen im Bereich 'Lektüre und Lernen' geben die Wahrscheinlichkeit an, mit der der Autor liest, die Lesemotivation des Autors sowie die Typen von Inhalten, die der Autor gerne liest. Die Kategorie-ID und der Name sind `consumption_preferences_reading` und `Präferenzen im Bereich 'Lektüre'`. Die Kategorie umfasst fünf Präferenzen.
 
 <table>
-  <caption>Tabelle 4. Lektüre- und Bildungspräferenzen</caption>
+  <caption>Tabelle 4. Präferenzen im Bereich 'Lektüre und Lernen'</caption>
   <tr>
     <th style="width:45%; text-align:left">
       ID der Verbraucherpräferenz
@@ -556,13 +565,13 @@ Lektüre- und Bildungspräferenzen geben die Wahrscheinlichkeit, mit der der Aut
   </tr>
 </table>
 
-## Gesundheits- und Aktivitätspräferenzen
+## Präferenzen im Bereich 'Gesundheit und Aktivität'
 {: #health}
 
-Gesundheits- und Aktivitätspräferenzen geben das Interesse des Autors an gesunden Nahrungsmitteln und körperlichen Aktivitäten an. Die Kategorie-ID und der Name sind `consumption_preferences_health_and_activity` und `Präferenzen im Bereich Gesundheit und Aktivitäten`. Die Kategorie besitzt drei Präferenzen.
+Präferenzen im Bereich 'Gesundheit und Aktivität' geben das Interesse des Autors an gesunder Ernährung und körperlichen Aktivitäten an. Die Kategorie-ID und der Name sind `consumption_preferences_health_and_activity` und `Präferenzen im Bereich 'Gesundheit und Aktivität'`. Die Kategorie umfasst drei Präferenzen.
 
 <table>
-  <caption>Tabelle 5. Gesundheits- und Aktivitätspräferenzen</caption>
+  <caption>Tabelle 5. Präferenzen im Bereich 'Gesundheit und Aktivität'</caption>
   <tr>
     <th style="width:45%; text-align:left">
       ID der Verbraucherpräferenz
@@ -614,13 +623,13 @@ Gesundheits- und Aktivitätspräferenzen geben das Interesse des Autors an gesun
   </tr>
 </table>
 
-## Unternehmerische Präferenzen
+## Präferenzen im Bereich 'Unternehmergeist'
 {: #entrepreneur}
 
-Unternehmerische Präferenzen geben das Interesse des Autors an, ein Geschäft zu gründen. Die Kategorie-ID und der Name sind `consumption_preferences_entrepreneurship` und `Unternehmerische Präferenzen`. Die Kategorie besitzt eine Präferenz.
+Präferenzen im Bereich 'Unternehmergeist' geben das Interesse des Autors an, ein Geschäft zu gründen. Die Kategorie-ID und der Name sind `consumption_preferences_entrepreneurship` und `Präferenzen im Bereich 'Unternehmergeist'`. Die Kategorie umfasst eine Präferenz.
 
 <table>
-  <caption>Tabelle 6. Unternehmerische Präferenzen</caption>
+  <caption>Tabelle 6. Präferenzen im Bereich 'Unternehmergeist'</caption>
   <tr>
     <th style="width:45%; text-align:left">
       ID der Verbraucherpräferenz
@@ -647,13 +656,13 @@ Unternehmerische Präferenzen geben das Interesse des Autors an, ein Geschäft z
   </tr>
 </table>
 
-## Umweltbewusste Präferenzen
+## Präferenzen im Bereich 'Umweltbewusstsein'
 {: #environment}
 
-Umweltbewusste Präferenzen geben das Interesse des Autors an der Umwelt an. Die Kategorie-ID und der Name sind `consumption_preferences_environmental_concern` und `Präferenzen im Bereich Umwelt`. Die Kategorie besitzt eine Präferenz.
+Präferenzen im Bereich 'Umweltbewusstsein' geben das Interesse des Autors an der Umwelt an. Die Kategorie-ID und der Name sind `consumption_preferences_environmental_concern` und `Präferenz im Bereich 'Umweltbewusstsein'`. Die Kategorie umfasst eine Präferenz.
 
 <table>
-  <caption>Tabelle 7. Umweltbewusste Präferenzen</caption>
+  <caption>Tabelle 7. Präferenz im Bereich 'Umweltbewusstsein'</caption>
   <tr>
     <th style="width:45%; text-align:left">
       ID der Verbraucherpräferenz
@@ -680,13 +689,13 @@ Umweltbewusste Präferenzen geben das Interesse des Autors an der Umwelt an. Die
   </tr>
 </table>
 
-## Ehrenamtliche Präferenzen
+## Präferenzen im Bereich 'Ehrenamtliche Mitarbeit'
 {: #volunteer}
 
-Ehrenamtliche Präferenzen geben das Interesse des Autors an ehrenamtlicher Tätigkeit im Sozialbereich an. Die Kategorie-ID und der Name sind `consumption_preferences_volunteering` und `Präferenzen im Bereich der ehrenamtlichen Arbeit`. Die Kategorie besitzt eine Präferenz.
+Präferenzen im Bereich 'Ehrenamtliche Mitarbeit' geben das Interesse des Autors an ehrenamtlicher Mitarbeit im Sozialbereich an. Die Kategorie-ID und der Name sind `consumption_preferences_volunteering` und `Präferenzen im Bereich 'Ehrenamtliche Mitarbeit'`. Die Kategorie umfasst eine Präferenz.
 
 <table>
-  <caption>Tabelle 8. Ehrenamtliche Präferenzen</caption>
+  <caption>Tabelle 8. Präferenzen im Bereich 'Ehrenamtliche Mitarbeit'</caption>
   <tr>
     <th style="width:45%; text-align:left">
       ID der Verbraucherpräferenz
