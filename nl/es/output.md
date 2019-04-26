@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-28"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,24 +25,24 @@ lastupdated: "2017-10-28"
 # Comprensión de un perfil JSON
 {: #output}
 
-Cuando utiliza el método `POST /v3/profile` para analizar contenido, el servicio devuelve los resultados de su análisis como un objeto `Profile` de JSON de forma predeterminada o al especificar `application/json` con la cabecera `Accept` de una solicitud. El ámbito de la salida JSON depende de los parámetros que haya especificado con la solicitud y de si el texto de entrada representa datos con indicación de fecha y hora, como por ejemplo el texto asociado con un canal de Twitter.
+Cuando se utiliza el método `POST /v3/profile` para analizar contenido, el servicio devuelve los resultados de su análisis como un objeto `Profile` de JSON si se especifica `application/json` con la cabecera `Accept` de una solicitud. El ámbito de la salida JSON depende de los parámetros que haya especificado con la solicitud. También depende de si el texto de entrada representa datos con indicación de fecha y hora, como por ejemplo el texto asociado con un canal de Twitter.
 {: shortdesc}
 
-Las siguientes secciones describen el contenido de una respuesta en formato JSON. Toda la salida de ejemplo la produce el archivo JSON de ejemplo <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo" class="style-scope doc-content"></a> que se utiliza en la [Guía de aprendizaje de iniciación](/docs/services/personality-insights/getting-started.html). Para obtener información sobre la salida CSV, consulte [Comprensión de un perfil CSV](/docs/services/personality-insights/output-csv.html).
+Las siguientes secciones describen el contenido de una respuesta en formato JSON. Toda la salida de ejemplo la produce el archivo JSON de ejemplo <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a> que se utiliza en la [Guía de aprendizaje de iniciación](/docs/services/personality-insights?topic=personality-insights-gettingStarted). Para obtener información sobre la salida CSV, consulte [Comprensión de un perfil CSV](/docs/services/personality-insights?topic=personality-insights-outputCSV).
 
 ## El objeto Profile
 {: #outputJSON}
 
-El objeto `Profile` es el objeto JSON de nivel superior devuelto por el servicio. El objeto tiene los campos siguientes:
+El objeto `Profile` es el objeto JSON de nivel superior que devuelve el servicio. El objeto tiene los campos siguientes:
 
--   `word_count` (entero) proporciona el número de palabras del contenido de entrada que se utilizaron para generar el perfil. Puede ser menos que el número de palabras de la entrada si la solicitud ha enviado una gran cantidad de contenido. Si el número de palabras no cumple con un umbral mínimo, la salida también incluirá un campo `word_count_message` que proporciona orientación adicional.
+-   `word_count` (entero) proporciona el número de palabras del contenido de entrada que se utilizaron para generar el perfil. Esta cifra puede ser inferior que el número de palabras de la entrada si la solicitud ha enviado una gran cantidad de contenido. Si el número de palabras no cumple con un umbral mínimo, la salida incluye un campo `word_count_message` que proporciona orientación adicional.
 -   `processed language` (serie) describe el modelo de idioma que ha utilizado el servicio para procesar la entrada: `ar` (árabe), `en` (inglés), `es` (español), `ja` (japonés), o `ko` (coreano).
--   `personality` es una matriz recursiva de objetos `Trait` que describe las cinco grandes dimensiones y facetas deducidas del texto de entrada.
--   `needs` es una matriz de objetos `Trait` que describe las necesidades deducidas del texto de entrada.
--   `values` es una matriz de objetos `Trait` que describe los valores deducidos del texto de entrada.
+-   `personality` es una matriz recursiva de objetos `Trait` que describe las dimensiones y facetas de los Cinco grandes que se deducen del texto de entrada.
+-   `needs` es una matriz de objetos `Trait` que describe las necesidades que se deducen del texto de entrada.
+-   `values` es una matriz de objetos `Trait` que describe los valores que se deducen del texto de entrada.
 -   `behavior` es una matriz de objetos `Behavior` que describe la distribución del contenido en los días de la semana y en las horas del día. El servicio devuelve el campo solo para la entrada JSON que tiene indicación de fecha y hora.
 -   `consumption_preferences` es una matriz de objetos `ConsumptionPreferencesCategory` que proporciona resultados para cada categoría de preferencias de consumo. Los elementos de la matriz proporcionan información para las preferencias individuales de dicha categoría. El servicio devuelve el campo solo si el parámetro de consulta `consumption_preferences` de la solicitud se establece en `true`.
--   `warnings` es una matriz de objetos `Warning` que proporciona mensajes asociados con el texto de entrada. La matriz está vacía si la entrada no ha generado avisos.
+-   `warnings` es una matriz de objetos `Warning` que proporciona mensajes sobre el texto de entrada. La matriz está vacía si la entrada no ha generado avisos.
 
 ### Respuesta de ejemplo
 {: #JSONExample}
@@ -71,27 +76,27 @@ La siguiente salida de ejemplo muestra la estructura de alto nivel de un objeto 
 ## Salida de características de personalidad
 {: #traitJSON}
 
-El objeto `Profile` siempre incluye los campos `personality`, `needs`, y `values` para todos los tipos de entrada. Cada uno de estos campos contiene una matriz de objetos `Trait` que describe las características de personalidad para los atributos de dicho tipo de característica. Para las características necesidades y valores, la matriz tiene un único nivel que describe las características. Para las cinco grandes características, una matriz de nivel superior describe las dimensiones, y las matrices de segundo nivel describen las facetas de cada dimensión.
+El objeto `Profile` siempre incluye los campos `personality`, `needs`, y `values` para todos los tipos de entrada. Cada uno de estos campos contiene una matriz de objetos `Trait` que describe las características de personalidad para los atributos de dicho tipo de característica. Para las características necesidades y valores, la matriz tiene un único nivel que describe las características. Para las características de los Cinco grandes, una matriz de nivel superior describe las dimensiones, y las matrices de segundo nivel describen las facetas de cada dimensión.
 
 -   `trait_id` (serie) es el ID exclusivo de la característica a la que pertenecen los resultados:
-    -   `big5_characteristic` para las cinco grandes dimensiones de personalidad
-    -   `facet_characteristic` para las cinco grandes facetas de personalidad
-    -   `need_characteristic` para necesidades
-    -   `value_characteristic` para valores
+    -   `big5_{característica}` para las dimensiones de personalidad de los Cinco grandes
+    -   `facet_{característica}` para las facetas de personalida de los Cinco grandes
+    -   `need_{characteristic}` para Necesidades
+    -   `value_{characteristic}` para Valores
 -   `name` (serie) es el nombre visible del usuario de la característica.
 -   `category` (serie) es la categoría de la característica:
     -   `personality` para las cinco grandes características de personalidad
     -   `needs` para necesidades
     -   `values` para valores
--   `percentile` (doble) es la puntuación de percentil normalizada para la característica. Para obtener más información, consulte [Percentiles para características de personalidad](/docs/services/personality-insights/numeric.html#percentiles).
--   `raw_score` (doble) es la puntuación en bruto para la característica. El campo solo se devuelve si solicita puntuaciones en bruto estableciendo el parámetro de consulta `raw_scores` en `true`. Para obtener más información, consulte [Puntuaciones en bruto para las características de personalidad](/docs/services/personality-insights/numeric.html#rawScores).
--   `significant` (booleano) indica si la característica es significativa para el idioma de entrada. El campo es siempre `true` para todas las características de la entrada en inglés, español y japonés. El campo es `false` para el subconjunto de características de la entrada en árabe y coreano para la que los modelos de servicio no pueden generar resultados significativos. Para obtener más información, consulte [Limitaciones para entrada en árabe y coreano](/docs/services/personality-insights/numeric.html#limitations).
--   `children` es una matriz de objetos `Trait` que proporciona resultados más detallados para las facetas de cada dimensión de las cinco grandes, como se ha deducido del texto de entrada. La matriz solo se devuelve para las cinco grandes dimensiones.
+-   `percentile` (doble) es la puntuación de percentil normalizada para la característica. Para obtener más información, consulte [Percentiles para características de personalidad](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
+-   `raw_score` (doble) es la puntuación en bruto para la característica. El campo solo se devuelve si solicita puntuaciones en bruto estableciendo el parámetro de consulta `raw_scores` en `true`. Para obtener más información, consulte [Puntuaciones en bruto para las características de personalidad](/docs/services/personality-insights?topic=personality-insights-numeric#rawScores-numeric).
+-   `significant` (booleano) indica si la característica es significativa para el idioma de entrada. El campo es siempre `true` para todas las características de la entrada en inglés, español y japonés. El campo es `false` para el subconjunto de características de la entrada en árabe y coreano para la que los modelos de servicio no pueden generar resultados significativos. Para obtener más información, consulte [Limitaciones para entrada en árabe y coreano](/docs/services/personality-insights?topic=personality-insights-numeric#limitations).
+-   `children` es una matriz de objetos `Trait` que proporciona resultados más detallados para las facetas de cada dimensión de los cinco grandes, como se ha deducido del texto de entrada. La matriz solo se devuelve para las dimensiones de los Cinco grandes.
 
 ### Respuesta de ejemplo
 {: #traitExample}
 
-La salida de ejemplo siguiente muestra fragmentos de la salida para las características cinco grandes, necesidades y valores. Tal como se describe, solo las cinco grandes características tienen una matriz de `children` para sus respectivas facetas.
+La salida de ejemplo siguiente muestra fragmentos de la salida para las características de los Cinco grandes, de las Necesidades y de los Valores. Tal como se describe, solo las características de los Cinco grandes tienen una matriz de `children` para sus respectivas facetas.
 
 ```javascript
 {
@@ -225,11 +230,11 @@ La salida de ejemplo siguiente muestra fragmentos de la salida para las caracter
 Si la entrada al servicio es JSON que tiene indicaciones de fecha y hora para los elementos de contenido individual, el objeto `Profile` incluirá un campo `behavior`. El campo incluye un objeto `Behavior` para cada día de la semana y hora del día.
 
 -   `trait_id` (serie) es el ID exclusivo de la característica a la que pertenecen los resultados:
-    -   `behavior_day` para días de la semana (por ejemplo, `behavior_sunday`).
-    -   `behavior_hour` para horas del día (por ejemplo, `behavior_0000`).
+    -   `behavior_{day}` para días de la semana (por ejemplo, `behavior_sunday`).
+    -   `behavior_{hour}` para horas del día (por ejemplo, `behavior_0000`).
 -   `name` (serie) es el nombre visible del usuario de la característica.
 -   `category` (serie) es la categoría de la característica, que es siempre `behavior`.
--   `percentage` (doble) es el porcentaje de elementos de contenido que se ha producido durante dicho día de la semana u hora del día. Para obtener más información, consulte [Porcentajes para características de comportamiento](/docs/services/personality-insights/numeric.html#percentages).
+-   `percentage` (doble) es el porcentaje de elementos de contenido que se ha producido durante dicho día de la semana u hora del día. Para obtener más información, consulte [Porcentajes para características de comportamiento](/docs/services/personality-insights?topic=personality-insights-numeric#percentages).
 
 ### Respuesta de ejemplo
 {: #behaviorExample}
@@ -293,11 +298,11 @@ Si el parámetro de consulta `consumption_preferences` se establece en `true`, e
 -   `name` (serie) es el nombre visible del usuario de la categoría de preferencias de consumo.
 -   `consumption_preferences` es una matriz de objetos `ConsumptionPreferences` que proporciona resultados para las preferencias individuales de la categoría.
 
-Cada preferencia individual para una categoría se describe mediante un objeto `ConsumptionPreferences`. Algunas categorías solo tienen una única preferencia, otras tienen muchas más.
+Cada preferencia individual para una categoría se describe mediante un objeto `ConsumptionPreferences`. Algunas categorías solo tienen una única preferencia; otras tienen muchas más.
 
--   `consumption_preference_id` (serie) es el ID exclusivo de la preferencia de consumo a la que pertenecen los resultados en el formato `consumption_preferences_preference`.
+-   `consumption_preference_id` (serie) es el ID exclusivo de la preferencia de consumo a la que pertenecen los resultados en el formato `consumption_preferences_{preferencia}`.
 -   `name` (serie) es el nombre visible de usuario de la preferencia de consumo.
--   `score` (doble) es una puntuación que indica la probabilidad de que el autor prefiera el artículo. Para obtener más información, consulte [Puntuaciones para preferencias de consumo](/docs/services/personality-insights/numeric.html#scores).
+-   `score` (doble) es una puntuación que indica la probabilidad de que el autor prefiera el elemento. Para obtener más información, consulte [Puntuaciones para preferencias de consumo](/docs/services/personality-insights?topic=personality-insights-numeric#scores).
 
 ### Respuesta de ejemplo
 {: #preferenceExample}

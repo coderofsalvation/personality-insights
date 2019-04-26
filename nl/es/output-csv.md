@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,14 +25,14 @@ lastupdated: "2017-10-12"
 # Comprensión de un perfil CSV
 {: #outputCSV}
 
-El servicio devuelve los resultados de su análisis en formato CSV (comma-separated values) al especificar `text/csv` con la cabecera `Accept` de una solicitud. La salida CSV proporciona información similar a la proporcionada por la salida JSON. Como con JSON, la información de la salida CSV depende de si la entrada representa datos con indicación de fecha y hora y de si el usuario solicita puntuaciones en bruto y preferencias de consumo.
+El servicio devuelve los resultados de su análisis en formato CSV (comma-separated values) al especificar `text/csv` con la cabecera `Accept` de una solicitud. La salida CSV proporciona información similar a la proporcionada por la salida JSON. Como con JSON, la información de la salida CSV depende de si los datos de entrada llevan indicación de fecha y hora y de si se solicitan puntuaciones en bruto y preferencias de consumo.
 {: shortdesc}
 
-A diferencia de JSON, sin embargo, la salida CSV se devuelve como un número fijo de columnas. La primera fila de la salida consta de etiquetas de columna opcionales, incluidas solo si se establece el parámetro de consulta `csv_headers` de la solicitud en `true`. La segunda fila de la salida, que está siempre presente, contiene los resultados del análisis.
+La salida CSV, a diferencia de JSON, se devuelve como un número fijo de columnas. La primera fila de la salida consta de etiquetas de columna opcionales, incluidas solo si se establece el parámetro de consulta `csv_headers` de la solicitud en `true`. La segunda fila de la salida, que está siempre presente, contiene los resultados del análisis.
 
 Las secciones siguientes listan y describen brevemente todas las columnas de la salida CSV en el orden exacto en el que aparecen en los resultados. Las tablas describen las columnas por agrupación lógica, incluido el número de columnas de cada grupo y sus etiquetas opcionales. Aparte del recuento de palabras, todos los datos numéricos se devuelven como valores dobles.
 
-Para obtener más información sobre el significado de las columnas CSV, consulte [Comprensión de un perfil JSON](/docs/services/personality-insights/output.html) e [Interpretación de los resultados numéricos](/docs/services/personality-insights/numeric.html).
+Para obtener más información sobre el significado de las columnas CSV, consulte [Comprensión de un perfil JSON](/docs/services/personality-insights?topic=personality-insights-output) e [Interpretación de los resultados numéricos](/docs/services/personality-insights?topic=personality-insights-numeric).
 
 ## Características básicas y metadatos
 {: #basicCSV}
@@ -38,90 +43,90 @@ Las siguientes columnas están siempre presentes en la salida CSV para todas las
   <caption>Tabla 1. Columnas CSV para características básicas y
     metadatos</caption>
   <tr>
-    <th style="width:25%; text-align:left; vertical-align:bottom">Agrupación<br/>(número de columnas)</th>
+    <th style="width:25%; text-align:left; vertical-align:bottom">Agrupación<br/>(Número de columnas)</th>
     <th style="width:25%; text-align:left; vertical-align:bottom">Etiquetas opcionales</th>
     <th style="text-align:left; vertical-align:bottom">Descripción</th>
   </tr>
   <tr>
-    <td>
-      Simpatía de cinco grandes<br/>percentiles<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Percentiles de simpatía - Cinco Grandes<br/>(Siete columnas)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_agreeableness<br/>facet_altruism<br/>
       facet_cooperation<br/>facet_modesty<br/>
       facet_morality<br/>facet_sympathy<br/>
       facet_trust
     </td>
-    <td>
-      Puntuación de percentil normalizado para el autor del texto con respecto
-      a la dimensión o a la faceta denominada.
+    <td style="vertical-align:top">
+      Puntuación de percentil normalizada del autor del texto
+      respecto a la dimensión o faceta mencionada.
     </td>
   </tr>
   <tr>
-    <td>
-      Responsabilidad de cinco grandes<br/>percentiles<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Percentiles de responsabilidad - Cinco Grandes<br/>(Siete columnas)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_conscientiousness<br/>facet_achievement_striving
       <br/>facet_cautiousness<br/>facet_dutifulness<br/>
       facet_orderliness<br/>facet_self_discipline<br/>
       facet_self_efficacy
     </td>
-    <td>
-      Puntuación de percentil normalizado para el autor del texto con respecto
-      a la dimensión o a la faceta denominada.
+    <td style="vertical-align:top">
+      Puntuación de percentil normalizada del autor del texto
+      respecto a la dimensión o faceta mencionada.
     </td>
   </tr>
   <tr>
-    <td>
-      Extraversión de cinco grandes<br/>percentiles<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Percentiles de extraversión - Cinco Grandes<br/>(Siete columnas)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_extraversion<br/>facet_activity_level
       <br/>facet_assertiveness<br/>facet_cheerfulness<br/>
       facet_excitement_seeking<br/>facet_friendliness<br/>
       facet_gregariousness
     </td>
-    <td>
-      Puntuación de percentil normalizado para el autor del texto con respecto
-      a la dimensión o a la faceta denominada.
+    <td style="vertical-align:top">
+      Puntuación de percentil normalizada del autor del texto
+      respecto a la dimensión o faceta mencionada.
     </td>
   </tr>
   <tr>
-    <td>
-      Rango emocional de cinco grandes<br/>percentiles<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Percentiles de rango emocional - Cinco Grandes<br/>(Siete columnas)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_neuroticism<br/>facet_anger<br/>
       facet_anxiety<br/>facet_depression<br/>
       facet_immoderation<br/>facet_self_consciousness<br/>
       facet_vulnerability
     </td>
-    <td>
-      Puntuación de percentil normalizado para el autor del texto con respecto
-      a la dimensión o a la faceta denominada.
+    <td style="vertical-align:top">
+      Puntuación de percentil normalizada del autor del texto
+      respecto a la dimensión o faceta mencionada.
     </td>
   </tr>
   <tr>
-    <td>
-      Apertura de cinco grandes<br/>percentiles<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Percentiles de apertura - Cinco Grandes<br/>(Siete columnas)
     </td>
-    <td>
+    <td style="vertical-align:top">
       big5_openness<br/>facet_adventurousness<br/>
       facet_artistic_interests<br/>facet_emotionality<br/>
       facet_imagination<br/>facet_intellect<br/>
       facet_liberalism
     </td>
-    <td>
-      Puntuación de percentil normalizado para el autor del texto con respecto
-      a la dimensión o a la faceta denominada.
+    <td style="vertical-align:top">
+      Puntuación de percentil normalizada del autor del texto
+      respecto a la dimensión o faceta mencionada.
     </td>
   </tr>
   <tr>
-    <td>
-      Percentiles de necesidades<br/>(12 columnas)
+    <td style="vertical-align:top">
+      Percentiles de Necesidades<br/>(Doce columnas)
     </td>
-    <td>
+    <td style="vertical-align:top">
       need_liberty<br/>need_ideal<br/>
       need_love<br/>need_practicality<br/>
       need_self_expression<br/>need_stability<br/>
@@ -129,62 +134,62 @@ Las siguientes columnas están siempre presentes en la salida CSV para todas las
       need_closeness<br/>need_curiosity<br/>
       need_excitement<br/>need_harmony
     </td>
-    <td>
-      Puntuación de percentil normalizado para el autor del texto con respecto
-      a la necesidad denominada.
+    <td style="vertical-align:top">
+      Puntuación de percentil normalizada del autor del texto
+      respecto a la necesidad mencionada.
     </td>
   </tr>
   <tr>
-    <td>
-      Percentiles de valores<br/>(5 columnas)
+    <td style="vertical-align:top">
+      Percentiles de Valores<br/>(Cinco columnas)
     </td>
-    <td>
+    <td style="vertical-align:top">
       value_conservation<br/>value_hedonism<br/>
       value_openness_to_change<br/>value_self_enhancement<br/>
       value_self_transcendence
     </td>
-    <td>
-      Puntuación de percentil normalizado para el autor del texto con respecto
-      al valor denominado.
+    <td style="vertical-align:top">
+      Puntuación de percentil normalizada del autor del texto
+      respecto al valor mencionado.
     </td>
   </tr>
   <tr>
-    <td>
-      Días de la semana<br/>porcentajes<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Porcentajes de días de la semana<br/>(Siete columnas)
     </td>
-    <td>
+    <td style="vertical-align:top">
       behavior_sunday<br/>behavior_monday<br/>
       behavior_tuesday<br/>behavior_wednesday<br/>
       behavior_thursday<br/>behavior_friday<br/>
       behavior_saturday
     </td>
-    <td>
-      Si el texto de entrada tiene indicación de fecha y hora, el porcentaje de la entrada
-      asociada con cada día de la semana; si la entrada no tiene
-      indicación de fecha y hora, todos los porcentajes son <code>0,0</code>.
+    <td style="vertical-align:top">
+      <em>Si el texto de entrada tiene indicación de fecha y hora,</em> el porcentaje de la
+      entrada que está asociado a cada día de la semana. De lo contrario,
+      todos los porcentajes son <code>0.0</code>.
     </td>
   </tr>
   <tr>
-    <td>
-      Horas del día<br/>porcentajes<br/>(24 columnas)
+    <td style="vertical-align:top">
+      Porcentajes de horas del día<br/>(Veinticuatro columnas)
     </td>
-    <td>
-      behavior_0000<br/><em>a través de</em><br/>behavior_2300
+    <td style="vertical-align:top">
+      behavior_0000 <em>through</em> behavior_2300
     </td>
-    <td>
-      Si el texto de entrada tiene indicación de fecha y hora, el porcentaje de la entrada
-      asociada con cada hora del día; si la entrada no tiene
-      indicación de fecha y hora, los porcentajes serán todos <code>0,0</code>.
+    <td style="vertical-align:top">
+      <em>Si el texto de entrada tiene indicación de fecha y hora,</em> el porcentaje de la
+      entrada que está asociado a cada hora del día. De lo contrario,
+      todos los porcentajes son <code>0.0</code>.
     </td>
   </tr>
   <tr>
-    <td>
-      Recuento de palabras e<br/>idioma<br/>(2 columnas)
+    <td style="vertical-align:top">
+      Recuento de palabras e idioma<br/>(Dos columnas)
     </td>
-    <td>
+    <td style="vertical-align:top">
       word_count<br/>processed_language
     </td>
-    <td>
+    <td style="vertical-align:top">
       Un entero que indica el número de palabras presentes en el texto de entrada,
       y un identificador de dos letras para el modelo de idioma que ha utilizado el
       servicio para analizar el texto.
@@ -200,12 +205,12 @@ Las columnas siguientes solo están presentes si solicita las puntuaciones en br
 <table>
   <caption>Tabla 2. Columnas CSV para puntuaciones en bruto</caption>
   <tr>
-    <th style="width:40%; text-align:left; vertical-align:bottom">Agrupación<br/>(número de columnas)</th>
+    <th style="width:40%; text-align:left; vertical-align:bottom">Agrupación<br/>(Número de columnas)</th>
     <th style="width:60%; text-align:left; vertical-align:bottom">Etiquetas opcionales</th>
   </tr>
   <tr>
-    <td>
-      Simpatía de cinco grandes<br/>puntuaciones en bruto<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Puntuaciones en bruto de simpatía - Cinco Grandes<br/>(Siete columnas)
     </td>
     <td>
       big5_agreeableness_raw<br/>facet_altruism_raw<br/>
@@ -215,8 +220,8 @@ Las columnas siguientes solo están presentes si solicita las puntuaciones en br
     </td>
   </tr>
   <tr>
-    <td>
-      Responsabilidad de cinco grandes<br/>puntuaciones en bruto<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Puntuaciones en bruto de responsabilidad - Cinco Grandes<br/>(Siete columnas)
     </td>
     <td>
       big5_conscientiousness_raw<br/>facet_achievement_striving_raw<br/>
@@ -226,8 +231,8 @@ Las columnas siguientes solo están presentes si solicita las puntuaciones en br
     </td>
   </tr>
   <tr>
-    <td>
-      Extraversión de cinco grandes<br/>puntuaciones en bruto<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Puntuaciones en bruto de extraversión - Cinco Grandes<br/>(Siete columnas)
     </td>
     <td>
       big5_extraversion_raw<br/>facet_activity_level_raw<br/>
@@ -237,8 +242,8 @@ Las columnas siguientes solo están presentes si solicita las puntuaciones en br
     </td>
   </tr>
   <tr>
-    <td>
-      Rango emocional de cinco grandes<br/>puntuaciones en bruto<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Puntuaciones en bruto de rango emocional - Cinco Grandes<br/>(Siete columnas)
     </td>
     <td>
       big5_neuroticism_raw<br/>facet_anger_raw<br/>
@@ -248,8 +253,8 @@ Las columnas siguientes solo están presentes si solicita las puntuaciones en br
     </td>
   </tr>
   <tr>
-    <td>
-      Apertura de cinco grandes<br/>puntuaciones en bruto<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Puntuaciones en bruto de apertura - Cinco Grandes<br/>(Siete columnas)
     </td>
     <td>
       big5_openness_raw<br/>facet_adventurousness_raw<br/>
@@ -259,8 +264,8 @@ Las columnas siguientes solo están presentes si solicita las puntuaciones en br
     </td>
   </tr>
   <tr>
-    <td>
-      Puntuaciones en bruto de necesidades<br/>(12 columnas)
+    <td style="vertical-align:top">
+      Puntuaciones en bruto de Necesidades<br/>(Doce columnas)
     </td>
     <td>
       need_liberty_raw<br/>need_ideal_raw<br/>
@@ -272,8 +277,8 @@ Las columnas siguientes solo están presentes si solicita las puntuaciones en br
     </td>
   </tr>
   <tr>
-    <td>
-      Puntuaciones en bruto de valores<br/>(5 columnas)
+    <td style="vertical-align:top">
+      Puntuaciones en bruto de Valores<br/>(Cinco columnas)
     </td>
     <td>
       value_conservation_raw<br/>value_hedonism_raw<br/>
@@ -291,12 +296,12 @@ Las siguientes columnas están siempre presentes en la salida CSV para todas las
 <table>
   <caption>Tabla 3. Columnas CSV para significancia</caption>
   <tr>
-    <th style="width:40%; text-align:left; vertical-align:bottom">Agrupación<br/>(número de columnas)</th>
+    <th style="width:40%; text-align:left; vertical-align:bottom">Agrupación<br/>(Número de columnas)</th>
     <th style="width:60%; text-align:left; vertical-align:bottom">Etiquetas opcionales</th>
   </tr>
   <tr>
-    <td>
-      Simpatía de cinco grandes<br/>significancia<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Significancia de simpatía - Cinco Grandes<br/>(Siete columnas)
     </td>
     <td>
       big5_agreeableness_significant<br/>facet_altruism_significant<br/>
@@ -306,8 +311,8 @@ Las siguientes columnas están siempre presentes en la salida CSV para todas las
     </td>
   </tr>
   <tr>
-    <td>
-      Responsabilidad de cinco grandes<br/>significancia<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Significancia de responsabilidad - Cinco Grandes<br/>(Siete columnas)
     </td>
     <td>
       big5_conscientiousness_significant<br/>
@@ -318,8 +323,8 @@ Las siguientes columnas están siempre presentes en la salida CSV para todas las
     </td>
   </tr>
   <tr>
-    <td>
-      Extraversión de cinco grandes<br/>significancia<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Significancia de extraversión - Cinco Grandes<br/>(Siete columnas)
     </td>
     <td>
       big5_extraversion_significant<br/>facet_activity_level_significant<br/>
@@ -329,8 +334,8 @@ Las siguientes columnas están siempre presentes en la salida CSV para todas las
     </td>
   </tr>
   <tr>
-    <td>
-      Rango emocional de cinco grandes<br/>significancia<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Significancia de rango emocional - Cinco Grandes<br/>(Siete columnas)
     </td>
     <td>
       big5_neuroticism_significant<br/>facet_anger_significant<br/>
@@ -340,8 +345,8 @@ Las siguientes columnas están siempre presentes en la salida CSV para todas las
     </td>
   </tr>
   <tr>
-    <td>
-      Apertura de cinco grandes<br/>significancia<br/>(7 columnas)
+    <td style="vertical-align:top">
+      Significancia de apertura - Cinco Grandes<br/>(Siete columnas)
     </td>
     <td>
       big5_openness_significant<br/>facet_adventurousness_significant<br/>
@@ -351,8 +356,8 @@ Las siguientes columnas están siempre presentes en la salida CSV para todas las
     </td>
   </tr>
   <tr>
-    <td>
-      Significancia bruta de necesidades<br/>(12 columnas)
+    <td style="vertical-align:top">
+      Significancia bruta de Necesidades<br/>(Doce columnas)
     </td>
     <td>
       need_liberty_significant<br/>need_ideal_significant<br/>
@@ -364,8 +369,8 @@ Las siguientes columnas están siempre presentes en la salida CSV para todas las
     </td>
   </tr>
   <tr>
-    <td>
-      Significancia de valores<br/>(5 columnas)
+    <td style="vertical-align:top">
+      Significancia de Valores<br/>(Cinco columnas)
     </td>
     <td>
       value_conservation_significant<br/>value_hedonism_significant<br/>
@@ -384,14 +389,14 @@ Las columnas siguientes solo están presentes si solicita las preferencias de co
 <table style="width:90%">
   <caption>Tabla 4. Columnas CSV para las preferencias de consumo</caption>
   <tr>
-    <th style="width:40%; text-align:left; vertical-align:bottom">Agrupación<br/>(número de columnas)</th>
+    <th style="width:40%; text-align:left; vertical-align:bottom">Agrupación<br/>(Número de columnas)</th>
     <th style="width:60%; text-align:left; vertical-align:bottom">Etiquetas opcionales</th>
   </tr>
   <tr>
-    <td>
-      Preferencias de compra<br/>puntuaciones de categoría<br/>(12 columnas)
+    <td style="vertical-align:top">
+      Puntuaciones de categorías de preferencias de compras<br/>(Doce columnas)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_spur_of_moment<br/>
       consumption_preferences_credit_card_payment<br/>
       consumption_preferences_influence_brand_name<br/>
@@ -407,10 +412,10 @@ Las columnas siguientes solo están presentes si solicita las preferencias de co
     </td>
   </tr>
   <tr>
-    <td>
-      Preferencias musicales<br/>puntuaciones de categoría<br/>(9 columnas)
+    <td style="vertical-align:top">
+      Puntuaciones de categorías de preferencias musicales<br/>(Nueve columnas)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_music_rap<br/>
       consumption_preferences_music_country<br/>
       consumption_preferences_music_r_b<br/>
@@ -423,20 +428,20 @@ Las columnas siguientes solo están presentes si solicita las preferencias de co
     </td>
   </tr>
   <tr>
-    <td>
-      Preferencias de salud y actividad<br/>puntuaciones de categoría<br/>(3 columnas)
+    <td style="vertical-align:top">
+      Puntuaciones de categorías de preferencias de salud y actividad<br/>(Tres columnas)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_gym_membership<br/>
       consumption_preferences_outdoor<br/>
       consumption_preferences_eat_out
     </td>
   </tr>
   <tr>
-    <td>
-      Preferencias de películas<br/>puntuaciones de categoría<br/>(10 columnas)
+    <td style="vertical-align:top">
+      Puntuaciones de categorías de preferencias de películas<br/>(Diez columnas)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_movie_romance<br/>
       consumption_preferences_movie_adventure<br/>
       consumption_preferences_movie_horror<br/>
@@ -450,10 +455,10 @@ Las columnas siguientes solo están presentes si solicita las preferencias de co
     </td>
   </tr>
   <tr>
-    <td>
-      Preferencias de lectura<br/>puntuaciones de categoría<br/>(5 columnas)
+    <td style="vertical-align:top">
+      Puntuaciones de categorías de preferencias de lectura<br/>(Cinco columnas)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_read_frequency<br/>
       consumption_preferences_books_entertainment_magazines<br/>
       consumption_preferences_books_non_fiction<br/>
@@ -462,26 +467,26 @@ Las columnas siguientes solo están presentes si solicita las preferencias de co
     </td>
   </tr>
   <tr>
-    <td>
-      Preferencias de voluntariado<br/>puntuaciones de categoría<br/>(1 columna)
+    <td style="vertical-align:top">
+      Puntuaciones de categorías de preferencias de voluntariado<br/>(Una columna)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_volunteer
     </td>
   </tr>
   <tr>
-    <td>
-      Preferencias de interés en cuestiones ambientales<br/>puntuaciones de categoría<br/>(1 columna)
+    <td style="vertical-align:top">
+      Puntuaciones de categorías de preferencias de interés en cuestiones ambientales<br/>(Una columna)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_concerned_environment
     </td>
   </tr>
   <tr>
-    <td>
-      Preferencias de emprendimiento<br/>puntuaciones de categoría<br/>(1 columna)
+    <td style="vertical-align:top">
+      Puntuaciones de categorías de preferencias de emprendimiento<br/>(Una columna)
     </td>
-    <td>
+    <td style="vertical-align:top">
       consumption_preferences_start_business
     </td>
   </tr>

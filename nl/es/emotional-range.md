@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -17,14 +22,20 @@ lastupdated: "2017-10-12"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Rango emocional de cinco grandes
+# Los Cinco grandes - Rango emocional
 {: #emotionalRange}
 
-*Rango emocional*, también conocido como *Neurosis* o *Reacciones naturales*, es el punto hasta el que las emociones de una persona son sensibles al entorno del individuo.
+*Rango emocional*, también conocido como *Neurosis* o *Reacciones naturales*, es el punto hasta el que las emociones de una persona son sensibles al entorno del individuo.  En las tablas siguientes se califican los resultados de las características como *alta* o *baja*:
 {: shortdesc}
 
+-   Cualquier puntuación por encima de la media de 0,5 indica una tendencia de una característica más alta que la media. Una puntuación de 0,75 o superior
+indica los aspectos fácilmente discernibles de la característica; estas puntuaciones se consideran *altas*.
+-   Las sentencias opuestas son ciertas para las puntuaciones por debajo de 0,50 y 0,25, que se consideran *bajas*.
+
+Para obtener más información, consulte [Percentiles para características de personalidad](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
+
 ## Facetas
-{: #facets}
+{: #facets-emote}
 
 Descripciones breves de las facetas de la dimensión y de personas que tienen una alta puntuación en cada faceta.
 
@@ -32,106 +43,173 @@ Descripciones breves de las facetas de la dimensión y de personas que tienen un
   <caption>Tabla 1. Facetas (rango emocional)</caption>
   <tr>
     <th style="text-align:left">Faceta</th>
-    <th style="text-align:left">Personas que tienen una puntuación alta...</th>
+    <th style="text-align:left">Las personas que tienen una puntuación alta...</th>
   </tr>
   <tr>
     <td><strong>Ira / Fogoso</strong></td>
-    <td>Tener una tendencia a sentirse enfadado.</td>
+    <td>Tienen tendencia a sentirse enfadadas.</td>
   </tr>
   <tr>
     <td><strong>Ansiedad / Tendencia a la preocupación</strong></td>
-    <td>A menudo parece que algo desagradable, amenazante, o peligroso está
-    a punto de ocurrir. El sistema "pelear o huir" de sus cerebros se activa demasiado
-    fácil y frecuentemente.</td>
+    <td>A menudo les parece que está a punto de ocurrir algo desagradable, amenazante o peligroso. El sistema "pelear o huir" de sus cerebros se activa demasiado fácil y frecuentemente.</td>
   </tr>
   <tr>
     <td><strong>Depresión / Melancolía / Irritación</strong></td>
-    <td>Tender a reaccionar más rápidamente a los altibajos de la vida.</td>
+    <td>Tienden a reaccionar más rápidamente a los altibajos de la vida.</td>
   </tr>
   <tr>
     <td><strong>Falta de moderación / Autoindulgencia</strong></td>
-    <td>Sentir fuertes antojos y deseos a los que se tiene dificultad en resistirse,
-    aunque se sepa que es probable que haya que lamentarse más tarde. Se suele
-    estar orientado hacia placeres y recompensas a corto plazo en lugar de a consecuencias a     largo plazo.</td>
+    <td>Sienten fuertes antojos y deseos a los que les es difícil resistirse, aunque sepan que probablemente después se arrepentirán. Suelen estar orientadas a los placeres y recompensas a corto plazo en lugar de a las consecuencias a largo plazo.</td>
   </tr>
   <tr>
-    <td><strong>Conciencia de uno mismo</strong></td>
-    <td>Se es sensible hacia lo que los demás piensan de nosotros. Preocuparse sobre
-    el rechazo y el ridículo provoca avergonzarse y estar incómodo alrededor de los
-    demás; abochornarse fácilmente.</td>
+    <td><strong>Autoconsciencia</strong></td>
+    <td>Son sensibles a lo que los demás piensan de ellas. Su preocupación por el rechazo y el ridículo hace que sean tímidas y estén incómodas alrededor de los demás; se avergüenzan fácilmente.</td>
   </tr>
   <tr>
     <td><strong>Vulnerabilidad / Susceptible al estrés / Sensibilidad al estrés</strong></td>
-    <td>Tener dificultades para enfrentar el estrés. Experimentar pánico, confusión
-    e impotencia cuando se está bajo presión o al enfrentar situaciones de emergencia.</td>
+    <td>Tienen dificultades para enfrentar el estrés. Experimentan pánico, confusión e impotencia cuando están bajo presión o al enfrentarse a situaciones de emergencia.</td>
   </tr>
 </table>
 
 ## Rango de características
-{: #range}
+{: #range-emote}
 
 Descripciones generales que pueden aplicarse a las personas cuyas puntuaciones muestran más o menos de cada faceta de la dimensión, así como los términos que pueden describir a dichas personas.
 
-<table>
+<table summary="Para la faceta que se indica en la columna de en medio de cada fila, las dos primeras columnas proporcionan una descripción y un término para los individuos con puntuaciones bajas para la faceta, y las dos últimas columnas proporcionan un término y una descripción para los individuos con puntuaciones altas para la faceta.">
   <caption>Tabla 2. Rango de características (rango emocional)</caption>
   <tr>
-    <th colspan="2" style="text-align:center">Descripción de valor bajo</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">Descripción de valor alto</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+      Descripción de valor bajo
+    </th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+      Descripción de valor alto
+    </th>
   </tr>
   <tr>
-    <th style="text-align:left; width: 23%">Descripción</th>
-    <th style="text-align:center; width: 16%">Término</th>
-    <th style="text-align:center; width: 16%">Faceta</th>
-    <th style="text-align:center; width: 16%">Término</th>
-    <th style="text-align:right">Descripción</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width: 23%">
+      Descripción
+    </th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width: 16%">
+      Término
+    </th>
+    <th id="facet" headers="blank" style="text-align:center; width: 16%">
+      Faceta
+    </th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width: 16%">
+      Término
+    </th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+      Descripción
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">No enfadarse con facilidad.</td>
-    <td style="text-align:center">De temperamento apacible</td>
-    <td style="text-align:center"><strong>Ira</strong></td>
-    <td style="text-align:center">Fogoso</td>
-    <td style="text-align:right">Tener un temperamento fogoso, especialmente cuando las cosas no salen como se esperaba.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      No enfadarse con facilidad.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      De temperamento apacible
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Ira</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Fogoso
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Tener un temperamento fogoso, especialmente cuando las cosas no salen como se esperaba.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Tender a sentirse calmado y seguro de uno mismo.</td>
-    <td style="text-align:center">Seguro de uno mismo</td>
-    <td style="text-align:center"><strong>Ansiedad</strong></td>
-    <td style="text-align:center">Tendencia a la preocupación</td>
-    <td style="text-align:right">Tender a preocuparse por cosas que pueden ocurrir.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Tender a sentirse calmado y seguro de uno mismo.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Seguro de uno mismo
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Ansiedad</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Tendencia a la preocupación
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Tender a preocuparse por cosas que pueden ocurrir.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Estar generalmente cómodo con uno mismo como se es.</td>
-    <td style="text-align:center">Contento</td>
-    <td style="text-align:center"><strong>Depresión</strong></td>
-    <td style="text-align:center">Melancolía</td>
-    <td style="text-align:right">Pensar bastante a menudo sobre las cosas con las que se está descontento.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Estar generalmente cómodo con uno mismo como se es.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Contento
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Depresión</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Melancolía
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Pensar bastante a menudo sobre las cosas con las que se está descontento.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Tener control sobre sus deseos, que no son especialmente intensos.</td>
-    <td style="text-align:center">Sereno</td>
-    <td style="text-align:center"><strong>Falta de moderación</strong></td>
-    <td style="text-align:center">Hedonista</td>
-    <td style="text-align:right">Sentir los deseos firmemente y estar tentado fácilmente por ellos.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Tener control sobre sus deseos, que no son especialmente intensos.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Sereno
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Falta de moderación</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Hedonista
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Sentir los deseos firmemente y estar tentado fácilmente por ellos.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Ser difícil de avergonzar y confiar en uno mismo la mayoría del tiempo.</td>
-    <td style="text-align:center">Seguro</td>
-    <td style="text-align:center"><strong>Conciencia de uno mismo</strong></td>
-    <td style="text-align:center">Consciente de uno mismo</td>
-    <td style="text-align:right">Ser sensible a lo que los demás puedan pensar de uno mismo.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Ser difícil de avergonzar y confiar en uno mismo la mayoría del tiempo.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Seguro de uno mismo
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Autoconsciencia</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Cohibido
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Ser sensible a lo que los demás puedan pensar de uno mismo.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Manejar situaciones inesperadas de forma tranquila y efectiva.</td>
-    <td style="text-align:center">Calma bajo presión</td>
-    <td style="text-align:center"><strong>Vulnerabilidad</strong></td>
-    <td style="text-align:center">Susceptible al estrés</td>
-    <td style="text-align:right">Estar agobiado fácilmente en situaciones estresantes.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Manejar situaciones inesperadas de forma tranquila y efectiva.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Calma bajo presión
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Vulnerabilidad</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Susceptible al estrés
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Estar agobiado fácilmente en situaciones estresantes.
+    </td>
   </tr>
 </table>
 
 ## Dimensiones primarias y secundarias
-{: #dimensions}
+{: #dimensions-emote}
 
 Información que relaciona la dimensión con otras dimensiones, que describe combinaciones de características de personalidad. Proporciona información sobre cómo pueden interrelacionarse las características primarias y secundarias para representar una personalidad compleja del individuo.
 
