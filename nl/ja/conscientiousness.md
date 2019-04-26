@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,11 +25,16 @@ lastupdated: "2017-10-12"
 # ビッグ・ファイブの誠実性
 {: #conscientiousness}
 
-*誠実性* は、組織的な思慮深い方法で行動する個人の傾向です。
+*誠実性* は、組織的な思慮深い方法で行動する個人の傾向です。 以下の表では、特性に関する結果を*高い* または*低い* として特定しています。
 {: shortdesc}
 
+-   平均である 0.5 を超えるスコアは、特性の平均的傾向よりも大きいことを示しています。 0.75 以上のスコアは、特性の側面が容易に認められることを示しています。 そのようなスコアは、*高い* と見なされます。
+-   *低い* と見なされる 0.50 および 0.25 より下のスコアについては、その逆になります。
+
+詳しくは、『[パーソナリティー特性の百分位数](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles)』を参照してください。
+
 ## ファセット
-{: #facets}
+{: #facets-consc}
 
 ディメンションのファセットと、そのファセットでスコアが高い人の簡単な説明。
 
@@ -36,7 +46,7 @@ lastupdated: "2017-10-12"
   </tr>
   <tr>
     <td><strong>達成努力 / 意欲的</strong></td>
-    <td>卓越のために一生懸命努力する。成功と
+    <td>卓越のために一生懸命努力する。 成功と
     認められようとして、目標達成に向けて真剣に取り組んで
     常に突き進む。</td>
   </tr>
@@ -65,75 +75,149 @@ lastupdated: "2017-10-12"
 </table>
 
 ## 特性の範囲
-{: #range}
+{: #range-consc}
 
 ディメンションの各ファセットのスコアが高い人または低い人に当てはまる可能性がある一般的な記述と、そうした人を表す言葉。
 
-<table>
+<table summary="各行の中央の列にリストされているファセットに対して、最初の 2 列にはファセットのスコアが低い人の説明と言葉が示されています。最後の 2 列にはファセットのスコアが高い人の言葉と説明が示されています。">
   <caption>表 2. 特性の範囲 (誠実性)</caption>
   <tr>
-    <th colspan="2" style="text-align:center">低い値の人の記述</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">高い値の人の記述</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+      低い値の人の記述
+    </th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+      高い値の人の記述
+    </th>
   </tr>
   <tr>
-    <th style="text-align:left; width:23%">説明</th>
-    <th style="text-align:center; width:16%">言葉</th>
-    <th style="text-align:center; width:16%">ファセット</th>
-    <th style="text-align:center; width:16%">言葉</th>
-    <th style="text-align:right">説明</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width:23%">
+      説明
+    </th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width:16%">
+      言葉
+    </th>
+    <th id="facet" headers="blank" style="text-align:center; width:16%">
+      ファセット
+    </th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width:16%">
+      言葉
+    </th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+      説明
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">自分の達成したレベルに満足しており、
-      野心的な目標を設定する必要を感じない。</td>
-    <td style="text-align:center">満足</td>
-    <td style="text-align:center"><strong>達成努力</strong></td>
-    <td style="text-align:center">意欲的</td>
-    <td style="text-align:right">自分に高い目標を設定し、その達成のために
-      真剣に取り組む。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      自分の達成したレベルに満足しており、
+      野心的な目標を設定する必要を感じない。
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      満足
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>達成努力</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      意欲的
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      自分に高い目標を設定し、その達成のために
+      真剣に取り組む。
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">決断に慎重で時間を費やすより、
-      すぐに実行する。</td>
-    <td style="text-align:center">大胆</td>
-    <td style="text-align:center"><strong>注意深さ</strong></td>
-    <td style="text-align:center">慎重</td>
-    <td style="text-align:right">決断する前に注意深く考え抜く。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      決断に慎重で時間を費やすより、
+      すぐに実行する。
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      大胆
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>注意深さ</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      慎重
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      決断する前に注意深く考え抜く。
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">規則や義務は無視して、やりたいことをやる。</td>
-    <td style="text-align:center">気楽</td>
-    <td style="text-align:center"><strong>忠実さ</strong></td>
-    <td style="text-align:center">従順</td>
-    <td style="text-align:right">規則や義務が不都合であってもまじめに守る。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      規則や義務は無視して、やりたいことをやる。
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      気楽
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>忠実さ</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      従順
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      規則や義務が不都合であってもまじめに守る。
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">日常生活で組織のために時間を多く取らない。</td>
-    <td style="text-align:center">非組織的</td>
-    <td style="text-align:center"><strong>秩序性</strong></td>
-    <td style="text-align:center">組織的</td>
-    <td style="text-align:right">生活の中で組織構造の必要性を強く感じる。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      日常生活で組織のために時間を多く取らない。
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      非組織的
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>秩序性</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      組織的
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      生活の中で組織構造の必要性を強く感じる。
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">長期間、むずかしいことを続けられない。</td>
-    <td style="text-align:center">中断</td>
-    <td style="text-align:center"><strong>自制力</strong></td>
-    <td style="text-align:center">持続</td>
-    <td style="text-align:right">きついことにも立ち向かってあきらめない。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      長期間、むずかしいことを続けられない。
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      中断
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>自制力</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      持続
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      きついことにも立ち向かってあきらめない。
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">自分の目標達成能力を疑うことが多い。</td>
-    <td style="text-align:center">自分に自信がない</td>
-    <td style="text-align:center"><strong>自己効力感</strong></td>
-    <td style="text-align:center">自信がある</td>
-    <td style="text-align:right">取り組んだことには成功できると感じる。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      自分の目標達成能力を疑うことが多い。
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      自分に自信がない
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>自己効力感</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      自信がある
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      取り組んだことには成功できると感じる。
+    </td>
   </tr>
 </table>
 
 ## 1 次ディメンションと 2 次ディメンション
-{: #dimensions}
+{: #dimensions-consc}
 
-パーソナリティー特性の組み合わせを記述し、1 つのディメンションを他のディメンションと関連付ける情報。個人の複合的なパーソナリティーを表すために 1 次特性と 2 次特性が相互にどう関連するかを洞察します。
+パーソナリティー特性の組み合わせを記述し、1 つのディメンションを他のディメンションと関連付ける情報。 個人の複合的なパーソナリティーを表すために 1 次特性と 2 次特性が相互にどう関連するかを洞察します。
 
 <table>
   <caption>表 3. 1 次ディメンションと 2 次ディメンション (誠実性)</caption>

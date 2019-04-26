@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -91,7 +96,7 @@ lastupdated: "2017-10-12"
 1.  <a id="rentfrow2003" style="border-bottom:none; color:black">Rentfrow, Peter J. 및 Samuel D. Gosling.</a> [*The Do Re Mi's of Everyday Life: The Structure and Personality Correlates of Music Preferences.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ncbi.nlm.nih.gov/pubmed/12793587){: new_window} Journal of Personality and Social Psychology, Vol. 84(6) (2003년 6월): pp. 1236-1256.
 1.  <a id="roberts2007" style="border-bottom:none; color:black">Roberts, Brent W., Nathan Kuncel, Rebecca L. Shiner, Avshalom Caspi 및 Lewis R. Goldberg.</a> [*The Power of Personality: The Comparative Validity of Personality Traits, Socioeconomic Status, and Cognitive Ability for Predicting Important Life Outcomes.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://pps.sagepub.com/content/2/4/313.short?rss=1&ssource=mfc){: new_window} Perspectives on Psychological Science, Vol. 2(4) (2007년 12월): pp. 313-345.
 1.  <a id="roberts2008" style="border-bottom:none; color:black">Roberts, Brent W. 및 Daniel Mroczek.</a> [*Personality Trait Change in Adulthood.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2743415/){: new_window} Current Directions in Psychological Science, Vol. 17(1) (2008년 2월): pp. 31-35.
-1.  <a id="sarli2011" style="border-bottom:none; color:black">Sarli, Abduljalil 및 Huam Hon Tat.</a> [*Attracting Consumers by Finding out Their Psychographic Traits.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://fundamentaljournals.org/ijfpss/downloads/2-Sarli%20N1%20pp%20%286-10%29.pdf){: new_window} International Journal of Fundamental Psychology &amp; Social Sciences, Vol. 1(1) (2011년 9월): pp. 6-10.
+1.  <a id="sarli2011" style="border-bottom:none; color:black">Sarli, Abduljalil 및 Huam Hon Tat.</a> [*Attracting Consumers by Finding out Their Psychographic Traits.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.academia.edu/3586683/Attracting_Consumers_by_Finding_out_Their_Psychographic_Traits){: new_window} International Journal of Fundamental Psychology &amp; Social Sciences, Vol. 1(1) (2011년 9월): pp. 6-10.
 1.  <a id="schlegelmilch1996" style="border-bottom:none; color:black">Schlegelmilch, Bodo B., Greg M. Bohlen 및 Adamantios Diamantopoulos.</a> [*The Link between Green Purchasing Decisions and Measures of Environmental Consciousness.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.emeraldinsight.com/doi/abs/10.1108/03090569610118740){: new_window} European Journal of Marketing, Vol. 30(5) (1996): pp. 35-55.
 1.  <a id="schwartz2013" style="border-bottom:none; color:black">Schwartz, H. Andrew, Johannes C. Eichstaedt, Margaret L. Kern, Lukasz Dziurzynski, Stephanie M. Ramones, Megha Agrawal, Achal Shah, Michal Kosinski, David Stillwell, Martin E. P. Seligman 및 Lyle H. Ungar.</a> [*Personality, Gender, and Age in the Language of Social Media: The Open-Vocabulary Approach.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0073791){: new_window} PLoS One, Vol. 8(9) (2013년 9월).
 1.  <a id="schwartz1992" style="border-bottom:none; color:black">Schwartz, Shalom H.</a> [*Universals in the content and structure of values: Theoretical advances and empirical tests in 20 countries.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.220.3674&rep=rep1&type=pdf){: new_window} Advances in Experimental Social Psychology, Vol. 25 (1992).
@@ -99,11 +104,9 @@ lastupdated: "2017-10-12"
 1.  <a id="scollon2006" style="border-bottom:none; color:black">Scollon, Christine N. 및 Ed Diener.</a> [*Love, Work, and Changes in Extraversion and Neuroticism over Time.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ncbi.nlm.nih.gov/pubmed/17144771){: new_window} Journal of Personality and Social Psychology, Vol. 91(6) (2006년 12월): pp. 1152-1165.
 1.  <a id="shepherd1994" style="border-bottom:none; color:black">Shepherd, Richard 및 Paul Sparks.</a> [*Modelling Food Choice.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://rd.springer.com/chapter/10.1007/978-1-4615-2171-6_8){: new_window} Measurement of Food Preferences, Springer US (1994): pp. 202-226.
 1.  <a id="sumner2012" style="border-bottom:none; color:black">Sumner, Chris, Alison Byers, Rachel Boochever 및 Gregory J. Park.</a> [*Predicting Dark Triad Personality Traits from Twitter usage and a linguistic analysis of Tweets.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.onlineprivacyfoundation.org/research_/Sumner_Predicting_Dark_Triad_Traits_from_Twitter_Usage_V5.pdf){: new_window} 11th IEEE International Conference on Machine Learning and Applications (2012): pp. 386-93.
-1.  <a id="tausczik2010" style="border-bottom:none; color:black">Tausczik, Yla R. 및 James W. Pennebaker.</a> [*The Psychological Meaning of Words: LIWC and Computerized Text Analysis Methods.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://jls.sagepub.com/content/29/1/24.abstract){: new_window} Journal of Language and Social Psychology, Vol. 29(1) (2010): pp. 24-54.
 1.  <a id="tok2011" style="border-bottom:none; color:black">Tok, Serdar.</a> [*The Big Five Personality Traits and Risky Sport Participation.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.sbp-journal.com/index.php/sbp/article/view/2197){: new_window} Social Behavior and Personality: an international journal, Vol. 39(8) (2011): pp. 1105-1112.
 1.  <a id="turiano2012" style="border-bottom:none; color:black">Turiano, Nicholas A., Lindsay Pitzer, Cherioe Armour, Arun Karlamangla, Carol D. Ryff 및 Daniel K. Mroczek.</a> [*Personality Trait Level and Change as Predictors of Health Outcomes: Findings From a National Study of Americans (MIDUS).* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ncbi.nlm.nih.gov/pubmed/21765062){: new_window} Journals of Gerontology Series B: Psychological Sciences &amp; Social Sciences, Vol. 67B(1) (2012년 1월): pp. 4-12.
 1.  <a id="vantrijp1992" style="border-bottom:none; color:black">van Trijp, Hans C. M. 및 Jan-Benedict E. M. Steenkamp.</a> [*Consumers' Variety Seeking Tendency with Respect to Foods: Measurement and Managerial Implications.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://erae.oxfordjournals.org/content/19/2/181.full.pdf){: new_window} European Review of Agricultural Economics, Vol. 19(2) (1992): pp. 181-195.
 1.  <a id="vanvianen2012" style="border-bottom:none; color:black">van Vianen, Annelies E. M., Ute-Christine Klehe, Jessie Koen 및 Nicky Dries.</a> [*Career adapt-abilities scale &mdash; Netherlands form: Psychometric properties and relationships to ability, personality, and regulatory focus.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.sciencedirect.com/science/article/pii/S0001879112000048){: new_window} Journal of Vocational Behavior, Vol. 80(3) (2012년 6월): pp. 716-724.
 1.  <a id="westfall1962" style="border-bottom:none; color:black">Westfall, Ralph.</a> [*Psychological Factors in Predicting Product Choice.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.jstor.org/stable/1248434?seq=1#page_scan_tab_contents){: new_window} Journal of Marketing, Vol. 26(2) (1962년 4월): pp. 34-40.
-1.  <a id="yang2013" style="border-bottom:none; color:black">Yang, Huahai 및 Yanyuo Li.</a> [*Identifying User Needs from Social Media.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://domino.research.ibm.com/library/cyberdig.nsf/papers?SearchView&Query=%28identifying+user+needs+from+social+media%29&SearchMax=10){: new_window} {{site.data.keyword.IBM_notm}} Research Report (2013).
 1.  <a id="yarkoni2010" style="border-bottom:none; color:black">Yarkoni, Tal.</a> [*Personality in 100,000 words: A large-scale analysis of personality and word usage among bloggers.* ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2885844/){: new_window} Journal of Research in Personality, Vol. 44(3) (2010): pp. 363-373.

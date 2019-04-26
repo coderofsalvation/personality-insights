@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,19 +26,24 @@ lastupdated: "2017-10-12"
 {: #agreeableness}
 
 *Gradevolezza* è la tendenza di una persona a essere
-              compassionevole e cooperativa verso gli altri.
+              compassionevole e cooperativa verso gli altri. Le tabelle che seguono qualificano i risultati delle caratteristiche come *alti* o *bassi*:
 {: shortdesc}
 
-## Aspetti
-{: #facets}
+-   Qualsiasi punteggio al di sopra della media di 0,5 indica una tendenza superiore alla media per una caratteristica. Un punteggio pari o al di sopra di 0,75 indica aspetti facilmente distinguibili della caratteristica; tali punteggi vengono considerati *alti*.
+-   Sono vere le dichiarazioni opposte di punteggi al di sotto di 0,50 e 0,25, che vengono considerate *basse*.
 
-Brevi descrizioni degli aspetti della dimensione e degli individui che ottengono un punteggio elevato in ogni aspetto.
+Per ulteriori informazioni, vedi [Percentili per le caratteristiche della personalità](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
+
+## Aspetti
+{: #facets-agree}
+
+Brevi descrizioni degli aspetti della dimensione e degli individui che ottengono un punteggio alto in ogni aspetto.
 
 <table>
   <caption>Tabella 1. Aspetti (gradevolezza)</caption>
   <tr>
     <th style="text-align:left">Aspetto</th>
-    <th style="text-align:left">Individui che ottengono un punteggio elevato...</th>
+    <th style="text-align:left">Individui che ottengono un punteggio alto...</th>
   </tr>
   <tr>
     <td><strong>Altruismo / Altruista</strong></td>
@@ -69,70 +79,143 @@ Brevi descrizioni degli aspetti della dimensione e degli individui che ottengono
 </table>
 
 ## Serie di caratteristiche
-{: #range}
+{: #range-agree}
 
 Descrizioni generali che potrebbero applicarsi a individui i cui punteggi mostrano più o meno ogni aspetto della dimensione, nonché i termini che potrebbero descrivere tali individui.
 
-<table>
+<table summary="Per l'aspetto elencato nella colonna centrale di ciascuna riga, le prime due colonne forniscono una descrizione e un termine per gli individui con punteggi bassi per l'aspetto e le ultime due colonne forniscono un termine e una descrizione per gli individui con punteggi alti per l'aspetto.">
   <caption>Tabella 2. Serie di caratteristiche (gradevolezza)</caption>
   <tr>
-    <th colspan="2" style="text-align:center">Descrizione del valore basso</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">Descrizione del valore alto</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+      Descrizione del valore basso
+    </th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+      Descrizione del valore alto
+    </th>
   </tr>
   <tr>
-    <th style="text-align:left; width:23%">Descrizione</th>
-    <th style="text-align:center; width:16%">Termine</th>
-    <th style="text-align:center; width:16%">Aspetto</th>
-    <th style="text-align:center; width:16%">Termine</th>
-    <th style="text-align:right">Descrizione</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width:23%">
+      Descrizione
+    </th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width:16%">
+      Termine
+    </th>
+    <th id="facet" headers="blank" style="text-align:center; width:16%">
+      Aspetto
+    </th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width:16%">
+      Termine
+    </th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+      Descrizione
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">Sei più interessato a prenderti cura di te che a occuparti degli altri.</td>
-    <td style="text-align:center">Egocentrico</td>
-    <td style="text-align:center"><strong>Altruismo</strong></td>
-    <td style="text-align:center">Altruista</td>
-    <td style="text-align:right">Ti senti soddisfatto quando aiuti gli altri e fai di tutto per farlo.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sei più interessato a prenderti cura di te che a occuparti degli altri.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Egocentrico
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Altruismo</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Altruista
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Ti senti soddisfatto quando aiuti gli altri e fai di tutto per farlo.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Non eviti di contraddire gli altri.</td>
-    <td style="text-align:center">Contrario</td>
-    <td style="text-align:center"><strong>Cooperazione</strong></td>
-    <td style="text-align:center">Accomodante</td>
-    <td style="text-align:right">Sei facile da accontentare e cerchi di evitare lo scontro.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Non eviti di contraddire gli altri.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Contrario</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Cooperazione</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Accomodante
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Sei facile da accontentare e cerchi di evitare lo scontro.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Hai una grande stima di te e sei soddisfatto di quello che sei.</td>
-    <td style="text-align:center">Orgoglioso</td>
-    <td style="text-align:center"><strong>Modestia</strong></td>
-    <td style="text-align:center">Modesto</td>
-    <td style="text-align:right">Ti senti a disagio nell'essere al centro dall'attenzione.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Hai una grande stima di te e sei soddisfatto di quello che sei.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Orgoglioso
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Modestia</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Modesto
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Ti senti a disagio nell'essere al centro dall'attenzione.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Sei a tuo agio nell'usare ogni trucco per ottenere quello che vuoi.</td>
-    <td style="text-align:center">Compromettente</td>
-    <td style="text-align:center"><strong>Moralità</strong></td>
-    <td style="text-align:center">Irremovibile</td>
-    <td style="text-align:right">Pensi che sia sbagliato approfittare degli altri per andare avanti.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sei a tuo agio nell'usare ogni trucco per ottenere quello che vuoi.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Compromettente
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Moralità</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Irremovibile
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Pensi che sia sbagliato approfittare degli altri per andare avanti.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Pensi che le persone dovrebbero generalmente contare più su se stesse che sugli altri.</td>
-    <td style="text-align:center">Crudele</td>
-    <td style="text-align:center"><strong>Compartecipazione</strong></td>
-    <td style="text-align:center">Empatico</td>
-    <td style="text-align:right">Senti ciò che gli altri sentono e sei compassionevole nei loro confronti.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Pensi che le persone dovrebbero generalmente contare più su se stesse che sugli altri.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Crudele
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Compartecipazione</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Empatico
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Senti ciò che gli altri sentono e sei compassionevole nei loro confronti.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Sei diffidente nei confronti delle intenzioni altrui e non ti fidi facilmente.</td>
-    <td style="text-align:center">Diffidente</td>
-    <td style="text-align:center"><strong>Fiducia</strong></td>
-    <td style="text-align:center">Fiducioso</td>
-    <td style="text-align:right">Credi nelle altre persone e ti fidi facilmente.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sei diffidente nei confronti delle intenzioni altrui e non ti fidi facilmente.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Diffidente
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Fiducia</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Fiducioso
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Credi nelle altre persone e ti fidi facilmente.
+    </td>
   </tr>
 </table>
 
 ## Dimensioni primarie e secondarie
-{: #dimensions}
+{: #dimensions-agree}
 
 Informazioni che collegano la dimensione ad altre dimensioni, descrivendo combinazioni di caratteristiche della personalità. Vengono fornite informazioni su come le caratteristiche primarie e secondarie potrebbero essere correlate per rappresentare la personalità composita di un individuo.
 

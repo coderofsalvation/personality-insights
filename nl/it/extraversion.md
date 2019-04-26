@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,11 +26,16 @@ lastupdated: "2017-10-12"
 {: #extraversion}
 
 *Estroversione* è la tendenza di una persona
-              a cercare stimoli in compagnia di altri.
+              a cercare stimoli in compagnia di altri. Le tabelle che seguono qualificano i risultati delle caratteristiche come *alti* o *bassi*:
 {: shortdesc}
 
+-   Qualsiasi punteggio al di sopra della media di 0,5 indica una tendenza superiore alla media per una caratteristica. Un punteggio pari o al di sopra di 0,75 indica aspetti facilmente distinguibili della caratteristica; tali punteggi vengono considerati *alti*.
+-   Sono vere le dichiarazioni opposte di punteggi al di sotto di 0,50 e 0,25, che vengono considerate *basse*.
+
+Per ulteriori informazioni, vedi [Percentili per le caratteristiche della personalità](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
+
 ## Aspetti
-{: #facets}
+{: #facets-extra}
 
 Brevi descrizioni degli aspetti della dimensione e degli individui che ottengono un punteggio elevato in ogni aspetto.
 
@@ -67,70 +77,144 @@ Brevi descrizioni degli aspetti della dimensione e degli individui che ottengono
 </table>
 
 ## Serie di caratteristiche
-{: #range}
+{: #range-extra}
 
 Descrizioni generali che potrebbero applicarsi a individui i cui punteggi mostrano più o meno ogni aspetto della dimensione, nonché i termini che potrebbero descrivere tali individui.
 
-<table>
+<table summary="Per l'aspetto elencato nella colonna centrale di ciascuna riga, le prime due colonne forniscono una descrizione e un termine per gli individui con punteggi bassi per l'aspetto e le ultime due colonne forniscono un termine e una descrizione per gli individui con punteggi alti per l'aspetto.">
   <caption>Tabella 2. Serie di caratteristiche (estroversione)</caption>
   <tr>
-    <th colspan="2" style="text-align:center">Descrizione del valore basso</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">Descrizione del valore alto</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+      Descrizione del valore basso
+    </th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+      Descrizione del valore alto
+    </th>
   </tr>
   <tr>
-    <th style="text-align:left; width:23%">Descrizione</th>
-    <th style="text-align:center; width:16%">Termine</th>
-    <th style="text-align:center; width:16%">Aspetto</th>
-    <th style="text-align:center; width:16%">Termine</th>
-    <th style="text-align:right">Descrizione</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width:23%">
+      Descrizione
+    </th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width:16%">
+      Termine
+    </th>
+    <th id="facet" headers="blank" style="text-align:center; width:16%">
+      Aspetto
+    </th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width:16%">
+      Termine
+    </th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+      Descrizione
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">Apprezzi un ritmo rilassato nella vita.</td>
-    <td style="text-align:center">Rilassato</td>
-    <td style="text-align:center"><strong>Livello di attività</strong></td>
-    <td style="text-align:center">Energico</td>
-    <td style="text-align:right">Ti piace un programma frenetico e impegnativo con molte attività.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Apprezzi un ritmo rilassato nella vita.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Rilassato
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Livello di attività</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Energico
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Ti piace un programma frenetico e impegnativo con molte attività.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Preferisci ascoltare piuttosto che parlare, specialmente nei contesti di gruppo.</td>
-    <td style="text-align:center">Riservato</td>
-    <td style="text-align:center"><strong>Assertività</strong></td>
-    <td style="text-align:center">Assertivo</td>
-    <td style="text-align:right">Tendi a parlare e prendi in mano le situazioni e sei a tuo agio nel guidare gruppi.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Preferisci ascoltare piuttosto che parlare, specialmente nei contesti di gruppo.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Riservato
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Assertività</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Assertivo
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Tendi a parlare e prendi in mano le situazioni e sei a tuo agio nel guidare gruppi.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Sei generalmente serio e non scherzi molto.</td>
-    <td style="text-align:center">Solenne</td>
-    <td style="text-align:center"><strong>Allegria</strong></td>
-    <td style="text-align:center">Allegro</td>
-    <td style="text-align:right">Sei una persona gioiosa e condividi tale gioia con il mondo.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sei generalmente serio e non scherzi molto.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Solenne
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Allegria</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Allegro
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Sei una persona gioiosa e condividi tale gioia con il mondo.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Preferisci attività tranquille, calme e sicure.</td>
-    <td style="text-align:center">Desiderio di calma</td>
-    <td style="text-align:center"><strong>Desiderio di stimoli</strong></td>
-    <td style="text-align:center">Desiderio di stimoli</td>
-    <td style="text-align:right">Ti piace assumerti dei rischi e di senti annoiato senza azioni continue.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Preferisci attività tranquille, calme e sicure.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Desiderio di calma
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Desiderio di stimoli</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Desiderio di stimoli
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Ti piace assumerti dei rischi e di senti annoiato senza azioni continue.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Sei una persona privata e non lasci entrare molte persone nella tua vita.</td>
-    <td style="text-align:center">Riservato</td>
-    <td style="text-align:center"><strong>Cordialità</strong></td>
-    <td style="text-align:center">Socievole</td>
-    <td style="text-align:right">Fai amicizia facilmente e ti senti a tuo agio con altre persone.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sei una persona privata e non lasci entrare molte persone nella tua vita.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Riservato
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Cordialità</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Socievole
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Fai amicizia facilmente e ti senti a tuo agio con altre persone.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Hai un forte desiderio di avere tempo per te stesso.</td>
-    <td style="text-align:center">Indipendente</td>
-    <td style="text-align:center"><strong>Socievolezza</strong></td>
-    <td style="text-align:center">Socievole</td>
-    <td style="text-align:right">Ti piace stare in compagnia degli altri.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Hai un forte desiderio di avere tempo per te stesso.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Indipendente
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Socievolezza</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Socievole
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Ti piace stare in compagnia degli altri.
+    </td>
   </tr>
 </table>
 
 ## Dimensioni primarie e secondarie
-{: #dimensions}
+{: #dimensions-extra}
 
 Informazioni che collegano la dimensione ad altre dimensioni, descrivendo combinazioni di caratteristiche della personalità. Vengono fornite informazioni su come le caratteristiche primarie e secondarie potrebbero essere correlate per rappresentare la personalità composita di un individuo.
 

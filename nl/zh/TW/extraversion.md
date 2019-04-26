@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,10 +26,16 @@ lastupdated: "2017-10-12"
 {: #extraversion}
 
 *外向* 是一個人在他人陪伴下尋求刺激的傾向。
+下列表格符合*高*或*低*特質的結果：
 {: shortdesc}
 
+-   任何大於 0.5 的平均值的評分，表示特質的平均趨勢為大於平均值。若評分等於或大於 0.75 ，表示特質在辨識方面較容易；這類評分被視為*高*。
+-   相反的陳述式是低於 0.50 和 0.25 的評分，這將會被視為*低*。
+
+如需相關資訊，請參閱[性格特質的百分位數](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles)。
+
 ## 面向
-{: #facets}
+{: #facets-extra}
 
 簡要說明維度的面向，以及在各面向獲得高評分的個人。
 
@@ -61,70 +72,113 @@ lastupdated: "2017-10-12"
 </table>
 
 ## 特質範圍
-{: #range}
+{: #range-extra}
 
 針對評分或多或少可證明維度各面向的個人，提供一般性說明，以及可以形容這些個人的詞彙。
 
-<table>
-  <caption>表 2. 特質範圍（外向）</caption>
+<table summary="針對每一列中間直欄所列出的面向，前兩個直欄會提供低面向評分的個人說明及詞彙，而最後兩個直欄會提供高面向評分的個人說明及詞彙。">
+<caption>表 2. 特質範圍（外向）</caption>
   <tr>
-    <th colspan="2" style="text-align:center">低值的說明</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">高值的說明</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+低值的說明</th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+高值的說明</th>
   </tr>
   <tr>
-    <th style="text-align:left; width:23%">說明</th>
-    <th style="text-align:center; width:16%">詞彙</th>
-    <th style="text-align:center; width:16%">面向</th>
-    <th style="text-align:center; width:16%">詞彙</th>
-    <th style="text-align:right">說明</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width:23%">
+說明</th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width:16%">
+詞彙</th>
+    <th id="facet" headers="blank" style="text-align:center; width:16%">
+面向</th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width:16%">
+詞彙</th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+說明</th>
   </tr>
   <tr>
-    <td style="text-align:left">您喜歡放鬆的生活節奏。</td>
-    <td style="text-align:center">悠閒</td>
-    <td style="text-align:center"><strong>活動層次</strong></td>
-    <td style="text-align:center">充滿活力</td>
-    <td style="text-align:right">您享受有許多活動的快節奏、忙碌行程。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+您喜歡放鬆的生活節奏。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+悠閒</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>活動層次</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+充滿活力</td>
+    <td headers="highValue highDescription" style="text-align:right">
+您享受有許多活動的快節奏、忙碌行程。</td>
   </tr>
   <tr>
-    <td style="text-align:left">您喜歡聆聽勝於說話，尤其是在團體場合中。</td>
-    <td style="text-align:center">端莊</td>
-    <td style="text-align:center"><strong>堅定自信</strong></td>
-    <td style="text-align:center">堅定自信的</td>
-    <td style="text-align:right">您傾向於發言及掌控情況，並且可以輕鬆地領導團體。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+您喜歡聆聽勝於說話，尤其是在團體場合中。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+端莊</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>堅定自信</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+堅定自信的</td>
+    <td headers="highValue highDescription" style="text-align:right">
+您傾向於發言及掌控情況，並且可以輕鬆地領導團體。</td>
   </tr>
   <tr>
-    <td style="text-align:left">您通常很嚴肅，不太開玩笑。</td>
-    <td style="text-align:center">嚴肅</td>
-    <td style="text-align:center"><strong>愉快</strong></td>
-    <td style="text-align:center">爽朗</td>
-    <td style="text-align:right">您是個快樂的人，並與世界分享快樂。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+您通常很嚴肅，不太開玩笑。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+嚴肅</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>愉快</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+爽朗</td>
+    <td headers="highValue highDescription" style="text-align:right">
+您是個快樂的人，並與世界分享快樂。</td>
   </tr>
   <tr>
-    <td style="text-align:left">您偏好安靜、平靜和安全的活動。</td>
-    <td style="text-align:center">追求平靜</td>
-    <td style="text-align:center"><strong>追求刺激</strong></td>
-    <td style="text-align:center">追求刺激</td>
-    <td style="text-align:right">冒險會讓您感到興奮，如果沒有很多活動在進行，您會覺得很無聊。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+您偏好安靜、平靜和安全的活動。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+追求平靜</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>追求刺激</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+追求刺激</td>
+    <td headers="highValue highDescription" style="text-align:right">
+冒險會讓您感到興奮，如果沒有很多活動在進行，您會覺得很無聊。</td>
   </tr>
   <tr>
-    <td style="text-align:left">您是很孤僻的人，不會讓很多人親近您。</td>
-    <td style="text-align:center">矜持</td>
-    <td style="text-align:center"><strong>友善</strong></td>
-    <td style="text-align:center">直率</td>
-    <td style="text-align:right">您很容易交朋友，在人群中可以感到自在。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+您是很孤僻的人，不會讓很多人親近您。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+矜持</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>友善</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+直率</td>
+    <td headers="highValue highDescription" style="text-align:right">
+您很容易交朋友，在人群中可以感到自在。</td>
   </tr>
   <tr>
-    <td style="text-align:left">您非常渴望有自己的時間。</td>
-    <td style="text-align:center">獨立</td>
-    <td style="text-align:center"><strong>合群</strong></td>
-    <td style="text-align:center">善交際</td>
-    <td style="text-align:right">您喜歡與他人為伴。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+您非常渴望有自己的時間。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+獨立</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>合群</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+善交際</td>
+    <td headers="highValue highDescription" style="text-align:right">
+您喜歡與他人為伴。</td>
   </tr>
 </table>
 
 ## 主要和次要維度
-{: #dimensions}
+{: #dimensions-extra}
 
 在不同維度之間建立關聯的資訊，說明性格特質的組合。提供主要與次要特質如何相互關聯的洞察分析，以呈現個人的綜合性格。
 

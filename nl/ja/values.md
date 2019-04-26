@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,8 +25,10 @@ lastupdated: "2017-10-12"
 # 価値
 {: #values}
 
-*価値*は、筆者の意思決定に影響を及ぼす動機付け要因を示します。以下の表は、このサービスで推測される 5 つの価値を示したものです。
+*価値*は、筆者の意思決定に影響を及ぼす動機付け要因を示します。 以下の表は、このサービスで推測される 5 つの価値を示したものです。
 {: shortdesc}
+
+平均である 0.5 を超えるスコアは、特性の平均的傾向よりも大きいことを示しています。 0.75 以上のスコアは、特性の側面が容易に認められることを示しています。 そのようなスコアは、*高い* と見なされます。詳しくは、『[パーソナリティー特性の百分位数](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles)』を参照してください。
 
 <table>
   <caption>表 1. 価値</caption>

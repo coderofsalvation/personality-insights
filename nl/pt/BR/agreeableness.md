@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -17,171 +22,249 @@ lastupdated: "2017-10-12"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Big Five agradam
+# Afabilidade do Big Five
 {: #agreeableness}
 
 *Afabilidade* é uma tendência
-da pessoa que a leva a ser compassiva e cooperativa em relação aos outros.
+da pessoa que a leva a ser compassiva e cooperativa em relação aos outros. As tabelas a seguir qualificam os resultados para as características como *altos* ou *baixos*:
 {: shortdesc}
 
-## Aspectos
-{: #facets}
+-   Qualquer pontuação acima da média de 0,5 indica uma tendência mais alta do que a média para uma característica. Uma pontuação de 0,75 ou acima indica aspectos prontamente discerníveis da característica. Essas pontuações são consideradas *altas*. 
+-   As declarações opostas correspondem a pontuações abaixo de 0,50 e 0,25, que são consideradas *baixas*.
 
-Descrições Breves de aspectos da dimensão e de indivíduos que recorde em cada aspecto.
+Para obter mais informações, consulte [Percentis para características da personalidade](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
+
+## Aspectos
+{: #facets-agree}
+
+Breves descrições dos aspectos da dimensão e de indivíduos que pontuam mais alto em cada aspecto.
 
 <table>
-  <caption>Tabela 1. Aspectos (agradam)</caption>
+  <caption>Tabela 1. Aspectos (afabilidade)</caption>
   <tr>
     <th style="text-align:left">Aspecto</th>
-    <th style="text-align:left">Indivíduos que recorde ...</th>
+    <th style="text-align:left">Indivíduos que pontuam alto...</th>
   </tr>
   <tr>
     <td><strong>Altruísmo / Altruísta</strong></td>
-    <td>Localizar que ajudar os outros é realmente gratificante, que faz as coisas para os outros é uma forma de sua realização, em vez de auto-sacrifício.</td>
+    <td>Acreditam que ajudar os outros é genuinamente gratificante, que fazer as coisas para os outros é uma forma de autorrealização, em vez de autossacrifício.</td>
   </tr>
   <tr>
-    <td><strong>Cooperação / Acomodando / Conformidade</strong></td>
-    <td>Confronto Descurtir. Eles são perfeitamente disposto a comprometer ou negar suas próprias necessidades para se dar bem com os outros.</td>
+    <td><strong>Cooperação / Acomodação / Conformidade</strong></td>
+    <td>Não gostam de confrontos. Estão perfeitamente dispostos a chegar a um acordo ou a negar suas próprias necessidades para se dar bem com os outros.</td>
   </tr>
   <tr>
     <td><strong>Modéstia / Modesto</strong></td>
-    <td>É modesto, em vez do modesto e humilde. No entanto, eles não necessariamente falta confiança ou auto-estima.</td>
+    <td>São simples, modestos e humildes. No entanto, eles não apresentam necessariamente falta de autoconfiança ou de autoestima.</td>
   </tr>
   <tr>
-    <td><strong>A / Descompromissada / Singeleza</strong></td>
-    <td>Veja sem necessidade de pretensão ou manipulação ao lidar com outros e, portanto, são sinceros, honesto e verdadeiro.</td>
+    <td><strong>Moralidade / Firme / Sinceridade</strong></td>
+    <td>Não veem necessidade de fingir ou manipular ao lidarem com os outros e são, portanto, cândidos, francos e verdadeiros.</td>
   </tr>
   <tr>
-    <td><strong>Simpatia / Empatia</strong></td>
-    <td>São carinhosos e compassivos.</td>
+    <td><strong>Compreensão / Empático</strong></td>
+    <td>Têm bom coração e são compassivos.</td>
   </tr>
   <tr>
-    <td><strong>Trust / Confiando de outros</strong></td>
-    <td>Suponha que a maioria das pessoas são fundamentalmente justo, honesto, e tem boas intenções. Eles pegam pessoas em valor nominal e estão dispostos a perdoar e esquecer.</td>
+    <td><strong>Confiança / Confiante nos outros</strong></td>
+    <td>Supõem que a maioria das pessoas é fundamentalmente justa, honesta e tem boas intenções. Eles acreditam nas pessoas sem precisar de provas e estão dispostos a perdoar e esquecer.</td>
   </tr>
 </table>
 
-## Intervalo de características
-{: #range}
+## Faixa de características
+{: #range-agree}
 
-As descrições gerais que possam se aplicar a indivíduos cujas contas provas mais ou menos de cada aspecto da dimensão, bem como termos que pode descrever tais indivíduos.
+Descrições gerais que podem se aplicar a indivíduos cujas pontuações evidenciam mais ou menos de cada aspecto da dimensão, bem como termos que podem descrever esses indivíduos.
 
-<table>
-  <caption>Tabela 2. Intervalo de características (agradam)</caption>
+<table summary="Para o aspecto listado na coluna do meio de cada linha, as primeiras duas colunas fornecem uma descrição e um termo para indivíduos com pontuações baixas para o aspecto e as duas últimas colunas fornecem um termo e uma descrição para indivíduos com pontuações altas para o aspecto.">
+  <caption>Tabela 2. Intervalo de características (afabilidade)</caption>
   <tr>
-    <th colspan="2" style="text-align:center">Descrição de valor baixo</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">Descrição de valor alto</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+      Descrição de valor baixo
+    </th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+      Descrição de valor alto
+    </th>
   </tr>
   <tr>
-    <th style="text-align:left; width:23%">Descrição</th>
-    <th style="text-align:center; width:16%">Termo</th>
-    <th style="text-align:center; width:16%">Aspecto</th>
-    <th style="text-align:center; width:16%">Termo</th>
-    <th style="text-align:right">Descrição</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width:23%">
+      Descrição
+    </th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width:16%">
+      Termo
+    </th>
+    <th id="facet" headers="blank" style="text-align:center; width:16%">
+      Aspecto
+    </th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width:16%">
+      Termo
+    </th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+      Descrição
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">Você está mais preocupado com tomar conta de ti do que tomar tempo para os outros.</td>
-    <td style="text-align:center">Auto-foco</td>
-    <td style="text-align:center"><strong>Altruísmo</strong></td>
-    <td style="text-align:center">Altruísta</td>
-    <td style="text-align:right">Você se sente preenchida quando ajudar os outros e vai sair do seu caminho para fazer isso.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Você está mais preocupado em se cuidar do que doar seu tempo aos outros.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Egocêntrico
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Altruísmo</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Altruísta
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Você se sente realizado ao ajudar os outros e sairá do seu caminho para fazer isso.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Você não se esquiva de contrariar os outros.</td>
-    <td style="text-align:center">Ao contrário</td>
-    <td style="text-align:center"><strong>Cooperação</strong></td>
-    <td style="text-align:center">Acomodando</td>
-    <td style="text-align:right">É fácil de agradar e tente evitar confronto.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Você não hesita em contrariar os outros.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Contrário</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Cooperação</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Acomodação
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Você é fácil de agradar e tenta evitar confronto.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Você se manter em alta e estão satisfeitos com quem você é.</td>
-    <td style="text-align:center">Orgulhoso</td>
-    <td style="text-align:center"><strong>Modesty</strong></td>
-    <td style="text-align:center">Modesto</td>
-    <td style="text-align:right">Você está desconfortável sendo o centro das atenções.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Você se considera muito e está satisfeito com quem é.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Orgulhoso
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Modéstia</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Modesto
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Você se sente desconfortável sendo o centro das atenções.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Você está confortável usando todos os truques no livro para conseguir o que quer.</td>
-    <td style="text-align:center">Comprometer</td>
-    <td style="text-align:center"><strong>A</strong></td>
-    <td style="text-align:center">Intransigente</td>
-    <td style="text-align:right">Você acha que é errado tirar vantagem de outros para chegar à frente.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Você se sente confortável usando todos os truques possíveis para conseguir o que deseja.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Comprometedor
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Moralidade</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Firme
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Você acha que é errado tirar vantagem dos outros para se dar bem.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Você acha que as pessoas deveriam geralmente confiar mais em si do que em outros.</td>
-    <td style="text-align:center">Difícil-coração</td>
-    <td style="text-align:center"><strong>Compreensão</strong></td>
-    <td style="text-align:center">Empatia</td>
-    <td style="text-align:right">Você sente o que os outros sentem e estão compassiva para eles.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Você acha que as pessoas deveriam geralmente depender mais delas mesmas do que dos outros.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Sem coração
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Compaixão</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Empático
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Você sente o que os outros sentem e é compassivo em relação a eles.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Você está cuidado com intenções outras pessoas e não confiar facilmente.</td>
-    <td style="text-align:center">Cauteloso dos outros</td>
-    <td style="text-align:center"><strong>Confiança</strong></td>
-    <td style="text-align:center">Confiança dos outros</td>
-    <td style="text-align:right">Você acredita no melhor dos outros e as pessoas confiança facilmente.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Você desconfia das intenções das outras pessoas e não confia facilmente.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Cauteloso em relação aos outros
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Confiança</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Confiante nos outros
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Você acredita no melhor dos outros e confia nas pessoas facilmente.
+    </td>
   </tr>
 </table>
 
-## Principal e dimensões secundárias
-{: #dimensions}
+## Dimensões primária e secundária
+{: #dimensions-agree}
 
-Informações que se relaciona a dimensão para outras dimensões, descrevendo combinações de características de personalidade. Fornece insight sobre como as características primário e secundário podem se relacionam para representar a personalidade composta de um indivíduo.
+As informações que relacionam a dimensão com outras dimensões, descrevendo combinações de características da personalidade. Fornece insight sobre como as características primária e secundária podem estar inter-relacionadas para representar a personalidade composta de um indivíduo.
 
 <table>
-  <caption>Tabela 3. Principal e dimensões secundárias (agradam)</caption>
+  <caption>Tabela 3. Dimensões principais e secundárias (afabilidade)</caption>
   <tr>
     <th colspan="2" style="width:30%">Dimensão</th>
-    <th style="width:35%">Alta agradam</th>
+    <th style="width:35%">Alta afabilidade</th>
     <th style="width:35%">Baixa afabilidade</th>
   </tr>
   <tr>
-    <td style="text-align:left"><strong>inteligênica</strong></td>
+    <td style="text-align:left"><strong>Estado consciente</strong></td>
     <td style="text-align:center"><em>Alto</em></td>
-    <td>Útil, cooperativa, atencioso, respeitoso, educado</td>
-    <td>Exato, rígido, popa</td>
+    <td>Útil, cooperativo, atencioso, respeitoso, educado</td>
+    <td>Rigoroso, rígido, austero</td>
   </tr>
   <tr>
     <td></td>
     <td style="text-align:center"><em>Baixo</em></td>
-    <td>Simples, modesto</td>
-    <td>Falta de educação, desconfiado, cooperativa, insensível</td>
+    <td>Despretensioso, modesto</td>
+    <td>Não atencioso, indelicado, não confiável, não cooperativo, imponderado</td>
   </tr>
   <tr>
     <td style="text-align:left"><strong>Extroversão</strong></td>
     <td style="text-align:center"><em>Alto</em></td>
-    <td>Agitada, feliz, amigável, alegre, jovial</td>
-    <td>Teimoso, brutal, grosseiro, agressivo, violento</td>
+    <td>Agitado, feliz, amigável, divertido, jovial</td>
+    <td>Cabeça-dura, seco, bronco, combativo, rude</td>
   </tr>
   <tr>
     <td></td>
     <td style="text-align:center"><em>Baixo</em></td>
-    <td>Suave-coração, agradável, gentil, humilde, tolerante</td>
-    <td>Cínico, cuidado com outros, recluso, desconectado, impessoal</td>
+    <td>Coração mole, afável, prestativo, humilde, clemente</td>
+    <td>Cínico, desconfiado dos outros, recluso, distante, impessoal</td>
   </tr>
   <tr>
-    <td style="text-align:left"><strong>Emotivas intervalo</strong></td>
+    <td style="text-align:left"><strong>Escala emocional</strong></td>
     <td style="text-align:center"><em>Alto</em></td>
-    <td>Sentimental, carinhosa, sensível, suave, apaixonado</td>
-    <td>Crítico, egoísta e mal humorado, ranzinza antagônica</td>
+    <td>Sentimental, afetuoso, sensível, brando, apaixonado</td>
+    <td>Crítico, egoísta, mal-humorado, antagonista, ranzinza</td>
   </tr>
   <tr>
     <td></td>
     <td style="text-align:center"><em>Baixo</em></td>
     <td>Generoso, agradável, tolerante, pacífico, flexível</td>
-    <td>Insensível, rude, paixão, emoção</td>
+    <td>Insensível, seco, desinteressado, impassível</td>
   </tr>
   <tr>
-    <td style="text-align:left"><strong>Openness</strong></td>
+    <td style="text-align:left"><strong>Abertura</strong></td>
     <td style="text-align:center"><em>Alto</em></td>
-    <td>Ótimo, sutil, diplomática, profunda, idealista</td>
-    <td>Sagaz, excêntrico, individualista</td>
+    <td>Cordial, fino, diplomático, profundo, idealista</td>
+    <td>Perspicaz, excêntrico, individualista</td>
   </tr>
   <tr>
     <td></td>
     <td style="text-align:center"><em>Baixo</em></td>
-    <td>Dependentes, simples</td>
-    <td>Abrangente, grosseiro, rude, limitada e insensível mente</td>
+    <td>Dependente, simples</td>
+    <td>Grosseiro, indelicado, rude, intolerante, insensível</td>
   </tr>
 </table>

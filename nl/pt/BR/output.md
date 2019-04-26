@@ -1,12 +1,19 @@
 ---
 
-Copyright: years: 2015, 2017 lastupdated: "2017-10-28"
+copyright:
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -18,78 +25,92 @@ Copyright: years: 2015, 2017 lastupdated: "2017-10-28"
 # Entendendo um perfil JSON
 {: #output}
 
-Quando você usa o `POST /v3/profile` método para analisar o conteúdo, o serviço retorna os resultados de sua análise como um JSON `Perfil` objeto por padrão ou quando você especificar `application / json` com o `Aceitar` cabeçalho de uma solicitação. O escopo da saída JSON depende dos parâmetros que você especificou com a solicitação e se o texto de entrada representa dados com registro de data e hora, como o texto associado a um feed do Twitter.
+Quando você usa o método `POST /v3/profile` para analisar conteúdo, o serviço retorna os resultados de sua análise como um objeto de JSON `Profile` quando você especifica `application/json` com o cabeçalho `Accept` de uma solicitação. O escopo da saída de JSON depende dos parâmetros que você especifica com a solicitação. Ele também depende de o texto de entrada representar dados com registro de data e hora, como o texto associado a um feed do Twitter.
 {: shortdesc}
 
-As seções a seguir descrevem o conteúdo de uma resposta em formato JSON. Toda saída de exemplo é produzido pela amostra JSON no arquivo <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> que é usado no [Introdução ao tutorial](/docs/services/personality-insights/getting-started.html). Para obter informações sobre a saída CSV, consulte [Entendendo um perfil CSV](/docs/services/personality-insights/output-csv.html).
+As seções a seguir descrevem os conteúdos de uma resposta em formato JSON. Toda a saída de exemplo é produzida pelo arquivo JSON de amostra <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a> que é usado no [Tutorial de introdução](/docs/services/personality-insights?topic=personality-insights-gettingStarted). Para obter informações sobre a saída em CSV, consulte [Entendendo um perfil CSV](/docs/services/personality-insights?topic=personality-insights-outputCSV).
 
-## O objeto Perfil
+## O objeto Profile
 {: #outputJSON}
 
-O `Perfil` objeto é o objeto JSON de nível superior retornado pelo serviço. O objeto possui os seguintes campos:
+O objeto `Profile` é o objeto de JSON de nível superior que é retornado pelo serviço. O objeto tem os campos a seguir:
 
--   `word_count` (inteiro) fornece o número de palavras do conteúdo de entrada que foram usados para gerar o perfil. Isso pode ser menor que o número de palavras na entrada se a solicitação enviada uma grande quantidade de conteúdo. Se o número de palavras não atender um limite mínimo, a saída também inclui um `word_count_message` campo que fornece orientação adicional.
--   `processados idioma` (sequência) descreve o modelo de linguagem que o serviço utilizado para processar a entrada: `عندما` (Árabe), `en` (inglês), `es` (Espanhol), `ja` (Japonês), ou `ko` (Coreano).
--   `Personalidade` é uma matriz recursiva de `Característica` objetos que descreve o Big Five dimensões e aspectos inferido a partir do texto de entrada.
--   `precisa` é uma matriz de `Peculiaridade` objetos que descreve as Necessidades inferido do texto de entrada.
--   `valores` é uma matriz de `Peculiaridade` objetos que descreve os valores inferidos do texto de entrada.
--   `comportamento` é uma matriz de `Comportamento` objetos que descreve a distribuição do conteúdo sobre os dias da semana e as horas do dia. O serviço retorna o campo apenas para entrada JSON que é hora.
--   `consumption_preferences` é uma matriz de objetos `ConsumptionPreferencesCategory` que fornece resultados para cada categoria de preferências de consumo. Os elementos da matriz fornecem informações para as preferências individuais dessa categoria. O serviço retorna o campo apenas se o `consumption_preferences` parâmetro de consulta da solicitação é configurado como `true`.
--   `avisos` é uma matriz de `Aviso` objetos que fornece mensagens associadas com o texto de entrada. A matriz está vazia se a entrada gerada não tem avisos.
+-   `word_count` (número inteiro) fornece o número de palavras do conteúdo de entrada que foram usadas para gerar o perfil. Esse valor poderá ser menor que o número de palavras na entrada se a solicitação enviou uma grande quantia de conteúdo. Se o número de palavras falhar em atender a um limite mínimo, a saída incluirá um campo `word_count_message` que fornecerá orientação adicional.
+-   `processed language` (sequência) descreve o modelo de idioma que o serviço usou para processar a entrada: `ar` (árabe), `en` (inglês), `es` (espanhol), `ja` (japonês) ou `ko` (coreano).
+-   `personality` é uma matriz recursiva de objetos `Trait` que descreve as dimensões e os aspectos do Big Five que são inferidos por meio do texto de entrada.
+-   `needs` é uma matriz de objetos `Trait` que descreve as Necessidades que são inferidas por meio do texto de entrada.
+-   `values` é uma matriz de objetos `Trait` que descreve os Valores que são inferidos por meio do texto de entrada.
+-   `behavior` é uma matriz de objetos `Behavior` que descreve a distribuição do conteúdo pelos dias da semana e as horas do dia. O serviço retorna o campo apenas para entrada JSON com registro de data e hora.
+-   `consumption_preferences` é uma matriz de objetos `ConsumptionPreferencesCategory` que fornece resultados para cada categoria de preferências de consumo. Os elementos da matriz fornecem informações para as preferências individuais dessa categoria. O serviço retornará o campo apenas se o parâmetro de consulta `consumption_preferences` da solicitação for configurado para `true`.
+-   `warnings` é uma matriz de objetos `Warning` que fornece mensagens sobre o texto de entrada. A matriz estará vazia se a entrada não tiver gerado avisos.
 
-### Exemplo de resposta
+### Resposta de exemplo
 {: #JSONExample}
 
-A saída de exemplo a seguir mostra a estrutura de alto nível de um `Perfil` objeto. A saída sempre inclui o `pessoa`, `precisa`, e `valores` campos. Se a entrada for data JSON, a resposta inclui o `comportamento` campo. E se a solicitação também pede preferências de consumo, a resposta inclui o `consumption_preferences` campo. Neste exemplo, a entrada não gera avisos.
+A saída de exemplo a seguir mostra a estrutura de alto nível de um objeto `Profile`. A saída sempre inclui os campos `personality`, `needs` e `values`. Se a entrada tiver registro de data e hora JSON, a resposta incluirá o campo `behavior`. E se a solicitação também solicitar preferências de consumo, a resposta incluirá o campo `consumption_preferences`. Neste exemplo, a entrada não gera avisos.
 
 ```javascript
 {
-  "Word_count": 15223, "processed_language": "en", "personalidade": [
+  "word_count": 15223,
+  "processed_language": "en",
+  "personality": [
      . . .
-  ], "precisa": [
+  ],
+  "needs": [
      . . .
-  ], "valores": [
+  ],
+  "values": [
      . . .
-  ], "comportamento": [
+  ],
+  "behavior": [
      . . .
   ],
   "consumption_preferences": [
      . . .
-   ], "warnings": [ ]
+   ],
+  "warnings": []
 }
 ```
 {: codeblock}
 
-## Saída características de personalidade
+## Saída de características da personalidade
 {: #traitJSON}
 
-O `Perfil` objeto sempre inclui `Personalidade`, `precisa`, e `valores` campos para todos os tipos de entrada. Cada um desses campos contém uma matriz de `Peculiaridade` objetos que descreve as características da personalidade para os atributos desse tipo de característica. Para Necessidades e Valores características, a matriz possui um único nível que descreve as características. Para características Big Five, uma matriz de nível superior descreve as dimensões e as matrizes de segundo descrevem os aspectos de cada dimensão.
+O objeto `Profile` sempre inclui os campos `personality`, `needs` e `values` para todos os tipos de entrada. Cada um desses campos contém uma matriz de objetos `Trait` que descreve as características da personalidade para os atributos desse tipo de característica. Para as características de Necessidades e Valores, a matriz tem um único nível que descreve as características. Para características do Big Five, uma matriz de nível superior descreve as dimensões e as matrizes de segundo nível descrevem os aspectos de cada dimensão.
 
--   `trait_id` (sequência) é o ID exclusivo do característica para o qual o resultado pertencem:
-    -   `big5_characteristic` para as dimensões da personalidade Big Five
-    -   `facet_characteristic` para Big Five aspectos da personalidade
-    -   `need_characteristic` para Necessária
-    -   `value_characteristic` para Valores
--   `name` (sequência) é o usuário visível nome da característica.
--   `categoria` (sequência) é a categoria da característica:
-    -   `Personalidade` para as características da personalidade Big Five
-    -   `precisa` para Necessária
-    -   `valores` para Valores
--   `percentile` (dobro) é o escore percentil normalizado para a característica. Para obter mais informações, consulte [percentis para características da personalidade](/docs/services/personality-insights/numeric.html#percentiles).
--   `raw_score` (duplo) é o resultado bruto para a característica. O campo é retornado apenas se você solicitar notas brutas configurando o `raw_scores` parâmetro de consulta para `true`. Para obter mais informações, consulte [pontuações para características da personalidade bruta](/docs/services/personality-insights/numeric.html#rawScores).
--   `significativo` (boolean) indica se a característica é significativo para o idioma de entrada. O campo é sempre `true` para todas as características de inglês, espanhol, e a entrada do Japão. O campo é `false` para o subconjunto de características de entrada árabe e coreano para o qual os modelos do serviço são incapazes de gerar resultados significativos. Para obter mais informações, consulte [Limitações para entrada árabe e coreano](/docs/services/personality-insights/numeric.html#limitations).
--   `filhos` é uma matriz de `Peculiaridade` objetos que fornece resultados mais detalhados para os aspectos de cada dimensão Big Five como inferido a partir do texto de entrada. A matriz é retornado apenas para dimensões Big Five.
+-   `trait_id` (sequência) é o ID exclusivo da característica à qual os resultados pertencem:
+    -   `big5_{characteristic}` para as dimensões de personalidade do Big Five
+    -   `facet_{characteristic}` para os aspectos de personalidade do Big Five
+    -   `need_{characteristic}` para as Necessidades
+    -   `value_{characteristic}` para os Valores
+-   `name` (sequência) é o nome visível pelo usuário da característica.
+-   `category` (sequência) é a categoria da característica:
+    -   `personality` para as características da personalidade do Big Five
+    -   `needs` para Necessidades
+    -   `values` para Valores
+-   `percentile` (duplo) é a pontuação em percentil normalizada para a característica. Para obter mais informações, consulte [Percentis para características da personalidade](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
+-   `raw_score` (duplo) é a pontuação bruta para a característica. O campo é retornado apenas se você solicitar pontuações brutas configurando o parâmetro de consulta `raw_scores` para `true`. Para obter mais informações, consulte [Pontuações brutas para características da personalidade](/docs/services/personality-insights?topic=personality-insights-numeric#rawScores-numeric).
+-   `significant` (booleano) indica se a característica é significativa para o idioma de entrada. O campo é sempre `true` para todas as características de entrada em inglês, espanhol e japonês. O campo é `false` para o subconjunto de características de entrada em árabe e coreano para o qual os modelos do serviço são incapazes de gerar resultados significativos. Para obter mais informações, veja [Limitações para entrada em árabe e coreano](/docs/services/personality-insights?topic=personality-insights-numeric#limitations).
+-   `children` é uma matriz de objetos `Trait` que fornece resultados mais detalhados para os aspectos de cada dimensão do Big Five conforme inferido do texto de entrada. A matriz é retornada apenas para dimensões do Big Five.
 
-### Exemplo de resposta
+### Resposta de exemplo
 {: #traitExample}
 
-A saída de exemplo a seguir mostra fragmentos da saída para o Big Five, Necessidades, e Valores características. Conforme descrito, apenas o Big Five características ter uma matriz de `filhos` para seus respectivos aspectos.
+A saída de exemplo a seguir mostra fragmentos da saída para as características do Big Five, Necessidades e Valores. Conforme descrito, apenas as características do Big Five têm uma matriz de `children` para seus respectivos aspectos.
 
 ```javascript
 {
   . . .
-  "Personalidade": [ {
-      "Trait_id": "big5_openness", "name": "Openness", "category": "personalidade", "percentil": 0,8011555009553, "raw_score": 0,77565404255038, "significativa": true, "crianças": [ {
+  "personality": [
+    {
+      "trait_id": "big5_openness",
+      "name": "Openness",
+      "category": "personality",
+      "percentile": 0.8011555009553,
+      "raw_score": 0.77565404255038,
+      "significant": true,
+      "children": [
+        {
           "trait_id": "facet_adventurousness",
           "name": "Adventurousness",
           "category": "personality",
@@ -101,29 +122,90 @@ A saída de exemplo a seguir mostra fragmentos da saída para o Big Five, Necess
       ]
     },
     {
-      "Trait_id": "big5_conscientiousness", "name": "consciente", "category": "personalidade", "percentil": 0,81001753184176, "raw_score": 0,66899984888815, "significativa": true, "crianças": [ {
-          "Trait_id": "facet_achievement_striving", "name": "Melhor esforço", "category": "personalidade", "percentil": 0,84613299226628, "raw_score": 0,74240118454888, "significativa": true },
+      "trait_id": "big5_conscientiousness",
+      "name": "Conscientiousness",
+      "category": "personality",
+      "percentile": 0.81001753184176,
+      "raw_score": 0.66899984888815,
+      "significant": true,
+      "children": [
+        {
+          "trait_id": "facet_achievement_striving",
+          "name": "Achievement striving",
+          "category": "personality",
+          "percentile": 0.84613299226628,
+          "raw_score": 0.74240118454888,
+          "significant": true
+        },
         . . .
       ]
     },
     {
-      "Trait_id": "big5_extraversion", "name": "Extroversão", "category": "personalidade", "percentil": 0,64980796071382, "raw_score": 0,56817738781166, "significativa": true, "crianças": [ {
-          "Trait_id": "facet_activity_level", "name": "nível de atividade", "category": "personalidade", "percentil": 0,88220584913965, "raw_score": 0,60106995926143, "significativa": true }, ]
+      "trait_id": "big5_extraversion",
+      "name": "Extraversion",
+      "category": "personality",
+      "percentile": 0.64980796071382,
+      "raw_score": 0.56817738781166,
+      "significant": true,
+      "children": [
+        {
+          "trait_id": "facet_activity_level",
+          "name": "Activity level",
+          "category": "personality",
+          "percentile": 0.88220584913965,
+          "raw_score": 0.60106995926143,
+          "significant": true
+        },
+      ]
     },
     {
-      "Trait_id": "big5_agreeableness", "name": "Afabilidade", "category": "personalidade", "percentil": 0,94786124793821, "raw_score": 0,80677815631809, "significativa": true, "crianças": [ {
-          "Trait_id": "facet_altruism", "name": "Altruísmo", "category": "personalidade", "percentil": 0,99241983824205, "raw_score": 0,79028406290747, "significativa": true },
+      "trait_id": "big5_agreeableness",
+      "name": "Agreeableness",
+      "category": "personality",
+      "percentile": 0.94786124793821,
+      "raw_score": 0.80677815631809,
+      "significant": true,
+      "children": [
+        {
+          "trait_id": "facet_altruism",
+          "name": "Altruism",
+          "category": "personality",
+          "percentile": 0.99241983824205,
+          "raw_score": 0.79028406290747,
+          "significant": true
+        },
         . . .
       ]
     },
     {
-      "Trait_id": "big5_neuroticism", "name": "Emotivas intervalo", "category": "personalidade", "percentil": 0,5008224041628, "raw_score": 0,46748200007024, "significativa": true, "crianças": [ {
-          "Trait_id": "facet_anger", "name": "Furioso", "category": "personalidade", "percentil": 0,17640022058508, "raw_score": 0,48490315691802, "significativa": true },
+      "trait_id": "big5_neuroticism",
+      "name": "Emotional range",
+      "category": "personality",
+      "percentile": 0.5008224041628,
+      "raw_score": 0.46748200007024,
+      "significant": true,
+      "children": [
+        {
+          "trait_id": "facet_anger",
+          "name": "Fiery",
+          "category": "personality",
+          "percentile": 0.17640022058508,
+          "raw_score": 0.48490315691802,
+          "significant": true
+        },
         . . .
       ]
     }
-  ], "precisa": [ {
-      "Trait_id": "need_challenge", "name": "Challenge", "categoria": "necessidades", "percentil": 0,67362332054511, "raw_score": 0,75196348037675, "significativa": true },
+  ],
+  "needs": [
+    {
+      "trait_id": "need_challenge",
+      "name": "Challenge",
+      "category": "needs",
+      "percentile": 0.67362332054511,
+      "raw_score": 0.75196348037675,
+      "significant": true
+    },
     . . .
   ],
   "values": [
@@ -142,19 +224,19 @@ A saída de exemplo a seguir mostra fragmentos da saída para o Big Five, Necess
 ```
 {: codeblock}
 
-## Comportamento de saída
+## Saída comportamental
 {: #behaviorJSON}
 
-Se a entrada para o serviço é JSON que tem os registros para os itens de conteúdo individuais, o `Perfil` objeto inclui um `comportamento` campo. O campo inclui um `Comportamento` do objeto para cada dia da semana e hora do dia.
+Se a entrada para o serviço for em JSON com registros de data e hora para os itens de conteúdo individuais, o objeto `Profile` incluirá um campo `behavior`. O campo inclui um objeto `Behavior` para cada dia da semana e hora do dia.
 
--   `trait_id` (sequência) é o ID exclusivo do característica para o qual o resultado pertencem:
-    -   `behavior_day` para dias da semana (por exemplo, `behavior_sunday`).
-    -   `behavior_hour` para horas do dia (por exemplo, `behavior_0000`).
--   `name` (sequência) é o usuário visível nome da característica.
--   `categoria` (sequência) é a categoria do característica, que é sempre `comportamento`.
--   `porcentagem` (duplo) é a porcentagem de itens de conteúdo que ocorreram durante esse dia da semana ou hora do dia. Para obter mais informações, consulte [Classificações para características comportamentais](/docs/services/personality-insights/numeric.html#percentages).
+-   `trait_id` (sequência) é o ID exclusivo da característica à qual os resultados pertencem:
+    -   `behavior_{day}` para dias da semana (por exemplo, `behavior_sunday`).
+    -   `behavior_{hour}` para horas do dia (por exemplo, `behavior_0000`).
+-   `name` (sequência) é o nome visível pelo usuário da característica.
+-   `category` (sequência) é a categoria da característica, que sempre é `behavior`.
+-   `percentage` (duplo) é a porcentagem de itens de conteúdo que ocorreram durante esse dia da semana ou hora do dia. Para obter mais informações, consulte [Porcentagens para características comportamentais](/docs/services/personality-insights?topic=personality-insights-numeric#percentages).
 
-### Exemplo de resposta
+### Resposta de exemplo
 {: #behaviorExample}
 
 A saída a seguir mostra fragmentos da saída comportamental para características temporais.
@@ -162,25 +244,45 @@ A saída a seguir mostra fragmentos da saída comportamental para característic
 ```javascript
 {
   . . .
-  "Comportamento": [ {
-      "Trait_id": "behavior_sunday", "name": "Sunday", "category": "comportamento", "porcentagem": 0,21392532795156
+  "behavior": [
+    {
+      "trait_id": "behavior_sunday",
+      "name": "Sunday",
+      "category": "behavior",
+      "percentage": 0.21392532795156
     },
     {
-      "Trait_id": "behavior_monday", "name": "Segunda-feira", "category": "comportamento", "porcentagem": 0,42583249243189
-    },
-    . . .
-    {
-      "Trait_id": "behavior_saturday", "name": "sábado", "category": "comportamento", "porcentagem": 0,077699293642785
-    },
-    {
-      "Trait_id": "behavior_0000", "name": "00:00", "category": "comportamento", "porcentagem": 0,4561049445005
-    },
-    {
-      "Trait_id": "behavior_0100", "name": "01:00", "category": "comportamento", "porcentagem": 0,12209889001009
+      "trait_id": "behavior_monday",
+      "name": "Monday",
+      "category": "behavior",
+      "percentage": 0.42583249243189
     },
     . . .
     {
-      "Trait_id": "behavior_2300", "name": "23:00", "category": "comportamento", "porcentagem": 0,12310797174571 }
+      "trait_id": "behavior_saturday",
+      "name": "Saturday",
+      "category": "behavior",
+      "percentage": 0.077699293642785
+    },
+    {
+      "trait_id": "behavior_0000",
+      "name": "0:00 am",
+      "category": "behavior",
+      "percentage": 0.4561049445005
+    },
+    {
+      "trait_id": "behavior_0100",
+      "name": "1:00 am",
+      "category": "behavior",
+      "percentage": 0.12209889001009
+    },
+    . . .
+    {
+      "trait_id": "behavior_2300",
+      "name": "11:00 pm",
+      "category": "behavior",
+      "percentage": 0.12310797174571
+    }
   ],
   . . .
 }
@@ -190,19 +292,19 @@ A saída a seguir mostra fragmentos da saída comportamental para característic
 ## Saída de preferências de consumo
 {: #preferenceJSON}
 
-Se o parâmetro de consulta `consumption_preferences` está configurado como `true`, o objeto `Profile` inclui um campo `consumption_preferences`. O campo inclui um `ConsumptionPreferencesCategory` do objeto para cada categoria de preferências.
+Se o parâmetro de consulta `consumption_preferences` for configurado para `true`, o objeto `Profile` incluirá um campo `consumption_preferences`. O campo inclui um objeto `ConsumptionPreferencesCategory` para cada categoria de preferências.
 
--   `consumption_preference_category_id` (sequência) é o ID exclusivo da categoria preferências de consumo ao qual o pertence resultados no formato `consumption_preferences_ {`.
--   `name` (sequência) é o nome visível do usuário da categoria de preferências de consumo.
--   `consumption_preferences` é uma matriz de `ConsumptionPreferences` objetos que fornece resultados para as preferências individuais da categoria.
+-   `consumption_preference_category_id` (sequência) é o ID exclusivo da categoria de preferências de consumo à qual os resultados pertencem no formato `consumption_preferences_{category}`.
+-   `name` (sequência) é o nome da categoria de preferências de consumo visível para o usuário.
+-   `consumption_preferences` é uma matriz de objetos `ConsumptionPreferences` que fornece resultados para as preferências individuais da categoria.
 
-Cada preferência individual para uma categoria é descrito através de um `ConsumptionPreferences` objeto. Algumas categorias têm apenas uma única preferência, outros têm muitos mais.
+Cada preferência individual de uma categoria é descrita por meio do objeto `ConsumptionPreferences`. Algumas categorias têm somente uma preferência única; outras categorias têm muito mais.
 
--   `consumption_preference_id` (sequência) é o ID exclusivo da preferência consumo na qual o pertencem resultados na forma `consumption_preferences_preference`.
--   `name` (sequência) é o usuário visível nome da preferência consumo.
--   `score` (duplo) é uma pontuação que indica a probabilidade do autor de preferir o item. Para obter mais informações, consulte [Escores para consumo preferências](/docs/services/personality-insights/numeric.html#scores).
+-   `consumption_preference_id` (sequência) é o ID exclusivo da preferência de consumo à qual os resultados pertencem no formato `consumption_preferences_{preference}`.
+-   `name` (sequência) é o nome da preferência consumo visível para o usuário.
+-   `score` (duplo) é uma pontuação que indica a probabilidade de o autor preferir o item. Para obter mais informações, consulte [Pontuações para preferências de consumo](/docs/services/personality-insights?topic=personality-insights-numeric#scores).
 
-### Exemplo de resposta
+### Resposta de exemplo
 {: #preferenceExample}
 
 A saída a seguir mostra fragmentos da saída para as preferências de consumo.
@@ -210,24 +312,41 @@ A saída a seguir mostra fragmentos da saída para as preferências de consumo.
 ```javascript
 {
   . . .
-  "Consumption_preferences": [ {
-      "Consumption_preference_category_id": "consumption_preferences_shopping", "name": "Preferências de Compras", "consumption_preferences": [ {
-          "Consumption_preference_id": "consumption_preferences_automobile_ownership_cost", "name": "a ser sensível ao custo de propriedade ao comprar automóveis", "placar": 0
+  "consumption_preferences": [
+    {
+      "consumption_preference_category_id": "consumption_preferences_shopping",
+      "name": "Purchasing Preferences",
+      "consumption_preferences": [
+        {
+          "consumption_preference_id": "consumption_preferences_automobile_ownership_cost",
+          "name": "Likely to be sensitive to ownership cost when buying automobiles",
+          "score": 0
         },
         . . .
       ]
     },
     {
-      "Consumption_preference_category_id": "consumption_preferences_health_and_activity", "name": "Preferências Health & Activity", "consumption_preferences": [ {
-          "Consumption_preference_id": "consumption_preferences_eat_out", "name": "Propenso a comer fora frequentemente", "placar": 1
+      "consumption_preference_category_id": "consumption_preferences_health_and_activity",
+      "name": "Health & Activity Preferences",
+      "consumption_preferences": [
+        {
+          "consumption_preference_id": "consumption_preferences_eat_out",
+          "name": "Likely to eat out frequently",
+          "score": 1
         },
         . . .
       ]
     },
     . . .
     {
-      "Consumption_preference_category_id": "consumption_preferences_volunteering", "name": "Voluntariando Preferências", "consumption_preferences": [ {
-          "Consumption_preference_id": "consumption_preferences_volunteer", "name": "a trabalhar como voluntário por causas sociais", "pontuação": 0 }
+      "consumption_preference_category_id": "consumption_preferences_volunteering",
+      "name": "Volunteering Preferences",
+      "consumption_preferences": [
+        {
+          "consumption_preference_id": "consumption_preferences_volunteer",
+          "name": "Likely to volunteer for social causes",
+          "score": 0
+        }
       ]
     }
   ],

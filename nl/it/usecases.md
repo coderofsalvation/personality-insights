@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-08-11"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -34,7 +39,7 @@ Immagina un'esperienza di vendita in negozio che coinvolge un chiosco interattiv
 
 Con il servizio {{site.data.keyword.personalityinsightsshort}}, le aziende possono trasformare questa idea in realtà. Sfruttando una combinazione di dati aziendali e di social media, le aziende possono applicare l'analisi per sviluppare ritratti più profondi dei singoli clienti. Possono utilizzare i risultati per una migliore lead generation, una segmentazione dei clienti più dettagliata e un marketing mirato che sia più rilevante e più personale.
 
-Utilizzando il servizio {{site.data.keyword.personalityinsightsshort}} con le altre offerte {{site.data.keyword.IBM_notm}}, come Unica e BigInsights Social Data Accelerator (SDA), le aziende possono ricavare informazioni approfondite da un vasto insieme di dati transazionali e di social media. Queste informazioni approfondite possono aiutare le aziende a
+Le aziende possono utilizzare il servizio {{site.data.keyword.personalityinsightsshort}} con le altre offerte {{site.data.keyword.IBM_notm}} per ricavare informazioni approfondite da un vasto insieme di dati transazionali e di social media. Tali offerte includono Unica e BigInsights Social Data Accelerator (SDA). Queste informazioni approfondite possono aiutare le aziende a
 
 -  Estrarre tempestivamente segnali quasi in tempo reale delle intenzioni di acquisto dei clienti per identificare i lead di qualità.
 -   Ricavare ritratti di clienti che includono preferenze psicologiche intrinseche, che possono quindi dettare le decisioni economiche dei clienti.
@@ -51,9 +56,9 @@ In base ai dati dei social media, le aziende possono identificare e interagire d
 
 I ritratti di personalità generati dal servizio {{site.data.keyword.personalityinsightsshort}} possono aiutare le aziende a rafforzare le relazioni esistenti con i clienti e identificare nuovi clienti. Ad esempio, le persone le cui personalità manifestano una maggiore tendenza all'ordine, all'autodisciplina e alla prudenza e una minore smoderatezza sono più propensi, rispetto alla popolazione casuale, a riscattare i coupon. Allo stesso modo, la propensione delle persone ad acquistare specifici tipi di prodotti è correlata alle loro caratteristiche della personalità. Ad esempio, gli acquirenti le cui personalità tendono all'apertura mentale e alla coscienziosità hanno maggiori probabilità di acquistare latte, frutta e verdura biologici.
 
-I rivenditori beneficiano dell'invio di coupon a persone i cui contenuti di social media presentano l'intersezione di queste caratteristiche della personalità, siano essi clienti esistenti o potenziali. Non inviando coupon a quei clienti che non li riscattano, le aziende riducono i costi di marketing diretto. Evitano inoltre di inondare i clienti di coupon che non vogliono e che scarteranno, un modello che alla fine può portare i clienti a scartare del tutto i coupon del rivenditore. 
+I rivenditori beneficiano dell'invio di coupon a persone i cui contenuti di social media presentano l'intersezione di queste caratteristiche della personalità, siano essi clienti esistenti o potenziali. Non inviando coupon a quei clienti che non li riscattano, le aziende riducono i costi di marketing diretto. Evitano inoltre di inondare i clienti di coupon che non vogliono, un modello che alla fine può portare i clienti a scartare del tutto i coupon del rivenditore. 
 
-La combinazione dei ritratti di personalità con gli eventi della vita dedotti dai social media e con i dati demografici aziendali esistenti può fornire informazioni approfondite significative sui modelli di consumo e sulle preferenze dei singoli clienti. Ad esempio, è probabile che le famiglie con un neonato inizino a comprare pannolini. I rivenditori possono utilizzare il servizio {{site.data.keyword.personalityinsightsshort}} per dedurre se tali famiglie sono più propense a preferire i pannolini di stoffa o quelli usa e getta e possono inviare alle famiglie i coupon che corrispondono a tale deduzione. Combinando le caratteristiche della personalità e gli eventi della vita in questo modo, i rivenditori possono utilizzare l'informazione aggiunta per aumentare la risposta dei clienti e generare nuovi clienti. <!-- Sending coupons for such products to customers whose personality characteristics and life situations make them more likely to use them can increase customer response and generate new customers. -->
+La combinazione dei ritratti di personalità con gli eventi della vita dedotti dai social media e con i dati demografici aziendali esistenti può fornire informazioni approfondite significative sui modelli di consumo e sulle preferenze dei singoli clienti. Ad esempio, è probabile che le famiglie con un neonato inizino a comprare pannolini. I rivenditori possono utilizzare il servizio {{site.data.keyword.personalityinsightsshort}} per dedurre se tali famiglie sono più propense a preferire i pannolini di stoffa o quelli usa e getta. Possono inviare alle famiglie i coupon che corrispondono a tale deduzione. Combinando le caratteristiche della personalità e gli eventi della vita, i rivenditori possono utilizzare l'informazione aggiunta per aumentare la risposta dei clienti e generare nuovi clienti.
 
 Le aziende possono anche analizzare grandi gruppi di clienti in base ai loro contenuti e comportamenti sui social media pubblicamente disponibili per capitalizzare opportunità di guadagno mirate. Il servizio {{site.data.keyword.personalityinsightsshort}} può aiutare le aziende a migliorare il successo delle future campagne di marketing, comprendendo quali messaggi o prodotti attraggono determinati segmenti di clienti. Un'azienda dovrebbe prima raggruppare i clienti con comportamenti noti in termini di caratteristiche della personalità. Dovrebbe poi ricavare le regole di associazione dalla personalità al comportamento basandosi sulla conoscenza della segmentazione ricavata dai gruppi. 
 
@@ -62,9 +67,9 @@ Le aziende possono anche analizzare grandi gruppi di clienti in base ai loro con
 
 Nel corso del ciclo di vita del coinvolgimento del cliente, le imprese possono utilizzare il servizio {{site.data.keyword.personalityinsightsshort}} per costruire relazioni migliori e più durature con i propri clienti. Comprendendo meglio i clienti e rispondendo loro come individui, le aziende possono
 
--   Consigliare e guidare le azioni dei clienti mediante scambi personalizzati attraverso canali diversi, come chat online, partecipazioni ai social media e comunicazioni via e-mail. Una migliore comprensione può portare a migliori interazioni con i clienti, che a loro volta possono migliorare la reputazione del marchio, aumentare la fidelizzazione dei clienti e incoraggiare opportunità di up-selling e cross-selling. 
--   Utilizzare le caratteristiche della personalità dei clienti per determinare quale mezzo di interazione utilizzare, quale pagina web visualizzare e quale video condividere. 
--   Inoltrare agli agenti le informazioni su un cliente che contatta l'azienda. Queste informazioni possono consentire all'agente di offrire al cliente un'esperienza più personalizzata fornendo suggerimenti su come rivolgersi al cliente. 
+-   Consigliare e guidare le azioni dei clienti mediante scambi personalizzati attraverso canali diversi, come chat online, partecipazioni ai social media e comunicazioni via e-mail. Una migliore comprensione può portare a migliori interazioni con i clienti, che a loro volta possono migliorare la reputazione del marchio, aumentare la fidelizzazione dei clienti e incoraggiare opportunità di up-selling e cross-selling.
+-   Utilizzare le caratteristiche della personalità dei clienti per determinare quale mezzo di interazione utilizzare, quale pagina web visualizzare e quale video condividere.
+-   Inoltrare agli agenti le informazioni su un cliente che contatta l'azienda. Queste informazioni possono consentire all'agente di offrire al cliente un'esperienza più personalizzata fornendo suggerimenti su come rivolgersi al cliente.
 
 Considera un viaggiatore che utilizza un servizio di viaggi online per ottenere consigli sui posti da visitare o in cui mangiare. Il servizio di viaggi può esaminare le caratteristiche della personalità del viaggiatore e suggerire luoghi da visitare e ristoranti personalizzati che si adattano alla personalità del viaggiatore. Il servizio può andare anche oltre collaborando con i commercianti locali per offrire coupon personalizzati che corrispondono agli interessi del viaggiatore.
 
@@ -84,11 +89,11 @@ Healthcare provider to patient. A cognitive-care use case developed by the {{sit
 -   Agente del servizio clienti e chiamante abbinando gli agenti del call center ai chiamanti.
 -   Intermediario di investimento e investitori abbinando gli intermediari agli investitori con i quali è probabile che si colleghino.
 
-Supponiamo che un cliente contatti una società di intermediazione per sapere quali fondi di investimento perseguire. Questo scenario suggerisce un caso di utilizzo corrispondente che sfrutta le caratteristiche della personalità del cliente per soddisfare al meglio le sue esigenze. Utilizzando il servizio {{site.data.keyword.personalityinsightsshort}}, l'azienda può abbinare il cliente a un intermediario che corrisponde alla personalità del cliente e può suggerire opzioni di investimento che soddisfano le preferenze e le inclinazioni del cliente. Inoltre, l'intermediario assegnato può utilizzare il servizio per preparare un messaggio personalizzato per il cliente.
+Supponiamo che un cliente contatti una società di intermediazione per sapere quali fondi di investimento perseguire. Questo scenario suggerisce un caso di utilizzo corrispondente che sfrutta le caratteristiche della personalità del cliente per soddisfare al meglio le sue esigenze. Utilizzando il servizio {{site.data.keyword.personalityinsightsshort}}, l'azienda può abbinare il cliente a un intermediario che corrisponde alla personalità del cliente. L'azienda può anche suggerire opzioni di investimento che soddisfano le preferenze e le inclinazioni del cliente. Inoltre, l'intermediario assegnato può utilizzare il servizio per preparare un messaggio personalizzato per il cliente.
 
 ## Scrittura di curriculum
 {: #ucResume}
 
 Un neolaureato ha bisogno di scrivere un curriculum che sia ottimizzato per i settori che corrispondono al grado e agli interessi del laureato. Un'applicazione da un recente hackathon {{site.data.keyword.watson}} suggerisce lo sviluppo di curriculum ottimali specifici del settore da eccellenti esempi passati. L'applicazione può utilizzare i servizi {{site.data.keyword.watson}} per determinare le caratteristiche di curriculum di riferimento ottimali per ottenere la massima risonanza con ogni settore.
 
-Dopo aver creato un curriculum, il laureato utilizza l'applicazione per sapere quanto il curriculum assomigli al riferimento ottimale. L'applicazione utilizza il servizio {{site.data.keyword.personalityinsightsshort}} per analizzare il curriculum. Evidenzia i potenziali problemi e suggerisce modifiche per allineare meglio le caratteristiche e i valori della personalità rivelati dal curriculum con quelli del riferimento. 
+Un laureato può creare un curriculum e utilizzare l'applicazione per sapere quanto il curriculum assomigli al riferimento ottimale. L'applicazione utilizza il servizio {{site.data.keyword.personalityinsightsshort}} per analizzare il curriculum. Evidenzia i potenziali problemi e suggerisce modifiche per allineare meglio le caratteristiche e i valori della personalità rivelati dal curriculum con le caratteristiche del riferimento. 

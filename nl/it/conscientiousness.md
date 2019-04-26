@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,11 +26,16 @@ lastupdated: "2017-10-12"
 {: #conscientiousness}
 
 *Coscienziosità* è la tendenza di una persona ad agire
-              in modo organizzato o riflessivo.
+              in modo organizzato o riflessivo. Le tabelle che seguono qualificano i risultati delle caratteristiche come *alti* o *bassi*:
 {: shortdesc}
 
+-   Qualsiasi punteggio al di sopra della media di 0,5 indica una tendenza superiore alla media per una caratteristica. Un punteggio pari o al di sopra di 0,75 indica aspetti facilmente distinguibili della caratteristica; tali punteggi vengono considerati *alti*.
+-   Sono vere le dichiarazioni opposte di punteggi al di sotto di 0,50 e 0,25, che vengono considerate *basse*.
+
+Per ulteriori informazioni, vedi [Percentili per le caratteristiche della personalità](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
+
 ## Aspetti
-{: #facets}
+{: #facets-consc}
 
 Brevi descrizioni degli aspetti della dimensione e degli individui che ottengono un punteggio elevato in ogni aspetto.
 
@@ -66,73 +76,147 @@ Brevi descrizioni degli aspetti della dimensione e degli individui che ottengono
 </table>
 
 ## Serie di caratteristiche
-{: #range}
+{: #range-consc}
 
 Descrizioni generali che potrebbero applicarsi a individui i cui punteggi mostrano più o meno ogni aspetto della dimensione, nonché i termini che potrebbero descrivere tali individui.
 
-<table>
+<table summary="Per l'aspetto elencato nella colonna centrale di ciascuna riga, le prime due colonne forniscono una descrizione e un termine per gli individui con punteggi bassi per l'aspetto e le ultime due colonne forniscono un termine e una descrizione per gli individui con punteggi alti per l'aspetto.">
   <caption>Tabella 2. Serie di caratteristiche (coscienziosità)</caption>
   <tr>
-    <th colspan="2" style="text-align:center">Descrizione del valore basso</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">Descrizione del valore alto</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+      Descrizione del valore basso
+    </th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+      Descrizione del valore alto
+    </th>
   </tr>
   <tr>
-    <th style="text-align:left; width:23%">Descrizione</th>
-    <th style="text-align:center; width:16%">Termine</th>
-    <th style="text-align:center; width:16%">Aspetto</th>
-    <th style="text-align:center; width:16%">Termine</th>
-    <th style="text-align:right">Descrizione</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width:23%">
+      Descrizione
+    </th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width:16%">
+      Termine
+    </th>
+    <th id="facet" headers="blank" style="text-align:center; width:16%">
+      Aspetto
+    </th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width:16%">
+      Termine
+    </th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+      Descrizione
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">Sei soddisfatto del tuo livello di
-      realizzazione e non senti il bisogno di fissare obiettivi ambiziosi.</td>
-    <td style="text-align:center">Contento</td>
-    <td style="text-align:center"><strong>Perseguimento di obiettivi</strong></td>
-    <td style="text-align:center">Motivato</td>
-    <td style="text-align:right">Stabilisci alti obiettivi per te stesso e lavori
-      duro per raggiungerli.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Sei soddisfatto del tuo livello di
+      realizzazione e non senti il bisogno di fissare obiettivi ambiziosi.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Contento
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Perseguimento di obiettivi</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Motivato
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Stabilisci alti obiettivi per te stesso e lavori
+      duro per raggiungerli.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Preferisci agire immediatamente
-      piuttosto che perdere tempo a prendere una decisione.</td>
-    <td style="text-align:center">Coraggioso</td>
-    <td style="text-align:center"><strong>Prudenza</strong></td>
-    <td style="text-align:center">Ponderato</td>
-    <td style="text-align:right">Pensi attentamente a tutte le decisioni prima di procedere.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Preferisci agire immediatamente
+      piuttosto che perdere tempo a prendere una decisione.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Coraggioso
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Prudenza</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Ponderato
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Pensi attentamente a tutte le decisioni prima di procedere.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Fai quello che vuoi, ignorando le regole e gli obblighi.</td>
-    <td style="text-align:center">Spensierato</td>
-    <td style="text-align:center"><strong>Doverosità</strong></td>
-    <td style="text-align:center">Disciplinato</td>
-    <td style="text-align:right">Prendi sul serio regole e obblighi, anche quando sono sconvenienti.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Fai quello che vuoi, ignorando le regole e gli obblighi.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Spensierato
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Doverosità</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Disciplinato
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Prendi sul serio regole e obblighi, anche quando sono sconvenienti.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Non dedichi molto tempo all'organizzazione nella tua vita quotidiana.</td>
-    <td style="text-align:center">Disordinato</td>
-    <td style="text-align:center"><strong>Ordine</strong></td>
-    <td style="text-align:center">Organizzato</td>
-    <td style="text-align:right">Senti un forte bisogno di struttura nella tua vita.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Non dedichi molto tempo all'organizzazione nella tua vita quotidiana.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Disordinato
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Ordine</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Organizzato
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Senti un forte bisogno di struttura nella tua vita.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Hai difficoltà a seguire attività difficili per un lungo periodo di tempo.</td>
-    <td style="text-align:center">Intermittente</td>
-    <td style="text-align:center"><strong>Autodisciplina</strong></td>
-    <td style="text-align:center">Perseverante</td>
-    <td style="text-align:right">Puoi affrontare e seguire attività difficili.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Hai difficoltà a seguire attività difficili per un lungo periodo di tempo.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Intermittente
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Autodisciplina</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Perseverante
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Puoi affrontare e seguire attività difficili.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">Dubiti spesso della tua capacità di raggiungere i tuoi obiettivi.</td>
-    <td style="text-align:center">Insicuro</td>
-    <td style="text-align:center"><strong>Autoefficacia</strong></td>
-    <td style="text-align:center">Sicuro di sé</td>
-    <td style="text-align:right">Senti di avere la capacità di riuscire nelle attività che ti sei prefissato.</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+      Dubiti spesso della tua capacità di raggiungere i tuoi obiettivi.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+      Insicuro
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>Autoefficacia</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+      Sicuro di sé
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+      Senti di avere la capacità di riuscire nelle attività che ti sei prefissato.
+    </td>
   </tr>
 </table>
 
 ## Dimensioni primarie e secondarie
-{: #dimensions}
+{: #dimensions-consc}
 
 Informazioni che collegano la dimensione ad altre dimensioni, descrivendo combinazioni di caratteristiche della personalità. Vengono fornite informazioni su come le caratteristiche primarie e secondarie potrebbero essere correlate per rappresentare la personalità composita di un individuo.
 

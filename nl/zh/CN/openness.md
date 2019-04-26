@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,10 +26,16 @@ lastupdated: "2017-10-12"
 {: #openness}
 
 *开放性*或*乐于体验*是指个人对体验各种活动所持开放态度的程度高低。
+随后的表格将特征结果限定为*高*或*低*：
 {: shortdesc}
 
+-   高于平均值 0.5 的任何分数都指示某个特征高于平均值的倾向。等于或高于 0.75 的分数表示特征的非常易于区分的方面；此类分数被视为*高*。
+-   对于低于 0.50 和 0.25 的分数（这些分数被视为*低*），则为相反的情况。
+
+有关更多信息，请参阅[个性特征的百分位数](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles)。
+
 ## 构面
-{: #facets}
+{: #facets-opens}
 
 简要描述维度的构面以及在每个构面中得分高的个人。
 
@@ -61,72 +72,109 @@ lastupdated: "2017-10-12"
 </table>
 
 ## 特征范围
-{: #range}
+{: #range-opens}
 
 可能适用于其得分或多或少证实了该维度每个构面的个人的一般描述，以及可能描述了此类个人的术语。
 
-<table>
+<table summary="对于每行中间列中列出的构面，前两列提供构面得分较低的个人的描述和术语，后两列提供构面得分较高的个人的术语和描述。">
   <caption>表 2. 特征范围（开放性）</caption>
   <tr>
-    <th colspan="2" style="text-align:center">低值描述</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">高值描述</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+低值描述</th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+高值描述</th>
   </tr>
   <tr>
-    <th style="text-align:left; width: 23%">描述</th>
-    <th style="text-align:center; width: 16%">术语</th>
-    <th style="text-align:center; width: 16%">构面</th>
-    <th style="text-align:center; width: 16%">术语</th>
-    <th style="text-align:right">描述</th>
-  </tr>
-    <tr>
-    <td style="text-align:left">喜欢熟悉的惯例，不喜欢偏离这些惯例。</td>
-    <td style="text-align:center">因循</td>
-    <td style="text-align:center"><strong>冒险性</strong></td>
-    <td style="text-align:center">冒险</td>
-    <td style="text-align:right">渴望体验新的事物。</td>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width: 23%">
+描述</th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width: 16%">
+术语</th>
+    <th id="facet" headers="blank" style="text-align:center; width: 16%">
+构面</th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width: 16%">
+术语</th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+描述</th>
   </tr>
   <tr>
-    <td style="text-align:left">对艺术或创作活动的兴趣低于大多数人。</td>
-    <td style="text-align:center">对艺术不感兴趣</td>
-    <td style="text-align:center"><strong>艺术兴趣</strong></td>
-    <td style="text-align:center">喜爱艺术</td>
-    <td style="text-align:right">喜欢美的事物，追求创作体验。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+喜欢熟悉的惯例，不喜欢偏离这些惯例。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+因循</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>冒险性</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+冒险</td>
+    <td headers="highValue highDescription" style="text-align:right">
+渴望体验新的事物。</td>
   </tr>
   <tr>
-    <td style="text-align:left">很少想到或公开表达自己的情绪。</td>
-    <td style="text-align:center">冷静</td>
-    <td style="text-align:center"><strong>情绪性</strong></td>
-    <td style="text-align:center">感知情绪</td>
-    <td style="text-align:right">了解自己的感受，知道如何表达这些感受。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+对艺术或创作活动的兴趣低于大多数人。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+对艺术不感兴趣</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>艺术兴趣</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+喜爱艺术</td>
+    <td headers="highValue highDescription" style="text-align:right">
+喜欢美的事物，追求创作体验。</td>
   </tr>
   <tr>
-    <td style="text-align:left">重事实更胜于想象。</td>
-    <td style="text-align:center">务实</td>
-    <td style="text-align:center"><strong>想象力</strong></td>
-    <td style="text-align:center">富于想象</td>
-    <td style="text-align:right">有无边的想象力。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+很少想到或公开表达自己的情绪。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+冷静</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>情绪性</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+感知情绪</td>
+    <td headers="highValue highDescription" style="text-align:right">
+了解自己的感受，知道如何表达这些感受。</td>
   </tr>
   <tr>
-    <td style="text-align:left">宁愿按世界的现状来行动，很少考虑抽象的想法。</td>
-    <td style="text-align:center">现实</td>
-    <td style="text-align:center"><strong>才智</strong></td>
-    <td style="text-align:center">哲学</td>
-    <td style="text-align:right">乐于接受新的想法并深感好奇，热爱探索这些新想法。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+重事实更胜于想象。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+务实</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>想象力</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+富于想象</td>
+    <td headers="highValue highDescription" style="text-align:right">
+有无边的想象力。</td>
   </tr>
   <tr>
-    <td style="text-align:left">倾向于遵循传统来保持稳定感。</td>
-    <td style="text-align:center">尊重权威</td>
-    <td style="text-align:center"><strong>思想开明</strong></td>
-    <td style="text-align:center">挑战权威</td>
-    <td style="text-align:right">倾向于挑战权威和传统价值观，以帮助实现变革。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+宁愿按世界的现状来行动，很少考虑抽象的想法。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+现实</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>才智</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+哲学</td>
+    <td headers="highValue highDescription" style="text-align:right">
+乐于接受新的想法并深感好奇，热爱探索这些新想法。</td>
+  </tr>
+  <tr>
+    <td headers="lowValue lowDescription" style="text-align:left">
+倾向于遵循传统来保持稳定感。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+尊重权威</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>思想开明</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+挑战权威</td>
+    <td headers="highValue highDescription" style="text-align:right">
+倾向于挑战权威和传统价值观，以帮助实现变革。</td>
   </tr>
 </table>
 
 ## 主维度和辅助维度
-{: #dimensions}
+{: #dimensions-opens}
 
-表达该维度与其他维度的关系的信息，描述了个性特征的组合。深入说明主特征和辅助特征之间可能如何相互关联，以表示个人的综合个性。
+说明该维度与其他维度的关系的信息，描述了个性特征的组合。深入了解主特征和辅助特征之间可能如何相互关联，以表示个人的综合个性。
 
 <table>
   <caption>表 3. 主维度和辅助维度（开放性）</caption>
@@ -175,12 +223,12 @@ lastupdated: "2017-10-12"
     <td style="text-align:left"><strong>情绪程度</strong></td>
     <td style="text-align:center"><em>高</em></td>
     <td>热情、容易激动、追求感官刺激</td>
-    <td>有创造力、智慧、富有洞察力、多才多艺、善于创造</td>
+    <td>容易受到惊吓、容易厌烦、忧虑不安</td>
   </tr>
   <tr>
     <td></td>
     <td style="text-align:center"><em>低</em></td>
-    <td>容易受到惊吓、容易厌烦、忧虑不安</td>
+    <td>有创造力、智慧、富有洞察力、多才多艺、善于创造</td>
     <td>不易激动、漠不关心</td>
   </tr>
 </table>

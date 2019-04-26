@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-08-11"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,8 +25,10 @@ lastupdated: "2017-08-11"
 # ニーズ
 {: #needs}
 
-*ニーズ* は、入力テキスト筆者の共感を呼びそうな商品側面を概要レベルで記述します。当サービスが評価する 12 個のニーズは次の表のとおりです。
+*ニーズ* は、入力テキスト筆者の共感を呼びそうな商品側面を概要レベルで記述します。 当サービスが評価する 12 個のニーズは次の表のとおりです。
 {: shortdesc}
+
+平均である 0.5 を超えるスコアは、特性の平均的傾向よりも大きいことを示しています。 0.75 以上のスコアは、特性の側面が容易に認められることを示しています。 そのようなスコアは、*高い* と見なされます。詳しくは、『[パーソナリティー特性の百分位数](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles)』を参照してください。
 
 <table>
   <caption>表 1. ニーズ</caption>
@@ -59,7 +66,7 @@ lastupdated: "2017-08-11"
   </tr>
   <tr>
     <td><strong>愛</strong></td>
-    <td>1 対 1 と 1 対多のどちらであっても社会的接触を楽しむ。人々をまとめるような製品がこの欲求を刺激する。</td>
+    <td>1 対 1 と 1 対多のどちらであっても社会的接触を楽しむ。 人々をまとめるような製品がこの欲求を刺激する。</td>
   </tr>
   <tr>
     <td><strong>実用性</strong></td>
@@ -67,7 +74,7 @@ lastupdated: "2017-08-11"
   </tr>
   <tr>
     <td><strong>安定性</strong></td>
-    <td>物理的世界で等価のものを探す。実用的で、試験され検証されたものを好む。</td>
+    <td>物理的世界で等価のものを探す。 実用的で、試験され検証されたものを好む。</td>
   </tr>
   <tr>
     <td><strong>挑戦</strong></td>
@@ -75,6 +82,6 @@ lastupdated: "2017-08-11"
   </tr>
   <tr>
     <td><strong>構造</strong></td>
-    <td>根拠を明示し、物事を一つにまとめることを望む。物事がよく整理され、制御可能であることを求める。</td>
+    <td>根拠を明示し、物事を一つにまとめることを望む。 物事がよく整理され、制御可能であることを求める。</td>
   </tr>
 </table>

@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-28"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,24 +25,24 @@ lastupdated: "2017-10-28"
 # Descrizione di un profilo JSON
 {: #output}
 
-Quando utilizzi il metodo `POST /v3/profile` per analizzare il contenuto, il servizio restituisce i risultati della sua analisi come oggetto `Profile` JSON per impostazione predefinita o se specifichi `application/json` con l'intestazione `Accept` di una richiesta. L'ambito dell'output JSON dipende dai parametri che hai specificato con la richiesta e a seconda che il testo di input rappresenti dati con data e ora, ad esempio il testo associato a un feed Twitter.
+Quando utilizzi il metodo `POST /v3/profile` per analizzare il contenuto, il servizio restituisce i risultati della sua analisi come oggetto `Profile` o se specifichi `application/json` con l'intestazione `Accept` di una richiesta. L'ambito dell'output JSON dipende dai parametri che specifichi con la richiesta. Dipende anche dal fatto che il testo di input rappresenti dati con data e ora, ad esempio il testo associato a un feed Twitter.
 {: shortdesc}
 
-Le seguenti sezioni descrivono i contenuti di una risposta in formato JSON. Tutto l'output di esempio è prodotto dal file JSON campione <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno" class="style-scope doc-content"></a> utilizzato nell'[Esercitazione introduttiva](/docs/services/personality-insights/getting-started.html). Per informazioni sull'output CSV, vedi [Descrizione di un profilo CSV](/docs/services/personality-insights/output-csv.html).
+Le seguenti sezioni descrivono i contenuti di una risposta in formato JSON. Tutto l'output di esempio è prodotto dal file JSON campione <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a> utilizzato nell'[Esercitazione introduttiva](/docs/services/personality-insights?topic=personality-insights-gettingStarted). Per informazioni sull'output CSV, vedi [Descrizione di un profilo CSV](/docs/services/personality-insights?topic=personality-insights-outputCSV).
 
 ## Oggetto Profile
 {: #outputJSON}
 
 L'oggetto `Profile` è l'oggetto JSON di livello superiore restituito dal servizio. L'oggetto include i seguenti campi:
 
--   `word_count` (numero intero) fornisce il numero di parole del contenuto di input utilizzate per generare il profilo. Può essere inferiore al numero di parole nell'input se la richiesta ha inoltrato una grande quantità di contenuto. Se il numero di parole non riesce a soddisfare una soglia minima, l'output include anche un campo `word_count_message` che fornisce ulteriori indicazioni.
+-   `word_count` (numero intero) fornisce il numero di parole del contenuto di input utilizzate per generare il profilo. Questa figura può essere inferiore al numero di parole nell'input se la richiesta ha inoltrato una grande quantità di contenuto. Se il numero di parole non riesce a soddisfare una soglia minima, l'output include anche un campo `word_count_message` che fornisce ulteriori indicazioni. 
 -   `processed language` (stringa) descrive il modello di lingua utilizzato dal servizio per elaborare l'input: `ar` (Arabo), `en` (Inglese), `es` (Spagnolo), `ja` (Giapponese) o `ko` (Coreano).
--   `personality` è un array ricorsivo di oggetti `Trait` che descrive le dimensioni e gli oggetti Big Five dedotti dal testo di input.
+-   `personality` è un array ricorsivo di oggetti `Trait` che descrive le dimensioni e gli oggetti Big Five dedotti dal testo di input. 
 -   `needs` è un array di oggetti `Trait` che descrive le Esigenze dedotte dal testo di input. 
--   `values` è un array di oggetti `Trait` che descrive i Valori dedotti dal testo di input.
+-   `values` è un array di oggetti `Trait` che descrive i Valori dedotti dal testo di input. 
 -   `behavior` è un array di oggetti `Behavior` che descrive la distribuzione dei contenuti nei giorni della settimana e nelle ore del giorno. Il servizio restituisce il campo solo per l'input JSON che ha un indicatore di data e ora.
 -   `consumption_preferences` è un array di oggetti `ConsumptionPreferencesCategory` che fornisce risultati per ogni categoria delle preferenze di consumo. Gli elementi dell'array forniscono informazioni per le singole preferenze della categoria. Il servizio restituisce il campo solo se il parametro di query `consumption_preferences` della richiesta è impostato su `true`.
--   `warnings` è un array di oggetti `Warning` che fornisce i messaggi associati al testo di input. L'array è vuoto se l'input non genera avvertenze.
+-   `warnings` è un array di oggetti `Warning` che fornisce i messaggi relativi al testo di input. L'array è vuoto se l'input non genera avvertenze.
 
 ### Risposta di esempio
 {: #JSONExample}
@@ -74,18 +79,18 @@ Il seguente output di esempio mostra la struttura di alto livello di un oggetto 
 L'oggetto `Profile` include sempre i campi `personality`, `needs` e `values` per tutti i tipi di input. Ognuno di questi campi contiene un array di oggetti `Trait` che descrive le caratteristiche della personalità per gli attributi di quel tipo di caratteristica. Per le caratteristiche di Esigenze e Valori, l'array ha un unico livello che descrive le caratteristiche. Per le caratteristiche Big Five, un array di livello superiore descrive le dimensioni e gli array di secondo livello descrivono gli aspetti di ciascuna dimensione.
 
 -   `trait_id` (stringa) è l'ID univoco della caratteristica a cui si riferiscono i risultati:
-    -   `big5_characteristic` per le dimensioni della personalità Big Five
-    -   `facet_characteristic` per gli aspetti della personalità Big Five
-    -   `need_characteristic` per le Esigenze
-    -   `value_characteristic` per i Valori
+    -   `big5_{characteristic}` per le dimensioni della personalità Big Five
+    -   `facet_{characteristic}` per gli aspetti della personalità Big Five
+    -   `need_{characteristic}` per le Esigenze
+    -   `value_{characteristic}` per i Valori
 -   `name` (stringa) è il nome visibile all'utente della caratteristica.
 -   `category` (stringa) è la categoria della caratteristica:
     -   `personality` per le caratteristiche della personalità Big Five
     -   `needs` per le Esigenze
     -   `values` per i Valori
--   `percentile` (doppio) è il punteggio percentile normalizzato per la caratteristica. Per ulteriori informazioni, vedi [Percentili per le caratteristiche della personalità](/docs/services/personality-insights/numeric.html#percentiles).
--   `raw_score` (doppio) è il punteggio non elaborato per la caratteristica. Il campo viene restituito solo se richiedi i punteggi non elaborati impostando il parametro di query `raw_scores` su `true`. Per ulteriori informazioni, vedi [Punteggi non elaborati per le caratteristiche della personalità](/docs/services/personality-insights/numeric.html#rawScores).
--   `significant` (booleano) indica se la caratteristica è significativa per la lingua di input. Il campo è sempre `true` per tutte le caratteristiche dell'input in inglese, spagnolo e giapponese. Il campo è `false` per il sottoinsieme di caratteristiche dell'input in arabo e coreano per cui i modelli del servizio non sono in grado di generare risultati significativi. Per ulteriori informazioni, vedi [Limitazioni per l'input in arabo e coreano](/docs/services/personality-insights/numeric.html#limitations).
+-   `percentile` (doppio) è il punteggio percentile normalizzato per la caratteristica. Per ulteriori informazioni, vedi [Percentili per le caratteristiche della personalità](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
+-   `raw_score` (doppio) è il punteggio non elaborato per la caratteristica. Il campo viene restituito solo se richiedi i punteggi non elaborati impostando il parametro di query `raw_scores` su `true`. Per ulteriori informazioni, vedi [Punteggi non elaborati per le caratteristiche della personalità](/docs/services/personality-insights?topic=personality-insights-numeric#rawScores-numeric).
+-   `significant` (booleano) indica se la caratteristica è significativa per la lingua di input. Il campo è sempre `true` per tutte le caratteristiche dell'input in inglese, spagnolo e giapponese. Il campo è `false` per il sottoinsieme di caratteristiche dell'input in arabo e coreano per cui i modelli del servizio non sono in grado di generare risultati significativi. Per ulteriori informazioni, vedi [Limitazioni per l'input in arabo e coreano](/docs/services/personality-insights?topic=personality-insights-numeric#limitations).
 -   `children` è un array di oggetti `Trait` che fornisce risultati più dettagliati per gli aspetti di ogni dimensione Big Five dedotta dal testo di input. L'array viene restituito solo per le dimensioni Big Five.
 
 ### Risposta di esempio
@@ -222,14 +227,14 @@ Il seguente output di esempio mostra frammenti dell'output per le caratteristich
 ## Output comportamentale
 {: #behaviorJSON}
 
-Se l'input per il servizio è un JSON con indicatori di data e ora per i singoli elementi di contenuto, l'oggetto `Profile` include un campo `behavior`. Il campo include un oggetto `Behavior` per ogni giorno della settimana e ora del giorno. 
+Se l'input per il servizio è un JSON con indicatori di data e ora per i singoli elementi di contenuto, l'oggetto `Profile` include un campo `behavior`. Il campo include un oggetto `Behavior` per ogni giorno della settimana e ora del giorno.
 
 -   `trait_id` (stringa) è l'ID univoco della caratteristica a cui si riferiscono i risultati:
-    -   `behavior_day` per i giorni della settimana (ad esempio, `behavior_sunday`).
-    -   `behavior_hour` per le ore del giorno (ad esempio, `behavior_0000`).
+    -   `behavior_{day}` per i giorni della settimana (ad esempio, `behavior_sunday`).
+    -   `behavior_{hour}` per le ore del giorno (ad esempio, `behavior_0000`).
 -   `name` (stringa) è il nome visibile all'utente della caratteristica.
 -   `category` (stringa) è la categoria della caratteristica, che è sempre `behavior`.
--   `percentage` (doppio) è la percentuale di elementi di contenuto che si sono verificati durante quel giorno della settimana o quell'ora del giorno. Per ulteriori informazioni, vedi [Percentuali per le caratteristiche comportamentali](/docs/services/personality-insights/numeric.html#percentages).
+-   `percentage` (doppio) è la percentuale di elementi di contenuto che si sono verificati durante quel giorno della settimana o quell'ora del giorno. Per ulteriori informazioni, vedi [Percentuali per le caratteristiche comportamentali](/docs/services/personality-insights?topic=personality-insights-numeric#percentages).
 
 ### Risposta di esempio
 {: #behaviorExample}
@@ -293,11 +298,11 @@ Se il parametro di query `consumption_preferences` è impostato su `true`, l'ogg
 -   `name` (stringa) è il nome visibile all'utente della categoria delle preferenze di consumo.
 -   `consumption_preferences` è un array di oggetti `ConsumptionPreferences` che fornisce i risultati per le singole preferenze della categoria.
 
-Ogni singola preferenza per una categoria è descritta tramite un oggetto `ConsumptionPreferences`. Alcune categorie hanno solo un'unica preferenza mentre altre ne hanno molte di più.
+Ogni singola preferenza per una categoria è descritta tramite un oggetto `ConsumptionPreferences`. Alcune categorie hanno solo un'unica preferenza; altre categorie ne hanno molte di più. 
 
--   `consumption_preference_id` (stringa) è l'ID univoco della preferenza di consumo a cui si riferiscono i risultati in formato `consumption_preferences_preference`.
+-   `consumption_preference_id` (stringa) è l'ID univoco della preferenza di consumo a cui si riferiscono i risultati in formato `consumption_preferences_{preference}`.
 -   `name` (stringa) è il nome visibile all'utente della preferenza di consumo.
--   `score` (doppio) è un punteggio che indica la probabilità dell'autore di preferire l'elemento. Per ulteriori informazioni, vedi [Punteggi per le preferenze di consumo](/docs/services/personality-insights/numeric.html#scores).
+-   `score` (doppio) è un punteggio che indica la probabilità dell'autore di preferire l'elemento. Per ulteriori informazioni, vedi [Punteggi per le preferenze di consumo](/docs/services/personality-insights?topic=personality-insights-numeric#scores).
 
 ### Risposta di esempio
 {: #preferenceExample}

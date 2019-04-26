@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -23,11 +28,15 @@ lastupdated: "2017-10-12"
 Il servizio {{site.data.keyword.personalityinsightsshort}} deduce le caratteristiche della personalità di un autore per tre modelli: Big Five, Esigenze e Valori. Sulla base dei risultati ottenuti per questi modelli, il servizio può anche produrre preferenze di consumo per l'autore del testo di input. Per ottenere le preferenze di consumo, imposta il parametro di query `consumption_preferences` su `true` per una richiesta.
 {: shortdesc}
 
-Raggruppate in otto categorie di alto livello, le oltre 40 preferenze di consumo indicano la probabilità dell'autore di preferire prodotti, servizi e attività differenti. Ad esempio, il servizio può identificare le inclinazioni dell'autore durante l'acquisto di abbigliamento (comodità in opposizione a moda) e automobili (costo in opposizione a sicurezza), la loro inclinazione verso diversi generi di musica, film e lettura, il loro atteggiamento nei confronti dell'ambiente e del volontariato e altro ancora.
+Il servizio raggruppa le oltre 40 preferenze di consumo in otto categorie di alto livello. Le preferenze indicano la probabilità dell'autore a preferire prodotti, servizi e attività differenti. Ad esempio, il servizio può identificare
 
-Le aziende utilizzano i modelli di personalità del servizio per comprendere meglio i propri clienti e per progettare e sviluppare campagne, prodotti e servizi più personalizzati e mirati. Le preferenze di consumo rendono ancora più semplice agire in base ai risultati del servizio. Le aziende possono facilmente ottenere un elenco di preferenze associate alle caratteristiche dominanti di un individuo e rispondere di conseguenza. Per ulteriori informazioni sulle possibili applicazioni delle preferenze di consumo, vedi [Casi di utilizzo](/docs/services/personality-insights/usecases.html) e [Il servizio in azione](/docs/services/personality-insights/applied.html).
+-   Le inclinazioni dell'autore per abbigliamento (comodità in opposizione a moda) e automobili (costo in opposizione a sicurezza).
+-   Le inclinazioni dell'autore verso diversi generi di musica, film e lettura. 
+-   L'atteggiamento dell'autore nei confronti dell'ambiente e del volontariato. 
 
-Le seguenti sezioni elencano e descrivono le preferenze di consumo che possono essere restituite dal servizio. Per informazioni sull'interpretazione delle preferenze numeriche, vedi [Punteggi per le preferenze di consumo](/docs/services/personality-insights/numeric.html#scores). Per informazioni su come {{site.data.keyword.IBM_notm}} ha sviluppato le preferenze, vedi [La scienza alla base del servizio](/docs/services/personality-insights/science.html).
+Le aziende utilizzano i modelli di personalità del servizio per comprendere meglio i propri clienti e per progettare e sviluppare campagne, prodotti e servizi più personalizzati e mirati. Le preferenze di consumo rendono ancora più semplice agire in base ai risultati del servizio. Le aziende possono facilmente ottenere e rispondere a un elenco di preferenze associate alle caratteristiche dominanti di un individuo. Per ulteriori informazioni sulle possibili applicazioni delle preferenze di consumo, vedi [Casi di utilizzo](/docs/services/personality-insights?topic=personality-insights-usecases) e [Il servizio in azione](/docs/services/personality-insights?topic=personality-insights-applied).
+
+Le seguenti sezioni elencano e descrivono le preferenze di consumo che possono essere restituite dal servizio. Per informazioni sull'interpretazione delle preferenze numeriche, vedi [Punteggi per le preferenze di consumo](/docs/services/personality-insights?topic=personality-insights-numeric#scores). Per informazioni su come {{site.data.keyword.IBM_notm}} ha sviluppato le preferenze, vedi [La scienza alla base del servizio](/docs/services/personality-insights?topic=personality-insights-science).
 
 ## Preferenze di acquisto
 {: #shopping}

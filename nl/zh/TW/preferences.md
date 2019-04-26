@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -23,11 +28,15 @@ lastupdated: "2017-10-12"
 {{site.data.keyword.personalityinsightsshort}} 服務會針對三種模型來推斷作者的性格特質：「五大性格特質」、「需求」和「價值觀」。根據針對這些模型來推斷的結果，服務還可以針對輸入文字的作者產生消費喜好。將 `consumption_preferences` 查詢參數設為 `true`，即可讓要求取得消費喜好。
 {: shortdesc}
 
-超過 40 種消費喜好分組成八個高階種類，以指出作者喜好不同產品、服務和活動的可能性。例如，服務可以識別作者在購買服飾（舒適與時尚）和汽車（價格與安全性）時傾向；他們對不同類型音樂、電影和讀物的愛好；以及他們對環境和志願服務的態度等等。
+服務會將超過 40 種消費喜好分組為八個高階種類。該喜好會指出作者喜好不同產品、服務和活動的可能性。例如，服務可用於識別
 
-企業使用服務的性格模型，可以更充分地瞭解其客戶，並可設計及開發更為個人化且目標更明確的行銷活動、產品和服務。消費喜好甚至可以讓他們更容易根據服務的結果來採取行動。企業可以輕鬆取得與個人主要特質相關聯的喜好清單，並據此做出回應。如需消費喜好可能的應用方式的相關資訊，請參閱[使用案例](/docs/services/personality-insights/usecases.html)和[運作中的服務](/docs/services/personality-insights/applied.html)。
+-   作者對於衣服（舒適與時尚）及汽車（成本與安全）的愛好。
+-   作者的學習朝向不同的音樂、影片和閱讀。
+-   作者對於環境及志願服務的態度。
 
-下列各節列出並說明服務可以傳回的消費喜好。如需解譯喜好數值的相關資訊，請參閱[消費喜好的評分](/docs/services/personality-insights/numeric.html#scores)。如需 {{site.data.keyword.IBM_notm}} 如何開發這些喜好的相關資訊，請參閱[服務背後的科學](/docs/services/personality-insights/science.html)。
+企業使用服務的性格模型，可以更充分地瞭解其客戶，並可設計及開發更為個人化且目標更明確的行銷活動、產品和服務。消費喜好甚至可以讓他們更容易依據服務的結果來採取行動。企業可以輕鬆取得並回應至個人主要特質相關聯的喜好清單。如需消費喜好可能的應用方式的相關資訊，請參閱[使用案例](/docs/services/personality-insights?topic=personality-insights-usecases)和[運作中的服務](/docs/services/personality-insights?topic=personality-insights-applied)。
+
+下列各節列出並說明服務可以傳回的消費喜好。如需解譯喜好數值的相關資訊，請參閱[消費喜好的評分](/docs/services/personality-insights?topic=personality-insights-numeric#scores)。如需 {{site.data.keyword.IBM_notm}} 如何開發這些喜好的相關資訊，請參閱[服務背後的科學](/docs/services/personality-insights?topic=personality-insights-science)。
 
 ## 購物喜好
 {: #shopping}

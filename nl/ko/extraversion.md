@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,13 +25,19 @@ lastupdated: "2017-10-12"
 # 빅 파이브 외향성
 {: #extraversion}
 
-*외향성*은 타인과 만났을 때 자극을 받는 개인적 성향입니다.
+*외향성*은 타인과 만났을 때 자극을 받는 개인적 성향입니다. 다음 표는 *높음* 또는 *낮음*과 같은 특성에 대한 결과를 규정합니다.
 {: shortdesc}
 
-## 성향
-{: #facets}
+-   평균 0.5보다 높은 점수는 특성에 대해 평균 보다 높은 경향을 나타냅니다. 0.75 이상의 점수는 쉽게 식별할 수 있는 특성 측면을 나타냅니다. 이러한 점수는 *높음*으로 간주됩니다. 
+-   이와 반대로 0.50보다 낮은 점수와 0.25보다 낮은 점수에는 위와 반대 문장이 적용되고 *낮음*으로 간주됩니다.
 
-특질의 성향 및 각 성향에서 높은 점수를 받는 개인에 대한 간략한 설명입니다. 
+자세한 정보는
+[성격 특성에 대한 백분위수](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles)를 참조하십시오.
+
+## 성향
+{: #facets-extra}
+
+특질의 성향 및 각 성향에서 높은 점수를 받는 개인에 대한 간략한 설명입니다.
 
 <table>
   <caption>표 1. 성향(외향성)</caption>
@@ -36,99 +47,173 @@ lastupdated: "2017-10-12"
   </tr>
   <tr>
     <td><strong>활동 수준/열정적</strong></td>
-    <td>빠르게 진행되는 바쁜 삶을 영위합니다. 일을 수행하면서 신속하고 열정적이며 활기차게 돌아다니고, 많은 활동에 관여합니다. </td>
+    <td>빠르게 진행되는 바쁜 삶을 영위합니다. 일을 수행하면서 신속하고 열정적이며 활기차게 돌아다니고, 많은 활동에 관여합니다.</td>
   </tr>
   <tr>
     <td><strong>적극성/적극적인</strong></td>
-    <td>책임을 지기를 좋아하며 타인의 행동을 이끌어내고 싶어합니다. 그룹의 리더일 확률이 높습니다. </td>
+    <td>책임을 지기를 좋아하며 타인의 행동을 이끌어내고 싶어합니다. 그룹의 리더일 확률이 높습니다.</td>
   </tr>
   <tr>
     <td><strong>쾌활함/명랑함/긍정적 감정</strong></td>
-    <td>행복감, 열정, 낙관주의와 즐거움을 포함하여 다양한 긍정적인 감정을 느낍니다. </td>
+    <td>행복감, 열정, 낙관주의와 즐거움을 포함하여 다양한 긍정적인 감정을 느낍니다.</td>
   </tr>
   <tr>
     <td><strong>자극 추구</strong></td>
-    <td>고도의 자극이 없으면 따분함을 느끼기 쉽습니다. </td>
+    <td>고도의 자극이 없으면 따분함을 느끼기 쉽습니다.</td>
   </tr>
   <tr>
     <td><strong>친화성/사교적/온정적</strong></td>
-    <td>진정으로 타인을 좋아하여 타인에 대한 긍정적 감성을 솔직히 표현합니다. </td>
+    <td>진정으로 타인을 좋아하여 타인에 대한 긍정적 감성을 솔직히 표현합니다.</td>
   </tr>
   <tr>
     <td><strong>사교성/사교적</strong></td>
     <td>타인과 함께 있으면 즐거운 자극이 되며 보람을 느낍니다.
-    많은 사람들이 신바람이 나면 즐거워합니다. </td>
+    많은 사람들이 신바람이 나면 즐거워합니다.</td>
   </tr>
 </table>
 
 ## 특성의 범위
-{: #range}
+{: #range-extra}
 
-해당 개인을 설명할 수 있는 용어와 함께 해당 점수가 특질의 각 성향이 많거나 적음을 입증하는 개인에 적용될 수 있는 일반적인 설명입니다. 
+해당 개인을 설명할 수 있는 용어와 함께 해당 점수가 특질의 각 성향이 많거나 적음을 입증하는 개인에 적용될 수 있는 일반적인 설명입니다.
 
-<table>
+<table summary="각 행의 중간 열에 나열된 성향의 경우 처음 두 열은 성향에 대한 점수가 낮은 개인에 대한 설명과 용어를 제공하고, 마지막 두 열은 성향에 대한 점수가 높은 개인에 대한 용어 및 설명을 제공합니다.">
   <caption>표 2. 특성의 범위(외향성)</caption>
   <tr>
-    <th colspan="2" style="text-align:center">낮은 값의 설명</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">높은 값의 설명</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+낮은 값의 설명
+    </th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+높은 값의 설명
+    </th>
   </tr>
   <tr>
-    <th style="text-align:left; width:23%">설명</th>
-    <th style="text-align:center; width:16%">항목</th>
-    <th style="text-align:center; width:16%">성향</th>
-    <th style="text-align:center; width:16%">항목</th>
-    <th style="text-align:right">설명</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width:23%">
+설명
+    </th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width:16%">
+항목
+    </th>
+    <th id="facet" headers="blank" style="text-align:center; width:16%">
+성향
+    </th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width:16%">
+항목
+    </th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+설명
+    </th>
   </tr>
   <tr>
-    <td style="text-align:left">느긋하게 진행되는 삶에 감사합니다. </td>
-    <td style="text-align:center">느긋함</td>
-    <td style="text-align:center"><strong>활동 수준</strong></td>
-    <td style="text-align:center">활동적</td>
-    <td style="text-align:right">많은 활동을 하면서 빠른 행보의 바쁜 스케줄을 즐깁니다. </td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+느긋하게 진행되는 삶에 감사합니다.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+느긋함
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>활동 수준</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+활동적
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+많은 활동을 하면서 빠른 행보의 바쁜 스케줄을 즐깁니다.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">특히 여러 사람이 모여 있을 때는 말하는 대신 주로 듣는 편입니다. </td>
-    <td style="text-align:center">조용함</td>
-    <td style="text-align:center"><strong>적극성</strong></td>
-    <td style="text-align:center">적극적인</td>
-    <td style="text-align:right">큰 소리로 말하고 상황을 주도하는 경향이 있으며 집단을 이끌어나가는 일에 편안함을 느낍니다. </td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+특히 여러 사람이 모여 있을 때는 말하는 대신 주로 듣는 편입니다.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+조용함
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>적극성</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+적극적인
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+큰 소리로 말하고 상황을 주도하는 경향이 있으며 집단을 이끌어나가는 일에 편안함을 느낍니다.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">일반적으로 진지하며 농담을 별로 즐기지 않습니다. </td>
-    <td style="text-align:center">엄숙한</td>
-    <td style="text-align:center"><strong>쾌활함</strong></td>
-    <td style="text-align:center">쾌활한</td>
-    <td style="text-align:right">쾌활한 성격이며 세상 사람들과 함께 즐거워합니다. </td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+일반적으로 진지하며 농담을 별로 즐기지 않습니다.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+엄숙한
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>쾌활함</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+쾌활한
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+쾌활한 성격이며 세상 사람들과 함께 즐거워합니다.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">차분하고 조용하며 안전한 활동을 좋아합니다. </td>
-    <td style="text-align:center">조용함 추구</td>
-    <td style="text-align:center"><strong>자극 추구</strong></td>
-    <td style="text-align:center">자극 추구</td>
-    <td style="text-align:right">위험을 감수하는 일을 즐기며 많은 행위들이 진행되지 않으면 따분함을 느낍니다. </td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+차분하고 조용하며 안전한 활동을 좋아합니다.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+조용함 추구
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>자극 추구</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+자극 추구
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+위험을 감수하는 일을 즐기며 많은 행위들이 진행되지 않으면 따분함을 느낍니다.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">은밀한 성격이며 많은 사람들을 안에 받아들이려고 하지 않습니다. </td>
-    <td style="text-align:center">내성적</td>
-    <td style="text-align:center"><strong>친화성</strong></td>
-    <td style="text-align:center">외향적</td>
-    <td style="text-align:right">쉽게 친구를 사귀며 다른 사람들이 주변이 있으면 편안함을 느낍니다. </td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+은밀한 성격이며 많은 사람들을 안에 받아들이려고 하지 않습니다.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+내성적
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>친화성</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+외향적
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+쉽게 친구를 사귀며 다른 사람들이 주변이 있으면 편안함을 느낍니다.
+    </td>
   </tr>
   <tr>
-    <td style="text-align:left">자기만의 시간을 갖기를 무척 좋아합니다. </td>
-    <td style="text-align:center">자립적</td>
-    <td style="text-align:center"><strong>사교성</strong></td>
-    <td style="text-align:center">사교적</td>
-    <td style="text-align:right">타인과 함께 있으면 즐거워합니다. </td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+자기만의 시간을 갖기를 무척 좋아합니다.
+    </td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+자립적
+    </td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>사교성</strong>
+    </td>
+    <td headers="highValue highTerm" style="text-align:center">
+사교적
+    </td>
+    <td headers="highValue highDescription" style="text-align:right">
+타인과 함께 있으면 즐거워합니다.
+    </td>
   </tr>
 </table>
 
 ## 기본 및 보조 특질
-{: #dimensions}
+{: #dimensions-extra}
 
 특질을 다른 특질과 연관시키는 정보이며, 성격 특성의 조합을 설명합니다. 
-기본 및 보조 특성이 상호 연관되어 개인의 복합 성격을 제시하는 방법에 대한 통찰을 제공합니다. 
+기본 및 보조 특성이 상호 연관되어 개인의 복합 성격을 제시하는 방법에 대한 통찰을 제공합니다.
 
 <table>
   <caption>표 3. 기본 및 보조 특질(외향성)</caption>

@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-12"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,10 +26,16 @@ lastupdated: "2017-10-12"
 {: #conscientiousness}
 
 *尽责性*是指个人的行为方式是否有条理、是否思虑周全方面的倾向。
+随后的表格将特征结果限定为*高*或*低*：
 {: shortdesc}
 
+-   高于平均值 0.5 的任何分数都指示某个特征高于平均值的倾向。等于或高于 0.75 的分数表示特征的非常易于区分的方面；此类分数被视为*高*。
+-   对于低于 0.50 和 0.25 的分数（这些分数被视为*低*），则为相反的情况。
+
+有关更多信息，请参阅[个性特征的百分位数](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles)。
+
 ## 构面
-{: #facets}
+{: #facets-consc}
 
 简要描述维度的构面以及在每个构面中得分高的个人。
 
@@ -61,72 +72,109 @@ lastupdated: "2017-10-12"
 </table>
 
 ## 特征范围
-{: #range}
+{: #range-consc}
 
 可能适用于其得分或多或少证实了该维度每个构面的个人的一般描述，以及可能描述了此类个人的术语。
 
-<table>
+<table summary="对于每行中间列中列出的构面，前两列提供构面得分较低的个人的描述和术语，后两列提供构面得分较高的个人的术语和描述。">
   <caption>表 2. 特征范围（尽责性）</caption>
   <tr>
-    <th colspan="2" style="text-align:center">低值描述</th>
-    <th></th>
-    <th colspan="2" style="text-align:center">高值描述</th>
+    <th id="lowValue" colspan="2" style="text-align:center">
+低值描述</th>
+    <th id="blank"></th>
+    <th id="highValue" colspan="2" style="text-align:center">
+高值描述</th>
   </tr>
   <tr>
-    <th style="text-align:left; width:23%">描述</th>
-    <th style="text-align:center; width:16%">术语</th>
-    <th style="text-align:center; width:16%">构面</th>
-    <th style="text-align:center; width:16%">术语</th>
-    <th style="text-align:right">描述</th>
+    <th id="lowDescription" headers="lowValue" style="text-align:left; width:23%">
+描述</th>
+    <th id="lowTerm" headers="lowValue" style="text-align:center; width:16%">
+术语</th>
+    <th id="facet" headers="blank" style="text-align:center; width:16%">
+构面</th>
+    <th id="highTerm" headers="highValue" style="text-align:center; width:16%">
+术语</th>
+    <th id="highDescription" headers="highValue" style="text-align:right">
+描述</th>
   </tr>
   <tr>
-    <td style="text-align:left">对自己的成就感到满足，认为无需设定雄心勃勃的目标。</td>
-    <td style="text-align:center">满足</td>
-    <td style="text-align:center"><strong>追求成就</strong></td>
-    <td style="text-align:center">有紧迫感</td>
-    <td style="text-align:right">为自己设定较高的目标，并努力实现这些目标。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+对自己的成就感到满足，认为无需设定雄心勃勃的目标。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+满足</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>追求成就</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+有紧迫感</td>
+    <td headers="highValue highDescription" style="text-align:right">
+为自己设定较高的目标，并努力实现这些目标。</td>
   </tr>
   <tr>
-    <td style="text-align:left">愿意立即采取行动，而不是花时间仔细考虑如何决策。</td>
-    <td style="text-align:center">大胆</td>
-    <td style="text-align:center"><strong>谨慎</strong></td>
-    <td style="text-align:center">思虑周全</td>
-    <td style="text-align:right">仔细思考后才会做出决策。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+愿意立即采取行动，而不是花时间仔细考虑如何决策。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+大胆</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>谨慎</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+思虑周全</td>
+    <td headers="highValue highDescription" style="text-align:right">
+仔细思考后才会做出决策。</td>
   </tr>
   <tr>
-    <td style="text-align:left">做事不顾后果，无视规则和责任。</td>
-    <td style="text-align:center">不负责任</td>
-    <td style="text-align:center"><strong>有责任心</strong></td>
-    <td style="text-align:center">尽责</td>
-    <td style="text-align:right">即使规则和责任带来不便，也会认真遵守。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+做事不顾后果，无视规则和责任。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+不负责任</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>有责任心</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+尽责</td>
+    <td headers="highValue highDescription" style="text-align:right">
+即使规则和责任带来不便，也会认真遵守。</td>
   </tr>
   <tr>
-    <td style="text-align:left">在日常生活中，不会用大量时间来进行组织整理。</td>
-    <td style="text-align:center">无条理</td>
-    <td style="text-align:center"><strong>条理性</strong></td>
-    <td style="text-align:center">有条理</td>
-    <td style="text-align:right">对生活有条理的需求强烈。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+在日常生活中，不会用大量时间来进行组织整理。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+无条理</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>条理性</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+有条理</td>
+    <td headers="highValue highDescription" style="text-align:right">
+对生活有条理的需求强烈。</td>
   </tr>
   <tr>
-    <td style="text-align:left">很难长时间坚持执行艰难任务。</td>
-    <td style="text-align:center">懈怠</td>
-    <td style="text-align:center"><strong>自律性</strong></td>
-    <td style="text-align:center">坚持不懈</td>
-    <td style="text-align:right">不畏艰难，坚持执行棘手的任务。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+很难长时间坚持执行艰难任务。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+懈怠</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>自律性</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+坚持不懈</td>
+    <td headers="highValue highDescription" style="text-align:right">
+不畏艰难，坚持执行棘手的任务。</td>
   </tr>
   <tr>
-    <td style="text-align:left">经常怀疑自己是否有能力达成目标。</td>
-    <td style="text-align:center">不自信</td>
-    <td style="text-align:center"><strong>自我效能</strong></td>
-    <td style="text-align:center">自信</td>
-    <td style="text-align:right">认为自己有能力成功完成要执行的任务。</td>
+    <td headers="lowValue lowDescription" style="text-align:left">
+经常怀疑自己是否有能力达成目标。</td>
+    <td headers="lowValue lowTerm" style="text-align:center">
+不自信</td>
+    <td headers="blank facet" style="text-align:center">
+      <strong>自我效能</strong></td>
+    <td headers="highValue highTerm" style="text-align:center">
+自信</td>
+    <td headers="highValue highDescription" style="text-align:right">
+认为自己有能力成功完成要执行的任务。</td>
   </tr>
 </table>
 
 ## 主维度和辅助维度
-{: #dimensions}
+{: #dimensions-consc}
 
-表达该维度与其他维度的关系的信息，描述了个性特征的组合。深入说明主特征和辅助特征之间可能如何相互关联，以表示个人的综合个性。
+说明该维度与其他维度的关系的信息，描述了个性特征的组合。深入了解主特征和辅助特征之间可能如何相互关联，以表示个人的综合个性。
 
 <table>
   <caption>表 3. 主维度和辅助维度（尽责性）</caption>

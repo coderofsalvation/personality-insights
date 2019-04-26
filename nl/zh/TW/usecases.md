@@ -1,14 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-08-11"
+  years: 2015, 2019
+lastupdated: "2019-03-07"
+
+subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -34,7 +39,7 @@ lastupdated: "2017-08-11"
 
 使用 {{site.data.keyword.personalityinsightsshort}} 服務，企業可以將此構想實現。藉由將企業與社交媒體資料組合運用，企業可以應用分析來開發個別客戶更深入的側寫。他們可以利用這些結果來產生更高品質的商機、更精細的客戶區隔，以及更相關且更個人的聚焦行銷。
 
-將 {{site.data.keyword.personalityinsightsshort}} 服務與其他 {{site.data.keyword.IBM_notm}} 供應項目（例如 Unica 和 BigInsights Social Data Accelerator (SDA)）搭配使用，企業可以從大量的交易和社交媒體資料衍生洞察分析。這些洞察分析可以協助企業
+企業可以使用 {{site.data.keyword.personalityinsightsshort}} 服務搭配其他 {{site.data.keyword.IBM_notm}} 供應項目，從大量的交易和社交媒體資料衍生洞察分析。這類供應項目包括 Unica 及 BigInsights Social Data Accelerator (SDA)。這些洞察分析可以協助企業
 
 -  及早、近乎即時的擷取客戶採購意圖訊號，以識別高品質的商機。
 -   衍生可以支配客戶經濟決策的客戶側寫，包括固有的心理喜好。
@@ -51,9 +56,9 @@ lastupdated: "2017-08-11"
 
 {{site.data.keyword.personalityinsightsshort}} 服務所產生的性格側寫，可協助企業加強現有的客戶關係，以及識別新客戶。例如，性格顯示在有條理、自律和謹慎傾向較高，而在無節制傾向較低的個人，比隨機母體更有可能兌換優惠券。同樣地，個人購買特定類型產品的傾向，也與其性格特質相關。例如，性格傾向開放性和責任感的購物者，比較可能會購買有機牛奶、水果和蔬菜。
 
-針對社交媒體內容顯現出這些性格特質交集的人（無論他們是現有或潛在客戶），零售商可以從將優惠券送給這些人而獲利。而不將優惠券送給那些不兌換的客戶，企業則可節省直效行銷成本。此外，他們也可以避免用客戶不想要或是會丟棄的優惠券來塞滿客戶信箱，這種模式最終會導致客戶將該零售商的優惠券全部丟棄。
+針對社交媒體內容顯現出這些性格特質交集的人（無論他們是現有或潛在客戶），零售商可以從將優惠券送給這些人而獲利。而不將優惠券送給那些不兌換的客戶，企業則可節省直效行銷成本。此外，他們也可以避免用客戶不想要的優惠券來淹沒客戶，這種模式最終會導致客戶將該零售商的優惠券全部丟棄。
 
-將性格側寫與從社交媒體推斷的生活事件，以及現有的企業個人背景資訊結合，可以針對個別客戶的消費模式和喜好產生有意義的洞察分析。例如，有新生兒的家庭可能會開始採購尿布。零售商可以使用 {{site.data.keyword.personalityinsightsshort}} 服務來推斷這類家庭比較可能偏好布製還是拋棄式尿布，並可寄送符合該推斷的優惠券給那些家庭。用這種方式來結合性格特質與生活事件，零售商可以進一步運用洞察分析來增加客戶回應，以及產生新的客戶。<!-- Sending coupons for such products to customers whose personality characteristics and life situations make them more likely to use them can increase customer response and generate new customers. -->
+將性格側寫與從社交媒體推斷的生活事件，以及現有的企業個人背景資訊結合，可以針對個別客戶的消費模式和喜好產生有意義的洞察分析。例如，有新生兒的家庭可能會開始採購尿布。零售商可以使用 {{site.data.keyword.personalityinsightsshort}} 服務來推斷這類家庭比較可能偏好布製還是拋棄式尿布。然後便可寄送符合該推斷的優惠券給那些家庭。結合性格特質與生活事件，零售商可以進一步運用新增洞察分析來增加客戶回應，以及產生新的客戶。
 
 企業也可以根據客戶公開的社交媒體內容和行為來分析大型客戶群組，以利用鎖定目標的創造收益機會。{{site.data.keyword.personalityinsightsshort}} 服務可以協助企業瞭解哪些訊息或產品會吸引哪些客戶群，進而提升未來市場行銷活動的成功機會。企業要先依據性格特質來聚集具有已知行為的客戶，然後根據從那些群集搜集到的區隔知識，衍生出性格與行為的對映規則。
 
@@ -84,11 +89,11 @@ Healthcare provider to patient. A cognitive-care use case developed by the {{sit
 -   客戶服務中心對來電者（將客服中心與來電者媒合）。
 -   投資經紀人對投資者（將經紀人與其可能聯繫的投資者媒合）。
 
-假設客戶聯絡經紀業務公司，以瞭解要追哪幾支投資基金。此情境暗示的媒合使用案例，是要運用客戶的性格特質以進一步滿足客戶的需求。使用 {{site.data.keyword.personalityinsightsshort}} 服務，該公司可以將客戶媒合給符合客戶性格的經紀人，並可建議適合客戶喜好和傾向的投資選項。此外，指派給客戶的經紀人還可以使用此服務來為客戶準備個性化的訊息。
+假設客戶聯絡經紀業務公司，以瞭解要追哪幾支投資基金。此情境暗示的媒合使用案例，是要運用客戶的性格特質以進一步滿足客戶的需求。使用 {{site.data.keyword.personalityinsightsshort}} 服務，該公司可以將客戶媒合給符合客戶性格的經紀人。並可建議適合客戶喜好和傾向的投資選項。此外，指派給客戶的經紀人還可以使用此服務來為客戶準備個性化的訊息。
 
 ## 履歷表書寫
 {: #ucResume}
 
 一位應屆畢業生需要撰寫履歷表，其內容需針對符合該畢業生學歷和興趣的產業最佳化。來自最近 {{site.data.keyword.watson}} Hackathon 的應用程式建議，從過去優秀的範例來開發最佳的產業特定履歷表。應用程式可以使用 {{site.data.keyword.watson}} 服務來判斷最佳基準履歷表的特質，以達到與各產業的最大共鳴。
 
-建立履歷表之後，畢業生可使用應用程式來瞭解履歷表與最佳基準的比較結果。應用程式使用 {{site.data.keyword.personalityinsightsshort}} 服務來分析履歷表。其強調顯示潛在問題，並建議進行變更，讓履歷表所揭露的性格特質和價值觀，更符合基準性格特質和價值觀。
+畢業生可建立履歷表，然後使用應用程式來瞭解履歷表與最佳基準的比較結果。應用程式使用 {{site.data.keyword.personalityinsightsshort}} 服務來分析履歷表。其強調顯示潛在問題，並建議進行變更，讓履歷表所揭露的性格特質和價值觀，更符合基準性格特質。
