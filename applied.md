@@ -9,7 +9,7 @@ subcollection: personality-insights
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -224,7 +224,7 @@ However, the study observed a weak correlation between the Value hedonism and an
 ### Predicting consumption preferences
 {: #IBMpreferences}
 
-{{site.data.keyword.IBM_notm}} collaborated with [Acxiom ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.acxiom.com/){: new_window} to investigate whether individuals' personality portraits can improve the predictive accuracy of their consumption preferences compared with predictions based solely on demographic attributes. The study examined 133 consumption preferences for about 785,000 individuals in the US. Adding personality insights characteristics to demographics improved the predictive accuracy for 115 preferences (86.5 percent). For 23 of the preferences, using personality insights alone provides better accuracy than using demographics only.
+{{site.data.keyword.IBM_notm}} collaborated with [Acxiom](http://www.acxiom.com/){: external} to investigate whether individuals' personality portraits can improve the predictive accuracy of their consumption preferences compared with predictions based solely on demographic attributes. The study examined 133 consumption preferences for about 785,000 individuals in the US. Adding personality insights characteristics to demographics improved the predictive accuracy for 115 preferences (86.5 percent). For 23 of the preferences, using personality insights alone provides better accuracy than using demographics only.
 
 The study was based on two technologies: The results of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.personalityinsightsshort}} service and the Acxiom InfoBase product, specifically InfoBase Customer Enhancement&trade; data elements. Acxiom is an industry-leading provider of demographic data for clients' marketing needs. Acxiom's demographic data includes attributes such as age, gender, income, household size, and income range. The demographic data can be used to analyze and enhance customer data. It can help identify selling and retention opportunities, fill gaps in customer contact information, assist in analyzing customer information, and identify prospects, among other things.
 
