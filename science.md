@@ -9,7 +9,7 @@ subcollection: personality-insights
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -58,7 +58,7 @@ For the {{site.data.keyword.personalityinsightsshort}} service, {{site.data.keyw
 
 The {{site.data.keyword.personalityinsightsshort}} service infers personality characteristics from textual information based on an open-vocabulary approach. This method reflects the latest trend in the research about personality inference ([Arnoux and others, 2017](/docs/services/personality-insights?topic=personality-insights-references#arnoux2017), [Schwartz and others, 2013](/docs/services/personality-insights?topic=personality-insights-references#schwartz2013), and [Plank and Hovy, 2015](/docs/services/personality-insights?topic=personality-insights-references#plank2015)).
 
-The service first tokenizes the input text to develop a representation in an *n*-dimensional space. The service uses an open-source word-embedding technique, [GloVe ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://nlp.stanford.edu/projects/glove/){: new_window}, to obtain a vector representation for the words in the input text ([Pennington and others, 2014](/docs/services/personality-insights?topic=personality-insights-references#pennington2014)). It then feeds this representation to a machine-learning algorithm that infers a personality profile with Big Five, Needs, and Values characteristics. To train the algorithm, the service uses scores from surveys that were conducted among thousands of users along with data from their Twitter feeds.
+The service first tokenizes the input text to develop a representation in an *n*-dimensional space. The service uses an open-source word-embedding technique, [GloVe](https://nlp.stanford.edu/projects/glove/){: external}, to obtain a vector representation for the words in the input text ([Pennington and others, 2014](/docs/services/personality-insights?topic=personality-insights-references#pennington2014)). It then feeds this representation to a machine-learning algorithm that infers a personality profile with Big Five, Needs, and Values characteristics. To train the algorithm, the service uses scores from surveys that were conducted among thousands of users along with data from their Twitter feeds.
 
 {{site.data.keyword.IBM_notm}} developed the models for all supported languages in an identical way. The models were developed independent of user demographics such as age, gender, or culture. In the future, {{site.data.keyword.IBM_notm}} might develop models that are specific to different demographic categories.
 

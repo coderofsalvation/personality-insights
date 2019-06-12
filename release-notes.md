@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-06"
 
 subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -102,10 +102,10 @@ The migration to IAM authentication affects new and existing service instances d
 
 For more information, see the following documentation:
 
--   To learn which authentication mechanism your service instance uses, view your service credentials by clicking the instance on the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/dashboard/apps){: new_window}.
+-   To learn which authentication mechanism your service instance uses, view your service credentials by clicking the instance on the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}/resources){: external}.
 -   For more information about using IAM tokens with Watson services, see [Authenticating with IAM tokens](/docs/services/watson?topic=watson-iam).
 -   For more information about using IAM API keys with Watson services, see [IAM service API keys](/docs/services/watson?topic=watson-api-key-bp).
--   For examples that use IAM authentication, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/personality-insights){: new_window}.
+-   For examples that use IAM authentication, see the [API reference](https://{DomainName}/apidocs/personality-insights){: external}.
 
 ### 11 June 2018
 {: #June2018b}
@@ -249,7 +249,7 @@ This documentation now describes version 3 of the {{site.data.keyword.personalit
 
 -   For more information about calling the `/v3/profile` method, see [Requesting a profile](/docs/services/personality-insights?topic=personality-insights-input).
 -   For more information about the `/v3/profile` method's response, see [Understanding a JSON profile](/docs/services/personality-insights?topic=personality-insights-output) and [Understanding a CSV profile](/docs/services/personality-insights?topic=personality-insights-outputCSV).
--   For more information about the version 3 interface, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/personality-insights){: new_window}.
+-   For more information about the version 3 interface, see the [API reference](https://{DomainName}/apidocs/personality-insights){: external}.
 
 #### Changes to parameters of the <code>/v3/profile</code> method
 
@@ -385,7 +385,7 @@ For the new model used for English input, the service reports the average Mean A
 ### 1 July 2016
 {: #July2016a}
 
--   The pricing plans for the service now offer lower prices for {{site.data.keyword.personalityinsightsshort}} users. For more information, see the {{site.data.keyword.personalityinsightsshort}} service in the [{{site.data.keyword.cloud_notm}} Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/personality-insights/){: new_window}.
+-   The pricing plans for the service now offer lower prices for {{site.data.keyword.personalityinsightsshort}} users. For more information, see the {{site.data.keyword.personalityinsightsshort}} service in the [{{site.data.keyword.cloud_notm}} Catalog](https://{DomainName}/catalog/services/personality-insights/){: external}.
 -   The list of supported response languages that you can specify with the `Accept-Language` header now includes
     -   `ar` (Arabic)
     -   `de` (German)
@@ -404,7 +404,7 @@ For the new model used for English input, the service reports the average Mean A
     -   429 *Too Many Requests*: The service is processing too many requests for the content language. Wait a short time and try the request again. If you are submitting many requests for the language, consider throttling the rate at which you submit requests.
     -   504 *Gateway Timeout*: The request timed out or took too long to process. Wait a short time and try the request again. If the input contained too many words (for example, more than 20,000), consider reducing the number of words but maintain the guidelines for meaningful input.
 
-    The method no longer returns 503 *Service Unavailable*. For more information about possible response codes, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/personality-insights){: new_window}.
+    The method no longer returns 503 *Service Unavailable*. For more information about possible response codes, see the [API reference](https://{DomainName}/apidocs/personality-insights){: external}.
 -   The update includes defect fixes and internal improvements.
 
 ### 7 June 2016
@@ -417,7 +417,7 @@ For the new model used for English input, the service reports the average Mean A
 ### 1 June 2016
 {: #June2016a}
 
-The service was updated for defect fixes and internal improvements. A new top-level field, `warnings`, was also added to the JSON results that are returned by the service. For more information, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/personality-insights){: new_window}.
+The service was updated for defect fixes and internal improvements. A new top-level field, `warnings`, was also added to the JSON results that are returned by the service. For more information, see the [API reference](https://{DomainName}/apidocs/personality-insights){: external}.
 
 ### 17 May 2016
 {: #May2016}
@@ -432,7 +432,7 @@ The service now supports the following languages:
 -   The service supports four languages for its input text: Arabic (`ar`), English (`en`), Spanish (`es`), and Japanese (`ja`). To specify the language, use the HTTP `Content-Language` header for plain text and HTML input or the `language` property of the `ContentItem` object for JSON input.
 -   The service supports the same four languages for its response. To specify the language of the response, use the `Accept-Language` header.
 
-You can use any combination of languages for the input and response. If you do not indicate a language, the service defaults to English. For more information, see [Specifying request and response languages](/docs/services/personality-insights?topic=personality-insights-input#languages-input). You can also refer to the blog post [Arabic and Japanese support is now available for {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.personalityinsightsshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/watson/2016/04/arabic-japanese-support-now-available-ibm-watson-personality-insights/){: new_window}.
+You can use any combination of languages for the input and response. If you do not indicate a language, the service defaults to English. For more information, see [Specifying request and response languages](/docs/services/personality-insights?topic=personality-insights-input#languages-input). You can also refer to the blog post [Arabic and Japanese support is now available for {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.personalityinsightsshort}}](https://www.ibm.com/blogs/watson/2016/04/arabic-japanese-support-now-available-ibm-watson-personality-insights/){: external}.
 
 Because it requires significantly more computing cycles to analyze than other languages, Arabic content takes markedly longer to process. Although the service supports the same 20 MB restriction on the amount of input text for all languages, the practical limit for Arabic content might be lower to avoid timeouts. Japanese content also takes longer to process, but the delays are of less meaningful significance than they are for Arabic.
 {: note}

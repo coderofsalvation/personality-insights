@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-27"
+lastupdated: "2019-06-06"
 
 subcollection: personality-insights
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -108,7 +108,7 @@ US Health Insurance Portability and Accountability Act (HIPAA) support does not 
 ## Learn more about the service
 {: #learn-index}
 
--   A [quick demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://personality-insights-demo.ng.bluemix.net/){: new_window} of the {{site.data.keyword.personalityinsightsshort}} service analyzes input text to develop a personality portrait that includes consumption preferences for the author.
--   Applications in {{site.data.keyword.watson}} [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/watson/developercloud/starter-kits.html){: new_window} demonstrate the service.
+-   A [quick demo](https://personality-insights-demo.ng.bluemix.net/){: external} of the {{site.data.keyword.personalityinsightsshort}} service analyzes input text to develop a personality portrait that includes consumption preferences for the author.
+-   Applications in {{site.data.keyword.watson}} [Starter Kits](https://cloud.ibm.com/developer/watson/starter-kits){: external} demonstrate the service.
 -   [The service in action](/docs/services/personality-insights?topic=personality-insights-applied) and [The science behind the service](/docs/services/personality-insights?topic=personality-insights-science) provide information about the research that underlies the service.
--   The {{site.data.keyword.personalityinsightsshort}} service in the [{{site.data.keyword.cloud_notm}} Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/personality-insights/){: new_window} describes the pricing plans that are available for the service.
+-   The {{site.data.keyword.personalityinsightsshort}} service in the [{{site.data.keyword.cloud_notm}} Catalog](https://{DomainName}/catalog/services/personality-insights/){: external} describes the pricing plans that are available for the service.
