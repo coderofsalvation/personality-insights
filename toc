@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="personality-insights" audience="service" arm="351" href="/docs/services/personality-insights/getting-started.html" path="services/personality-insights"}
+{: .toc subcollection="personality-insights" category="ai" audience="service" arm="351" href="/docs/services/personality-insights/getting-started.html" path="services/personality-insights"}
 Personality Insights
 
     {: .navgroup id="learn"}
