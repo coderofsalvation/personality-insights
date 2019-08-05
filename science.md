@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-07-30"
 
 subcollection: personality-insights
 
@@ -148,7 +148,7 @@ The following table shows per-language average MAE and correlation results for t
       Average correlation
     </td>
     <td headers="dimensions arabic" style="text-align:center">
-      0.17
+      0.16
     </td>
     <td headers="facets arabic" style="text-align:center">
       0.14
@@ -187,7 +187,7 @@ The following table shows per-language average MAE and correlation results for t
       Average correlation
     </td>
     <td headers="dimensions english" style="text-align:center">
-      0.33
+      0.31
     </td>
     <td headers="facets english" style="text-align:center">
       0.28
@@ -209,7 +209,7 @@ The following table shows per-language average MAE and correlation results for t
       Average MAE
     </td>
     <td headers="dimensions japanese" style="text-align:center">
-      0.11
+      0.10
     </td>
     <td headers="facets japanese" style="text-align:center">
       0.12
@@ -226,7 +226,7 @@ The following table shows per-language average MAE and correlation results for t
       Average correlation
     </td>
     <td headers="dimensions japanese" style="text-align:center">
-      0.27
+      0.30
     </td>
     <td headers="facets japanese" style="text-align:center">
       0.22
@@ -248,7 +248,7 @@ The following table shows per-language average MAE and correlation results for t
       Average MAE
     </td>
     <td headers="dimensions korean" style="text-align:center">
-      0.11
+      0.09
     </td>
     <td headers="facets korean" style="text-align:center">
       0.12
@@ -265,7 +265,7 @@ The following table shows per-language average MAE and correlation results for t
       Average correlation
     </td>
     <td headers="dimensions korean" style="text-align:center">
-      0.21
+      0.25
     </td>
     <td headers="facets korean" style="text-align:center">
       0.21

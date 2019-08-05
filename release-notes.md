@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-07-30"
 
 subcollection: personality-insights
 
@@ -31,30 +31,34 @@ The following sections document the new features and changes that were included 
 The release notes document the *service version* and *interface version* for all recent updates. You specify the *interface version* with the `version` query parameter to use new features and functionality made available with that update. The service returns both versions with the `X-Service-Api-Version` response header.
 {: note}
 
-## 21 December 2018
-{: #December2018}
+## 30 July 2019
+{: #July2019}
 
-**Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
+**Service version** - `3.6.1`<br/> **Interface version** - `2017-10-13`
 
-Version 2 of the {{site.data.keyword.personalityinsightsshort}} API has been removed from service. Version 3 of the service was released on 19 October 2016. At that time, users were strongly encouraged to migrate from version 2 as soon as possible.
+- Overall, accuracy of [emotional range (neuroticism)](/docs/services/personality-insights?topic=personality-insights-emotionalRange) improved. For details about the accuracy of the service, see [Per-language average MAE and correlation](/docs/services/personality-insights?topic=personality-insights-science#precisePerLanguage). Because the emotional range dimension is part of the *Big Five* personality characteristics, the accuracy of that dimension is included in the value of the *Big Five dimensions* column.
+- For Arabic, the emotional range is now statistically significant. The limitation that existed previously was removed from the table in [Limitations for Arabic and Korean input](/docs/services/personality-insights?topic=personality-insights-numeric#limitations).
 
-## 18 November 2018
-{: #November2018b}
+## 18 June 2019
+{: #June2019}
 
-**Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
+**Service version** - `3.6.0`<br/> **Interface version** - `2017-10-13`
 
-The {{site.data.keyword.personalityinsightsshort}} service is now available in the {{site.data.keyword.cloud}} London location (**eu-gb**). Like all locations, London uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
+The service was updated to maintain compatibility with {{site.data.keyword.cloud_notm}}.
 
-## 7 November 2018
-{: #November2018a}
+## 9 January 2019
+{: #January2019}
 
-**Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
+**Service version** - `3.5.0`<br/> **Interface version** - `2017-10-13`
 
-The {{site.data.keyword.personalityinsightsshort}} service is now available in the {{site.data.keyword.cloud_notm}} Tokyo location (**jp-tok**). Like all locations, Tokyo uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
+The service was updated for small defect fixes.
 
 ## Older releases
 {: #older}
 
+-   [21 December 2018](#December2018)
+-   [18 November 2018](#November2018b)
+-   [7 November 2018](#November2018a)
 -   [30 October 2018](#October2018)
 -   [11 June 2018](#June2018b)
 -   [4 June 2018](#June2018a)
@@ -79,6 +83,27 @@ The {{site.data.keyword.personalityinsightsshort}} service is now available in t
 -   [18 March 2016](#March2016)
 -   [9 July 2015](#July2015)
 -   [23 February 2015](#February2015)
+
+### 21 December 2018
+{: #December2018}
+
+**Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
+
+Version 2 of the {{site.data.keyword.personalityinsightsshort}} API has been removed from service. Version 3 of the service was released on 19 October 2016. At that time, users were strongly encouraged to migrate from version 2 as soon as possible.
+
+### 18 November 2018
+{: #November2018b}
+
+**Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
+
+The {{site.data.keyword.personalityinsightsshort}} service is now available in the {{site.data.keyword.cloud}} London location (**eu-gb**). Like all locations, London uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
+
+### 7 November 2018
+{: #November2018a}
+
+**Service version** - `3.4.5`<br/> **Interface version** - `2017-10-13`
+
+The {{site.data.keyword.personalityinsightsshort}} service is now available in the {{site.data.keyword.cloud_notm}} Tokyo location (**jp-tok**). Like all locations, Tokyo uses token-based Identity and Access Management (IAM) authentication. All new services instances that you create in this location use IAM authentication.
 
 ### 30 October 2018
 {: #October2018}
