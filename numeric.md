@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-07-30"
 
 subcollection: personality-insights
 
@@ -89,17 +89,6 @@ For Arabic and Korean input, the service's models are unable to produce meaningf
     <th style="text-align:left; vertical-align:bottom; width:40%">
       Korean results that<br/>are not meaningful
     </th>
-  </tr>
-  <tr>
-    <td style="text-align:left; vertical-align:top">
-      Big Five dimensions
-    </td>
-    <td style="text-align:left; vertical-align:top">
-      Emotional range
-    </td>
-    <td style="text-align:left; vertical-align:top">
-      None
-    </td>
   </tr>
   <tr>
     <td style="text-align:left; vertical-align:top">
