@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-30"
+lastupdated: "2019-11-15"
 
 subcollection: personality-insights
 
@@ -30,6 +30,14 @@ The following sections document the new features and changes that were included 
 
 The release notes document the *service version* and *interface version* for all recent updates. You specify the *interface version* with the `version` query parameter to use new features and functionality made available with that update. The service returns both versions with the `X-Service-Api-Version` response header.
 {: note}
+
+## 15 November 2019
+{: #November2019}
+
+**Service version** - `3.6.1`<br/> **Interface version** - `2017-10-13`
+
+New South Korea location
+You can now create {{site.data.keyword.personalityinsightsshort}} instances in the Seoul location. As with other locations, the {{site.data.keyword.cloud_notm}} Seoul location uses token-based Identity and Access Management (IAM) authentication.
 
 ## 30 July 2019
 {: #July2019}
