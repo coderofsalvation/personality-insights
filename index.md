@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-30"
+lastupdated: "2019-12-10"
 
 subcollection: personality-insights
 
@@ -25,7 +25,7 @@ subcollection: personality-insights
 # About
 {: #about}
 
-> **Service update:** *The {{site.data.keyword.personalityinsightsshort}} service was updated on July 30, 2019. The service now provides more accurate emotional range scores. Also, the emotional range dimension for Arabic is now statistically significant. For more information, see the [30 July 2019 service update](/docs/services/personality-insights?topic=personality-insights-release-notes#July2019) in the release notes.*
+**Service update:** *The {{site.data.keyword.personalityinsightsshort}} service was updated on December 12, 2019. The service now supports the full implementation of token-based Identity and Access Management (IAM) authentication, and private network endpoints for Premium plans. For more information, see the [12 December 2019 service update](/docs/services/personality-insights?topic=personality-insights-release-notes#December2019) in the release notes.*
 
 The {{site.data.keyword.personalityinsightsfull}} service provides an application programming interface (API) for deriving insights from social media, enterprise data, or other digital communications. The service uses linguistic analytics to infer individuals' intrinsic personality characteristics from digital communications such as email, text messages, tweets, and forum posts.
 {: shortdesc}

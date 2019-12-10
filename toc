@@ -21,6 +21,7 @@ Personality Insights
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    /watson/watson-public-private-endpoints
     input.md
     output.md
     output-csv.md
