@@ -43,14 +43,15 @@ The release notes document the *service version* and *interface version* for all
 
         Example URL for an instance hosted in the Dallas location: `api.us-south.personality-insights.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
 
-        The previous public endpoint domain `watsonplatform.net`.
+        The previous public endpoint domain was `watsonplatform.net`.
 
-        For more information, see the [API reference](https://{DomainName}/apidocs/personality-insights#service-endpoint){: external} in the API reference.
+        For more information about the URLs, see the [API reference](https://{DomainName}/apidocs/personality-insights#service-endpoint){: external} in the API reference.
 
         These URLs do not introduce a breaking change. The new URLs work both for your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year (until December 2020).
-    - For more information, see [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
+    - For more information about IAM, see [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
 - **New network and data security features**
-    - **Support for private network endpoints**
+
+    **Support for private network endpoints**
         - Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.personalityinsightsshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/personality-insights?topic=watson-public-private-endpoints).
 
 ## 15 November 2019
