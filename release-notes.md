@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-11-15"
+lastupdated: "2019-12-09"
 
 subcollection: personality-insights
 
@@ -31,6 +31,29 @@ The following sections document the new features and changes that were included 
 The release notes document the *service version* and *interface version* for all recent updates. You specify the *interface version* with the `version` query parameter to use new features and functionality made available with that update. The service returns both versions with the `X-Service-Api-Version` response header.
 {: note}
 
+## 12 December 2019
+{: #December2019}
+
+**Service version** - `3.6.1`<br/> **Interface version** - `2017-10-13`
+
+- **Full support for IBM Cloud IAM**
+
+    - {{site.data.keyword.personalityinsightsshort}} now supports the full implementation of {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). API keys for Watson services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services.
+    - To support this change, the API service endpoints use a different domain and include the service instance ID. The pattern is `api.{location}.{offering}.watson.cloud.ibm.com/instances/{instance_id}`.
+
+        Example URL for an instance hosted in the Dallas location: `api.us-south.personality-insights.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
+
+        The previous public endpoint domain was `watsonplatform.net`.
+
+        For more information about the URLs, see the [API reference](https://{DomainName}/apidocs/personality-insights#service-endpoint){: external}.
+
+        These URLs do not introduce a breaking change. The new URLs work both for your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year (until December 2020).
+    - For more information about IAM, see [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
+- **New network and data security features**
+
+    **Support for private network endpoints**
+        - Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.personalityinsightsshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/personality-insights?topic=watson-public-private-endpoints).
+
 ## 15 November 2019
 {: #November2019}
 
@@ -47,23 +70,11 @@ You can now create {{site.data.keyword.personalityinsightsshort}} instances in t
 - Overall, accuracy of [emotional range (neuroticism)](/docs/services/personality-insights?topic=personality-insights-emotionalRange) improved. For details about the accuracy of the service, see [Per-language average MAE and correlation](/docs/services/personality-insights?topic=personality-insights-science#precisePerLanguage). Because the emotional range dimension is part of the *Big Five* personality characteristics, the accuracy of that dimension is included in the value of the *Big Five dimensions* column.
 - For Arabic, the emotional range is now statistically significant. The limitation that existed previously was removed from the table in [Limitations for Arabic and Korean input](/docs/services/personality-insights?topic=personality-insights-numeric#limitations).
 
-## 18 June 2019
-{: #June2019}
-
-**Service version** - `3.6.0`<br/> **Interface version** - `2017-10-13`
-
-The service was updated to maintain compatibility with {{site.data.keyword.cloud_notm}}.
-
-## 9 January 2019
-{: #January2019}
-
-**Service version** - `3.5.0`<br/> **Interface version** - `2017-10-13`
-
-The service was updated for small defect fixes.
-
 ## Older releases
 {: #older}
 
+-   [18 June 2019](#June2019)
+-   [9 January 2019](#January2019)
 -   [21 December 2018](#December2018)
 -   [18 November 2018](#November2018b)
 -   [7 November 2018](#November2018a)
@@ -91,6 +102,20 @@ The service was updated for small defect fixes.
 -   [18 March 2016](#March2016)
 -   [9 July 2015](#July2015)
 -   [23 February 2015](#February2015)
+
+### 18 June 2019
+{: #June2019}
+
+**Service version** - `3.6.0`<br/> **Interface version** - `2017-10-13`
+
+The service was updated to maintain compatibility with {{site.data.keyword.cloud_notm}}.
+
+### 9 January 2019
+{: #January2019}
+
+**Service version** - `3.5.0`<br/> **Interface version** - `2017-10-13`
+
+The service was updated for small defect fixes.
 
 ### 21 December 2018
 {: #December2018}
