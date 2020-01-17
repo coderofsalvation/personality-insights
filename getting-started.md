@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-07-09"
+  years: 2015, 2020
+lastupdated: "2020-01-17"
+
+keywords: personality insights, getting started, tutorial
 
 subcollection: personality-insights
 
@@ -27,7 +29,7 @@ subcollection: personality-insights
 {:url: data-credential-placeholder='url'}
 {:hide-dashboard: .hide-dashboard}
 
-# Getting started tutorial
+# Getting started with {{site.data.keyword.personalityinsightsshort}}
 {: #gettingStarted}
 
 The {{site.data.keyword.personalityinsightsfull}} service derives insights about personality characteristics from social media, enterprise data, or other digital communications. This tutorial can help you get started quickly with the {{site.data.keyword.personalityinsightsshort}} service. The examples show you how to call the service's `POST /v3/profile` method with different types of input and how to request different types of output and output formats.
@@ -42,7 +44,7 @@ The {{site.data.keyword.personalityinsightsfull}} service derives insights about
     1.  {: hide-dashboard} Click **Create**.
 -   Copy the credentials to authenticate to your service instance:
     1.  {: hide-dashboard} From the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}/resources){: external}, click on your {{site.data.keyword.personalityinsightsshort}} service instance to go to the {{site.data.keyword.personalityinsightsshort}} service dashboard page.
-    1.  On the **Manage** page, click **Show** to view your credentials.
+    1.  On the **Manage** page, click **Show Credentials** to view your credentials.
     1.  Copy the `API Key` and `URL` values.
 
 ### Using the curl examples
