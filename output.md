@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-03-07"
+  years: 2015, 2020
+lastupdated: "2020-01-30"
 
 subcollection: personality-insights
 
@@ -28,7 +28,7 @@ subcollection: personality-insights
 When you use the `POST /v3/profile` method to analyze content, the service returns the results of its analysis as a JSON `Profile` object when you specify `application/json` with the `Accept` header of a request. The scope of the JSON output depends on the parameters you specify with the request. It also depends on whether the input text represents timestamped data, such as the text associated with a Twitter feed.
 {: shortdesc}
 
-The following sections describe the contents of a response in JSON format. All example output is produced by the sample JSON file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> that is used in the [Getting started tutorial](/docs/services/personality-insights?topic=personality-insights-gettingStarted). For information about CSV output, see [Understanding a CSV profile](/docs/services/personality-insights?topic=personality-insights-outputCSV).
+The following sections describe the contents of a response in JSON format. All example output is produced by the sample JSON file <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/personality-insights/profile.json" download="profile.json">profile.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> that is used in the [Getting started tutorial](/docs/personality-insights?topic=personality-insights-gettingStarted). For information about CSV output, see [Understanding a CSV profile](/docs/personality-insights?topic=personality-insights-outputCSV).
 
 ## The Profile object
 {: #outputJSON}
@@ -88,9 +88,9 @@ The `Profile` object always includes `personality`, `needs`, and `values` fields
     -   `personality` for Big Five personality characteristics
     -   `needs` for Needs
     -   `values` for Values
--   `percentile` (double) is the normalized percentile score for the characteristic. For more information, see [Percentiles for personality characteristics](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
--   `raw_score` (double) is the raw score for the characteristic. The field is returned only if you request raw scores by setting the `raw_scores` query parameter to `true`. For more information, see [Raw scores for personality characteristics](/docs/services/personality-insights?topic=personality-insights-numeric#rawScores-numeric).
--   `significant` (boolean) indicates whether the characteristic is meaningful for the input language. The field is always `true` for all characteristics of English, Spanish, and Japanese input. The field is `false` for the subset of characteristics of Arabic and Korean input for which the service's models are unable to generate meaningful results. For more information, see [Limitations for Arabic and Korean input](/docs/services/personality-insights?topic=personality-insights-numeric#limitations).
+-   `percentile` (double) is the normalized percentile score for the characteristic. For more information, see [Percentiles for personality characteristics](/docs/personality-insights?topic=personality-insights-numeric#percentiles).
+-   `raw_score` (double) is the raw score for the characteristic. The field is returned only if you request raw scores by setting the `raw_scores` query parameter to `true`. For more information, see [Raw scores for personality characteristics](/docs/personality-insights?topic=personality-insights-numeric#rawScores-numeric).
+-   `significant` (boolean) indicates whether the characteristic is meaningful for the input language. The field is always `true` for all characteristics of English, Spanish, and Japanese input. The field is `false` for the subset of characteristics of Arabic and Korean input for which the service's models are unable to generate meaningful results. For more information, see [Limitations for Arabic and Korean input](/docs/personality-insights?topic=personality-insights-numeric#limitations).
 -   `children` is an array of `Trait` objects that provides more detailed results for the facets of each Big Five dimension as inferred from the input text. The array is returned only for Big Five dimensions.
 
 ### Example response
@@ -234,7 +234,7 @@ If the input to the service is JSON that has timestamps for the individual conte
     -   `behavior_{hour}` for hours of the day (for example, `behavior_0000`).
 -   `name` (string) is the user-visible name of the characteristic.
 -   `category` (string) is the category of the characteristic, which is always `behavior`.
--   `percentage` (double) is the percentage of content items that occurred during that day of the week or hour of the day. For more information, see [Percentages for behavioral characteristics](/docs/services/personality-insights?topic=personality-insights-numeric#percentages).
+-   `percentage` (double) is the percentage of content items that occurred during that day of the week or hour of the day. For more information, see [Percentages for behavioral characteristics](/docs/personality-insights?topic=personality-insights-numeric#percentages).
 
 ### Example response
 {: #behaviorExample}
@@ -302,7 +302,7 @@ Each individual preference for a category is described via a `ConsumptionPrefere
 
 -   `consumption_preference_id` (string) is the unique ID of the consumption preference to which the results pertain in the form `consumption_preferences_{preference}`.
 -   `name` (string) is the user-visible name of the consumption preference.
--   `score` (double) is a score that indicates the author's likelihood of preferring the item. For more information, see [Scores for consumption preferences](/docs/services/personality-insights?topic=personality-insights-numeric#scores).
+-   `score` (double) is a score that indicates the author's likelihood of preferring the item. For more information, see [Scores for consumption preferences](/docs/personality-insights?topic=personality-insights-numeric#scores).
 
 ### Example response
 {: #preferenceExample}
