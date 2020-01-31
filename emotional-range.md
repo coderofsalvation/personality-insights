@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-03-07"
+  years: 2015, 2020
+lastupdated: "2020-01-30"
 
 subcollection: personality-insights
 
@@ -31,7 +31,7 @@ subcollection: personality-insights
 -   Any score above the mean of 0.5 indicates a greater than average tendency for a characteristic. A score at or above 0.75 indicates readily discernible aspects of the characteristic; such scores are considered *high*.
 -   The opposite statements are true of scores below 0.50 and 0.25, which are considered *low*.
 
-For more information, see [Percentiles for personality characteristics](/docs/services/personality-insights?topic=personality-insights-numeric#percentiles).
+For more information, see [Percentiles for personality characteristics](/docs/personality-insights?topic=personality-insights-numeric#percentiles).
 
 ## Facets
 {: #facets-emote}

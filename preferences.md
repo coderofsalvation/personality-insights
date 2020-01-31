@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-03-07"
+  years: 2015, 2020
+lastupdated: "2020-01-30"
 
 subcollection: personality-insights
 
@@ -34,9 +34,9 @@ The service groups the more than 40 consumption preferences into eight high-leve
 -   The author's leanings toward different genres of music, movies, and reading.
 -   The author's attitudes about the environment and volunteering.
 
-Businesses use the service's personality models to better understand their customers and to design and develop more personalized and targeted campaigns, products, and services. Consumption preferences make it even easier to act on the service's results. Businesses can easily obtain and respond to a list of preferences that are associated with an individual's dominant characteristics. For more information about possible applications of the consumption preferences, see [Use cases](/docs/services/personality-insights?topic=personality-insights-usecases) and [The service in action](/docs/services/personality-insights?topic=personality-insights-applied).
+Businesses use the service's personality models to better understand their customers and to design and develop more personalized and targeted campaigns, products, and services. Consumption preferences make it even easier to act on the service's results. Businesses can easily obtain and respond to a list of preferences that are associated with an individual's dominant characteristics. For more information about possible applications of the consumption preferences, see [Use cases](/docs/personality-insights?topic=personality-insights-usecases) and [The service in action](/docs/personality-insights?topic=personality-insights-applied).
 
-The following sections list and describe the consumption preferences that the service can return. For more information about interpreting the numeric preferences, see [Scores for consumption preferences](/docs/services/personality-insights?topic=personality-insights-numeric#scores). For information about how {{site.data.keyword.IBM_notm}} developed the preferences, see [The science behind the service](/docs/services/personality-insights?topic=personality-insights-science).
+The following sections list and describe the consumption preferences that the service can return. For more information about interpreting the numeric preferences, see [Scores for consumption preferences](/docs/personality-insights?topic=personality-insights-numeric#scores). For information about how {{site.data.keyword.IBM_notm}} developed the preferences, see [The science behind the service](/docs/personality-insights?topic=personality-insights-science).
 
 ## Shopping preferences
 {: #shopping}
