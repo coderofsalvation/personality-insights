@@ -2,12 +2,14 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-03-06"
 
 subcollection: personality-insights
 
 ---
 
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
@@ -34,6 +36,8 @@ The service infers, from potentially noisy social media, portraits of individual
 
 ## Personality characteristics
 {: #models-index}
+{: help}
+{: support}
 
 The {{site.data.keyword.personalityinsightsshort}} service infers personality characteristics based on three primary models:
 
@@ -45,6 +49,8 @@ For more information, see [Personality models](/docs/personality-insights?topic=
 
 ## Consumption preferences
 {: #preferences-index}
+{: help}
+{: support}
 
 Based on the personality characteristics that are inferred from the input text, the service can also return an indication of the author's consumption preferences. Consumption preferences indicate the author's likelihood to pursue different products, services, and activities. The service groups the individual preferences into eight categories: *Shopping*, *Music*, *Movies*, *Reading and learning*, *Health and activity*, *Volunteering*, *Environmental concern*, and *Entrepreneurship*. Each category contains from one to as many as a dozen individual preferences.
 
@@ -63,6 +69,8 @@ For more information about how you can benefit from the service, see [Use cases]
 
 ## Language support
 {: #languages-index}
+{: help}
+{: support}
 
 The service supports the following languages. You can use any combination of supported languages for the request and response, but all input text must be in the same language. For more information, see [Specifying request and response languages](/docs/personality-insights?topic=personality-insights-input#languages-input).
 

@@ -2,12 +2,15 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-03-06"
 
 subcollection: personality-insights
 
 ---
 
+{:help: data-hd-content-type='help'}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
+{:support: data-reuse='support'}
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
@@ -33,6 +36,8 @@ For Arabic and Korean input, the service is unable to produce meaningful percent
 
 ## Percentiles for personality characteristics
 {: #percentiles}
+{: help}
+{: support}
 
 For each request, the service always reports a normalized score as a `percentile` for each Big Five, Values, and Needs personality characteristic. Normalized scores represent a percentile ranking for each characteristic that is based on qualities that the service infers from the input text. The service computes normalized scores by comparing the raw score for the author's text with results from a sample population. The service reports each percentile as a double in the range of 0 to 1.
 
@@ -43,6 +48,8 @@ No mathematical relationship exists between the percentiles that are reported fo
 
 ## Raw scores for personality characteristics
 {: #rawScores-numeric}
+{: help}
+{: support}
 
 If you specify `true` for the `raw_scores` query parameter of the request, the service reports a `raw_score` for each personality characteristic. Raw scores represent the score for a characteristic that is based solely on the author's text and the model for that characteristic. When it generates raw scores, the service does not compare the results to a sample population. Raw scores can be interpreted as the scores the author would receive from taking a personality test.
 
@@ -54,11 +61,15 @@ To normalize a raw score to a percentile for a specific characteristic, compare 
 
 ## Percentages for behavioral characteristics
 {: #percentages}
+{: help}
+{: support}
 
 If you submit JSON data whose content items have timestamps, the service reports a `percentage` for each behavioral characteristic. Behavioral characteristics identify the temporal distribution of the input. The percentage indicates how many of the content items occurred during each day of the week and time of day. For example, a percentage of `0.4561049445005` for the behavioral characteristic `behavior_0000` means that roughly 46 percent of the content items were created between the hours of midnight and 1:00 a.m.
 
 ## Scores for consumption preferences
 {: #scores}
+{: help}
+{: support}
 
 If you specify `true` for the `consumption_preferences` query parameter of the request, the service reports consumption preferences that include a `score` for each preference. The service derives the score from the personality characteristics that it infers from the input text. The score is a double that indicates how likely the author of the text is to prefer the item. It is an indication of preference, not a normalized percentage.
 
@@ -74,6 +85,8 @@ For a complete list of all preferences by category and the range of their result
 
 ## Limitations for Arabic and Korean input
 {: #limitations}
+{: troubleshoot}
+{: support}
 
 For Arabic and Korean input, the service's models are unable to produce meaningful results for a subset of personality characteristics. For the following characteristics, normalized percentile scores are always `0.5` and raw scores are always the mean of the original distribution. The `significant` field for each of these characteristics is always `false`. Do *not* rely on the results for these characteristics as part of the personality profile of the author.
 
