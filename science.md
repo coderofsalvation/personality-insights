@@ -2,12 +2,14 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-03-06"
 
 subcollection: personality-insights
 
 ---
 
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
@@ -38,6 +40,8 @@ The following sections expand upon these high-level findings to describe the res
 
 ## Understanding the personality models
 {: #researchModels}
+{: help}
+{: support}
 
 For the {{site.data.keyword.personalityinsightsshort}} service, {{site.data.keyword.IBM_notm}} developed models to infer scores for Big Five dimensions and facets, Needs, and Values from textual information. The models reported by the service are based on research in the fields of psychology, psycholinguistics, and marketing:
 

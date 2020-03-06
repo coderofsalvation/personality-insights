@@ -2,12 +2,14 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-03-06"
 
 subcollection: personality-insights
 
 ---
 
+{:troubleshoot: data-hd-content-type='troubleshoot'}
+{:support: data-reuse='support'}
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
@@ -128,6 +130,8 @@ You use the `Content-Type` and `Accept` header parameters to indicate the format
 
 ### Specifying the character set
 {: #charset}
+{: troubleshoot}
+{: support}
 
 By default, the service uses the following character sets for input content:
 
@@ -148,9 +152,7 @@ By using the `charset` parameter, you can avoid potential problems that are asso
 
 To prevent errors when using the `curl` command, always pass the content via the `--data-binary` option of the `curl` command to preserve any UTF-8 encoding of the content. If you use the `--data` option to pass the content as ASCII, the command can process the input, which can cause problems for data encoded in UTF-8.
 
-For example, the following `curl` command correctly uses the `--data-binary` option to post the contents of the specified *filename* with no additional processing. The command specifies the `charset` parameter with the `Content-Type` header, and it requests the JSON response format with the `Accept` header.
-
-* Replace `{apikey}`, `filename`, and `{url}` with your API key, file name, and URL.
+For example, the following `curl` command correctly uses the `--data-binary` option to post the contents of the specified file with no additional processing. The command specifies the `charset` parameter with the `Content-Type` header, and it requests the JSON response format with the `Accept` header. Replace `{apikey}`, `{filename}`, and `{url}` with your API key, the name of your input file, and the URL of your service instance.
 
 ```bash
 curl -X POST -u "apikey:{apikey}"
@@ -246,62 +248,6 @@ You can use the `Content-Language` and `Accept-Language` header parameters to in
   </tr>
   <tr>
     <td style="text-align:left">
-      English
-    </td>
-    <td style="text-align:center">
-      <code>en</code>
-    </td>
-    <td style="text-align:center">
-      Yes
-    </td>
-    <td style="text-align:center">
-      Yes
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:left">
-      Japanese
-    </td>
-    <td style="text-align:center">
-      <code>ja</code>
-    </td>
-    <td style="text-align:center">
-      Yes
-    </td>
-    <td style="text-align:center">
-      Yes
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:left">
-      Korean
-    </td>
-    <td style="text-align:center">
-      <code>ko</code>
-    </td>
-    <td style="text-align:center">
-      Yes
-    </td>
-    <td style="text-align:center">
-      Yes
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:left">
-      Spanish
-    </td>
-    <td style="text-align:center">
-      <code>es</code>
-    </td>
-    <td style="text-align:center">
-      Yes
-    </td>
-    <td style="text-align:center">
-      Yes
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:left">
       Brazilian Portuguese
     </td>
     <td style="text-align:center">
@@ -309,6 +255,20 @@ You can use the `Content-Language` and `Accept-Language` header parameters to in
     </td>
     <td style="text-align:center">
       No
+    </td>
+    <td style="text-align:center">
+      Yes
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      English
+    </td>
+    <td style="text-align:center">
+      <code>en</code>
+    </td>
+    <td style="text-align:center">
+      Yes
     </td>
     <td style="text-align:center">
       Yes
@@ -358,6 +318,34 @@ You can use the `Content-Language` and `Accept-Language` header parameters to in
   </tr>
   <tr>
     <td style="text-align:left">
+      Japanese
+    </td>
+    <td style="text-align:center">
+      <code>ja</code>
+    </td>
+    <td style="text-align:center">
+      Yes
+    </td>
+    <td style="text-align:center">
+      Yes
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      Korean
+    </td>
+    <td style="text-align:center">
+      <code>ko</code>
+    </td>
+    <td style="text-align:center">
+      Yes
+    </td>
+    <td style="text-align:center">
+      Yes
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
       Simplified Chinese
     </td>
     <td style="text-align:center">
@@ -365,6 +353,20 @@ You can use the `Content-Language` and `Accept-Language` header parameters to in
     </td>
     <td style="text-align:center">
       No
+    </td>
+    <td style="text-align:center">
+      Yes
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:left">
+      Spanish
+    </td>
+    <td style="text-align:center">
+      <code>es</code>
+    </td>
+    <td style="text-align:center">
+      Yes
     </td>
     <td style="text-align:center">
       Yes
@@ -386,7 +388,7 @@ You can use the `Content-Language` and `Accept-Language` header parameters to in
   </tr>
 </table>
 
-Submit all text in the same language; do not mix multiple languages in the same request. For two-character language arguments, the service treats regional variants as their parent language; for example, it interprets `en-US` as `en`.
+Submit all text in the same language. Do not mix multiple languages in the same request. For two-character language arguments, the service treats regional variants as their parent language; for example, it interprets `en-US` as `en`.
 
 ### Specifying a language for JSON content
 {: #languageJSON}
@@ -397,6 +399,8 @@ Omit the `Content-Type` header to base the language solely on the specification 
 
 ### Language considerations
 {: #languageNotes}
+{: troubleshoot}
+{: support}
 
 Consider the following details when you submit input text:
 
@@ -420,6 +424,8 @@ The service validates only the number of words that you submit. If you submit en
 
 ### Guidelines and recommendations
 {: #sufficientGuidelines}
+{: troubleshoot}
+{: support}
 
 The following table reports two values for different quantities of input text:
 
