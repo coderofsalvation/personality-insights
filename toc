@@ -69,6 +69,5 @@ Personality Insights
     {: .topicgroup}
     Developer community
         [StackOverflow](http://stackoverflow.com/questions/tagged/personality-insights)
-        [IBM Developer Answers](https://developer.ibm.com/answers/topics/personality-insights/)
         [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
     {: .navgroup-end}
